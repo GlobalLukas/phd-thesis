@@ -1,0 +1,313 @@
+\documentclass[11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyphenat}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=-1mm}
+\usepackage[boxsize=6pt]{ytableau}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{stmaryrd}
+\usetikzlibrary{decorations.markings,arrows,arrows.meta}
+\setlist[enumerate]{itemsep=0mm}
+\usepackage[a4paper,left=25mm,right=25mm,top=25mm,bottom=35mm]{geometry}
+\linespread{1.275}
+
+\counterwithout{figure}{chapter}
+
+\tikzset{every path/.style={thick}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{remark}
+\newtheorem*{example}{Example}
+
+\newenvironment{claim}[1]{\par\noindent\textit{Claim.}\space#1}{}
+\newenvironment{claimproof}[1]{\par\noindent\textit{Proof of claim.}\space#1}{\hfill $\Diamond$}
+
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\coim}{\operatorname{coim}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\id}{\textnormal{id}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\I}{\mathrm{i}}
+\renewcommand{\P}{\mathbb{P}}
+
+\makeindex[intoc]
+
+\title{
+\huge \textsc{PhD}
+}
+\author{
+-------- \\~\\~\\
+%Doktorgrad
+\\~\\~\\~\\~\\~\\~\\~\\~\\
+}
+\date{
+\begin{tabular}{ll}
+Autor: & Lukas Johannsen \\
+Erstgutachter: & Prof. Dr. Gleb Arutyunov \\
+Zweitgutachter: & ? \\
+Ort und Datum: & Hamburg im ? 2027
+\end{tabular}
+}
+
+\begin{document}
+\maketitle
+
+~
+
+\thispagestyle{empty}
+\setcounter{page}{0}
+
+\pagebreak
+
+\chapter*{Abstract}
+
+\section*{Acknowledgments}
+
+\footnotetext{This thesis has benefited from large language models.}
+
+\tableofcontents
+
+\chapter{Notes}
+
+\section{Basics of elliptic structures}
+
+\subsection{Elliptic functions and theta functions}
+
+\begin{definition}
+An elliptic curve $E$ (over $\C$) is a smooth projective curve or Riemann surface of genus 1. These are of the form $E \cong \C/\Lambda$ for $\Lambda = \Z \oplus \tau \Z$ for $\tau \in \mathbb{H} = \{ z \in \C \mid \Im z > 0 \}$. This does not faithfully parametrize elliptic curves, but $M_{1,1} := \mathbb{H}/SL_2(\Z)$ does, where $SL_2(\Z)$ acts by Möbius transformations. Algebraically, every elliptic curve may be brought into the form
+\begin{equation*}
+Y^2 Z = 4 X(X-Z)(X-\lambda Z),
+\end{equation*}
+where $\lambda$ is the $\lambda$-invariant of $E$, which is also not faithful up to an action of $SL_2(\Z)/\Gamma(2) \cong S_3$. The invariant combination
+\begin{equation*}
+j = 2^8 \frac{(\lambda^2-\lambda+1)^3}{\lambda^2(\lambda-1)^2}
+\end{equation*}
+is the $j$-invariant, yielding a bijection $j: M_{1,1} \to \C$. Stacky points are at $j=0$ and $j=12^3=1728$, where $\Lambda$ becomes the lattice of the Eisenstein and Gauss integers, respectively, with automorphism groups $\Z_2$ and $\Z_3$ (plus the usual involution $Y \mapsto -Y$, giving $\Z_4$ and $\Z_6$). There is an isomorphism
+\begin{equation*}
+\C/\Lambda \to E(\C), \quad z+\Lambda \mapsto
+\begin{cases}
+[\wp(z|\tau):\wp'(z|\tau):1], & z \notin \Lambda \\
+[0:1:0], & z \in \Lambda.
+\end{cases}
+\end{equation*}
+
+An elliptic function is a meromorphic function $f: \C \to \C$ that is $\Lambda$-periodic such that it descends to a meromorphic function on $E$. Theta functions are sections of certain line bundles over $E$, which may be represented as entire functions $\vartheta: \C \to \C$ satisfying
+\begin{equation*}
+\vartheta(z+1|\tau) = \vartheta(z|\tau), \quad \vartheta(z+\tau|\tau) = \exp(- \pi \I \tau - 2 \pi \I z) \vartheta(z|\tau)
+\end{equation*}
+This line bundle has in fact only one section up to a prefactor, and this is the Jacobi theta function.
+\end{definition}
+
+\subsection{Belavin's elliptic $R$-matrix}
+
+\cite{article:etingof:1998}
+
+\begin{definition}
+Let $\xi = \exp(2\pi\I/\ell)$. Define a projectively flat rank $\ell$ vector bundle on $E = \C/\Lambda$ by the two monodromies
+\begin{equation*}
+A =
+\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & \xi & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \xi^{\ell-1} \\
+\end{pmatrix}
+,\quad
+B = \exp(-\pi\I \tfrac{\ell-1}{\ell})
+\begin{pmatrix}
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1 \\
+1 & 0 & \cdots & 0 \\
+\end{pmatrix},
+\end{equation*}
+satisfying $A^\ell,B^\ell = 1$ and $BA = \xi AB$ giving a flat/holomorphic $PGL_\ell$-bundle $P \to E$. Belavin's elliptic $R$-matrix is the unique $R$-matrix satisfying the QYBE and unitarity as well as
+\begin{enumerate}[label=(\roman*)]
+\item $R^B(z)$ has simple poles only at $\eta + \Lambda$,
+\item $R^B(0) = P$,
+\item $R^B(z+1) = A_1 R^B(z) A_1^{-1} = A_2^{-1} R^B(z) A_2$, $R^B(z+\tau) = B_1 R^B(z) B_1^{-1} = B_2^{-1} R^B(z) B_2$.
+\end{enumerate}
+In particular, the $R$-matrix lives on the $\ell$-fold cover $\bar E = \C/\ell \Lambda$, where $P$ is trivialized. We may view the $R$-matrix as an element of
+\begin{equation*}
+\operatorname{End} \C^\ell \otimes \Gamma(E,P \ltimes \operatorname{End} \C^\ell),
+\end{equation*}
+where $\Gamma(E,P \ltimes \operatorname{End} \C^\ell)$ are meromorphic sections of the associated bundle $P \ltimes \operatorname{End} \C^\ell$.
+\end{definition}
+
+\subsection{RTT representations}
+
+\cite{article:etingof:1998}
+
+\begin{definition}
+Define the category $\mathsf{C}_B$ whose objects are vector spaces $V$ equipped with an invertible element
+\begin{equation*}
+L(z) \in \operatorname{Mat}_\ell(\operatorname{End} V \otimes \mathcal{M}(\bar E)),
+\end{equation*}
+thus having values in $\operatorname{End} \C^\ell \otimes \operatorname{End} V$, satisfying
+\begin{equation*}
+R_{12}^B(z-w) L_1(z) L_2(w) = L_2(w) L_1(z) R_{12}^B(z-w).
+\end{equation*}
+Morphisms are linear maps $f: V \to V'$ satisfying $\varphi L(z) = L'(z) \varphi$. There is a tensor structure via
+\begin{equation*}
+(V,L(z)) \otimes (V',L'(z)) := (V \otimes V', L_{12}(z) L_{13}'(z))
+\end{equation*}
+and finite-dimensional objects $(V,L(z))$ have duals $(V^*,L^*(z))$ with $L^*(z) = (L(z)^{-1})^{t_2}$. Belavin's $R$-matrix ensures the existence of a vector representation $(\C^\ell,R^B(z))$.
+\end{definition}
+
+\subsection{Elliptic Drinfeld functor}
+
+In order to define an elliptic Drinfeld functor, we first need an analog of the Yangian representation on $\C^\ell[y]$. For fixed $z$, we can view the coefficients of $R^B(z-y)$ as meromorphic $\operatorname{End} \C^\ell$-valued functions $f_{ij}(y)$ with at most a simple pole at $z-\eta + \Lambda$. They satisfy $f_{ij}(y+1) = \operatorname{Ad}_A^{-1} f_{ij}(y)$ and $f_{ij}(y+\tau) = \operatorname{Ad}_B^{-1} f_{ij}(y)$ and are thus meromorphic sections of the adjoint bundle $\operatorname{Ad} P$. These naturally act on sections of the bundle associated to $\C^\ell$. Let us abbreviate the space of such sections as
+\begin{equation*}
+\Theta := \{ f: \C \to \C^\ell \text{ meromorphic} \mid f(y+1) = A^{-1} f(y), f(y+\tau) B^{-1} f(y) \}.
+\end{equation*}
+We obtain an RTT representation on $\Theta$. More generally, we may define
+\begin{equation*}
+L_N(z) := R_{01}^B(z-y_1) \cdots R_{0N}^B(z-y_N)
+\end{equation*}
+whose coefficients act on the space
+\begin{equation*}
+\Theta_N := \{ f: \C^N \to (\C^\ell)^{\otimes N} \text{ meromorphic} \mid f(y_i+1) = A_i^{-1} f(y_i), f(y_i+\tau) B_i^{-1} f(y_i) \}.
+\end{equation*}
+These are the sections of a vector bundle $V_N \to E^N$, which can be pulled back to the ($\eta$-deformed) configuration space of points of $E$ or even on $M_{1,1+N}$ such that the $R$-matrix allows us to put an RTT representation on its sections.
+
+There is a commuting action of $S_N$ from the right on $\Theta_N$ via $R$-matrices: $(i \ j) \mapsto R_{ij}^B(y_i-y_j)$, as well as sections of the structure sheaf of the configuration space of points on $E$. Together, these form a generalization of the degenerate affine Hecke algebra. If these sections of the structure sheaf are replaced by the theta functions of \cite{article:hasegawa:1995}, we may let the elliptic difference operators act. This space is
+\begin{equation*}
+Th^l = \{ f: \C^N \to \C \text{ holomorphic} \mid f(y+e_i) = f(y), f(y+\tau e_i) = \exp(-\pi\I l\tau-2\pi\I l y_i) f(y) \}.
+\end{equation*}
+Then the $S_N$-invariant subspace is spanned by the ${N+l \choose l}$ $\hat{\mathfrak{gl}}_N$-characters of level $l$. This defines a line bundle $L$ on $E^N$.
+
+All in all, we may twist the vector bundle $V_N$ by $L$, obtaining $V_N \otimes L \to E^N$ and we have an action of $S_N$ giving the descent data for a vector bundle $W$ on the quotient stack $E^N \sslash S_N$. Its space of meromorphic sections gives an object in $\mathsf{C}_B$ via $L_N(z)$. This defines a functor from quasi-coherent modules on $E^N \sslash S_N$ to $\mathsf{C}_B$.
+
+Define the space
+\begin{equation*}
+\Theta_{\ell,N}^l = \{ f: \C^N \overset{\text{mer}.}\longrightarrow (\C^\ell)^{\otimes N} \mid f(y_i+1) = A_i^{-1} f(y_i), f(y_i+\tau) = \exp(-\pi\I l\tau-2\pi\I l y_i) B_i^{-1} f(y_i) \}.
+\end{equation*}
+These are sections of a vector bundle on $E^N$ and we have actions
+\begin{equation*}
+E(\mathfrak{gl}_\ell) \curvearrowright \Theta_{\ell,N}^\bullet \curvearrowleft S_N \ltimes Th^\bullet
+\end{equation*}
+via $L_N(z)$, permutations acting via $R$-matrices, and theta functions acting by scalar multiplication. This is graded by the level $l$. We now want to compute $\Theta_{\ell,N}^l \otimes_{S_N \ltimes Th^l} Th^l$. This is done by projecting out the action of $S_N$ on $\Theta_{\ell,N}^\bullet$. This is the Hilbert space of the elliptic spin RS model, you might call it the space of non-abelian characters of $A_{N-1}^{(1)}$ graded by level. Then we let Ruijsenaars difference operators act after Hasegawa. The reason this also acts on the sections of the vector bundle is the existence of a connection.
+
+\subsection{Generalized Schur-Weyl duality}
+
+In general, we would like to construct a Schur-Weyl duality for any bundle of conformal blocks for any genus. Braid/Hecke generators are obtained as monodromies along the configuration space, which become $R$-matrices, the coordinates become one set of generators and tangent vectors give a second set of generators. For genus zero, this gives the Schur-Weyl duality between the loop Yangian and the degenerate double affine Hecke algebra, while for genus one, this gives a Schur-Weyl duality between a degenerate elliptic double affine Hecke algebra and a loop elliptic quantum group $LE(\mathfrak{gl}_\ell)$.
+
+Instead of coordinates plus tangent vectors, the generators can also come from the product of two surfaces, going into 4d CS theory.
+
+\section{Loop Yangian}
+
+\subsection{As quantization of rational spin RS Poisson algebra}
+
+\cite{article:arutyunov:1998}
+
+The Hamiltonian reduction in the classical case is done as follows: Start with $(A,g,S) \in \mathfrak{gl}_N^* \times GL_N \times \mathfrak{gl}_N^*$ and factorize $S_{ij} = \sum_\alpha a_i^\alpha b_j^\alpha$, defining $S_{ij}^{\alpha\beta} := a_i^\alpha b_j^\beta$, where $\alpha,\beta$ can range in $1,...,\ell$. Then
+\begin{equation*}
+T^{\alpha\beta}(z) = \delta^{\alpha\beta} + \operatorname{tr} \frac{S^{\alpha\beta}}{z-A} = \delta^{\alpha\beta}+\sum_{n\geq 0} T_n^{\alpha\beta} z^{-n-1}, \quad T_n^{\alpha\beta} = \operatorname{tr} A^n S^{\alpha \beta}
+\end{equation*}
+generates the classical Yangian. Letting $J_n^{\alpha\beta} := \operatorname{tr} g^n S^{\alpha \beta}$, we define
+\begin{equation*}
+J^{\alpha \beta}(z) = \sum_{n=-\infty}^\infty J_n^{\alpha \beta} z^{-n-1},
+\end{equation*}
+which generates the classical loop algebra. On the reduced phase space, they are also given by
+\begin{equation*}
+J_n^{\alpha\beta} = \sum_{ij} (\mathbf{L}^{n-1})_{ij} \mathbf{a}_j^\alpha \mathbf{c}_i^\beta,
+\end{equation*}
+where $\mathbf{L},\mathbf{a},\mathbf{c}$ are the invariant versions of $L = TgT^{-1},a$, and $c$ ($T$ begin the diagonalizer for $A$). This makes it clear how the Lax matrix corresponds to the monodromy around a loop. Thus, it is known that
+\begin{equation*}
+J_1^{\alpha\beta} = \sum_i S_i^{\beta\alpha}, \quad S_i^{\alpha\beta} = \mathbf{c}_i^\alpha \mathbf{a}_i^\beta, \quad \mathbf{c}_i^\alpha = \sum_\beta S_i^{\alpha\beta}, \quad \mathbf{a}_i^\alpha = \frac{S_i^{\beta\alpha}}{\sum_\gamma S_i^{\beta\gamma}}
+\end{equation*}
+
+Recall that the loop Yangian $LY(\mathfrak{gl}_\ell)$ is Schur-Weyl dual to the degenerate double affine Hecke algebra $\ddot H_N$ and that the center of the Yangian $Y(\mathfrak{gl}_\ell)$ generated by the quantum determinant gives Hamiltonians for the quantum trigonometric spin CM model, while the center of the loop algebra $L(\mathfrak{gl}_\ell)$ gives Hamiltonians for the quantum rational spin RS model. This gives natural quantizations to $T_n^{\alpha\beta}$ and $J_n^{\alpha\beta}$. The formula for $J_1^{\alpha\beta}$ suggests the quantization rule
+\begin{equation*}
+S_i^{\alpha\beta} \to e_i^{\alpha\beta} \otimes X_i,
+\end{equation*}
+where $e_i^{\alpha\beta}$ is a matrix unit acting on the $i$th tensorand and $X_i$ is the $i$th Laurent generator of $\ddot H_N$. The following Poisson rules remain to be checked:
+\begin{equation*}
+\{ S_i^{\alpha\beta},S_j^{\mu\nu} \} = \frac{1}{y_i-y_j} (S_i^{\mu\beta} S_j^{\alpha\nu} + S_i^{\alpha\nu} S_j^{\mu\beta}) - \frac{\delta^{\beta\mu}}{y_i-y_j+\eta} (S_iS_j)^{\alpha\nu} + \frac{\delta^{\alpha\nu}}{y_j-y_i+\eta} (S_jS_i)^{\mu\beta} 
+\end{equation*}
+and $\{ y_i, S_j^{\alpha\beta} \} = S_j^{\alpha\beta} \delta_{ij}$. This second rule follows directly, the first is very non-trivial and should be checked using Mathematica. The first term seems unusual, but the last two terms look like the usual commutation relations in $\mathfrak{gl}_\ell$.
+
+\subsection{Fock space representation}
+
+\cite{article:kodera:2016}
+
+We construct the level $k$ Fock space. Let $U = \C[X^{\pm 1}] \otimes \C^\ell \otimes \C^k$. Given an integer $K$ and $N<M$, there is a natural map $\bigwedge^N U \to \bigwedge^M U$. Define the Fock space
+\begin{equation*}
+F_K = \varprojlim_N \bigwedge^N U.
+\end{equation*}
+Note that we have an isomorphism
+\begin{equation*}
+\bigwedge^N U \cong (\C^\ell)^{\otimes N} \otimes_{S_N} (\C[X_1^{\pm 1},...,X_N^{\pm 1}] \otimes (\C^k)^{\otimes N})
+\end{equation*}
+This clearly has an action of the affine Yangian by Schur-Weyl duality, and this extends to the limit $F_K$. For $k=1$, we recover the trigonometric Calogero-Moser system.
+
+\pagebreak
+
+\chapter*{Notation}\label{chapter:notation}
+\addcontentsline{toc}{chapter}{Notation}
+
+\pagebreak
+
+\printindex
+
+\bibliographystyle{alphaurl}
+\bibliography{bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\pagebreak
+
+\section*{Erklärung}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
