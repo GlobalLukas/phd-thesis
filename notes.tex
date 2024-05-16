@@ -92,7 +92,7 @@ Ort und Datum: & Hamburg im ? 2027
 
 \section*{Acknowledgments}
 
-\footnotetext{This thesis has benefited from large language models.}
+%\footnotetext{This thesis has benefited from large language models.}
 
 \tableofcontents
 
@@ -260,15 +260,39 @@ and $\{ y_i, S_j^{\alpha\beta} \} = S_j^{\alpha\beta} \delta_{ij}$. This second 
 
 \cite{article:kodera:2016}
 
-We construct the level $k$ Fock space. Let $U = \C[X^{\pm 1}] \otimes \C^\ell \otimes \C^k$. Given an integer $K$ and $N<M$, there is a natural map $\bigwedge^N U \to \bigwedge^M U$. Define the Fock space
+We construct the level one Fock space. Let $U = \C^\ell[X^{\pm 1}]$. Note that we have an isomorphism
 \begin{equation*}
-F_K = \varprojlim_N \bigwedge^N U.
+(\C^\ell)^{\otimes N} \otimes_{S_N} \C[X_1^{\pm 1},...,X_N^{\pm 1}] \cong \bigwedge^N U, \quad X_1^{m_1} \cdots X_N^{m_N} \otimes (e_{j_1} \otimes \cdots \otimes e_{j_N}) \mapsto e_{j_1} X^{m_1} \wedge \cdots \wedge e_{j_N} X^{m_j}.
 \end{equation*}
-Note that we have an isomorphism
+This clearly has an action of the affine Yangian by Schur-Weyl duality. Note that we recover the trigonometric Calogero-Moser system. The Fock space is obtained by the inverse limit over $N$ respecting a certain grading.
+
+We clearly have an $R$-matrix $R(y_1-y_2) \in \End(U^{\otimes 2})$ acting via matrix-differential operators. This should generalize to an $R$-matrix in $\End((\bigwedge^N U)^{\otimes 2})$. If the affine Yangian acts faithfully, we may obtain an RTT presentation this way.
+
+\subsection{Conjectural presentation from 4d CS}
+
+Consider 4d CS theory on $\P^1 \times S^1 \times [0,1]$. Wilson lines at constant $z \in \P^1$ can be represented pictorially on a 2d surface with a seam, giving the cylinder after gluing. The Yangian gives the 2-Hilbert space for $D^\times \times *$ and the relations can be reconstructed from lines on a cylinder: The $R$-matrix is a crossing of two normal lines labeled by the vector representation of $\mathfrak{gl}_\ell$, the $T$-matrix is a crossing of a normal line and a wavy line. The normal line crossing the seam gives the twist matrix $g$ parametrizing the background $GL_\ell$-principal bundle (Maybe add $e^{\hbar \partial}$). A wavy line crossing the seam gives an additional element $A(z)$, and we can derive an analog of the RTT relation:
 \begin{equation*}
-\bigwedge^N U \cong (\C^\ell)^{\otimes N} \otimes_{S_N} (\C[X_1^{\pm 1},...,X_N^{\pm 1}] \otimes (\C^k)^{\otimes N})
+g T(z-y) A(z) = A(z) T(z-y) g.
 \end{equation*}
-This clearly has an action of the affine Yangian by Schur-Weyl duality, and this extends to the limit $F_K$. For $k=1$, we recover the trigonometric Calogero-Moser system.
+Writing
+\begin{equation*}
+T(z-y) = \sum_{m=0}^\infty T^{(m)} (z-y)^{-m-1} = \sum_{m=0}^\infty \sum_{k=m+1}^\infty \frac{(k-m) \cdots (k-1)}{m!} T^{(m)} y^{k-m-1} z^{-k}
+\end{equation*}
+and
+\begin{equation*}
+A(z) = \sum_{n=-\infty}^\infty a^{(n)} z^{-n-1}
+\end{equation*}
+gives
+\begin{equation*}
+\sum_{m=0}^\infty \sum_{k=m+1}^\infty \sum_{n=-\infty}^\infty \frac{(k-m) \cdots (k-1)}{m!} g T^{(m)} a^{(n)} y^{k-m-1} z^{-k-n-1} = \sum_{m=0}^\infty \sum_{k=m+1}^\infty \sum_{n=-\infty}^\infty \frac{(k-m) \cdots (k-1)}{m!} a^{(n)} T^{(m)} g y^{k-m-1} z^{-k-n-1},
+\end{equation*}
+which would imply $g T^{(m)} a^{(n)} = a^{(n)} T^{(m)} g$, so the coefficients satisfy
+\begin{equation*}
+\gamma_i t_{ij}^{(m)} a^{(n)} = a^{(n)} t_{ij}^{(m)} \gamma_j.
+\end{equation*}
+Hence we might think of the twist as a kind of $R$-matrix commuting $A(z)$ and $T(z-y)$. We have the consistency condition $R(z) (g \otimes g) = (g \otimes g) R(z)$ plus invertibility. $A(z)$ also has to be invertible.
+
+There is the Gauss decomposition $T(z) = F(z) H(z) E(z)$ constructed from quantum minors with diagonal $H(z)$. The coefficients are $f_{ij}(z), h_i(z), e_{ij}(z)$. Let $e_i(z) = e_{i,i+1}(z)$ and $f_i = f_{i+1,i}(z)$. Then we can present the Yangian in Drinfeld form using the coefficients of $f_i(z),h_i(z),e_i(z)$.
 
 \pagebreak
 
