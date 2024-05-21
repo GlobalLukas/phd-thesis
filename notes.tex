@@ -268,8 +268,6 @@ We clearly have an $R$-matrix $R(y_1-y_2) \in \End(U^{\otimes 2})$ acting via ma
 
 \subsection{Conjectural presentation from 4d CS}
 
-There is the Gauss decomposition $T(z) = F(z) H(z) E(z)$ constructed from quantum minors with diagonal $H(z)$. The coefficients are $f_{ij}(z), h_i(z), e_{ij}(z)$. Let $e_i(z) = e_{i,i+1}(z)$ and $f_i = f_{i+1,i}(z)$. Then we can present the Yangian in Drinfeld form using the coefficients of $f_i(z),h_i(z),e_i(z)$.
-
 We know that the representations of the Yangian control Wilson lines. 't Hooft lines on the other hand modify the underlying principal bundle, for example by introducing a twist $g$ (a conjugacy class of $\mathfrak{gl}_\ell$).
 
 We should have that $S^1 \times *$ gets mapped to the 2-category $\mathcal{B}Y(\mathfrak{gl}_\ell)\mathsf{Mod}$, while $* \times S^1$ gets mapped to the 2-category $\mathcal{B}U(\dot{\mathfrak{gl}}_\ell)\mathsf{Mod}$ and $S^1 \times S^1$ gets mapped to $Y(\dot{\mathfrak{gl}}_\ell)\mathsf{Mod}$. Let $A$ be the annulus with the outer boundary component marked. Then $A \times S^1$ should give the $Y(\dot{\mathfrak{gl}}_\ell)$-module $\C^\ell[y]$. On the other hand, $S^1 \times A$ should give the $Y(\dot{\mathfrak{gl}}_\ell)$-module $\C^\ell[X^{\pm 1}]$. From this, we have to be able to derive relations for the affine Yangian in the spirit of \cite{article:costello:2018b}.
@@ -286,29 +284,7 @@ J_{ij}^{(n)}: e_j \otimes X^k \mapsto e_i \otimes X^{k+n}.
 \end{equation*}
 These are the Fourier modes of the flux through the line. Both are operators on $A \times A$, so both act on $\C^\ell[y]$ and $\C^\ell[X^{\pm 1}]$ and satisfy non-trivial relations. These give the affine Yangian relations when $N \to \infty$. The mapping classes relate this to Dehn twists with the two deformation parameters mapped to $\eta$ and $\hbar$. We can cross two $T$-matrices and get the universal $R$-matrix of the Yangian. We can also cross two $J$-matrices and get a trivial $R$-matrix. The interesting stuff happens when we cross a $T$-matrix and a $J$-matrix. In the vector representation $\C^\ell[y]$, this should have the effect of a twist $g$ and a shift $e^{\hbar \partial}$.
 
-All of this can be summarized in a graphical calculus on the cylinder $S^1 \times [0,1]$ with two types of lines in the axial direction: Wilson and 't Hooft lines. Wilson lines are labeled by a complex coordinate $y$ and 't Hooft lines are labeled by a mode number $n$. We can act on the diagrams via mapping classes. This gives a graphical way of determining the relations.
-
-What does a crossing of a Wilson line and a 't Hooft line look like? It has the form
-\begin{equation*}
-Q^{(n)}(y): \C^\ell[y] \otimes \C^\ell[X^{\pm 1}] \to \C^\ell[y] \otimes \C^\ell[X^{\pm 1}]
-\end{equation*}
-and from the graphical calculus we can derive an RQQ relation, so this has to give a Yangian representation on $\C^\ell[X^{\pm 1}]$, on the other hand an affine algebra representation on $\C^\ell[y]$. One possibility would be
-\begin{equation*}
-Q^{(n)}(y) = (1 - \frac{\eta P}{d-y})_n,
-\end{equation*}
-taking the degree $n$ piece in the expansion, where $d$ is the Dunkl operator. The expansion is well-defined since $d$ acts nilpotently.
-
-Where do $\eta$ and $\hbar$ appear in the graphical calculus? We know that $\eta$ appears as Planck's constant in the framing anomaly affecting Wilson lines, saying $(\C_y^\ell)^\vee = (\C^\ell)_{y+\ell\eta}^*$. What about the framing anomaly for 't Hooft lines? They should not have a framing anomaly, as the affine algebra is pivotal. I would expect $\hbar$ to be connected to the central charge, which appears when commuting two 't Hooft lines. If they are labeled by the identity matrix and mode numbers $n,m$, we get
-\begin{equation*}
-[1 \otimes t^n,1 \otimes t^m] = \ell n \delta_{n+m} c,
-\end{equation*}
-meaning we can extract the central charge as follows:
-\begin{equation*}
-c = \frac{1}{\ell} [1 \otimes t, 1 \otimes t^{-1}]
-\end{equation*}
-This central charge is zero in the representation for the ratRS model.
-
-This way, we can generate the affine Yangian by taking a triangle of lines and letting one of them take values in the algebra, the others in the vector representation.
+All of this can be summarized in a graphical calculus on the cylinder $S^1 \times [0,1]$ with two types of lines in the axial direction: Wilson and 't Hooft lines. Wilson lines are labeled by a complex coordinate $y$ and 't Hooft lines are labeled by a mode number $n$. We can act on the diagrams via mapping classes. This way, we can generate the affine Yangian by taking a triangle of lines and letting one of them take values in the algebra, the others in the vector representation.
 
 Meeting 21.05.24: Try to work at the classical level to uncover the classical affine Yangian by taking the Poisson structure from \cite{article:arutyunov:1998} and commuting the current $J$ with the $T$-matrix. Look at the $r$-matrix structure and quantize.
 
@@ -327,13 +303,18 @@ or
 \end{align*}
 Let us now introduce the crossing matrices
 \begin{equation*}
-X(q): \C^\ell[y] \otimes \C^\ell[X^{\pm 1}] \to \C^\ell[y] \otimes \C^\ell[X^{\pm 1}].
+Q(z,q) \in \End(\C^\ell[X^{\pm 1}] \otimes \C^\ell[y])
 \end{equation*}
-The two types of Wilson/'t Hooft-mixed YBEs tell us that
+The two types of 3rd Reidemeister moves involving both Wilson and 't Hooft lines tell us that $Q$ gives rise to representations of $Y(\mathfrak{gl}_\ell)$ and $\dot{\mathfrak{gl}}_\ell$ on $\C[X^{\pm 1}]$ and $\C[y]$, respectively:
 \begin{equation*}
-R_{12} X_{13}(q) X_{23}(q) = X_{23}(q) X_{13}(q) R_{12}, \quad
-[X_{31}(p),X_{32}(q)] = \delta(p/q)[P,X_{32}(q)]
+R_{12}(z-w) Q_{13}(z,q) Q_{23}(w,q) = Q_{23}(w,q) Q_{13}(z,q) R_{12}(z-w), \quad
+[Q_{31}(z,p),Q_{32}(z,q)] = \delta(p/q)[P,Q_{32}(q)]
 \end{equation*}
+We already know that such representations may be constructed via Schur-Weyl duality with $T(z) \mapsto z-d-\eta P$ and $J(q) \mapsto \delta(q/D) P$, where $d$ and $D$ are the Dunkl and Macdonald operators. Hence I propose
+\begin{equation*}
+Q(z,q) := \delta(q/D) (z-d-\eta P) \text{ or } Q(z,q) := \delta(q/X) (z-y-\eta P),
+\end{equation*}
+where $D$ acts on $\C[y]$ and $d$ acts on $\C[X^{\pm 1}]$. This is well-defined since $D^{\pm 1}$ acts nilpotently. This then generates the relations between $T$ and $J$ in a $T_1(z) Q_{12}(z,q) J_2(q) = J_2(q) Q_{12}(z,q) T_1(z)$ type relation.
 
 \pagebreak
 
