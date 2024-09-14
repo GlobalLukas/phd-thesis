@@ -2383,6 +2383,36 @@ giving
 &= \mathbf{S}_b(w) R_{ba}(w-z+\gamma\hbar) \mathbf{S}_a(z) R_{ab}(z-w).
 \end{align*}
 
+\subsection{Central extension of double Yangian}
+
+The centrally extended double Yangian $DY^c(\mathfrak{gl}_\ell)$ with central element $c$ can be presented as
+\begin{align*}
+R_{ab}(z-w) T_a^+(z) T_b^+(w) &= T_b^+(w) T_a^+(z) R_{ab}(z-w) \\
+T_a^+(z) R_{ab}(z-w+\tfrac{c\hbar}{2}) T_b^-(w) &= T_b^-(w) R_{ab}(z-w-\tfrac{c\hbar}{2}) T_a^+(z) \\
+T_a^-(z) T_b^-(w) R_{ab}(z-w) &= R_{ab}(z-w) T_b^-(w) T_a^-(z).
+\end{align*}
+together with the degree $-1$ derivation $d = \frac{\partial}{\partial z}$. For this, see Iohara's paper. Koroshkin takes a slightly different approach. An important element is $C := e^{\hbar c \otimes d}$. The basic representations for $\ell=2$ with central charge one is constructed from a Heisenberg algebra $\mathcal{H}$
+\begin{equation*}
+[a_n,a_m] = n \delta_{n+m}, [p,a_0] = 2.
+\end{equation*}
+Then you can introduce $a_+(z) := \sum_{n \geq 1} \frac{a_n}{n} z^{-n}-p\log z$ and $a_-(z) = \sum_{n \geq 1} \frac{a_{-n}}{n} z^n + \frac{a_0}{2}$ as well as $\phi_\pm(z) := e^{a_\pm(z)}$ and construct from this a homomorphism $DY^c(\mathfrak{gl}_2) \to \mathcal{H}$. The Heisenberg algebra, in turn, acts in the obvious way on the extended Fock space
+\begin{equation*}
+V_i := \C[a_{-1},a_{-2},...] \otimes \bigoplus_{n \in \Z + \frac{i}{2}} \C e^{na_0}, \quad i=0,1.
+\end{equation*}
+Together with the evaluation module $V_z := \C^\ell[z^{\pm 1}]$, there are also intertwiners
+\begin{align*}
+\Phi_i(z): V_i \to V_{1-i} \otimes V_z, \quad \Psi_i(z): V_i \to V_z \otimes V_{1-i}
+\end{align*}
+and their adjoints $\Phi_i^*,\Psi_i^*$, or with a specialized vector $v_\pm$ in $V_z$ one has $\Phi_{i,\pm}$ and so on. These satisfy commutation relations using an $R$-matrix similar to the $U,T$-matrices on the quantum cotangent bundle, but for $\mathfrak{gl}_\ell$. Koroshkin defines
+\begin{align*}
+\mathcal{L}^-(z) := \mathcal{R} e^{-\hbar c \otimes d}, \quad \mathcal{L}^+ := \exp(\hbar d \otimes c) \mathcal{R}_{21}^{-1}
+\end{align*}
+and one can also find
+\begin{equation*}
+L_{\alpha\beta}^+(z) = \sqrt{\frac{2\hbar}{\pi}} \Phi_\alpha(z-\hbar) \Psi_\beta^*(z), \quad L_{\alpha\beta}^-(z) := \sqrt{\frac{2\hbar}{\pi}} \Psi_\beta^*(z) \Phi_\alpha(z).
+\end{equation*}
+This all has $c=1$ though. However, it gives a factorization of the $L$-operators in the way we were looking for. This would mean that the spin vector variables can be identified with the the intertwining vectors of $DY^c(\mathfrak{gl}_\ell)$! To obtain the model we want with $\gamma=1$, we probably have to look at $V_0 \otimes V_{q_1} \otimes \cdots \otimes V_{q_N}$, which has central charge 1.
+
 \pagebreak
 
 \chapter*{Notation}\label{chapter:notation}
