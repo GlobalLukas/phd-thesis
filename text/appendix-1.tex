@@ -1,0 +1,94 @@
+% !TEX root = ../main.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = pdflatexmk
+% !TEX spellcheck = en-US
+% !BIB program = biber
+
+\chapter{Elliptic functions}\label{app:ellipticFuncs}
+
+Throughout this thesis, we consider the elliptic curve $E_\tau = \C/(\Z + \tau \Z)$ for some complex number $\tau$ with $\operatorname{Im} \tau > 0$.
+
+\begin{definition}
+\begin{enumerate}[label=(\roman*)]
+	\item The \emph{first Jacobi theta function} of $E_\tau$ is defined by
+	\begin{equation}
+		\theta_1(z;e^{\I\pi\tau}) \coloneq -\I \sum_{n \in \Z} (-1)^n e^{\I\pi(n+1/2)^2\tau} e^{\I(2n+1)z}.
+	\end{equation}
+	\item The \emph{(normalized) odd Jacobi theta function} of $E_\tau$ is defined by
+	\begin{equation}\label{eq:oddTheta}
+	    \theta(z) \coloneq \frac{\theta_1(\pi z,e^{\I \pi \tau})}{\pi \theta_1'(0,e^{\I \pi \tau})}.
+	\end{equation}
+	\item We denote the logarithmic derivative of $\theta(z)$ by
+	\begin{equation}
+    	E_1(z) \coloneq \frac{\theta'(z)}{\theta(z)}.
+	\end{equation}
+	At $z=0$, $E_1(z)$ has a pole of residue one. Taking the regular part, we set $E_1(0) \coloneq 0$.
+	\item The \emph{Weierstraß $\wp$-function} is
+	\begin{equation}
+		\wp(z) \coloneq E_1(z)^2 - \frac{\theta''(z)}{\theta(z)} + \frac{\theta'''(0)}{3}.
+	\end{equation}
+	It has a double pole at $z=0$ with coefficient one.
+	\item The \emph{infinite $p$-Pochhammer symbel} is defined by
+	\begin{equation}
+		(x;p)_\infty \coloneq \prod_{n=0}^\infty (1-p^n x).
+	\end{equation}
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}
+	\begin{enumerate}[label=(\roman*)]
+		\item The odd Jacobi theta function $\theta(z)$ satisfies the quasi-periodicity
+		\begin{equation}
+		    \theta(z+1) = -\theta(z), \quad \theta(z+\tau) = -e^{-\I\pi \tau - 2\pi \I z} \theta(z),
+		\end{equation}
+		and is normalized such that $\theta'(0) = 1$.
+		\item Letting $x \coloneq e^{2\pi\I z}$ and $p=e^{2\pi\I\tau}$, we have
+		\begin{equation}
+			\theta(z) = \frac{x^{1/2}-x^{-1/2}}{2\pi\I} \prod_{n=1}^\infty \frac{(1-p^n x) (1-p^n x^{-1})}{(1-p^n)^2} = -\frac{x^{-1/2}}{2\pi\I (p;p)_\infty^2} (x;p)_\infty (px^{-1};p)_\infty,
+		\end{equation}
+		\item In the limit $\tau \to \I\infty$, \emph{i.e.} $p \to 0$, we have $\theta(z) \to \frac{1}{\pi} \sin(\pi z)$ and $E_1(z) \to \pi \cot(\pi z)$.
+		\item The logarithmic derivative $E_1(z)$ satisfies the quasi-periodicity
+		\begin{equation}
+			E_1(z+1) = E_1(z), \qquad E_1(z+\tau) = E_1(z) - 2\pi\I.
+		\end{equation}
+		\item The Weierstraß $\wp$-function is doubly periodic:
+		\begin{equation}
+			\wp(z+1) = \wp(z), \qquad \wp(z+\tau) = \wp(z).
+		\end{equation}
+	\end{enumerate}
+\end{lemma}
+
+\begin{definition}
+	The \emph{Kronecker elliptic function} is defined by
+	\begin{equation}\label{eq:kronecker}
+    	\Phi(z,u) \coloneq \frac{\theta(z+u)}{\theta(z) \theta(u)}.
+	\end{equation}
+	At $z=0$ or $u=0$, we define the Kronecker elliptic function by its regular part:
+	\begin{equation}
+		\Phi(z,0) \coloneq E_1(z), \qquad \Phi(0,u) \coloneq E_1(u), \qquad \Phi(0,0) \coloneq 0.
+	\end{equation}
+\end{definition}
+
+\begin{lemma}
+	The Kronecker elliptic function satisfies the following properties:
+	\begin{enumerate}[label=(\roman*)]
+		\item $\Phi(z,u) = \Phi(u,z)$.
+		\item $\Phi(z,u)$ is quasi-periodic:
+		\begin{equation}
+    		\Phi(z+1,u) = \Phi(z,u), \qquad \Phi(z+\tau,u) = e^{-2\pi\I u} \Phi(z,u).
+		\end{equation}
+    	\item $\Phi(z,u) = \frac{1}{z} + E_1(u) + O(z)$.
+    	\item $\Phi(z,u)$ satisfies the \emph{Fay identity}:
+    	\begin{equation}
+			\Phi(z,x) \Phi(w,y) = \Phi(z,x-y) \Phi(z+w,y) + \Phi(w,y-x) \Phi(z+w,x),
+		\end{equation}
+		which in the limit $z \to w$ becomes
+		\begin{equation}
+			\Phi(z,x) \Phi(z,y) = \Phi(z,x+y)(\Phi(z,0) + \Phi(x,0) + \Phi(y,0) - \Phi(z+x+y,0)).
+		\end{equation}
+		\item In the limit $\tau \to \I \infty$, we have
+		\begin{equation}
+			\Phi(z,u) \to \pi \cot(\pi z) + \pi \cot(\pi u).
+		\end{equation}
+	\end{enumerate}
+\end{lemma}

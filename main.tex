@@ -1,0 +1,231 @@
+% !TEX root = main.tex
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = pdflatexmk
+% !TEX spellcheck = en-US
+% !BIB program = biber
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% UHH LT THESIS TEMPLATE based on the OXFORD THESIS TEMPLATE
+
+%%%%% CHOOSE PAGE LAYOUT
+%%%%% Note:use options
+%%%%%     bsc for a Bachelor's thesis, 
+%%%%%     msc for a Master's thesis, 
+%%%%%     phd for a PhD thesis, or dissertation
+%%%%%     debugbibkeys in order to print the bibliographic biblatex keys next to the reference 
+% two-sided binding:
+% \documentclass[a4paper,twoside, phd]{conf/uhhltthesis}
+% one-sided binding:
+% \documentclass[a4paper, phd]{conf/uhhltthesis}
+% PDF output (ie equal margins, no extra blank pages, for online publication with debug options):
+% \documentclass[hidelinks, a4paper, nobind, phd, debugbibkeys]{conf/uhhltthesis}
+% PDF output (ie equal margins, no extra blank pages, for online publication):
+\documentclass[hidelinks, a4paper, nobind, phd]{conf/uhhltthesis}
+
+% Your full degree name.  (But remember that DPhils aren't "in" anything.  They're just DPhils.)
+% \degree{Doctor Philosophiae (Ph.D.)} % use with option phd
+% \degree{Doctor of Philosophy (DPhil)} % use with option phd
+\degree{Doctor rerum naturalium (Dr.\ rer.\ nat.)} % use with option phd
+% \degree{Master of Science (M.\ Sc.)} % use with option msc
+% \degree{Bachelor of Science (B.\ Sc.)} % use with option bsc
+% \degree{Bachelor of Arts (B.A.)} % use with option bsc
+% \degree{Superhero} % use if none of the options {bsc,msc,phd} are specified
+
+% declaration of academic honesty
+\affidavit{\input{./text/affidavit}}
+
+% useful shorthands
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\id}{\textnormal{id}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\I}{\mathrm{i}}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\todomargin}[1]{\marginpar{\tiny \textcolor{red}{#1}}}
+
+% theorem defs
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{remark}\newtheorem{example}[theorem]{Example}
+
+% outsource configurations
+\input{conf/thesisconf}
+
+\usepackage{float}
+\usepackage{stmaryrd}
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=-1mm}
+
+\makeindex
+
+%%%%% THE ACTUAL DOCUMENT STARTS HERE
+\begin{document}
+
+%%%%% CHOOSE YOUR LINE SPACING HERE
+% Zeilenabstand Einstellung
+%\setlength{\textbaselineskip}{22pt plus2pt}
+% This is closer spacing (about 1.5-spaced) that you might prefer for your personal copies:
+%\setlength{\textbaselineskip}{18pt plus2pt minus1pt}
+\setlength{\textbaselineskip}{\baselineskip}
+
+% You can set the spacing here for the roman-numbered pages (acknowledgements, table of contents, etc.)
+%\setlength{\frontmatterbaselineskip}{17pt plus1pt minus1pt}
+\setlength{\frontmatterbaselineskip}{\baselineskip}
+
+% Leave this line alone; it gets things started for the real document.
+\setlength{\baselineskip}{\textbaselineskip}
+
+
+%%%%% CHOOSE YOUR SECTION NUMBERING DEPTH HERE
+% 0 = chapter; 1 = section; 2 = subsection; 3 = subsubsection, 4 = paragraph...
+% The level that gets a number:
+\setcounter{secnumdepth}{2}
+% The level that shows up in the ToC:
+\setcounter{tocdepth}{2}
+
+%%%%% ABSTRACT SEPARATE - an abstract that is separate from the thesis
+%\begin{abstractseparate}
+%	\input{text/abstract} % Create an abstract.tex file in the 'text' folder for your abstract.
+%\end{abstractseparate}
+
+% Pages are roman numbered from here, though page numbers are invisible until ToC
+\begin{romanpages}
+
+% Title page is created here (includes affidavit)
+\maketitle
+
+%%%%% DEDICATION -- If you'd like, un-comment the following.
+\begin{dedication}
+	To my family
+	
+	\includegraphics[scale=0.04]{bo_xezanakam}
+\end{dedication}
+
+%%%%% ACKNOWLEDGEMENTS -- If you'd like, un-comment the following.
+\begin{acknowledgements}
+  \input{text/acknowledgements}
+\end{acknowledgements}
+
+%%%%% THEMED QUOTE -- If you'd like one, un-comment the following.
+%\begin{themedquote}{Johann Wolfgang von Goethe, 1829}
+%  Alles Gescheite ist schon gedacht worden.\\
+%Man muss nur versuchen, es noch einmal zu denken. \\[\baselineskip]
+%
+%All intelligent thoughts have already been thought;\\
+%what is necessary is only to try to think them again.
+%\end{themedquote}
+
+%%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
+\begin{abstract}
+  \kant[1-3]
+\end{abstract}
+
+%%%%% ABSTRACT IN GERMAN
+\begin{germanabstract}
+  \lipsum[1-3]
+\end{germanabstract}
+
+%%%%% MINI TABLES for each chapter
+\dominitoc % include a mini table of contents
+%\dominilof  % include a mini list of figures
+%\dominilot  % include a mini list of tables
+
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+% This is where the whole-document ToC appears:
+{%
+  \setcounter{page}{0}%
+  %
+  \hypersetup{%
+	  linkcolor=black%
+  }%
+  \tableofcontents%
+}%
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+% Uncomment to generate a LIST OF THESIS PUBLICATIONS:
+\begin{listofpublications}
+  \input{text/list-of-publications}
+  \mtcaddchapter % \mtcaddchapter is needed when adding a non-chapter (but chapter-like) entity to avoid confusing minitoc
+\end{listofpublications}
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+% Uncomment to generate a list of figures:
+{%
+  \hypersetup{%
+	  linkcolor=black%
+  }%
+  \listoffigures
+  \mtcaddchapter % \mtcaddchapter is needed when adding a non-chapter (but chapter-like) entity to avoid confusing minitoc
+}%
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+% Uncomment to generate a list of tables:
+{%
+  \hypersetup{%
+	  linkcolor=black%
+  }%
+  \listoftables%
+  \mtcaddchapter
+}%
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+%%%%% LIST OF ABBREVIATIONS, uncomment if you want one 
+\input{text/abbreviations}
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+% end roman page numbering
+\end{romanpages}
+
+% This aligns the bottom of the text of each page.  It generally makes things look better.
+\flushbottom
+
+%%%%% CHAPTERS
+\input{text/ch-1}
+\input{text/ch-2}
+\input{text/ch-3}
+\input{text/ch-4}
+\input{text/ch-5}
+
+%% APPENDICES %%
+% Starts lettered appendices, adds a heading in table of contents, and adds a
+%    page that just says "Appendices" to signal the end of your main text.
+\startappendices
+% Add or remove any appendices you'd like here:
+\input{text/appendix-1}
+
+%%%%% REFERENCES
+% JEM: Quote for the top of references (just like a chapter quote if you're using them).  Comment to skip.
+%\begin{savequote}[8cm]
+%The first kind of intellectual and artistic personality belongs to the hedgehogs, the second to the foxes \dots
+%  \qauthor{--- Sir Isaiah Berlin (2013)}
+%\end{savequote}
+% use single-space References
+\setlength{\baselineskip}{0pt}
+{%
+	\renewcommand*\MakeUppercase[1]{#1}%
+	%\nocite{*}
+	\printbibliography[heading=bibintoc,title={\bibtitle}]
+}%
+
+%%%%% INDEX
+\printindex
+
+\end{document}
