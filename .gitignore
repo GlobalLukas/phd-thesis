@@ -1,0 +1,4 @@
+# latexmk intermediate output directory (set via $aux_dir in latexmkrc)
+.aux/
+# stray bibliography logs written next to main.tex
+main.blg
