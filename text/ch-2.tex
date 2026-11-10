@@ -18,7 +18,7 @@
 
 \section{Supersymmetric gauge theory}\label{sec:susy}
 
-\subsection{Vector and hypermultiplets}
+\subsection{Vector multiplets and hypermultiplets}
 
 What was missing from the discussion of supersymmetric field theories in the introduction was a detailed description of the field content of supersymmetric field theories with eight supercharges, specifically the representation theory of the super Poincaré algebras in 3d, 4d, and 5d, which are the symmetries of the super Minkowski spacetimes $\R^{1,2|8}$, $\R^{1,3|8}$, and $\R^{1,4|8}$.
 
@@ -146,10 +146,10 @@ Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret a
 
 \begin{definition}
 	\begin{enumerate}[label=(\roman*)]
-		\item A Lie group action $G \times M \to M$ of a Poisson--Lie group $(G,\{-,-\}_G)$ on a Poisson manifold $(M,\pi_M)$ is a \emph{Poisson--Lie action} if it is a map of Poisson manifolds.
+		\item A Lie group action $G \times M \to M$ of a Poisson--Lie group $(G,\{-,-\}_G)$ on a Poisson manifold $(M,\{-,-\}_M)$ is a \emph{Poisson--Lie action} if it is a map of Poisson manifolds.
 		\item A Poisson--Lie action with infinitesimal action $\rho \colon \mathfrak{g} \to \Gamma(TM)$ is called \emph{Hamiltonian} if there exists a \emph{momentum map} $\mathcal{M} \colon M \to G^*$ satisfying
 		\begin{equation}\label{eq:momentumMap}
-			\langle \pi_M(\mathcal{M},f) \star \mathcal{M}^{-1}, \xi \rangle = \rho(\xi), \qquad f \in C^\infty(M), \, \xi \in \mathfrak{g}.
+			\langle \{\mathcal{M},f\}_M \star \mathcal{M}^{-1}, \xi \rangle = \rho(\xi), \qquad f \in C^\infty(M), \, \xi \in \mathfrak{g}.
 		\end{equation}
 		Importantly, this definition makes use of the modified product $-\star-$ in the dual Poisson--Lie group $G^*$.
 		\item Given any symplectic leaf $C$ of the dual Poisson--Lie group $G^*$, the Poisson reduction of a Hamiltonian Poisson--Lie action with momentum map $\mathcal{M} \colon M \to G^*$ is defined to be
@@ -161,9 +161,9 @@ Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret a
 
 \begin{example}\label{ex:PoissonRed}
 	\begin{enumerate}[label=(\roman*)]
-		\item \label{ex:HamRed}A Hamiltonian Poisson--Lie action $G \times M \to M$ on a Poisson manifold $(M,\pi_M)$ where $G$ is endowed with the trivial Poisson bracket $\{-,-\}_G = 0$ has a momentum map which can be written as $\mathcal{M} = \exp(\mu)$ for a map $\mu\colon M \to \mathfrak{g}^*$. The momentum map condition \eqref{eq:momentumMap} then becomes
+		\item \label{ex:HamRed}A Hamiltonian Poisson--Lie action $G \times M \to M$ on a Poisson manifold $(M,\{-,-\}_M)$ where $G$ is endowed with the trivial Poisson bracket $\{-,-\}_G = 0$ has a momentum map which can be written as $\mathcal{M} = \exp(\mu)$ for a map $\mu\colon M \to \mathfrak{g}^*$. The momentum map condition \eqref{eq:momentumMap} then becomes
 		\begin{equation}
-			\langle \pi_M(\mu,f), \xi \rangle = \rho(\xi).
+			\langle \{\mu,f\}_M, \xi \rangle = \rho(\xi).
 		\end{equation}
 		In this case, symplectic leaves of $G^*$ correspond to coadjoint orbits $\mathcal{O}$ of $\mathfrak{g}^*$ and the Poisson reduction reduces to ordinary Hamiltonian reduction
 		\begin{equation}

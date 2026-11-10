@@ -100,29 +100,29 @@ The important new ingredient present in $\mathcal{N}=2$ super Yang--Mills theory
 \begin{equation}
 	[\phi_1(x),\phi_2(x)] = 0,
 \end{equation}
-so that the expectation values $\langle \varphi \rangle$ can be taken to lie in the diagonal Cartan subalgebra of $\mathfrak{su}(N)_\C$, whose components $a^i$ (modulo the Weyl group $S_N$) coordinatize the moduli space of Coulomb vacua, the \emph{Coulomb branch} $\mathcal{B}$, as a complex variety. Expanding the field $\varphi$ in the action functional \eqref{eq:prepotentialAction} around the point $\langle \varphi \rangle$, one can see that all off-diagonal components of the $\mathfrak{su}(N)$-valued fields acquire a non-zero mass proportional to $a^i-a^j$. At low energy scales, we may integrate over all massive modes so that only the massless fields survive in the effective theory. It follows that all fields are diagonal in the resulting \emph{effective theory}, which is characterized by the values of the gauge invariant expectation values $u = (u_2,\dots,u_N)$ with $u_k = \langle \Tr \phi^k \rangle = \sum_{i=1}^N a_i^k$. This simplifies the effective description enormously.
+so that the expectation values $\langle \varphi \rangle$ can be taken to lie in the diagonal Cartan subalgebra of $\mathfrak{su}(N)_\C$, whose components $a^i$ (modulo the Weyl group $S_N$) coordinatize the moduli space of Coulomb vacua, the \emph{Coulomb branch} $\mathfrak{B}$, as a complex variety. Expanding the field $\varphi$ in the action functional \eqref{eq:prepotentialAction} around the point $\langle \varphi \rangle$, one can see that all off-diagonal components of the $\mathfrak{su}(N)$-valued fields acquire a non-zero mass proportional to $a^i-a^j$. At low energy scales, we may integrate over all massive modes so that only the massless fields survive in the effective theory. It follows that all fields are diagonal in the resulting \emph{effective theory}, which is characterized by the values of the gauge invariant expectation values $u = (u_2,\dots,u_N)$ with $u_k = \langle \Tr \phi^k \rangle = \sum_{i=1}^N a_i^k$. This simplifies the effective description enormously.
 
 Crucially, supersymmetry tells us that the actional functional of the effective theory must still be of the form \eqref{eq:prepotentialAction}, albeit with a possibly different prepotential $\mathcal{F}$. Expanding the prepotential to quadratic order, the effective coupling matrix has components
 \begin{equation}
 	\tau_{ij} = \frac{\partial^2 \mathcal{F}}{\partial a^i \partial a^j}
 \end{equation}
-and $\operatorname{Im} \tau$ must be positive definite to ensure that the effective theory is unitary. This equips the Coulomb branch $\mathcal{B}$ with a special Kähler structure where the Kähler metric is given by
+and $\operatorname{Im} \tau$ must be positive definite to ensure that the effective theory is unitary. This equips the Coulomb branch $\mathfrak{B}$ with a special Kähler structure where the Kähler metric is given by
 \begin{equation}
 	(ds)^2 = (\operatorname{Im} \tau)_{ij} da^i d\bar a^j.
 \end{equation}
-The effective theory can thus be written as a four-dimensional non-linear sigma model on $\R^{1,3}$ whose target space is the Coulomb branch $\mathcal{B}$ with this Kähler metric.
+The effective theory can thus be written as a four-dimensional non-linear sigma model on $\R^{1,3}$ whose target space is the Coulomb branch $\mathfrak{B}$ with this Kähler metric.
 
 Arguably, the main motivation of Seiberg and Witten to do this construction was that it allows to show the existence of a confining phase in a mass deformation of the theory. Indeed, one can use the algebraic relations of the $\mathcal{N}=2$ super Poincaré algebra to show that the mass of particles of electric charge $n$ and magnetic charge $m$ must satisfy the BPS bound \cite{witten_supersymmetry_1978}
 \begin{equation}
 	M \geq \sqrt{2} |n \cdot a + m \cdot a_D|, \qquad a_D \coloneq \frac{\partial \mathcal{F}}{\partial a}.
 \end{equation}
-Particles that saturate this bound are called \emph{BPS particles}. Usually, BPS particles of non-zero charge are heavy and thus do not contribute to the dynamics of the effective theory at low energy scales. However, it can happen at particular points of the Coulomb branch $\mathcal{B}$ that $a \to 0$ or $a_D \to 0$. In this case, certain BPS particles become light and cannot be integrated out of the effective theory. Turning on a non-zero mass for the coordinate $u_2$ (breaking supersymmetry to $\mathcal{N}=1$) to drive the theory towards the points $a \to 0$ or $a_D \to 0$ also drives the light BPS particle to a non-zero expectation value---it \emph{condenses}. If this BPS particle is a magnetic monopole (carrying no electric charge), the monopole condensate increases the energy of electric flux times area. The electric flux therefore gets squeezed into tubes with a small cross section which have a \emph{string tension}, energetically favoring shorter flux tubes. It follows that sources of (color-)electric charge connected by electric flux tubes are strongly attracted and bind into (color-)neutral configurations, \emph{i.e.\ }become \emph{confined}.
+Particles that saturate this bound are called \emph{BPS particles}. Usually, BPS particles of non-zero charge are heavy and thus do not contribute to the dynamics of the effective theory at low energy scales. However, it can happen at particular points of the Coulomb branch $\mathfrak{B}$ that $a \to 0$ or $a_D \to 0$. In this case, certain BPS particles become light and cannot be integrated out of the effective theory. Turning on a non-zero mass for the coordinate $u_2$ (breaking supersymmetry to $\mathcal{N}=1$) to drive the theory towards the points $a \to 0$ or $a_D \to 0$ also drives the light BPS particle to a non-zero expectation value---it \emph{condenses}. If this BPS particle is a magnetic monopole (carrying no electric charge), the monopole condensate increases the energy of electric flux times area. The electric flux therefore gets squeezed into tubes with a small cross section which have a \emph{string tension}, energetically favoring shorter flux tubes. It follows that sources of (color-)electric charge connected by electric flux tubes are strongly attracted and bind into (color-)neutral configurations, \emph{i.e.\ }become \emph{confined}.
 
 In order for the description of the light BPS monopoles to be valid perturbatively, we need the magnetic interactions to be weak. It thus becomes necessary to study the behavior of the coupling matrix $\tau$ more closely. Importantly, $\tau$ defines a local system of lattices $\Gamma$, where the lattice over a point $u$ is given by
 \begin{equation}
 	\Gamma_u \coloneq \Z^{N-1} + \tau(u) \Z^{N-1}.
 \end{equation}
-This, in turn, defines a torus fibration $\mathfrak{M} \coloneq T^*\mathcal{B}/\Gamma \to \mathcal{B}$ over the Coulomb branch $\mathcal{B}$, which comes with the canonical holomorphic symplectic form of the cotangent bundle. \emph{The punchline is that the coordinates $u$ form a Poisson-commutative family turning the torus fibration $\mathfrak{M}$ into the phase space of an algebraic integrable system in the sense of the Liouville theorem.} Specifically, it turns out that $a^i$ and their canonical conjugates are the action and angle variables of the periodic Toda chain (in the center-of-mass frame), whose Hamiltonian may be written as
+This, in turn, defines a torus fibration $\mathfrak{M} \coloneq T^*\mathfrak{B}/\Gamma \to \mathfrak{B}$ over the Coulomb branch $\mathfrak{B}$, which comes with the canonical holomorphic symplectic form of the cotangent bundle. \emph{The punchline is that the coordinates $u$ form a Poisson-commutative family turning the torus fibration $\mathfrak{M}$ into the phase space of an algebraic integrable system in the sense of the Liouville theorem.} Specifically, it turns out that $a^i$ and their canonical conjugates are the action and angle variables of the periodic Toda chain (in the center-of-mass frame), whose Hamiltonian may be written as
 \begin{equation}
 	u_2 = H_\text{Toda} = \frac{1}{2} \sum_{i=1}^{N} p_i^2 + \Lambda^2 \sum_{i=1}^{N} e^{x_i - x_{i+1}},
 \end{equation}
@@ -132,9 +132,9 @@ where $x_i$ are particle coordinates, $p_i$ the canonical momenta, and $i$ is ta
 \end{equation}
 at which $u_2 = \Lambda^2 e^{2\pi\I\,k/N}$. Since these points are stationary, the Liouville torus at these energy levels (the fiber sitting over a point $u$) must degenerate in the direction of the flow. The modulus $\tau$ of the torus therefore blows up in this direction, making the effective theory of the corresponding light BPS particle weakly coupled.
 
-A very general family of 4d $\mathcal{N}=2$ gauge theories (referred to as class $\mathcal{S}$ theories) can be constructed by compactifying the 6d $\mathcal{N}=(2,0)$ superconformal field theory of type $A_{N-1}$ on a punctured Riemann surface $C$. In this case, \cite{gaiotto_wall-crossing_2011} showed that the analogous torus fibration $\mathfrak{M} \to \mathcal{B}$ should be identified with the \emph{Hitchin fibration}, whose total space $\mathfrak{M}$ is the moduli space of Higgs bundles and whose base $\mathcal{B}$ (the Coulomb branch of the theory on $\R^{1,3}$) is given by the Hitchin base
+A very general family of 4d $\mathcal{N}=2$ gauge theories (referred to as class $\mathcal{S}$ theories) can be constructed by compactifying the 6d $\mathcal{N}=(2,0)$ superconformal field theory of type $A_{N-1}$ on a punctured Riemann surface $C$. In this case, \cite{gaiotto_wall-crossing_2011} showed that the analogous torus fibration $\mathfrak{M} \to \mathfrak{B}$ should be identified with the \emph{Hitchin fibration}, whose total space $\mathfrak{M}$ is the moduli space of Higgs bundles and whose base $\mathfrak{B}$ (the Coulomb branch of the theory on $\R^{1,3}$) is given by the Hitchin base
 \begin{equation}
-	\mathcal{B} = \bigoplus_{k=2}^N H^0(C,K_C^{\otimes k}),
+	\mathfrak{B} = \bigoplus_{k=2}^N H^0(C,K_C^{\otimes k}),
 \end{equation}
 where $K_C$ is the canonical bundle of $C$. The corresponding integrable model is the \emph{Hitchin system} associated to the punctured Riemann surface $C$.
 
@@ -150,7 +150,7 @@ Therefore, the gauge invariant combination of $\phi_3$ and $\sigma$ is the monop
 \begin{equation}\label{eq:monoOp}
 	v \coloneq e^{\frac{2\pi\I}{\tau} (\tau \phi_3 + \sigma)}.
 \end{equation}
-The transformation law \eqref{eq:scalarTransLaw} says that the monopole operator $v$ is a complex coordinate on the torus fibers $T_u^* \mathcal{B}/\Gamma_u$. The special Kähler structure on $\mathcal{B}$ may then be extended to a hyperkähler structure on $\mathfrak{M}$ with the \emph{semiflat metric}
+The transformation law \eqref{eq:scalarTransLaw} says that the monopole operator $v$ is a complex coordinate on the torus fibers $T_u^* \mathfrak{B}/\Gamma_u$. The special Kähler structure on $\mathfrak{B}$ may then be extended to a hyperkähler structure on $\mathfrak{M}$ with the \emph{semiflat metric}
 \begin{equation}
 	(ds)^2 = R (\operatorname{Im} \tau)_{ij} da^i d\bar a^j + R^{-1} (\operatorname{Im} \tau)^{-1}_{ij} \frac{dv^i}{v^i} \frac{d\bar v^j}{\bar v^j}.
 \end{equation}
