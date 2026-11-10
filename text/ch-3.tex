@@ -158,26 +158,26 @@ Let us write $\ell^*(z) \coloneq \chi(z) (z-Q)^{-1}$ and $\ell(z) = \chi'(Q)^{-1
 \begin{equation}
 \begin{aligned}
 \mathbf{T}(z) &\coloneq T \ell^*(z) e, \quad \mathbf{T}^{-1}(z) \coloneq e^t \ell(z) T^{-1}, \\
-U(z) &\coloneq U \ell^*(z) e, \quad U^{-1}(z) \coloneq e^t \ell(z) U^{-1}, \\
-P(z) &\coloneq P \ell^*(z) e, \quad P^{-1}(z) \coloneq e^t \ell(z) P^{-1}.
+\mathbf{U}(z) &\coloneq U \ell^*(z) e, \quad \mathbf{U}^{-1}(z) \coloneq e^t \ell(z) U^{-1}, \\
+\mathbf{P}(z) &\coloneq P \ell^*(z) e, \quad \mathbf{P}^{-1}(z) \coloneq e^t \ell(z) P^{-1}.
 \end{aligned}
 \end{equation}
-Then $\mathbf{T}(z),U(z)$ and $\mathbf{T}^{-1}(z),U^{-1}(z)$ transform as vectors and covectors under $\mathrm{M}_N$, respectively, and both depend polynomially on $z$.
+Then $\mathbf{T}(z),\mathbf{U}(z)$ and $\mathbf{T}^{-1}(z),\mathbf{U}^{-1}(z)$ transform as vectors and covectors under $\mathrm{M}_N$, respectively, and both depend polynomially on $z$.
 \end{definition}
 
 \begin{remark}
-The combinations $\mathbf{T}(z),U(z),P(z)$ are invertible in the following sense:
+The combinations $\mathbf{T}(z),\mathbf{U}(z),\mathbf{P}(z)$ are invertible in the following sense:
 \begin{equation}
 \begin{aligned}
 \mathbf{T}^{-1}(z) \mathbf{T}(z') &= \delta(z,z'), \\
-U^{-1}(z) U(z') &= \delta(z,z'), \\
-P^{-1}(z) P(z') &= \delta(z,z'),
+\mathbf{U}^{-1}(z) \mathbf{U}(z') &= \delta(z,z'), \\
+\mathbf{P}^{-1}(z) \mathbf{P}(z') &= \delta(z,z'),
 \end{aligned}
 \qquad
 \begin{aligned}
 \langle \mathbf{T}(z), \mathbf{T}^{-1}(z) \rangle &= 1, \\
-\langle U(z), U^{-1}(z) \rangle &= 1, \\
-\langle P(z), P^{-1}(z) \rangle &= 1.
+\langle \mathbf{U}(z), \mathbf{U}^{-1}(z) \rangle &= 1, \\
+\langle \mathbf{P}(z), \mathbf{P}^{-1}(z) \rangle &= 1.
 \end{aligned}
 \end{equation}
 Here, the left equalities are equalities of polynomials and the right equalities are equalities of $N \times N$ matrices and we make use of the $\delta$-polynomial
@@ -192,15 +192,15 @@ The relations of $\mathcal{O}_\hbar(T^* \mathrm{GL}_N)$ may equivalently be writ
 \begin{aligned}
 \mathbf{T}_1(z_1) \mathbf{T}_2(z_2) &= \mathbf{R}_{12}^* \mathbf{T}_2(z_2) \mathbf{T}_1(z_1), \\
 \mathbf{T}_1^{-1}(z_1) \mathbf{T}_2^{-1}(z_2) &= \mathbf{R}_{12} \mathbf{T}_2^{-1}(z_2) \mathbf{T}_1^{-1}(z_1), \\
-P_1^{-1}(z_1) \mathbf{T}_2(z_2) &= \mathbf{T}_2(z_2) P_1^{-1}(z_1), \\
-P_1^{-1}(z_1) \mathbf{T}_2^{-1}(z_2) &= \mathbf{R}_{21}^* [\mathbf{T}_2^{-1}(z_2)] P_1^{-1}(z_1),
+\mathbf{P}_1^{-1}(z_1) \mathbf{T}_2(z_2) &= \mathbf{T}_2(z_2) \mathbf{P}_1^{-1}(z_1), \\
+\mathbf{P}_1^{-1}(z_1) \mathbf{T}_2^{-1}(z_2) &= \mathbf{R}_{21}^* [\mathbf{T}_2^{-1}(z_2)] \mathbf{P}_1^{-1}(z_1),
 \end{aligned}
 \qquad
 \begin{aligned}
-U_1(z_1) U_2(z_2) &= \mathbf{R}_{21}^* U_2(z_2) U_1(z_1), \\
-U_1^{-1}(z_1) U_2^{-1}(z_2) &= \mathbf{R}_{21} U_2^{-1}(z_2) U_1^{-1}(z_1), \\
-P_1^{-1}(z_1) U_2(z_2) &= U_2(z_2) P_1^{-1}(z_1), \\
-P_1^{-1}(z_1) U_2^{-1}(z_2) &= \mathbf{R}_{21}^* [U_2^{-1}(z_2)] P_1^{-1}(z_1).
+\mathbf{U}_1(z_1) \mathbf{U}_2(z_2) &= \mathbf{R}_{21}^* \mathbf{U}_2(z_2) \mathbf{U}_1(z_1), \\
+\mathbf{U}_1^{-1}(z_1) \mathbf{U}_2^{-1}(z_2) &= \mathbf{R}_{21} \mathbf{U}_2^{-1}(z_2) \mathbf{U}_1^{-1}(z_1), \\
+\mathbf{P}_1^{-1}(z_1) \mathbf{U}_2(z_2) &= \mathbf{U}_2(z_2) \mathbf{P}_1^{-1}(z_1), \\
+\mathbf{P}_1^{-1}(z_1) \mathbf{U}_2^{-1}(z_2) &= \mathbf{R}_{21}^* [\mathbf{U}_2^{-1}(z_2)] \mathbf{P}_1^{-1}(z_1).
 \end{aligned}
 \end{equation}
 \end{prop}
