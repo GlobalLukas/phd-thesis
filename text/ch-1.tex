@@ -74,11 +74,11 @@ Despite the mathematically beautiful differential-geometric formulation of quant
 
 However, not every physically relevant gauge theory has a valid perturbative description at low energy scales. In fact, \emph{quantum chromodynamics}, describing the interactions of quarks and gluons relevant in nuclear physics, has the opposite behavior: Its coupling constant becomes small at high energies---a property known as \emph{asymptotic freedom}---and large at low energies \cite{gross_ultraviolet_1973}. This invalidates perturbative methods for calculations at ordinary energy scales, requiring theoreticians to develop non-perturbative methods valid in the strong coupling regime. Everyday experience and numerical lattice simulations suggest that strongly coupled quantum chromodynamics exhibits a phenomenon known as \emph{confinement}, binding charged quarks into neutral composite configurations known as hadrons.
 
-To further explore strongly coupled phenomena in quantum field theories, a simplified testing ground is instructive. The most basic example of an asymptotically free quantum field theory is Yang--Mills theory \cite{yang_conservation_1954} with gauge group $G$, describing the dynamics of an $\operatorname{Lie} G = \mathfrak{g}$-valued gauge field $A(x)$ (think: principal connection 1-form) transforming in the vector representation $(\tfrac 12, \tfrac 12)$ of the Lorentz group with the action functional
+To further explore strongly coupled phenomena in quantum field theories, a simplified testing ground is instructive. The most basic example of an asymptotically free quantum field theory is Yang--Mills theory \cite{yang_conservation_1954} with gauge group $G_c$, describing the dynamics of an $\operatorname{Lie} G_c = \mathfrak{g}$-valued gauge field $A(x)$ (think: principal connection 1-form) transforming in the vector representation $(\tfrac 12, \tfrac 12)$ of the Lorentz group with the action functional
 \begin{equation}
-	S_\text{YM}[A] \coloneq \int_{\R^{1,3}} d^4 x \left[ {-\frac{1}{4}} \operatorname{Tr} F^{\mu\nu} F_{\mu\nu} \right], \qquad F \coloneq dA + g A \wedge A,
+	S_\text{YM}[A] \coloneq \int_{\R^{1,3}} d^4 x \left[ {-\frac{1}{4}} \Tr F^{\mu\nu} F_{\mu\nu} \right], \qquad F \coloneq dA + g A \wedge A,
 \end{equation}
-where $g$ is the coupling constant, determining the strength of non-abelian self-interaction of the gauge field. Indeed, Yang--Mills theory for $G = \mathrm{SU}(N)$ faces the same problems as quantum chromodynamics: The weak coupling approximation becomes invalid at low energies.
+where $g$ is the coupling constant, determining the strength of non-abelian self-interaction of the gauge field. Indeed, Yang--Mills theory for $G_c = \mathrm{SU}(N)$ faces the same problems as quantum chromodynamics: The weak coupling approximation becomes invalid at low energies.
 
 Surprisingly, confinement can be seen semiclassically after placing the theory on the spacetime $\R^{1,2} \times S_R^1$ with small circle radius $R$ and adding additional fields to Yang--Mills theory \cite{poppitz_continuity_2012}. Specifically, adding massless $\mathfrak{g}$-valued fields $\lambda(x),\bar \lambda(x)$ transforming in the \emph{Majorana} spinor representation of the Poincaré algebra leads to the action functional
 \begin{equation}
@@ -92,7 +92,7 @@ This extended Lie superalgebra is known as the $\mathcal{N}=1$ super Poincaré a
 
 Continuing in this direction, a revolutionary breakthrough was achieved by Seiberg, Witten, and others after further extending supersymmetry to $\mathcal{N}=2$ supersymmetric Yang--Mills theory with gauge group $\mathrm{SU}(N)$ \cite{seiberg_monopole_1994,seiberg_monopoles_1994,gorsky_integrability_1995,martinec_integrable_1996,donagi_supersymmetric_1996,dhoker_calogero-moser_1998}. This quantum field theory extends $\mathcal{N}=1$ supersymmetric Yang--Mills theory by another set of massless $\mathfrak{su}(N)$-valued Majorana spinor fields $\psi(x),\bar \psi(x)$ as well as a massless $\mathfrak{su}(N)_\C$-valued scalar field $\varphi(x) = \phi_1(x) + \I \phi_2(x)$. All of these fields may be combined into a field $\Psi(x,\theta,\bar \theta)$ on super Minkowski spacetime $\R^{1,3|8}$, which transforms in the \emph{vector multiplet representation} of the $\mathcal{N}=2$ super Poincaré algebra, capturing the spacetime symmetries of $\R^{1,3|8}$. The action functional may be conveniently packaged as an integral over one chiral half of super Minkowski spacetime
 \begin{equation}\label{eq:prepotentialAction}
-	S_{\text{SYM2}}[\Psi] \coloneq \operatorname{Im} \frac{1}{4\pi} \int_{\R^{1,3|8}} d^4 x d^4 \theta \left[ \frac{1}{4} \operatorname{Tr} \mathcal{F}(\Psi) \right],
+	S_{\text{SYM2}}[\Psi] \coloneq \operatorname{Im} \frac{1}{4\pi} \int_{\R^{1,3|8}} d^4 x d^4 \theta \left[ \frac{1}{4} \Tr \mathcal{F}(\Psi) \right],
 \end{equation}
 where the \emph{prepotential} $\mathcal{F}$ is some holomorphic function. At high energies, the theory has the prepotential $\mathcal{F}(\Psi) \coloneq \frac{\tau}{2} \Psi^2$ with $\tau = \frac{\theta}{2\pi} + \frac{4\pi\I}{g^2}$, where $g$ is the coupling constant and $\theta$ is an angular variable called the \emph{$\theta$-angle}.
 
@@ -100,7 +100,7 @@ The important new ingredient present in $\mathcal{N}=2$ super Yang--Mills theory
 \begin{equation}
 	[\phi_1(x),\phi_2(x)] = 0,
 \end{equation}
-so that the expectation values $\langle \varphi \rangle$ can be taken to lie in the diagonal Cartan subalgebra of $\mathfrak{su}(N)_\C$, whose components $a^i$ (modulo the Weyl group $S_N$) coordinatize the moduli space of Coulomb vacua, the \emph{Coulomb branch} $\mathcal{B}$, as a complex variety. Expanding the field $\varphi$ in the action functional \eqref{eq:prepotentialAction} around the point $\langle \varphi \rangle$, one can see that all off-diagonal components of the $\mathfrak{su}(N)$-valued fields acquire a non-zero mass proportional to $a^i-a^j$. At low energy scales, we may integrate over all massive modes so that only the massless fields survive in the effective theory. It follows that all fields are diagonal in the resulting \emph{effective theory}, which is characterized by the values of the gauge invariant expectation values $u = (u_2,\dots,u_N)$ with $u_k = \langle \operatorname{Tr} \phi^k \rangle = \sum_{i=1}^N a_i^k$. This simplifies the effective description enormously.
+so that the expectation values $\langle \varphi \rangle$ can be taken to lie in the diagonal Cartan subalgebra of $\mathfrak{su}(N)_\C$, whose components $a^i$ (modulo the Weyl group $S_N$) coordinatize the moduli space of Coulomb vacua, the \emph{Coulomb branch} $\mathcal{B}$, as a complex variety. Expanding the field $\varphi$ in the action functional \eqref{eq:prepotentialAction} around the point $\langle \varphi \rangle$, one can see that all off-diagonal components of the $\mathfrak{su}(N)$-valued fields acquire a non-zero mass proportional to $a^i-a^j$. At low energy scales, we may integrate over all massive modes so that only the massless fields survive in the effective theory. It follows that all fields are diagonal in the resulting \emph{effective theory}, which is characterized by the values of the gauge invariant expectation values $u = (u_2,\dots,u_N)$ with $u_k = \langle \Tr \phi^k \rangle = \sum_{i=1}^N a_i^k$. This simplifies the effective description enormously.
 
 Crucially, supersymmetry tells us that the actional functional of the effective theory must still be of the form \eqref{eq:prepotentialAction}, albeit with a possibly different prepotential $\mathcal{F}$. Expanding the prepotential to quadratic order, the effective coupling matrix has components
 \begin{equation}
@@ -122,7 +122,7 @@ In order for the description of the light BPS monopoles to be valid perturbative
 \begin{equation}
 	\Gamma_u \coloneq \Z^{N-1} + \tau(u) \Z^{N-1}.
 \end{equation}
-This, in turn, defines a torus fibration $\mathcal{M} \coloneq T^*\mathcal{B}/\Gamma \to \mathcal{B}$ over the Coulomb branch $\mathcal{B}$, which comes with the canonical holomorphic symplectic form of the cotangent bundle. \emph{The punchline is that the coordinates $u$ form a Poisson-commutative family turning the torus fibration $\mathcal{M}$ into the phase space of an algebraic integrable system in the sense of the Liouville theorem.} Specifically, it turns out that $a^i$ and their canonical conjugates are the action and angle variables of the periodic Toda chain (in the center-of-mass frame), whose Hamiltonian may be written as
+This, in turn, defines a torus fibration $\mathfrak{M} \coloneq T^*\mathcal{B}/\Gamma \to \mathcal{B}$ over the Coulomb branch $\mathcal{B}$, which comes with the canonical holomorphic symplectic form of the cotangent bundle. \emph{The punchline is that the coordinates $u$ form a Poisson-commutative family turning the torus fibration $\mathfrak{M}$ into the phase space of an algebraic integrable system in the sense of the Liouville theorem.} Specifically, it turns out that $a^i$ and their canonical conjugates are the action and angle variables of the periodic Toda chain (in the center-of-mass frame), whose Hamiltonian may be written as
 \begin{equation}
 	u_2 = H_\text{Toda} = \frac{1}{2} \sum_{i=1}^{N} p_i^2 + \Lambda^2 \sum_{i=1}^{N} e^{q_i - q_{i+1}},
 \end{equation}
@@ -132,7 +132,7 @@ where $q_i$ are particle coordinates, $p_i$ the canonical momenta, and $i$ is ta
 \end{equation}
 at which $u_2 = \Lambda^2 e^{2\pi\I\,k/N}$. Since these points are stationary, the Liouville torus at these energy levels (the fiber sitting over a point $u$) must degenerate in the direction of the flow. The modulus $\tau$ of the torus therefore blows up in this direction, making the effective theory of the corresponding light BPS particle weakly coupled.
 
-A very general family of 4d $\mathcal{N}=2$ gauge theories (referred to as class $\mathcal{S}$ theories) can be constructed by compactifying the 6d $\mathcal{N}=(2,0)$ superconformal field theory of type $A_{N-1}$ on a punctured Riemann surface $C$. In this case, \cite{gaiotto_wall-crossing_2011} showed that the analogous torus fibration $\mathcal{M} \to \mathcal{B}$ should be identified with the \emph{Hitchin fibration}, whose total space $\mathcal{M}$ is the moduli space of Higgs bundles and whose base $\mathcal{B}$ (the Coulomb branch of the theory on $\R^{1,3}$) is given by the Hitchin base
+A very general family of 4d $\mathcal{N}=2$ gauge theories (referred to as class $\mathcal{S}$ theories) can be constructed by compactifying the 6d $\mathcal{N}=(2,0)$ superconformal field theory of type $A_{N-1}$ on a punctured Riemann surface $C$. In this case, \cite{gaiotto_wall-crossing_2011} showed that the analogous torus fibration $\mathfrak{M} \to \mathcal{B}$ should be identified with the \emph{Hitchin fibration}, whose total space $\mathfrak{M}$ is the moduli space of Higgs bundles and whose base $\mathcal{B}$ (the Coulomb branch of the theory on $\R^{1,3}$) is given by the Hitchin base
 \begin{equation}
 	\mathcal{B} = \bigoplus_{k=2}^N H^0(C,K_C^{\otimes k}),
 \end{equation}
@@ -150,50 +150,50 @@ Therefore, the gauge invariant combination of $\phi_3$ and $\sigma$ is the monop
 \begin{equation}\label{eq:monoOp}
 	v \coloneq e^{\frac{2\pi\I}{\tau} (\tau \phi_3 + \sigma)}.
 \end{equation}
-The transformation law \eqref{eq:scalarTransLaw} says that the monopole operator $v$ is a complex coordinate on the torus fibers $T_u^* \mathcal{B}/\Gamma_u$. The special Kähler structure on $\mathcal{B}$ may then be extended to a hyperkähler structure on $\mathcal{M}$ with the \emph{semiflat metric}
+The transformation law \eqref{eq:scalarTransLaw} says that the monopole operator $v$ is a complex coordinate on the torus fibers $T_u^* \mathcal{B}/\Gamma_u$. The special Kähler structure on $\mathcal{B}$ may then be extended to a hyperkähler structure on $\mathfrak{M}$ with the \emph{semiflat metric}
 \begin{equation}
 	(ds)^2 = R (\operatorname{Im} \tau)_{ij} da^i d\bar a^j + R^{-1} (\operatorname{Im} \tau)^{-1}_{ij} \frac{dv^i}{v^i} \frac{d\bar v^j}{\bar v^j}.
 \end{equation}
 
-The sigma model on $\R^{1,2}$ with target space given by $\mathcal{M}$ equipped with the semiflat metric approximates the theory on $\R^{1,2} \times S_R^1$, but crucially misses the dynamics of BPS particles with worldlines wrapping around the circle. Taking these dynamics into account, the complex symplectic variety obtained from the small circle limit $R \to 0$ (which is independent of the choice of complex structure) was closely considered in \cite{bullimore_coulomb_2015} and rigorously defined by Braverman, Finkelberg, Nakajima, and others (BFN) in a seminal series of papers \cite{nakajima_towards_2016,braverman_towards_2018,braverman_coulomb_2018}. This construction generalizes to the case of general gauge groups $G$ and additional ``matter'' fields transforming in a cotangent-type representation $T^* V$ under the gauge group and in the hypermultiplet representation under the $\mathcal{N}=2$ super Poincaré algebra.
+The sigma model on $\R^{1,2}$ with target space given by $\mathfrak{M}$ equipped with the semiflat metric approximates the theory on $\R^{1,2} \times S_R^1$, but crucially misses the dynamics of BPS particles with worldlines wrapping around the circle. Taking these dynamics into account, the complex symplectic variety obtained from the small circle limit $R \to 0$ (which is independent of the choice of complex structure) was closely considered in \cite{bullimore_coulomb_2015} and rigorously defined by Braverman, Finkelberg, Nakajima, and others (BFN) in a seminal series of papers \cite{nakajima_towards_2016,braverman_towards_2018,braverman_coulomb_2018}. This construction generalizes to the case of general gauge groups $G_c$ and additional ``matter'' fields transforming in a cotangent-type representation $T^* V$ under the gauge group and in the hypermultiplet representation under the $\mathcal{N}=2$ super Poincaré algebra.
 
 Looking instead at the holomorphic symplectic form of the complex structure $J$ at finite radius $R$ (as opposed to the complex structure $I$ coming from the coordinates $u$ and their canonical conjugates), the Darboux charts form cluster charts in the sense of cluster varieties, where the Poisson bracket of the Darboux coordinates $X_\gamma$ is
 \begin{equation}
 	\{ X_\gamma, X_{\gamma'} \} = \langle \gamma,\gamma' \rangle X_{\gamma+\gamma'}.
 \end{equation}
-Following Braverman--Finkelberg--Nakajima, the resulting complex symplectic variety also has a mathematically rigorous construction for general gauge groups $G$ and hypermultiplet fields in cotangent-type representations $T^* V$, known as \emph{$K$-theoretic Coulomb branches}. Their cluster structure was conjectured in \cite{gaiotto_four-dimensional_2010,gaiotto_three_2013} and found by Schrader and Shapiro \cite{schrader_k-theoretic_2026}. Generally, $K$-theoretic Coulomb branches also furnish algebraic integrable systems. Note, however, that the complex structure $J$ is distinct from the complex structure $I$, and the case $G=\mathrm{SU}(N)$ and $V=0$ does not yield the periodic Toda chain as in the complex structure $I$, but the open relativistic Toda chain. For class $\mathcal{S}$ theories, the complex structure $J$ yields the character variety of the Riemann surface $C$, instead of the moduli space of Higgs bundles in complex structure $I$.
+Following Braverman--Finkelberg--Nakajima, the resulting complex symplectic variety also has a mathematically rigorous construction for general gauge groups $G_c$ and hypermultiplet fields in cotangent-type representations $T^* V$, known as \emph{$K$-theoretic Coulomb branches}. Their cluster structure was conjectured in \cite{gaiotto_four-dimensional_2010,gaiotto_three_2013} and found by Schrader and Shapiro \cite{schrader_k-theoretic_2026}. Generally, $K$-theoretic Coulomb branches also furnish algebraic integrable systems. Note, however, that the complex structure $J$ is distinct from the complex structure $I$, and the case $G_c=\mathrm{SU}(N)$ and $V=0$ does not yield the periodic Toda chain as in the complex structure $I$, but the open relativistic Toda chain. For class $\mathcal{S}$ theories, the complex structure $J$ yields the character variety of the Riemann surface $C$, instead of the moduli space of Higgs bundles in complex structure $I$.
 
-Following \cite{nekrasov_five_1998}, the idea of Seiberg and Witten can be repeated for five-dimension\-al gauge theories with $\mathcal{N}=1$ supersymmetry placed on $\R^{1,2} \times T^2$: The effective theory can be rewritten as a sigma model on $\R^{1,2}$ with values in the Coulomb branch $\mathcal{M}$ of the theory, which is again a hyperkähler manifold whose metric now depends on the radii $R_3$ and $R_4$ of $T^2$. The holomorphic symplectic forms of the complex structures $I$ and $J$ again define complex symplectic varieties. For example, in the case $G=\mathrm{SU}(N),V=0$, the complex structure $I$ gives rise to the periodic \emph{relativistic} Toda chain. The complex symplectic variety coming from the complex structure $J$ again fits (conjecturally) into the BFN framework for any $G$ and $V$ using equivariant elliptic cohomology. 
+Following \cite{nekrasov_five_1998}, the idea of Seiberg and Witten can be repeated for five-dimension\-al gauge theories with $\mathcal{N}=1$ supersymmetry placed on $\R^{1,2} \times T^2$: The effective theory can be rewritten as a sigma model on $\R^{1,2}$ with values in the Coulomb branch $\mathfrak{M}$ of the theory, which is again a hyperkähler manifold whose metric now depends on the radii $R_3$ and $R_4$ of $T^2$. The holomorphic symplectic forms of the complex structures $I$ and $J$ again define complex symplectic varieties. For example, in the case $G_c=\mathrm{SU}(N),V=0$, the complex structure $I$ gives rise to the periodic \emph{relativistic} Toda chain. The complex symplectic variety coming from the complex structure $J$ again fits (conjecturally) into the BFN framework for any $G_c$ and $V$ using equivariant elliptic cohomology. 
 
 To summarize, the correspondence between supersymmetric gauge theories with gauge group $\mathrm{SU}(N)$ and integrable models living on the Coulomb branch is given in table \ref{table:intSysPure} without matter, and in table \ref{table:intSysAdjoint} with adjoint matter, which is the class $\mathcal{S}$ theory for the once-punctured torus. The bottom right entries are extrapolations based on the rational--trigonometric--elliptic hierarchy of the momentum dependence and the entries of the first row may be obtained from the entries of the second row by degeneration limits.
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|l|c|c|}
 		\hline
-		$G=\mathrm{SU}(N),V=0$ & complex structure $I$ & complex structure $J$ \\
+		$G_c=\mathrm{SU}(N),V=0$ & complex structure $I$ & complex structure $J$ \\
 		\hline
 		$\mathcal{N}=4, \R^{1,2}$ & open Toda & open Toda \\
 		$\mathcal{N}=2, \R^{1,2} \times S^1$ & periodic Toda \cite{gorsky_integrability_1995,martinec_integrable_1996} & open relativistic Toda \cite{bezrukavnikov_equivariant_2026} \\
 		$\mathcal{N}=1, \R^{1,2} \times T^2$ & periodic relativistic Toda \cite{nekrasov_five_1998} & dual periodic Toda? \\ \hline
 	\end{tabular}
-	\caption[Coulomb branches without matter]{Integrable models living on the Coulomb branches of gauge theories with gauge group $G = \mathrm{SU}(N)$ without matter.\label{table:intSysPure}}
+	\caption[Coulomb branches without matter]{Integrable models living on the Coulomb branches of gauge theories with gauge group $G_c = \mathrm{SU}(N)$ without matter.\label{table:intSysPure}}
 \end{table}
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|l|c|c|}
 		\hline
-		$G=\mathrm{SU}(N),V=\mathfrak{su}(N)$ & complex structure $I$ & complex structure $J$ \\
+		$G_c=\mathrm{SU}(N),V=\mathfrak{su}(N)$ & complex structure $I$ & complex structure $J$ \\
 		\hline
 		$\mathcal{N}=4, \R^{1,2}$ & trigonometric CM & trigonometric CM \\
 		$\mathcal{N}=2, \R^{1,2} \times S^1$ & elliptic CM \cite{dhoker_calogero-moser_1998} & trigonometric RS \cite{braverman_cyclotomic_2020} \\
 		$\mathcal{N}=1, \R^{1,2} \times T^2$ & elliptic RS \cite{nekrasov_five_1998} & dual elliptic RS? \\ \hline
 \end{tabular}
-	\caption[Coulomb branches with adjoint matter]{Integrable models living on the Coulomb branches of gauge theories with gauge group $G = \mathrm{SU}(N)$ with adjoint matter.\label{table:intSysAdjoint}}
+	\caption[Coulomb branches with adjoint matter]{Integrable models living on the Coulomb branches of gauge theories with gauge group $G_c = \mathrm{SU}(N)$ with adjoint matter.\label{table:intSysAdjoint}}
 \end{table}
 
 The main results of this thesis can be understood as a natural continuation of the ideas above to the case of the \emph{necklace quiver gauge theory}. The gauge group and matter content of the necklace quiver gauge theory can be read off of the necklace quiver shown in figure \ref{fig:quiver}. For every node $\alpha \in \Z_\ell$ in the quiver (drawn as circles filled with the number $N$), we get a factor $\mathrm{U}(N)_\alpha$ in the gauge group (each associated to a $\mathfrak{u}(N)$-valued vector multiplet), and for every arrow, we get a hypermultiplet valued in the cotangent representation of the bifundamental representation $V_\alpha \otimes V_{\alpha+1}^\vee$, where $V_\alpha$ is the defining representation of $\mathrm{U}(N)_\alpha$ and $V_\alpha^\vee$ is its dual. This means
 \begin{equation}
-    G = \prod_{\alpha \in \Z_\ell} \mathrm{U}(N)_\alpha, \qquad V = \bigoplus_{\alpha \in \Z_\ell} V_\alpha \otimes V_{\alpha+1}^\vee.
+    G_c = \prod_{\alpha \in \Z_\ell} \mathrm{U}(N)_\alpha, \qquad V = \bigoplus_{\alpha \in \Z_\ell} V_\alpha \otimes V_{\alpha+1}^\vee.
 \end{equation}
 \begin{figure}[h]
     \centering
@@ -294,7 +294,7 @@ where the dynamics of the variables $f_{12},f_{21}$ are integrated out and $\eta
 
 Constructing Poisson structures in more general cases required degenerating the underlying elliptic curve, yielding the trigonometric and rational spin Ruijsenaars--Schneider models. In the rational case, where the elliptic curve degenerates to a plane, a Poisson structure was found by Hamiltonian reduction \cite{arutyunov_hamiltonian_1998}. There, it was shown that the rational spin Ruijsenaars--Schneider model of $N$ particles and $\ell$ spin states can be obtained as a Hamiltonian reduction
 \begin{equation}\label{eq:ratRSPhaseSpace}
-	(T^* \mathrm{GL}_N \times (T^* \C^N)^{\times \ell}) /\!\!/ \mathrm{GL}_N,
+	(T^* \mathrm{GL}_N \times (T^* \C^N)^{\times \ell}) \hred \mathrm{GL}_N,
 \end{equation}
 where $\mathrm{GL}_N$ acts on $\mathrm{GL}_N$ by the adjoint action and on $\C^N$ by the defining representation. Via the multiplication map on $\mathrm{GL}_N$, we can trivialize the cotangent bundle, giving an isomorphism
 \begin{equation}
@@ -308,7 +308,7 @@ Again identifying $\mathfrak{gl}_N^* \cong \mathfrak{gl}_N$, the momentum map $\
 \begin{equation}
 	\mu = x - gxg^{-1} - ac.
 \end{equation}
-The phase space \eqref{eq:ratRSPhaseSpace} of the (spinless) rational Ruijsenaars--Schneider model is obtained by imposing the momentum map equation $\mu = \eta \cdot \id$, where $\eta$ is the coupling constant, and quotienting by the action of $\mathrm{GL}_N$. The Poisson-commuting Hamiltonians of the Ruijsenaars--Schneider model are given by $H[n] = \operatorname{Tr} g^n$. In particular, the Hamiltonian $H[1]$ generates the equations of motion \eqref{eq:eoms}.
+The phase space \eqref{eq:ratRSPhaseSpace} of the (spinless) rational Ruijsenaars--Schneider model is obtained by imposing the momentum map equation $\mu = \eta \cdot \id$, where $\eta$ is the coupling constant, and quotienting by the action of $\mathrm{GL}_N$. The Poisson-commuting Hamiltonians of the Ruijsenaars--Schneider model are given by $H[n] = \Tr g^n$. In particular, the Hamiltonian $H[1]$ generates the equations of motion \eqref{eq:eoms}.
 
 Given this construction of the phase space of the rational spin Ruijsenaars--Schneider model by Hamiltonian reduction, chapter \ref{chap:spinRSRed} quantizes the model using the method of quantum Hamiltonian reduction. The main motivation for carefully quantizing the rational case was the observation that it already contained an unexplored structure that develops its full traction in the quantization. Namely, besides finding a Poisson algebra that reproduces the equations of motion \eqref{eq:eoms}, the paper \cite{arutyunov_hamiltonian_1998} also identified two important symmetry algebras inside the Poisson algebra generated by the combinations
 \begin{equation}
@@ -321,7 +321,7 @@ whose Poisson brackets are of the form
 \end{align}
 where $P = \sum_{i,j=1}^N E_{ij} \otimes E_{ji}$ is the permutation operator. Now, the important insight is that these Poisson brackets are the defining Poisson brackets of the classical limit of the Yangian $Y(\mathfrak{gl}_\ell)$ and the loop algebra $L(\mathfrak{gl}_\ell)$. More precisely, $T(z)$ and $J[n]$ generate the $N$-truncated quotients thereof, which comes from the fact that $T(z)$ and $J[n]$ are defined in terms of $N \times N$ matrices. Moreover, we find that
 \begin{equation}\label{eq:HamFromCurrent}
-	\operatorname{Tr} J[n] = \operatorname{Tr} c g^n a = \operatorname{Tr} ac g^n = \eta H[n],
+	\Tr J[n] = \Tr c g^n a = \Tr ac g^n = \eta H[n],
 \end{equation}
 where we used the momentum map equation for the last equality. The Hamiltonians of the rational spin Ruijsenaars--Schneider model therefore come from the \emph{center} of the loop algebra $L(\mathfrak{gl}_\ell)$.
 
