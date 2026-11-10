@@ -57,7 +57,7 @@ where $\kappa^{\alpha\beta}$ is the Cartan matrix of the affine Lie algebra $\wi
 \end{remark}
 
 \begin{proof}
-    When $\ell > 2$, we compute the Poisson brackets inside $\mathfrak{A}_{N,\ell}$ to be
+    When $\ell > 2$, we compute the Poisson brackets inside $\mathfrak{A}_{N,\ell}$ to be \todo{[TODO: The coefficients differ from the brackets \eqref{eq:etaleCoordsPB} ($1/z$ on the diagonal, $1/(z\mp m)$ for neighbours) versus $\kappa^{\alpha\beta}/z$ here ($2/z$ and $-1/z$). Check normalization of $u^\pm$ and of the bracket.]} 
     \begin{equation*}
         \{ u_i^{\alpha\pm},u_j^{\beta\pm} \} = \pm(1-\delta_{ij}\delta^{\alpha\beta})\kappa^{\alpha\beta} u_i^{\alpha\pm} u_j^{\beta\pm}
         \begin{cases}
@@ -401,7 +401,8 @@ For the hyperbolic case, we proceed in essentially the same way, starting with a
 \end{definition}
 
 \begin{prop}
-    There exists an injective homomorphism $\psi^K\colon \mathfrak{C}_{N,\ell}^K \to \mathfrak{A}_{N,\ell}^K/(t-1)\mathfrak{A}_{N,\ell}^K$ of Poisson algebras that sends
+    \todo{[TODO: The multiplicative $\chi^\alpha(z)$ is not defined (only $\tilde\chi^\alpha$ is).]} 
+There exists an injective homomorphism $\psi^K\colon \mathfrak{C}_{N,\ell}^K \to \mathfrak{A}_{N,\ell}^K/(t-1)\mathfrak{A}_{N,\ell}^K$ of Poisson algebras that sends
     \begin{equation}
         \psi^K\colon \quad Q_i^\alpha \mapsto Q_i^\alpha, \qquad u_i^{\alpha\pm} \mapsto \pm (P_i^\alpha)^{\pm 1} \frac{\chi^{\alpha \pm 1}(Q_i^\alpha)}{\prod_{j \neq i} ((Q_i^\alpha/Q_j^\alpha)^{1/2}-(Q_j^\alpha/Q_i^\alpha)^{1/2})} + (t-1) \mathfrak{A}_{N,\ell}^K.
     \end{equation}
@@ -663,6 +664,7 @@ The time evolution under the Hamiltonian $H \coloneq (1-t) H[1]$ reproduces the 
             ={}& (r^0 - \delta_{0<\alpha<\beta} P + \tfrac{1}{2}\delta_{0<\alpha<\beta} + \tfrac{1}{2} \delta_{0<\beta<\alpha}) a_1^\alpha a_2^\beta
         \end{aligned}
     \end{equation*}
+\todo{[TODO: The last line of this computation disagrees with the statement for $\alpha=0$: since $a^0=e$, the bracket must vanish, which the statement satisfies but this line does not (difference $(1-P)(e \otimes a^\beta)$). Replace by the expression in the statement.]} 
     where we used the identities
     \begin{equation*}
         \underline r^\alpha e_1 e_2 = 0, \qquad (\underline r^\alpha + \bar r^\alpha) e_2 = -\tfrac{1}{2} e_2, \qquad (\underline r^\alpha - \bar r_{21}^\alpha - P) e_1 = -\tfrac{1}{2} e_1.
@@ -768,7 +770,7 @@ In this section, we construct generators of the abelianized quantized $K$-theore
 \begin{equation}
     Q_i^\alpha Q_j^\beta = Q_j^\beta Q_i^\alpha, \qquad P_i^\alpha Q_j^\beta = q^{\delta_{ij} \delta^{\alpha\beta}} Q_j^\beta P_i^\alpha, \qquad P_i^\alpha P_j^\beta = P_j^\beta P_i^\alpha.
 \end{equation}
-The abelianized monopole operators of minuscule coweight/magnetic charge, which together with the exponentiated vacuum expectation values $Q_i^\alpha$ generate the abelianized quantized $K$-theoretic Coulomb branch algebra, can then be expressed in terms of the $q$-difference operators as
+The abelianized monopole operators of minuscule coweight/magnetic charge, which together with the exponentiated vacuum expectation values $Q_i^\alpha$ generate the abelianized quantized $K$-theoretic Coulomb branch algebra, can then be expressed in terms of the $q$-difference operators as \todo{[TODO: Define the multiplicative masses $\mu^\alpha$ and the parameter $t$ (presumably $t = \prod_\alpha \mu^\alpha$ from the telescoping of $\tilde L^{\text{tot}-}$), and state their relation to the masses $m_\alpha$ of figure \ref{fig:quiver} and $m^{\alpha\to\beta}$ of chapter \ref{chap:background}.]} 
 \begin{align}
     u_i^{\alpha+} &\coloneq \prod_{k=1}^N (Q_k^\alpha/Q_k^{\alpha+1})^{1/2} \frac{\prod_{k=1}^N (1-(\mu^\alpha)^{-1} Q_k^{\alpha+1}/Q_i^\alpha)}{\prod_{k(\neq i)} (1-Q_k^\alpha/Q_i^\alpha)} P_i^\alpha, \\
     u_i^{\alpha-} &\coloneq \prod_{k=1}^N (Q_k^\alpha/Q_k^{\alpha-1})^{1/2} \frac{\prod_{k=1}^N (1-\mu^{\alpha-1} Q_k^{\alpha-1}/Q_i^\alpha)}{\prod_{k(\neq i)} (1-Q_k^\alpha/Q_i^\alpha)} (P_i^\alpha)^{-1}.
@@ -795,6 +797,7 @@ we quantize this algebra. To every arrow $\alpha \to \alpha+1$ in the necklace q
     L_{ij}^{\alpha+} &\coloneq \frac{q^{1/2}}{1-(\mu^\alpha)^{-1} Q_i^{\alpha+1}/Q_j^\alpha} u_j^{\alpha+}, \label{eq:LpOp} \\
     L_{ij}^{\alpha-} &\coloneq \frac{q^{-1/2}}{\mu^\alpha Q_i^\alpha/Q_j^{\alpha+1}-1} u_j^{\alpha+1,-}. \label{eq:LmOp}
 \end{align}
+\todo{[TODO: Compare with the classical $L$-operators of section \ref{sec:hypEoms}: the quantum $L^{\alpha+}$ has the transposed index structure ($u_j^{\alpha+}$ with $Q_i^{\alpha+1}/Q_j^\alpha$); classical spin variables use $u^+$, quantum ones $L^-,u^-$; $\tilde L$ is $Q^{-1} L Q$ classically and $\mu Q L Q^{-1}$ here; and $H^-[1] = \Tr L^{\text{tot}-}$ vs.\ $(t-1)\Tr L$ built from $u^+$. Reconcile conventions.]} 
 In \cite{arutyunov_spin_2026} it was shown that 
 the Poisson brackets of the classical counterparts of these $L$-operators are quadratic in $L^{\alpha\pm}$ and can be written in terms of classical $r$-matrices. Assuming the operator ordering prescribed by equations \eqref{eq:LpOp} and \eqref{eq:LmOp}, we obtain the following commutation relations
 \begin{align}
@@ -978,7 +981,7 @@ which satisfy relations analogous to the relations for $U_q(\mathfrak{gl}_\ell)$
     E^\alpha E^\beta &= E^\beta E^\alpha, \qquad \alpha-\beta \neq 0,\pm1, \\[5pt]
     F^\alpha F^\beta &= F^\beta F^\alpha, \qquad \alpha-\beta \neq 0,\pm1,
 \end{align}
-where $K^\alpha \coloneq t^\alpha (t^{\alpha-1})^{-1}$, as well as the $q$-Serre relations
+where $K^\alpha \coloneq t^\alpha (t^{\alpha-1})^{-1}$, as well as the $q$-Serre relations \todo{[TODO: From $P_i^\alpha Q_j^\beta = q^{\delta_{ij}\delta^{\alpha\beta}} Q_j^\beta P_i^\alpha$ and the definition of $t^\beta$ one finds $E^\alpha t^\beta = q^{(\delta^{\alpha\beta}-\delta^{\alpha+1,\beta})/2} t^\beta E^\alpha$, the opposite exponent. Also $K^\alpha = t^\alpha (t^{\alpha-1})^{-1}$ is centred at node $\alpha-1$ and inverted relative to the classical $K^\alpha$. Possible fix: invert $t^\alpha$ and set $K^\alpha \coloneq (t^{\alpha+1})^{-1} t^\alpha$.]} 
 \begin{align}
     (E^\alpha)^2 E^{\alpha\pm1} + E^{\alpha\pm1} (E^\alpha)^2 &= (q^{1/2}+q^{-1/2}) E^\alpha E^{\alpha\pm1} E^\alpha, \\[5pt]
     (F^\alpha)^2 F^{\alpha\pm1} + F^{\alpha\pm1} (F^\alpha)^2 &= (q^{1/2}+q^{-1/2}) F^\alpha F^{\alpha\pm1} F^\alpha,
@@ -1065,6 +1068,7 @@ for $\alpha = 0,\dots,\ell-1$, where we use the modified $L$-operator $\tilde L^
 \begin{equation}
     q^{1/2} L^{\alpha-} - q^{-1/2} \tilde L^{\alpha-} = e u^{\alpha+1,-}.
 \end{equation}
+\todo{[TODO: With the $q$-commutation taken into account, $q^{1/2} L^{\alpha-} - q^{-1/2} \tilde L^{\alpha-} = -e u^{\alpha+1,-}$; the sign propagates into \eqref{eq:Ltot}.]} 
 The same telescopic argument as in \cite{arutyunov_spin_2026} yields a similar identity for the total $L$-operators
 \begin{equation}\label{eq:Ltot}
         \sum_{\alpha \in \Z_\ell} q^\alpha a^\alpha c^\alpha
