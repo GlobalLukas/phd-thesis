@@ -74,7 +74,7 @@ Despite the mathematically beautiful differential-geometric formulation of quant
 
 However, not every physically relevant gauge theory has a valid perturbative description at low energy scales. In fact, \emph{quantum chromodynamics}, describing the interactions of quarks and gluons relevant in nuclear physics, has the opposite behavior: Its coupling constant becomes small at high energies---a property known as \emph{asymptotic freedom}---and large at low energies \cite{gross_ultraviolet_1973}. This invalidates perturbative methods for calculations at ordinary energy scales, requiring theoreticians to develop non-perturbative methods valid in the strong coupling regime. Everyday experience and numerical lattice simulations suggest that strongly coupled quantum chromodynamics exhibits a phenomenon known as \emph{confinement}, binding charged quarks into neutral composite configurations known as hadrons.
 
-To further explore strongly coupled phenomena in quantum field theories, a simplified testing ground is instructive. The most basic example of an asymptotically free quantum field theory is Yang--Mills theory \cite{yang_conservation_1954} with gauge group $G_c$, describing the dynamics of an $\operatorname{Lie} G_c = \mathfrak{g}$-valued gauge field $A(x)$ (think: principal connection 1-form) transforming in the vector representation $(\tfrac 12, \tfrac 12)$ of the Lorentz group with the action functional
+To further explore strongly coupled phenomena in quantum field theories, a simplified testing ground is instructive. The most basic example of an asymptotically free quantum field theory is Yang--Mills theory \cite{yang_conservation_1954} with gauge group $G_c$, describing the dynamics of a gauge field $A(x)$ valued in $\mathfrak{g} \coloneq \operatorname{Lie} G_c$ (think: principal connection 1-form) transforming in the vector representation $(\tfrac 12, \tfrac 12)$ of the Lorentz group with the action functional
 \begin{equation}
 	S_\text{YM}[A] \coloneq \int_{\R^{1,3}} d^4 x \left[ {-\frac{1}{4}} \Tr F^{\mu\nu} F_{\mu\nu} \right], \qquad F \coloneq dA + g A \wedge A,
 \end{equation}
@@ -82,7 +82,7 @@ where $g$ is the coupling constant, determining the strength of non-abelian self
 
 Surprisingly, confinement can be seen semiclassically after placing the theory on the spacetime $\R^{1,2} \times S_R^1$ with small circle radius $R$ and adding additional fields to Yang--Mills theory \cite{poppitz_continuity_2012}. Specifically, adding massless $\mathfrak{g}$-valued fields $\lambda(x),\bar \lambda(x)$ transforming in the \emph{Majorana} spinor representation of the Poincaré algebra leads to the action functional
 \begin{equation}
-	S_{\text{SYM}}[A,\lambda] \coloneq \int_{\R^{1,3}} d^4 x \left[ {-\frac{1}{4}} F^{\mu\nu} F_{\mu\nu} - \lambda \I \sigma^\mu D_\mu \bar \lambda \right],
+	S_{\text{SYM}}[A,\lambda] \coloneq \int_{\R^{1,3}} d^4 x \Tr \left[ {-\frac{1}{4}} F^{\mu\nu} F_{\mu\nu} - \lambda \I \sigma^\mu D_\mu \bar \lambda \right],
 \end{equation}
 where $\sigma^\mu$ are the Pauli matrices, which map the tensor product of the Majorana spinor representation with its dual to the vector representation. This quantum field theory is known as $\mathcal{N}=1$ supersymmetric Yang--Mills theory, since it possesses an extended symmetry which extends the Poincaré algebra to a Lie superalgebra using additional generators of odd degree, called \emph{supercharges}, $Q$ and $\bar Q$, which transform in the $(\tfrac 12,0)$ and $(0,\tfrac 12)$ representations under the Lorentz group, and importantly satisfy
 \begin{equation}
@@ -92,7 +92,7 @@ This extended Lie superalgebra is known as the $\mathcal{N}=1$ super Poincaré a
 
 Continuing in this direction, a revolutionary breakthrough was achieved by Seiberg, Witten, and others after further extending supersymmetry to $\mathcal{N}=2$ supersymmetric Yang--Mills theory with gauge group $\mathrm{SU}(N)$ \cite{seiberg_monopole_1994,seiberg_monopoles_1994,gorsky_integrability_1995,martinec_integrable_1996,donagi_supersymmetric_1996,dhoker_calogero-moser_1998}. This quantum field theory extends $\mathcal{N}=1$ supersymmetric Yang--Mills theory by another set of massless $\mathfrak{su}(N)$-valued Majorana spinor fields $\psi(x),\bar \psi(x)$ as well as a massless $\mathfrak{su}(N)_\C$-valued scalar field $\varphi(x) = \phi_1(x) + \I \phi_2(x)$. All of these fields may be combined into a field $\Psi(x,\theta,\bar \theta)$ on super Minkowski spacetime $\R^{1,3|8}$, which transforms in the \emph{vector multiplet representation} of the $\mathcal{N}=2$ super Poincaré algebra, capturing the spacetime symmetries of $\R^{1,3|8}$. The action functional may be conveniently packaged as an integral over one chiral half of super Minkowski spacetime
 \begin{equation}\label{eq:prepotentialAction}
-	S_{\text{SYM2}}[\Psi] \coloneq \operatorname{Im} \frac{1}{4\pi} \int_{\R^{1,3|8}} d^4 x d^4 \theta \left[ \frac{1}{4} \Tr \mathcal{F}(\Psi) \right],
+	S_{\text{SYM2}}[\Psi] \coloneq \operatorname{Im} \frac{1}{4\pi} \int d^4 x \, d^4 \theta \left[ \frac{1}{4} \Tr \mathcal{F}(\Psi) \right],
 \end{equation}
 where the \emph{prepotential} $\mathcal{F}$ is some holomorphic function. At high energies, the theory has the prepotential $\mathcal{F}(\Psi) \coloneq \frac{\tau}{2} \Psi^2$ with $\tau = \frac{\theta}{2\pi} + \frac{4\pi\I}{g^2}$, where $g$ is the coupling constant and $\theta$ is an angular variable called the \emph{$\theta$-angle}.
 
@@ -100,7 +100,7 @@ The important new ingredient present in $\mathcal{N}=2$ super Yang--Mills theory
 \begin{equation}
 	[\phi_1(x),\phi_2(x)] = 0,
 \end{equation}
-so that the expectation values $\langle \varphi \rangle$ can be taken to lie in the diagonal Cartan subalgebra of $\mathfrak{su}(N)_\C$, whose components $a^i$ (modulo the Weyl group $S_N$) coordinatize the moduli space of Coulomb vacua, the \emph{Coulomb branch} $\mathfrak{B}$, as a complex variety. Expanding the field $\varphi$ in the action functional \eqref{eq:prepotentialAction} around the point $\langle \varphi \rangle$, one can see that all off-diagonal components of the $\mathfrak{su}(N)$-valued fields acquire a non-zero mass proportional to $a^i-a^j$. At low energy scales, we may integrate over all massive modes so that only the massless fields survive in the effective theory. It follows that all fields are diagonal in the resulting \emph{effective theory}, which is characterized by the values of the gauge invariant expectation values $u = (u_2,\dots,u_N)$ with $u_k = \langle \Tr \phi^k \rangle = \sum_{i=1}^N a_i^k$. This simplifies the effective description enormously.
+so that the expectation values $\langle \varphi \rangle$ can be taken to lie in the diagonal Cartan subalgebra of $\mathfrak{su}(N)_\C$, whose components $a^i$ (modulo the Weyl group $S_N$) coordinatize the moduli space of Coulomb vacua, the \emph{Coulomb branch} $\mathfrak{B}$, as a complex variety. Expanding the field $\varphi$ in the action functional \eqref{eq:prepotentialAction} around the point $\langle \varphi \rangle$, one can see that all off-diagonal components of the $\mathfrak{su}(N)$-valued fields acquire a non-zero mass proportional to $a^i-a^j$. At low energy scales, we may integrate over all massive modes so that only the massless fields survive in the effective theory. It follows that all fields are diagonal in the resulting \emph{effective theory}, which is characterized by the values of the gauge invariant expectation values $u = (u_2,\dots,u_N)$ with $u_k = \langle \Tr \varphi^k \rangle = \sum_{i=1}^N (a^i)^k$. This simplifies the effective description enormously.
 
 Crucially, supersymmetry tells us that the actional functional of the effective theory must still be of the form \eqref{eq:prepotentialAction}, albeit with a possibly different prepotential $\mathcal{F}$. Expanding the prepotential to quadratic order, the effective coupling matrix has components
 \begin{equation}
@@ -130,7 +130,7 @@ where $x_i$ are particle coordinates, $p_i$ the canonical momenta, and $i$ is ta
 \begin{equation}
 	p_i = 0, \qquad x_i - x_{i+1} = 2\pi\I\,k/N,
 \end{equation}
-at which $u_2 = \Lambda^2 e^{2\pi\I\,k/N}$. Since these points are stationary, the Liouville torus at these energy levels (the fiber sitting over a point $u$) must degenerate in the direction of the flow. The modulus $\tau$ of the torus therefore blows up in this direction, making the effective theory of the corresponding light BPS particle weakly coupled.
+at which $u_2 = N\Lambda^2 e^{2\pi\I\,k/N}$. Since these points are stationary, the Liouville torus at these energy levels (the fiber sitting over a point $u$) must degenerate in the direction of the flow. The modulus $\tau$ of the torus therefore blows up in this direction, making the effective theory of the corresponding light BPS particle weakly coupled.
 
 A very general family of 4d $\mathcal{N}=2$ gauge theories (referred to as class $\mathcal{S}$ theories) can be constructed by compactifying the 6d $\mathcal{N}=(2,0)$ superconformal field theory of type $A_{N-1}$ on a punctured Riemann surface $C$. In this case, \cite{gaiotto_wall-crossing_2011} showed that the analogous torus fibration $\mathfrak{M} \to \mathfrak{B}$ should be identified with the \emph{Hitchin fibration}, whose total space $\mathfrak{M}$ is the moduli space of Higgs bundles and whose base $\mathfrak{B}$ (the Coulomb branch of the theory on $\R^{1,3}$) is given by the Hitchin base
 \begin{equation}
@@ -319,9 +319,9 @@ whose Poisson brackets are of the form
 	\{ T_1(z),T_2(w) \} &= \frac{1}{z-w} [P,T_1(z) T_2(w)], \\
 	\{ J_1[n],J_2[m] \} &= \frac{1}{2} [P,J_1[n+m]-J_2[n+m]],
 \end{align}
-where $P = \sum_{i,j=1}^N e_{ij} \otimes e_{ji}$ is the permutation operator. Now, the important insight is that these Poisson brackets are the defining Poisson brackets of the classical limit of the Yangian $Y(\mathfrak{gl}_\ell)$ and the loop algebra $L(\mathfrak{gl}_\ell)$. More precisely, $T(z)$ and $J[n]$ generate the $N$-truncated quotients thereof, which comes from the fact that $T(z)$ and $J[n]$ are defined in terms of $N \times N$ matrices. Moreover, we find that
+where $P = \sum_{\alpha,\beta \in \Z_\ell} e_{\alpha\beta} \otimes e_{\beta\alpha}$ is the permutation operator on $\C^\ell \otimes \C^\ell$. Now, the important insight is that these Poisson brackets are the defining Poisson brackets of the classical limit of the Yangian $Y(\mathfrak{gl}_\ell)$ and the loop algebra $L(\mathfrak{gl}_\ell)$. More precisely, $T(z)$ and $J[n]$ generate the $N$-truncated quotients thereof, which comes from the fact that $T(z)$ and $J[n]$ are defined in terms of $N \times N$ matrices. Moreover, we find that
 \begin{equation}\label{eq:HamFromCurrent}
-	\Tr J[n] = \Tr c g^n a = \Tr ac g^n = \eta H[n],
+	\Tr J[n] = \Tr c g^n a = \Tr ac g^n = -\eta H[n],
 \end{equation}
 where we used the momentum map equation for the last equality. The Hamiltonians of the rational spin Ruijsenaars--Schneider model therefore come from the \emph{center} of the loop algebra $L(\mathfrak{gl}_\ell)$.
 
@@ -329,11 +329,11 @@ At this point, it was natural to conjecture that the $N$-truncated Yangian and l
 
 The paper \cite{bullimore_coulomb_2015} offered very concrete insight into the Poisson structures defined by Coulomb branches. In particular, section 6 included a description of the momentum map of the enhanced topological symmetry $\mathfrak{sl}_\ell$ acting on the Coulomb branch of linear quiver gauge theories. Importantly, the $(\alpha,\beta)$-coefficients of the momentum map were expressed as sums of the form
 \begin{equation}
-	\sum_{i^\alpha,i^{\alpha+1},\dots,i^\beta} \frac{u_{i^\alpha}^\alpha \cdots u_{i^\beta}^\beta}{(\varphi_{i^\alpha}^\alpha-\varphi_{i^{\alpha+1}}^{\alpha+1}) \cdots (\varphi_{i^{\beta-1}}^{\beta-1}-\varphi_{i^\beta}^{\beta})}
+	\sum_{i^\alpha,i^{\alpha+1},\dots,i^\beta} \frac{u_{i^\alpha}^\alpha \cdots u_{i^\beta}^\beta}{(\varphi_{i^{\alpha+1}}^{\alpha+1}-\varphi_{i^\alpha}^\alpha) \cdots (\varphi_{i^\beta}^{\beta}-\varphi_{i^{\beta-1}}^{\beta-1})}
 \end{equation}
 that could be written as matrix products of $L$-operators of the form
 \begin{equation}
-	L^\alpha = \sum_{i,j=1}^N \frac{u_j^{\alpha+1}}{\varphi_i^\alpha - \varphi_j^{\alpha+1}} e_{ij},
+	L^\alpha = \sum_{i,j=1}^N \frac{u_j^{\alpha+1}}{\varphi_j^{\alpha+1} - \varphi_i^\alpha} e_{ij},
 \end{equation}
 resembling the Lax matrix of the (spinless) Ruijsenaars--Schneider model. Comparing these formulas to the ideas of \cite{nakajima_cherkis_2025} made it clear that such a construction should also be possible in the case of the necklace quiver. Constructed correctly, the momentum map for the necklace quiver then takes values in the loop algebra $L(\mathfrak{gl}_\ell)$, and the trace of the first mode should give the defining Hamiltonian $H[1]$ of the rational spin Ruijsenaars--Schneider model as in equation \eqref{eq:HamFromCurrent}. From the knowledge of the Hamiltonian $H[1]$ and the identification $x_i = \varphi_i^0$, we may compute $f_{ii}$ from the equations of motion \eqref{eq:eoms}, which inspires an ansatz for the spin (co)vector variables $a_i^\alpha$ and $c_i^\alpha$. Again using the equations of motion as a check, this ansatz finally yielded the correct identification of variables between the Coulomb branch variables and the variables of the rational spin Ruijsenaars--Schneider model.
 

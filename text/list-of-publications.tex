@@ -10,18 +10,14 @@
 % publications for dissertation accreditation
 % NOTE: biblio-zotero.bib has no forthesis/notforthesis keywords, so the lists
 % are selected by explicit \nocite keys.
-\begin{refsection}
-  \nocite{arutyunov_quantized_2026,arutyunov_spin_2026,arutyunov_elliptic_2026,arutyunov_quantum_2026}
-  \printbibliography[%
-    heading=subbibliography,%
-    title={Dissertation Related Publications}]%
-\end{refsection}
+\nocite{arutyunov_quantized_2026,arutyunov_spin_2026,arutyunov_elliptic_2026,arutyunov_quantum_2026,berndt_robust_2021}
+\printbibliography[%
+  category=thesispubs,%
+  heading=subbibliography,%
+  title={Dissertation Related Publications}]%
 
 % publications not for dissertation accreditation
-\begin{refsection}
-  \nocite{berndt_robust_2021}
-  \printbibliography[%
-    heading=subbibliography,%
-    title=Other Publications]%
-\end{refsection}
-
+\printbibliography[%
+  category=otherpubs,%
+  heading=subbibliography,%
+  title=Other Publications]%

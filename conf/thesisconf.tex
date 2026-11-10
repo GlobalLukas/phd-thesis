@@ -25,7 +25,17 @@
 
 % BIBLIOGRAPHY resources
 \addbibresource{./bib/biblio-zotero.bib}
+% own publications: listed in the List of Publications via categories, so that
+% their labels are computed together with all other references (one refsection)
+\DeclareBibliographyCategory{thesispubs}
+\DeclareBibliographyCategory{otherpubs}
+\addtocategory{thesispubs}{arutyunov_quantized_2026,arutyunov_spin_2026,arutyunov_elliptic_2026,arutyunov_quantum_2026}
+\addtocategory{otherpubs}{berndt_robust_2021}
 %\addbibresource{./bib/biblio-temp.bib}
+
+% citation pre/postnote delimiters (the class sets them empty, giving e.g. [Tsy23remark 2.10])
+\renewcommand*{\prenotedelim}{\addspace}
+\renewcommand*{\postnotedelim}{\addcomma\space}
 
 % Uncomment this if you want equation numbers per section (2.3.12), instead of per chapter (2.18):
 %\numberwithin{equation}{subsection}

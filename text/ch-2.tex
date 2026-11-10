@@ -33,19 +33,19 @@ The $R$-symmetry group in 3d is $\mathrm{SU}(2)_H \times \mathrm{SU}(2)_C$, in 4
 
 In any such dimension, there are two particularly important representations that we want to focus on: \emph{Vector multiplets} and \emph{hypermultiplets}. In 5d, the \emph{vector multiplet} comprises a gauge field $A$, a real-valued scalar field $\phi$, as well as fermionic fields\footnote{We will not need to discuss the fermionic (odd-graded) field content in detail for our purposes.}. On the other hand, the \emph{hypermultiplet} consists of a scalar field $q$ valued in the defining representation of $\mathrm{SU}(2)_R$, as well as fermionic fields.
 
-The field content of vector multiplets and hypermultiplets in 4d can be obtained by compactifying five dimensions on a circle $S^1$. This means that all fields are decomposed into Fourier modes along the compactification circle $S^1$. In particular, the zero mode of the 5d gauge field $A = (A_0,\dots,A_5)$ of the 5d vector multiplet splits into a 4d gauge field (also denoted $A = (A_0,\dots,A_4)$ by abuse of notation) and a 4d scalar field $A_5$, which combines with the real-valued scalar field $\phi$ to yield a complex scalar field:
+The field content of vector multiplets and hypermultiplets in 4d can be obtained by compactifying five dimensions on a circle $S^1$. This means that all fields are decomposed into Fourier modes along the compactification circle $S^1$. In particular, the zero mode of the 5d gauge field $A = (A_0,\dots,A_4)$ of the 5d vector multiplet splits into a 4d gauge field (also denoted $A = (A_0,\dots,A_3)$ by abuse of notation) and a 4d scalar field $A_4$, which combines with the real-valued scalar field $\phi$ to yield a complex scalar field:
 \begin{equation}
-	\varphi \coloneq \phi + \I A_5.
+	\varphi \coloneq \phi + \I A_4.
 \end{equation}
-In the presence of a compactification circle of non-zero radius, the large gauge group acts on $A_5$ as follows:
+In the presence of a compactification circle of non-zero radius, the large gauge group acts on $A_4$ as follows:
 \begin{equation}
-	A_5 \mapsto A_5 + n/R, \qquad n \in \Z.
+	A_4 \mapsto A_4 + n/R, \qquad n \in \Z.
 \end{equation}
 Gauge invariant combinations of the complex scalar field $\varphi$ thus become functions of $\exp(2\pi R \varphi)$. This mechanism will also be relevant later for the description of $K$-theoretic Coulomb branches. The 4d hypermultiplet remains a scalar field valued in the defining representation of $\mathrm{SU}(2)_R$.
 
 We can further compactify the 5d field theory on a torus $T^2$ of non-zero volume with modular parameter $\tau$ (an elliptic curve). In this case, the zero mode of the 5d gauge field $A$ of the 5d vector multiplet splits into a 3d gauge field (again denoted $A$) and a 3d complex scalar
 \begin{equation}
-	\varphi \coloneq A_4 + \tau A_5,
+	\varphi \coloneq A_3 + \tau A_4,
 \end{equation}
 which in the presence of the compactification torus gets acted upon as
 \begin{equation}
@@ -78,9 +78,9 @@ Quiver gauge theories in 5d $\mathcal{N}=1$, 4d $\mathcal{N}=2$, or 3d $\mathcal
 	\end{enumerate}
 \end{definition}
 
-In this way, the data of a quiver $Q$ and a dimension vector $N_\bullet$ define a supersymmetric gauge theory with gauge group $G_c$ (determining the vector multiplets, which have to be valued in the adjoint representtion of $G_c$) and hypermultiplets valued in the cotangent representation $T^* V$.
+In this way, the data of a quiver $Q$ and a dimension vector $N_\bullet$ define a supersymmetric gauge theory with gauge group $G_c$ (determining the vector multiplets, which have to be valued in the adjoint representation of $G_c$) and hypermultiplets valued in the cotangent representation $T^* V$.
 
-Quiver gauge theories generally provide a large class of tractably computable theories, which furnish a useful testing ground for establishing and testing conjectures. A particularly nice example of an invariant that can be computed simply from the data of the quiver is the moduli space of Higgs vacua of the quiver gauge theory, or \emph{Higgs branch} for short. Concretely, it is the hyperkähler variety defined as the hyoerkähler quotient which is the Hamiltonian reduction of (a certain stable locus of) $T^* V$ by the complexified gauge group $G$. The precise construction of \emph{Hamiltonian reductions} is the topic of the next section.
+Quiver gauge theories generally provide a large class of tractably computable theories, which furnish a useful testing ground for establishing and testing conjectures. A particularly nice example of an invariant that can be computed simply from the data of the quiver is the moduli space of Higgs vacua of the quiver gauge theory, or \emph{Higgs branch} for short. Concretely, it is the hyperkähler variety defined as the hyperkähler quotient which is the Hamiltonian reduction of (a certain stable locus of) $T^* V$ by the complexified gauge group $G$. The precise construction of \emph{Hamiltonian reductions} is the topic of the next section.
 
 \section{Hamiltonian reduction}\label{sec:HamRed}
 
@@ -140,7 +140,7 @@ Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret a
 		\begin{equation}
 			L = L_+ L_-^{-1}, \qquad \operatorname{diag}(L_+) \operatorname{diag}(L_-) = 1, \qquad L_\pm \in B_\pm
 		\end{equation}
-		and the Poisson bracket defined by \eqref{eq:PBpp}--\eqref{eq:PBmonodromy} is the classical limit of the RLL presentation of the quantum group $U_\hbar(\mathfrak{gl}_N)$ \cite{faddeev_quantization_1989,reshetikhin_quantum_1988}.
+		and the Poisson bracket defined by \eqref{eq:PBpp}--\eqref{eq:PBmonodromy} is the classical limit of the RLL presentation of the quantum group $U_q(\mathfrak{gl}_N)$ \cite{faddeev_quantization_1989,reshetikhin_quantum_1988}.
 	\end{enumerate}
 \end{example}
 
@@ -290,9 +290,9 @@ The notion of a Poisson--Lie group then has to be replaced by the notion of a \e
 		\end{align}
 		The Hopf algebra structure of $U_q(\mathfrak{gl}_N)$ is given by
 		\begin{align}
-			\Delta &\colon U_q(\mathfrak{gl}_N) \to U_q(\mathfrak{gl}_N) \otimes U_q(\mathfrak{gl}_N), \qquad &&\ell_\pm^{ij} \mapsto \sum_{k=1}^N \ell_\pm^{ik} \otimes \ell_\pm^{kj} \\[-2pt]
+			\Delta &\colon U_q(\mathfrak{gl}_N) \to U_q(\mathfrak{gl}_N) \otimes U_q(\mathfrak{gl}_N), \qquad &&l_\pm^{ij} \mapsto \sum_{k=1}^N l_\pm^{ik} \otimes l_\pm^{kj} \\[-2pt]
 			S &\colon U_q(\mathfrak{gl}_N) \to U_q(\mathfrak{gl}_N), \qquad &&L_\pm \mapsto L_\pm^{-1} \\[6pt]
-			\epsilon &\colon U_q(\mathfrak{gl}_N) \to \C[q^{\pm 1}], \qquad &&\ell_\pm^{ij} \mapsto \delta^{ij}
+			\epsilon &\colon U_q(\mathfrak{gl}_N) \to \C[q^{\pm 1}], \qquad &&l_\pm^{ij} \mapsto \delta^{ij}
 		\end{align}
 	\end{enumerate}
 \end{example}
@@ -410,7 +410,7 @@ which induces a Poincaré duality isomorphism for (possibly non-compact!) orient
 \end{definition}
 
 \begin{theorem}[Localization theorem {\cite{anderson_equivariant_2023}}]
-	Let $T$ be a complex torus acting on a complex variety $X$. The inclusion $\iota \colon X^T \to X$ yields a pushfoward map
+	Let $T$ be a complex torus acting on a complex variety $X$. The inclusion $\iota \colon X^T \to X$ yields a pushforward map
 	\begin{equation}
 		\iota_* \colon \bigoplus_{x \in X^T} H_T^\textup{BM}(\{ x \}) \to H_T^\textup{BM}(X)
 	\end{equation}
@@ -563,7 +563,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	\begin{equation}
 		q^* \colon H_{\tilde G}^\textup{BM}(G_\mathcal{K} \times^{G_\mathcal{O}} R_{G,V}) \overset \sim \to H_{\tilde G \times \tilde G}^\textup{BM}(G_\mathcal{K} \times R_{G,V}).
 	\end{equation}
-	Importantly, $\mu$ maps $q(p^{-1}(R_{G,V} \times R_{G,V}))$ to $R_{G,V}$, which makes the convolution product well-defined:
+	Importantly, $m$ maps $q(p^{-1}(R_{G,V} \times R_{G,V}))$ to $R_{G,V}$, which makes the convolution product well-defined:
 	\begin{equation}
 		c_1 * c_2 \coloneq m_* (q^*)^{-1} p^*(c_1 \boxtimes c_2), \qquad c_1,c_2 \in H_{\tilde G}^\textup{BM}(R_{G,V}).
 	\end{equation}
@@ -612,7 +612,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	\begin{equation}
 		(q^*)^{-1} p^*((f_1(a_1) [x^{\lambda_1}]) \boxtimes (f_2(a_2) [x^{\lambda_2}])) = f_1(a) f_2(a+\lambda_1\hbar) [x^{\lambda_1,\lambda_2}].
 	\end{equation}
-	Since the fixed point $x^{\lambda_1,\lambda_2}$ maps to $x^{\lambda_1+\lambda_2}$ under $\mu$, we find
+	Since the fixed point $x^{\lambda_1,\lambda_2}$ maps to $x^{\lambda_1+\lambda_2}$ under $m$, we find
 	\begin{equation}
 		m_* (q^*)^{-1} p^*((f_1(a_1) [x^{\lambda_1}]) \boxtimes (f_2(a_2) [x^{\lambda_2}])) = f_1(a) f_2(a+\lambda_1\hbar) [x^{\lambda_1+\lambda_2}].
 	\end{equation}
@@ -640,7 +640,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	\end{equation}
 	is a well-defined algebra map into an algebra of difference operators. For a dominant minuscule coweight $\lambda$ and an element $f \in \C[\mathfrak{t}]^{W_\lambda}$, where $W_\lambda$ is the stabilizer of $\lambda$, we have
 	\begin{equation}
-		\mathbf{z}^* (\iota_*)^{-1}(f [R_{G,V}^\lambda]) = \sum_{w \in W} wf \frac{\operatorname{eu}_T(t^{w\lambda} V_\mathcal{O}/(t^{w\lambda} V_\mathcal{O} \cap V_\mathcal{O}))}{\operatorname{eu}_T(T_{x^{w\lambda}} \textup{Gr}_G^\lambda)} [x^{w\lambda}].
+		\mathbf{z}^* (\iota_*)^{-1}(f [R_{G,V}^\lambda]) = \sum_{w \in W/W_\lambda} wf \frac{\operatorname{eu}_T(t^{w\lambda} V_\mathcal{O}/(t^{w\lambda} V_\mathcal{O} \cap V_\mathcal{O}))}{\operatorname{eu}_T(T_{x^{w\lambda}} \textup{Gr}_G^\lambda)} [x^{w\lambda}].
 	\end{equation}
 \end{prop}
 
