@@ -250,6 +250,10 @@ for $n > 0$. The coefficients $J^{\alpha\beta}[n]$ assemble into an $\ell \times
     It was already clear from \cite[\S 6.6]{bullimore_coulomb_2015} that $J^{\alpha\beta}[0]$ satisfies the relations of $\mathfrak{gl}_\ell$.
 \end{remark}
 
+\begin{remark}
+    The loop algebra generators $J[n] = c g^n a$ of chapters \ref{chap:intro} and \ref{chap:spinRSRed} satisfy $\{ J^{\alpha\beta}[n],J^{\mu\nu}[m] \} = \delta^{\alpha\nu} J^{\mu\beta}[n+m] - \delta^{\mu\beta} J^{\alpha\nu}[n+m]$, which differs from the bracket above by an overall sign. The two conventions are related by $J[n] \mapsto -J[n]$, or equivalently by transposition $J^{\alpha\beta}[n] \mapsto J^{\beta\alpha}[n]$.
+\end{remark}
+
 \begin{lemma}
     We have $\Tr J[n] = \eta H[n]$, where $\Tr$ is the operation of taking the trace of an $\ell \times \ell$ matrix.
 \end{lemma}
@@ -298,20 +302,20 @@ which yields the result.
 \end{proof}
 
 \begin{theorem}
-    The time evolution under the Hamiltonian $H \coloneq -\eta H[1]$ reproduces the equations of motion \eqref{eq:eoms} with the identification $x_i = \varphi_i^0$ and the rational potential $V(z) = \frac{1}{z}-\frac{1}{z-\eta}$.
+    The time evolution under the Hamiltonian $H \coloneq \eta H[1]$ reproduces the equations of motion \eqref{eq:eoms} with the identification $x_i = \varphi_i^0$ and the rational potential $V(z) = \frac{1}{z}-\frac{1}{z-\eta}$.
 \end{theorem}
 
 \begin{proof}
     Using the $L$-operator algebra, we find
     \begin{align*}
-        \dot x_i &= \{ H,\varphi_i^0 \} = \eta L_{ii},
+        \dot x_i &= \{ H,\varphi_i^0 \} = -\eta L_{ii},
         \\[7pt]
         \ddot x_i
         &= \{ H, \{ H,\varphi_i^0 \} \} = \eta^2 \sum_{j(\neq i)} \frac{2}{\varphi_i^0-\varphi_j^0} L_{ij} L_{ji}, \\
         \dot a_i^\alpha
-        &= \{ H,a_i^\alpha \} = -\eta \sum_{j(\neq i)} \frac{1}{\varphi_i^0-\varphi_j^0} (a_i^\alpha-a_j^\alpha) L_{ij}, \\
+        &= \{ H,a_i^\alpha \} = \eta \sum_{j(\neq i)} \frac{1}{\varphi_i^0-\varphi_j^0} (a_i^\alpha-a_j^\alpha) L_{ij}, \\
         \dot c_i^\alpha
-        &= \{ H,c_i^\alpha \} = \eta \sum_{j(\neq i)} \frac{1}{\varphi_i^0-\varphi_j^0} (c_i^\alpha L_{ij} + c_j^\alpha L_{ji}).
+        &= \{ H,c_i^\alpha \} = -\eta \sum_{j(\neq i)} \frac{1}{\varphi_i^0-\varphi_j^0} (c_i^\alpha L_{ij} + c_j^\alpha L_{ji}).
     \end{align*}
     We then use lemma \ref{lemma:ratLOp} and the identities
     \begin{align*}
@@ -608,17 +612,17 @@ for $\alpha=0,\dots,\ell-1$. Notice again that $a_i^0 = 1$ for $i=1,\dots,N$.
 \end{proof}
 
 \begin{theorem}
-The time evolution under the Hamiltonian $H \coloneq (t-1) H[1]$ reproduces the equations of motion \eqref{eq:eoms} with the identification $x_i = \log Q_i^0, \eta = \log t$ and the hyperbolic potential $V(z) = \tfrac{1}{2} \coth \tfrac{z}{2}-\tfrac{1}{2} \coth \tfrac{z-\eta}{2}$.
+The time evolution under the Hamiltonian $H \coloneq (1-t) H[1]$ reproduces the equations of motion \eqref{eq:eoms} with the identification $x_i = \log Q_i^0, \eta = \log t$ and the hyperbolic potential $V(z) = \tfrac{1}{2} \coth \tfrac{z}{2}-\tfrac{1}{2} \coth \tfrac{z-\eta}{2}$.
 \end{theorem}
 
 \begin{proof}
     We use the $L$-operator algebra to derive the equations of motion
     \begin{align*}
-        \dot x_i &= \{ H,Q_i^0 \} / Q_i^0 = -(t-1)L_{ii},
+        \dot x_i &= \{ H,Q_i^0 \} / Q_i^0 = (t-1)L_{ii},
         \\[4pt]
         \ddot x_i &= \{ H, \{ H,Q_i^0 \} / Q_i^0 \} = (t-1)^2 \sum_{j(\neq i)} L_{ij} L_{ji} \frac{Q_i^0+Q_j^0}{Q_i^0-Q_j^0}, \\
-        \dot a_i^\alpha &= \{ H,a_i^\alpha \} = -(t-1)\sum_{j(\neq i)} (a_i^\alpha-a_j^\alpha) \frac{L_{ij}}{1-Q_i^0/Q_j^0}, \\
-        \dot c_i^\alpha &= \{ H,c_i^\alpha \} = (t-1)\sum_{j(\neq i)} \Big( c_i^\alpha \frac{L_{ij}}{1-Q_i^0/Q_j^0} - c_j^\alpha \frac{L_{ji}}{1-Q_j^0/Q_i^0} \Big).
+        \dot a_i^\alpha &= \{ H,a_i^\alpha \} = (t-1)\sum_{j(\neq i)} (a_i^\alpha-a_j^\alpha) \frac{L_{ij}}{1-Q_i^0/Q_j^0}, \\
+        \dot c_i^\alpha &= \{ H,c_i^\alpha \} = -(t-1)\sum_{j(\neq i)} \Big( c_i^\alpha \frac{L_{ij}}{1-Q_i^0/Q_j^0} - c_j^\alpha \frac{L_{ji}}{1-Q_j^0/Q_i^0} \Big).
     \end{align*}
     We then use lemma \ref{lemma:hypLOp} and the identities
     \begin{align*}
