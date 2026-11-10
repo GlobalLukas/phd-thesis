@@ -134,7 +134,7 @@ Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret a
 		where $r$ standing to the left or the right indicates that it acts by the infinitesimal action coming from left or right translation on the group.
 		\item \label{ex:GL}Take $G = \mathrm{GL}_N$ and $\mathfrak{g} = \mathfrak{gl}_N$ and let
 		\begin{equation}
-			r = \sum_{i,j=1}^N \operatorname{sign}(i-j) E_{ij} \otimes E_{ji}, \qquad s = \sum_{i,j=1}^N E_{ij} \otimes E_{ji}.
+			r = \sum_{i,j=1}^N \operatorname{sign}(i-j) e_{ij} \otimes e_{ji}, \qquad s = \sum_{i,j=1}^N e_{ij} \otimes e_{ji}.
 		\end{equation}
 		Then $r$ and $s$ together satisfy the modified classical Yang--Baxter equation. Under the identification $\mathfrak{gl}_N^* \cong \mathfrak{gl}_N$ coming from the trace pairing, we see that $\bar \iota$ becomes the projection onto the upper and lower triangular Borel subalgebras $\mathfrak{b}_\pm$ (sharing the diagonal equally), which integrate to the upper and lower triangular Borel subgroups $B_\pm$ of $\mathrm{GL}_N$. The factorization property becomes the Gauss decomposition of the form
 		\begin{equation}
@@ -277,7 +277,7 @@ The notion of a Poisson--Lie group then has to be replaced by the notion of a \e
 		\end{equation}
 		Defining the matrices
 		\begin{equation}
-			L_\pm = \sum_{i,j=1}^N l_\pm^{ij} \otimes E_{ij} \in U_q(\mathfrak{gl}_N) \otimes \operatorname{End}(\C^N),
+			L_\pm = \sum_{i,j=1}^N l_\pm^{ij} \otimes e_{ij} \in U_q(\mathfrak{gl}_N) \otimes \operatorname{End}(\C^N),
 		\end{equation}
 		the commutation relations between the generators can then be concisely written in RLL form quantizing the Poisson brackets \eqref{eq:PBpp} and \eqref{eq:PBpm}:
 		\begin{align}
@@ -286,7 +286,7 @@ The notion of a Poisson--Lie group then has to be replaced by the notion of a \e
 		\end{align}
 		with
 		\begin{align}
-			R \coloneq q \sum_{i=1}^N E_{ii} \otimes E_{ii} + \sum_{i \neq j}^N E_{ii} \otimes E_{jj} + (q-q^{-1}) \sum_{i>j}^N E_{ij} \otimes E_{ji}.
+			R \coloneq q \sum_{i=1}^N e_{ii} \otimes e_{ii} + \sum_{i \neq j}^N e_{ii} \otimes e_{jj} + (q-q^{-1}) \sum_{i>j}^N e_{ij} \otimes e_{ji}.
 		\end{align}
 		The Hopf algebra structure of $U_q(\mathfrak{gl}_N)$ is given by
 		\begin{align}

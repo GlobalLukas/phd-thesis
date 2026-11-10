@@ -7,36 +7,36 @@
 \chapter{Spin Ruijsenaars--Schneider models from Hamiltonian reductions} \label{chap:spinRSRed}
 
 \begin{chapterabstract}
-	This chapter constructs the quantum rational spin Ruijsenaars--Schneider model, describing $N$ particles that each carry $\ell$ spin states, by quantum Hamiltonian reduction. After reviewing the classical Hamiltonian reduction of $T^*\mathrm{GL}_N \times T^*\C^{N \times \ell}$, we tensor the quantum cotangent bundle of $\mathrm{GL}_N$ with an algebra of canonical oscillators, identify the quantum moment map, and reduce at the value fixed by the coupling constant $\gamma$. The resulting algebra $\mathfrak{A}_{N,\ell}$ of observables is described in terms of the quantum current $S(z)$, whose commutation relations take $R$-matrix form and reduce to the classical Poisson brackets in the limit $\hbar \to 0$, and which determines all higher modes through a recurrence relation. We further show that $\mathfrak{A}_{N,\ell}$ contains the Yangian of $\mathfrak{gl}_\ell$ and compute its cross relations with the quantum current, which we expect to identify $\mathfrak{A}_{N,\ell}$ with a truncated affine Yangian. Finally, we use the Yangian generators as creation operators to propose a method for computing the spectrum of the lowest Hamiltonian at non-critical coupling. At $\gamma = 1$, this reduces the eigenvalue problem to a difference equation, which for the sector without excitations is given by the spinless Ruijsenaars--Schneider Hamiltonian, and we find that the energy levels are independent of the spin configuration.
+	This chapter constructs the quantum rational spin Ruijsenaars--Schneider model, describing $N$ particles that each carry $\ell$ spin states, by quantum Hamiltonian reduction. After reviewing the classical Hamiltonian reduction of $T^*\mathrm{GL}_N \times T^*\C^{N \times \ell}$, we tensor the quantum cotangent bundle of $\mathrm{GL}_N$ with an algebra of canonical oscillators, identify the quantum moment map, and reduce at the value fixed by the coupling constant $\eta$. The resulting algebra $\mathfrak{A}_{N,\ell}$ of observables is described in terms of the quantum current $S(z)$, whose commutation relations take $R$-matrix form and reduce to the classical Poisson brackets in the limit $\hbar \to 0$, and which determines all higher modes through a recurrence relation. We further show that $\mathfrak{A}_{N,\ell}$ contains the Yangian of $\mathfrak{gl}_\ell$ and compute its cross relations with the quantum current, which we expect to identify $\mathfrak{A}_{N,\ell}$ with a truncated affine Yangian. Finally, we use the Yangian generators as creation operators to propose a method for computing the spectrum of the lowest Hamiltonian at non-critical coupling. At $\eta = -1$, this reduces the eigenvalue problem to a difference equation, which for the sector without excitations is given by the spinless Ruijsenaars--Schneider Hamiltonian, and we find that the energy levels are independent of the spin configuration.
 \end{chapterabstract}
 
 \section{Quantum rational spin Ruijsenaars--Schneider models from quantum Hamiltonian reduction}
 
 \subsection{Review of the classical case} \label{subsection:reviewClassicalRat}
 
-We start this section with a brief review of \cite{arutyunov_hamiltonian_1998}, where the Poisson structure of the rational spin Ruijsenaars--Schneider model was obtained via Hamiltonian reduction with the unreduced phase space given by the cotangent bundle $T^* \mathrm{GL}_N \times T^* \C^{N \times \ell}$. This is parametrized by a tuple of matrices $(g,x,a,b) \in \mathrm{GL}_N \times \mathfrak{gl}_N \times \C^{N \times \ell} \times \C^{\ell \times N}$ with coefficients $g_{ij},x_{ij},a_i^\alpha,b_i^\alpha$ for $i,j=1,\dots,N$ and $\alpha=1,\dots,\ell$ equipped with the Poisson structure
+We start this section with a brief review of \cite{arutyunov_hamiltonian_1998}, where the Poisson structure of the rational spin Ruijsenaars--Schneider model was obtained via Hamiltonian reduction with the unreduced phase space given by the cotangent bundle $T^* \mathrm{GL}_N \times T^* \C^{N \times \ell}$. This is parametrized by a tuple of matrices $(g,x,a,c) \in \mathrm{GL}_N \times \mathfrak{gl}_N \times \C^{N \times \ell} \times \C^{\ell \times N}$ with coefficients $g_{ij},x_{ij},a_i^\alpha,c_i^\alpha$ for $i,j=1,\dots,N$ and $\alpha=1,\dots,\ell$ equipped with the Poisson structure
 \begin{align}
-\{ x_1,x_2 \} = C_{12} x_1-x_1 C_{12}, \quad \{ x_1,g_2 \} = g_2 C_{12}, \quad \{ a_1^\alpha,b_2^\beta \} = - \delta^{\alpha\beta} \Delta_{12},
+\{ x_1,x_2 \} = C_{12} x_1-x_1 C_{12}, \quad \{ x_1,g_2 \} = g_2 C_{12}, \quad \{ a_1^\alpha,c_2^\beta \} = - \delta^{\alpha\beta} \Delta_{12},
 \end{align}
 where $C_{12} = \sum_{i,j=1}^N e_{ij} \otimes e_{ji} \in \End(\C^N)^{\otimes 2}$ and $\Delta_{12} = \sum_{i=1}^N e_i \otimes e_i^t \in \C^N \otimes \C^{N*}$, and all other pairs Poisson-commuting. Here, $e_{ij}$ are the standard matrix units and $e_i$ are the standard unit vectors. The reduction is performed with respect to the $\mathrm{GL}_N$-action
 \begin{equation}
-h \cdot (g,x,a,b) \coloneq (hgh^{-1},hxh^{-1},ha,bh^{-1})
+h \cdot (g,x,a,c) \coloneq (hgh^{-1},hxh^{-1},ha,bh^{-1})
 \end{equation}
 and the moment map equation amounts to
 \begin{equation}
-x - gxg^{-1} - ab = -\gamma,
+x - gxg^{-1} - ab = \eta,
 \end{equation}
-where $\gamma \in \C$ later becomes the coupling constant of the model.
+where $\eta \in \C$ later becomes the coupling constant of the model.
 
-To perform the reduction, one restricts to the open dense locus where the matrix $x$ has distinct eigenvalues, allowing for a unique diagonalization $x = TQT^{-1}$, where $Q = \operatorname{diag}(q_1,\dots,q_N)$ with ordered and pairwise distinct $q_1,\dots,q_N$, and $\mathcal{T}$ satisfies the mirabolic condition $Te = e$, where
+To perform the reduction, one restricts to the open dense locus where the matrix $x$ has distinct eigenvalues, allowing for a unique diagonalization $x = TQT^{-1}$, where $Q = \operatorname{diag}(x_1,\dots,x_N)$ with ordered and pairwise distinct $x_1,\dots,x_N$, and $T$ satisfies the mirabolic condition $Te = e$, where
 \begin{equation}
     e = (1,\dots,1)^t
 \end{equation}
-is the column vector only containing ones. While $Q$ uniquely labels orbits, $\mathcal{T}$ gives a parameterization of each orbit and satisfies the Kostant--Kirillov bracket. Similarly, one diagonalizes $gxg^{-1} = UQU^{-1}$ with $Ue = e$. It follows that $g = UPT^{-1}$ for some diagonal matrix $P = \operatorname{diag}(P_1,\dots,P_N)$. The transformation properties of these variables under an element $h \in \mathrm{GL}_N$ are as follows:
+is the column vector only containing ones. While $Q$ uniquely labels orbits, $T$ gives a parameterization of each orbit and satisfies the Kostant--Kirillov bracket. Similarly, one diagonalizes $gxg^{-1} = UQU^{-1}$ with $Ue = e$. It follows that $g = UPT^{-1}$ for some diagonal matrix $P = \operatorname{diag}(P_1,\dots,P_N)$. The transformation properties of these variables under an element $h \in \mathrm{GL}_N$ are as follows:
 \begin{align}
-h \cdot \mathcal{T} = hTh[\mathcal{T}], \quad h \cdot U = hUh[U], \quad h \cdot P = h[U]^{-1} P h[\mathcal{T}],
+h \cdot T = hTh[T], \quad h \cdot U = hUh[U], \quad h \cdot P = h[U]^{-1} P h[T],
 \end{align}
-where $h[\mathcal{T}]$ is the unique diagonal matrix satisfying $h[\mathcal{T}] e = \mathcal{T}^{-1} h^{-1} e$ and similarly $h[U]$ is the unique diagonal matrix satisfying $h[U] e = U^{-1} h^{-1} e$. We note that $h[\mathcal{T}] = 1$ and $h[U] = 1$ whenever $h$ satisfies the mirabolic condition $he = e$, i.e. $h$ lies in the \emph{mirabolic subgroup}
+where $h[T]$ is the unique diagonal matrix satisfying $h[T] e = T^{-1} h^{-1} e$ and similarly $h[U]$ is the unique diagonal matrix satisfying $h[U] e = U^{-1} h^{-1} e$. We note that $h[T] = 1$ and $h[U] = 1$ whenever $h$ satisfies the mirabolic condition $he = e$, i.e. $h$ lies in the \emph{mirabolic subgroup}
 \begin{equation}
 \mathrm{M}_N \coloneq \{ h \in \mathrm{GL}_N \mid he = e \}.
 \end{equation}
@@ -44,30 +44,30 @@ Its Lie algebra is the \emph{mirabolic subalgebra}
 \begin{equation}
 \mathfrak{m}_N \coloneq \{ h \in \mathfrak{gl}_N \mid he = 0 \}.
 \end{equation}
-Introducing $t$ and $u$ to be the unique diagonal matrices satisfying $te = \sum_{\rho=1}^\ell \mathcal{T}^{-1} a^\rho$ and $ue = \sum_{\rho=1}^\ell U^{-1} a^\rho$, they transform as
+Introducing $t$ and $u$ to be the unique diagonal matrices satisfying $te = \sum_{\rho=1}^\ell T^{-1} a^\rho$ and $ue = \sum_{\rho=1}^\ell U^{-1} a^\rho$, they transform as
 \begin{equation}
-h \cdot t = h[\mathcal{T}]^{-1} t, \quad h \cdot u = h[U]^{-1} u.
+h \cdot t = h[T]^{-1} t, \quad h \cdot u = h[U]^{-1} u.
 \end{equation}
-Combining the variables $\mathcal{T},U,Q,P,t,u,a,b$ appropriately yields a complete set of invariants given by the coefficients $q_1,\dots,q_N$ of $Q$ as well as
+Combining the variables $T,U,Q,P,t,u,a,c$ appropriately yields a complete set of invariants given by the coefficients $x_1,\dots,x_N$ of $Q$ as well as
 \begin{align}
-\mathbf{a} \coloneq t^{-1} \mathcal{T}^{-1} a, \quad \mathbf{c} \coloneq b UPt, \quad \mathbf{L} \coloneq t^{-1} \mathcal{T}^{-1} UPt, \quad \mathbf{P} \coloneq u^{-1} P t.
+\mathbf{a} \coloneq t^{-1} T^{-1} a, \quad \mathbf{c} \coloneq c UPt, \quad \mathbf{L} \coloneq t^{-1} T^{-1} UPt, \quad \mathbf{P} \coloneq u^{-1} P t.
 \end{align}
 In terms of these variables, the fixing of the moment map reads
 \begin{align}
-Q\mathbf{L}-\mathbf{L}Q + \gamma \mathbf{L} = \mathbf{a} \mathbf{c} \qquad \Leftrightarrow \qquad \mathbf{L}_{ij} = \frac{\mathbf{a}_i \mathbf{c}_j}{q_{ij}+\gamma}.
+Q\mathbf{L}-\mathbf{L}Q - \eta \mathbf{L} = \mathbf{a} \mathbf{c} \qquad \Leftrightarrow \qquad \mathbf{L}_{ij} = \frac{\mathbf{a}_i \mathbf{c}_j}{x_{ij}-\eta}.
 \end{align}
 The fully reduced Poisson algebra is thus generated by the variables $Q,\mathbf{P},\mathbf{a}$, and $\mathbf{c}$, while $\mathbf{L}$ can be expressed in terms of these generators, and the Poisson bracket is induced from the Poisson bracket on the cotangent bundle.
 
 \subsection{Quantum cotangent bundle of $\mathrm{GL}_N$} \label{subsection:quantumCotangentBundle}
 
-Moving towards the quantization, let us describe the \emph{quantum cotangent bundle of $\mathrm{GL}_N$}, which is the algebra that quantizes the Poisson structure on the cotangent bundle $T^*\mathrm{GL}_N$ in the parameterization via $\mathcal{T},U,Q,$ and $P$ discussed above. It was introduced in \cite{arutyunov_quantum_1996} to derive the commutation relations satisfied by the quantum Lax operator of the rational \emph{spinless} ($\ell=1$) Ruijsenaars--Schneider model. In the following, the notation for the variables will be the same as in the classical case, but should be interpreted as quantum operators without further comment.
+Moving towards the quantization, let us describe the \emph{quantum cotangent bundle of $\mathrm{GL}_N$}, which is the algebra that quantizes the Poisson structure on the cotangent bundle $T^*\mathrm{GL}_N$ in the parameterization via $T,U,Q,$ and $P$ discussed above. It was introduced in \cite{arutyunov_quantum_1996} to derive the commutation relations satisfied by the quantum Lax operator of the rational \emph{spinless} ($\ell=1$) Ruijsenaars--Schneider model. In the following, the notation for the variables will be the same as in the classical case, but should be interpreted as quantum operators without further comment.
 
 \begin{definition}
-Let $\hbar \in \C^\times$. The \emph{quantum cotangent bundle of $\mathrm{GL}_N$}, denoted $\mathcal{O}_\hbar(T^* \mathrm{GL}_N)$, is the  unital associative algebra generated by the coefficients of matrices $\mathcal{T}^{\pm 1},U^{\pm 1},Q,P^{\pm 1}$ with $\mathcal{T}^{-1} \mathcal{T} = TT^{-1} = 1, U^{-1} U = UU^{-1} = 1, P^{-1} P = PP^{-1} = 1$ and $Q,P^{\pm 1}$ diagonal, subject to the commutation relations
+Let $\hbar \in \C^\times$. The \emph{quantum cotangent bundle of $\mathrm{GL}_N$}, denoted $\mathcal{O}_\hbar(T^* \mathrm{GL}_N)$, is the  unital associative algebra generated by the coefficients of matrices $T^{\pm 1},U^{\pm 1},Q,P^{\pm 1}$ with $T^{-1} T = TT^{-1} = 1, U^{-1} U = UU^{-1} = 1, P^{-1} P = PP^{-1} = 1$ and $Q,P^{\pm 1}$ diagonal, subject to the commutation relations
 \begin{equation}\label{eq:qCotBundle}
 \begin{aligned}
-\mathcal{T}_1 \mathcal{T}_2 &= \mathcal{T}_2 \mathcal{T}_1 R_{12}, \\
-\mathcal{T}_1 P_2 &= P_2 \mathcal{T}_1 \bar R_{12},
+T_1 T_2 &= T_2 T_1 R_{12}, \\
+T_1 P_2 &= P_2 T_1 \bar R_{12},
 \end{aligned}
 \qquad
 \begin{aligned}
@@ -81,7 +81,7 @@ P_2 Q_1 &= (Q_1 - \hbar Y_{12}) P_2,
 \end{equation}
 and all other pairs commuting. Here, we have introduced
 \begin{equation}
-R = 1 + \sum_{i \neq j} \frac{\hbar}{q_{ij}} f_{ij} \otimes f_{ji}, \quad \bar R = 1 + \sum_{i \neq j} \frac{\hbar}{q_{ij}-\hbar} f_{ij} \otimes e_{jj}, \quad
+R = 1 + \sum_{i \neq j} \frac{\hbar}{x_{ij}} f_{ij} \otimes f_{ji}, \quad \bar R = 1 + \sum_{i \neq j} \frac{\hbar}{x_{ij}-\hbar} f_{ij} \otimes e_{jj}, \quad
 Y \coloneq \sum_{i=1}^N e_{ii} \otimes e_{ii},
 \end{equation}
 where $f_{ij} \coloneq e_{ii}-e_{ij}$ is a basis for the mirabolic subalgebra $\mathfrak{m}_N$, and subscripts label auxiliary spaces. It is important to note that $R$ satisfies the Yang-Baxter equation and is unitary:
@@ -101,13 +101,13 @@ Let us note that the mirabolic subgroup originally appeared under the name \emph
 
 \subsubsection{Quantum cotangent bundle of $\mathrm{GL}_N$ via functional operators}
 
-A useful conceptual shift for this work is the reinterpretation of the presentation of the quantum cotangent bundle of $\mathrm{GL}_N$ in terms of functional operators. To this end, let $\F \coloneq \C(q_1,\dots,q_N)$ be the field of rational functions in the variables $q_1,\dots,q_N$. Consider the space $\F[z]_N$ of polynomials in $z$ with coefficients in $\F$ and degree strictly less than $N$. Such polynomials are uniquely determined by their values on $q_1,\dots,q_N$. In this vein, a convenient basis of $\F[z]_N$ for our purposes is given by the Lagrange interpolation polynomials
+A useful conceptual shift for this work is the reinterpretation of the presentation of the quantum cotangent bundle of $\mathrm{GL}_N$ in terms of functional operators. To this end, let $\F \coloneq \C(x_1,\dots,x_N)$ be the field of rational functions in the variables $x_1,\dots,x_N$. Consider the space $\F[z]_N$ of polynomials in $z$ with coefficients in $\F$ and degree strictly less than $N$. Such polynomials are uniquely determined by their values on $x_1,\dots,x_N$. In this vein, a convenient basis of $\F[z]_N$ for our purposes is given by the Lagrange interpolation polynomials
 \begin{equation}
-\ell_i(z) = \prod_{j(\neq i)} \frac{z-q_j}{q_i-q_j}, \quad i=1,\dots,N,
+\ell_i(z) = \prod_{j(\neq i)} \frac{z-x_j}{x_i-x_j}, \quad i=1,\dots,N,
 \end{equation}
 which satisfy the Lagrange interpolation formula:
 \begin{equation}
-f(z) = \sum_{i=1}^N f(q_i) \ell_i(z), \quad \forall f(z) \in \F[z]_N.
+f(z) = \sum_{i=1}^N f(x_i) \ell_i(z), \quad \forall f(z) \in \F[z]_N.
 \end{equation}
 Consequently, in this basis, the special vector $e = (1,\dots,1)$ defining the mirabolic condition is nothing but the constant polynomial $1$:
 \begin{equation}
@@ -119,11 +119,11 @@ Let us set $\chi(z) \coloneq \det(z-Q)$ and introduce the inner product
 \end{equation}
 where $\oint dz$ takes the negative residue at infinity, i.e. the sum of all residues away from infinity. This inner product is evidently bilinear and symmetric as well as non-degenerate with the dual basis to $\ell_i(z)$ given by
 \begin{equation}
-\ell_i^*(z) \coloneq \prod_{j(\neq i)} (z-q_j),
+\ell_i^*(z) \coloneq \prod_{j(\neq i)} (z-x_j),
 \end{equation}
 due to the identity
 \begin{align}
-\langle \ell_i^*(z), \ell_j(z) \rangle = \oint \frac{dz}{z-q_i} \ell_j(z) = \ell_j(q_i) = \delta_{ij}.
+\langle \ell_i^*(z), \ell_j(z) \rangle = \oint \frac{dz}{z-x_i} \ell_j(z) = \ell_j(x_i) = \delta_{ij}.
 \end{align}
 With this in hand, we may express $R_{12}$ as a functional operator on $\F[z_1]_N \otimes_\F \F[z_2]_N$. Let
 \begin{align}
@@ -157,25 +157,25 @@ giving the square of equalities
 Let us write $\ell^*(z) \coloneq \chi(z) (z-Q)^{-1}$ and $\ell(z) = \chi'(Q)^{-1} \ell^*(z)$. These are the diagonal matrices whose diagonal entries are $\ell_i^*(z)$ and $\ell_i(z)$. Define the combinations
 \begin{equation}
 \begin{aligned}
-\mathcal{T}(z) &\coloneq \mathcal{T} \ell^*(z) e, \quad \mathcal{T}^{-1}(z) \coloneq e^t \ell(z) \mathcal{T}^{-1}, \\
+\mathbf{T}(z) &\coloneq T \ell^*(z) e, \quad \mathbf{T}^{-1}(z) \coloneq e^t \ell(z) T^{-1}, \\
 U(z) &\coloneq U \ell^*(z) e, \quad U^{-1}(z) \coloneq e^t \ell(z) U^{-1}, \\
 P(z) &\coloneq P \ell^*(z) e, \quad P^{-1}(z) \coloneq e^t \ell(z) P^{-1}.
 \end{aligned}
 \end{equation}
-Then $\mathcal{T}(z),U(z)$ and $\mathcal{T}^{-1}(z),U^{-1}(z)$ transform as vectors and covectors under $\mathrm{M}_N$, respectively, and both depend polynomially on $z$.
+Then $\mathbf{T}(z),U(z)$ and $\mathbf{T}^{-1}(z),U^{-1}(z)$ transform as vectors and covectors under $\mathrm{M}_N$, respectively, and both depend polynomially on $z$.
 \end{definition}
 
 \begin{remark}
-The combinations $\mathcal{T}(z),U(z),P(z)$ are invertible in the following sense:
+The combinations $\mathbf{T}(z),U(z),P(z)$ are invertible in the following sense:
 \begin{equation}
 \begin{aligned}
-\mathcal{T}^{-1}(z) \mathcal{T}(z') &= \delta(z,z'), \\
+\mathbf{T}^{-1}(z) \mathbf{T}(z') &= \delta(z,z'), \\
 U^{-1}(z) U(z') &= \delta(z,z'), \\
 P^{-1}(z) P(z') &= \delta(z,z'),
 \end{aligned}
 \qquad
 \begin{aligned}
-\langle \mathcal{T}(z), \mathcal{T}^{-1}(z) \rangle &= 1, \\
+\langle \mathbf{T}(z), \mathbf{T}^{-1}(z) \rangle &= 1, \\
 \langle U(z), U^{-1}(z) \rangle &= 1, \\
 \langle P(z), P^{-1}(z) \rangle &= 1.
 \end{aligned}
@@ -190,10 +190,10 @@ Here, the left equalities are equalities of polynomials and the right equalities
 The relations of $\mathcal{O}_\hbar(T^* \mathrm{GL}_N)$ may equivalently be written as $P_2 Q_1 = (Q_1 - \hbar Y_{12}) P_2$ together with
 \begin{equation}
 \begin{aligned}
-\mathcal{T}_1(z_1) \mathcal{T}_2(z_2) &= \mathbf{R}_{12}^* \mathcal{T}_2(z_2) \mathcal{T}_1(z_1), \\
-\mathcal{T}_1^{-1}(z_1) \mathcal{T}_2^{-1}(z_2) &= \mathbf{R}_{12} \mathcal{T}_2^{-1}(z_2) \mathcal{T}_1^{-1}(z_1), \\
-P_1^{-1}(z_1) \mathcal{T}_2(z_2) &= \mathcal{T}_2(z_2) P_1^{-1}(z_1), \\
-P_1^{-1}(z_1) \mathcal{T}_2^{-1}(z_2) &= \mathbf{R}_{21}^* [\mathcal{T}_2^{-1}(z_2)] P_1^{-1}(z_1),
+\mathbf{T}_1(z_1) \mathbf{T}_2(z_2) &= \mathbf{R}_{12}^* \mathbf{T}_2(z_2) \mathbf{T}_1(z_1), \\
+\mathbf{T}_1^{-1}(z_1) \mathbf{T}_2^{-1}(z_2) &= \mathbf{R}_{12} \mathbf{T}_2^{-1}(z_2) \mathbf{T}_1^{-1}(z_1), \\
+P_1^{-1}(z_1) \mathbf{T}_2(z_2) &= \mathbf{T}_2(z_2) P_1^{-1}(z_1), \\
+P_1^{-1}(z_1) \mathbf{T}_2^{-1}(z_2) &= \mathbf{R}_{21}^* [\mathbf{T}_2^{-1}(z_2)] P_1^{-1}(z_1),
 \end{aligned}
 \qquad
 \begin{aligned}
@@ -208,7 +208,7 @@ P_1^{-1}(z_1) U_2^{-1}(z_2) &= \mathbf{R}_{21}^* [U_2^{-1}(z_2)] P_1^{-1}(z_1).
 \begin{proof}
 The first and second lines are derived from the fact that $\mathbf{R}_{12}^*$ and $\mathbf{R}_{12}$ are represented by $R_{12}^t$ and $R_{12}$ in the Lagrange basis. For the third line, we have the identity $P_1^{-1} \ell_2^*(z_2) e_2 = \bar R_{21}^{-1} \ell_2^*(z_2) e_2 P_1^{-1}$, which then implies
 \begin{align*}
-P_1^{-1} \mathcal{T}_2 \ell_2^*(z_2) e_2 &= \mathcal{T}_2 \bar R_{21} P_1^{-1} \ell_2^*(z_2) e_2 = \mathcal{T}_2 \ell_2^*(z_2) e_2 P_1^{-1} \\
+P_1^{-1} T_2 \ell_2^*(z_2) e_2 &= T_2 \bar R_{21} P_1^{-1} \ell_2^*(z_2) e_2 = T_2 \ell_2^*(z_2) e_2 P_1^{-1} \\
 P_1^{-1} U_2 \ell_2^*(z_2) e_2 &= U_2 \bar R_{21} P_1^{-1} \ell_2^*(z_2) e_2 = U_2 \ell_2^*(z_2) e_2 P_1^{-1}.
 \end{align*}
 For the fourth line, we use the identity
@@ -222,10 +222,10 @@ P_1^{-1} e_2^t \ell_2(z_2) = e_2^t \left( \ell_2(z_2) - \frac{\hbar}{z_2-Q_1} (\
 Quantum Hamiltonian reduction systematically quantizes the classical Hamiltonian reduction procedure and can be viewed as a special case of BRST quantization. We give an overview over the method of quantum Hamiltonian reduction in appendix \ref{appendix:reduction}. To perform the quantum Hamiltonian reduction determining the algebra $\mathfrak{A}_{N,\ell}$ which describes the observables of the rational spin Ruijsenaars--Schneider model, we extend the quantum cotangent bundle $\mathcal{O}_\hbar(T^* \mathrm{GL}_N)$ by tensoring with an algebra of canonical oscillators, in analogy with the classical case:
 
 \begin{definition}
-We let $\mathcal{O}_\hbar(T^* \C^{N \times \ell})$ be the unital associative algebra generated by the respective $N$ coefficients of $\ell$ column vectors $a^\alpha$ and of $\ell$ row vectors $b^\alpha$ ($\alpha=1,\dots,\ell$), subject to the canonical commutation relations $[a_1^\alpha,b_2^\beta] = -\hbar\delta^{\alpha\beta} \Delta_{12}$ and $[a_1^\alpha,a_2^\beta] = [b_1^\alpha,b_2^\beta] = 0$, where $\Delta = \sum_{i=1}^N e_i \otimes e_i^t$ and the subscripts label auxiliary spaces.
+We let $\mathcal{O}_\hbar(T^* \C^{N \times \ell})$ be the unital associative algebra generated by the respective $N$ coefficients of $\ell$ column vectors $a^\alpha$ and of $\ell$ row vectors $c^\alpha$ ($\alpha=1,\dots,\ell$), subject to the canonical commutation relations $[a_1^\alpha,c_2^\beta] = -\hbar\delta^{\alpha\beta} \Delta_{12}$ and $[a_1^\alpha,a_2^\beta] = [c_1^\alpha,c_2^\beta] = 0$, where $\Delta = \sum_{i=1}^N e_i \otimes e_i^t$ and the subscripts label auxiliary spaces.
 \end{definition}
 
-We thus take our algebra of observables before reduction to be the tensor product of algebras $\mathcal{O}_\hbar(T^* \mathrm{GL}_N) \otimes \mathcal{O}_\hbar(T^* \C^{N \times \ell})$, which is generated by the coefficients of $\mathcal{T}^{\pm 1},U^{\pm 1},Q,P^{\pm 1},a^\alpha,$ and $b^\alpha$. In particular, taking the tensor product implies that the generators $\mathcal{T}^{\pm 1},U^{\pm 1},Q,P^{\pm 1}$ from the first factor commute with the generators $a^\alpha,b^\alpha$ from the second factor.  The next step in the reduction procedure is to identify the quantum moment map.
+We thus take our algebra of observables before reduction to be the tensor product of algebras $\mathcal{O}_\hbar(T^* \mathrm{GL}_N) \otimes \mathcal{O}_\hbar(T^* \C^{N \times \ell})$, which is generated by the coefficients of $T^{\pm 1},U^{\pm 1},Q,P^{\pm 1},a^\alpha,$ and $c^\alpha$. In particular, taking the tensor product implies that the generators $T^{\pm 1},U^{\pm 1},Q,P^{\pm 1}$ from the first factor commute with the generators $a^\alpha,c^\alpha$ from the second factor.  The next step in the reduction procedure is to identify the quantum moment map.
 
 \subsubsection{Quantum moment map and induced action}
 
@@ -244,9 +244,9 @@ The variables $x \coloneq TQT^{-1}$ and $x' \coloneq -UQU^{-1}$ satisfy the comm
 \end{align*}
 This is due to
 \begin{align*}
-(\mathcal{T}_1 Q_1 \mathcal{T}_1^{-1}) (\mathcal{T}_2 Q_2 \mathcal{T}_2^{-1})
-&= \mathcal{T}_2 \mathcal{T}_1 R_{12} Q_1 R_{21} Q_2 R_{12} \mathcal{T}_2^{-1} \mathcal{T}_1^{-1} \\
-&= (\mathcal{T}_2 Q_2 \mathcal{T}_2^{-1}) (\mathcal{T}_1 Q_1 \mathcal{T}_1^{-1}) + \hbar C_{12} ((\mathcal{T}_1 Q_1 \mathcal{T}_1^{-1})-(\mathcal{T}_2 Q_2 \mathcal{T}_2^{-1})), \\
+(T_1 Q_1 T_1^{-1}) (T_2 Q_2 T_2^{-1})
+&= T_2 T_1 R_{12} Q_1 R_{21} Q_2 R_{12} T_2^{-1} T_1^{-1} \\
+&= (T_2 Q_2 T_2^{-1}) (T_1 Q_1 T_1^{-1}) + \hbar C_{12} ((T_1 Q_1 T_1^{-1})-(T_2 Q_2 T_2^{-1})), \\
 (U_1 Q_1 U_1^{-1}) (U_2 Q_2 U_2^{-1})
 &= U_2 U_1 R_{21} Q_1 R_{12} Q_2 R_{21} U_2^{-1} U_1^{-1} \\
 &= (U_2 Q_2 U_2^{-1}) (U_1 Q_1 U_1^{-1}) - \hbar C_{12} ((U_1 Q_1 U_1^{-1})-(U_2 Q_2 U_2^{-1})),
@@ -263,9 +263,9 @@ Furthermore, it is easily checked that $-ab$ also satisfies the commutation rela
 Finally, we note that $x = TQT^{-1}$ and $x' = UQU^{-1}$ as well as $ab$ all commute among each other, making $\mu$ into a homomorphism.
 \end{proof}
 
-We now take $\mu$ to be our quantum moment map and perform quantum Hamiltonian reduction at the ideal generated by the coefficients of $E-\gamma \hbar I$. The reduced algebra $\mathfrak{A}_{N,\ell}$ resulting from quantum Hamiltonian reduction is then given by taking invariants and modding out the moment map equation:
+We now take $\mu$ to be our quantum moment map and perform quantum Hamiltonian reduction at the ideal generated by the coefficients of $E+\eta \hbar I$. The reduced algebra $\mathfrak{A}_{N,\ell}$ resulting from quantum Hamiltonian reduction is then given by taking invariants and modding out the moment map equation:
 \begin{equation}
-\mathfrak{A}_{N,\ell} \coloneq \Big( (\mathcal{O}_\hbar(T^* \mathrm{GL}_N) \otimes \mathcal{O}_\hbar(T^* \C^{N \times \ell})) /(\mu(E)-\gamma\hbar) \Big)^{\mathfrak{gl}_N}.
+\mathfrak{A}_{N,\ell} \coloneq \Big( (\mathcal{O}_\hbar(T^* \mathrm{GL}_N) \otimes \mathcal{O}_\hbar(T^* \C^{N \times \ell})) /(\mu(E)+\eta\hbar) \Big)^{\mathfrak{gl}_N}.
 \end{equation}
 This means that that next step is to determine the algebra of invariants. We begin by determining the induced action:
 
@@ -273,17 +273,17 @@ This means that that next step is to determine the algebra of invariants. We beg
 The induced action of $U(\mathfrak{gl}_N)$ on $\mathcal{O}_\hbar(T^* \mathrm{GL}_N) \otimes \mathcal{O}_\hbar(T^* \C^{N \times \ell})$ is given by
 \begin{equation}
 \begin{aligned}
-\operatorname{ad}_{E_1} \mathcal{T}_2
-&= -\hbar C_{12} \mathcal{T}_2 + \hbar \mathcal{T}_2 (\mathcal{T}_1 X_{12} \mathcal{T}_1^{-1}), \\
+\operatorname{ad}_{E_1} T_2
+&= -\hbar C_{12} T_2 + \hbar T_2 (T_1 X_{12} T_1^{-1}), \\
 \operatorname{ad}_{E_1} U_2
 &= -\hbar C_{12} U_2 + \hbar U_2 (U_1 X_{12} U_1^{-1}), \\
 \operatorname{ad}_{E_1} P_2
-&= \hbar P_2 (\mathcal{T}_1 X_{12} \mathcal{T}_1^{-1}) - \hbar (U_1 X_{12} U_1^{-1}) P_2,
+&= \hbar P_2 (T_1 X_{12} T_1^{-1}) - \hbar (U_1 X_{12} U_1^{-1}) P_2,
 \end{aligned}
 \qquad
 \begin{aligned}
 \operatorname{ad}_{E_1} a_2 &= -\hbar C_{12} a_2, \\
-\operatorname{ad}_{E_1} b_2 &= \hbar b_2 C_{12}, \\
+\operatorname{ad}_{E_1} c_2 &= \hbar c_2 C_{12}, \\
 \operatorname{ad}_{E_1} Q_2 &= 0,
 \end{aligned}
 \end{equation}
@@ -305,12 +305,12 @@ as well as $Y_{12} \bar R_{12} = Y_{12}$, and
 R_{12} X_{12} = X_{12}, \quad R_{21} X_{12} &= X_{12}, \quad X_{12} R_{12} = X_{12}, \quad X_{12} R_{21} = X_{12}, \\
 \bar R_{12} X_{12} = X_{12}, \quad X_{12} \bar R_{12} &= X_{12}, \quad X_{12} \bar R_{21} = X_{12}, \quad X_{12} C_{12} = X_{12}.
 \end{align*}
-For example, for $\mathcal{T}$, we can use equation \eqref{eq:actionIdentity} to derive
+For example, for $T$, we can use equation \eqref{eq:actionIdentity} to derive
 \begin{align*}
-\operatorname{ad}_{E_1} \mathcal{T}_2
-&= [\mathcal{T}_1 Q_1 \mathcal{T}_1^{-1},\mathcal{T}_2] \\
-&= -\hbar \mathcal{T}_2 \mathcal{T}_1 (C_{12}-X_{12}) R_{21} \mathcal{T}_1^{-1} \\
-&= -\hbar C_{12} \mathcal{T}_2 + \hbar \mathcal{T}_2 (\mathcal{T}_1 X_{12} \mathcal{T}_1^{-1}).
+\operatorname{ad}_{E_1} T_2
+&= [T_1 Q_1 T_1^{-1},T_2] \\
+&= -\hbar T_2 T_1 (C_{12}-X_{12}) R_{21} T_1^{-1} \\
+&= -\hbar C_{12} T_2 + \hbar T_2 (T_1 X_{12} T_1^{-1}).
 \qedhere
 \end{align*}
 \end{proof}
@@ -318,21 +318,21 @@ For example, for $\mathcal{T}$, we can use equation \eqref{eq:actionIdentity} to
 \begin{remark}
 The action of a Lie algebra element $M \in \mathfrak{gl}_N$ can be computed as follows
 \begin{equation}
-\operatorname{ad}_M \mathcal{T} = \Tr_1(M_1 \operatorname{ad}_{E_1} \mathcal{T}_2)
-= - \hbar M \mathcal{T} + \hbar \mathcal{T} \sum_j e_{jj} (e_j^t \mathcal{T}^{-1} M e)
+\operatorname{ad}_M T = \Tr_1(M_1 \operatorname{ad}_{E_1} T_2)
+= - \hbar M T + \hbar T \sum_j e_{jj} (e_j^t T^{-1} M e)
 \end{equation}
 We remark that for torus elements of the form $M = TDT^{-1}$ with $D$ diagonal, the action simplifies drastically due to
 \begin{equation}
-\hbar \mathcal{T} \sum_j e_{jj} (e_j^t \mathcal{T}^{-1} M e) = \hbar TD.
+\hbar T \sum_j e_{jj} (e_j^t T^{-1} M e) = \hbar TD.
 \end{equation}
-Furthermore, the action of any $M \in \mathfrak{gl}_N$ indeed preserves the mirabolic condition for $\mathcal{T}$ as
+Furthermore, the action of any $M \in \mathfrak{gl}_N$ indeed preserves the mirabolic condition for $T$ as
 \begin{equation}
 \begin{aligned}
 \operatorname{ad}_M Te
-&= - \hbar M e + \hbar \mathcal{T} \sum_j e_j e_j^t \mathcal{T}^{-1} M e = 0.
+&= - \hbar M e + \hbar T \sum_j e_j e_j^t T^{-1} M e = 0.
 \end{aligned}
 \end{equation}
-In this sense, we may say that the $\mathfrak{m}_N$-gauge symmetry is preserved at the quantum level. Furthermore, when $M$ lies in the mirabolic subalgebra, i.e. $Me = 0$, then $\operatorname{ad}_M \mathcal{T}$ becomes equal to $\hbar MT$ as expected. More generally, the terms in lemma \ref{lemma:action} that include $\mathcal{T}_1 X_{12} \mathcal{T}_1^{-1}$ and $U_1 X_{12} U_1^{-1}$ drop out when we restrict to the action of $\mathfrak{m}_N$ alone. In particular, $P$ is invariant under the action of the mirabolic subalgebra and $\mathcal{T},U,a$ transform in the vector representation of $\mathfrak{m}_N$, while $\mathcal{T}^{-1},U^{-1},b$ transform in the covector representation.
+In this sense, we may say that the $\mathfrak{m}_N$-gauge symmetry is preserved at the quantum level. Furthermore, when $M$ lies in the mirabolic subalgebra, i.e. $Me = 0$, then $\operatorname{ad}_M T$ becomes equal to $\hbar MT$ as expected. More generally, the terms in lemma \ref{lemma:action} that include $T_1 X_{12} T_1^{-1}$ and $U_1 X_{12} U_1^{-1}$ drop out when we restrict to the action of $\mathfrak{m}_N$ alone. In particular, $P$ is invariant under the action of the mirabolic subalgebra and $T,U,a$ transform in the vector representation of $\mathfrak{m}_N$, while $T^{-1},U^{-1},c$ transform in the covector representation.
 \end{remark}
 
 \subsubsection{Algebra of mirabolic invariants}
@@ -340,7 +340,7 @@ In this sense, we may say that the $\mathfrak{m}_N$-gauge symmetry is preserved 
 The next step is to determine the algebra of $\mathfrak{gl}_N$-invariants, i.e. the commutant of the moment map. To this end, we factorize the group $\mathrm{GL}_N$ as $\mathrm{GL}_N = \mathrm{T}_N \mathrm{M}_N$, where $\mathrm{T}_N$ is the maximal torus of diagonal invertible matrices and $\mathrm{M}_N$ is the mirabolic subgroup. This allows us to perform the reduction in two steps, first with respect to the mirabolic subgroup $\mathrm{M}_N$, and then with respect to the torus $\mathrm{T}_N$, and it will turn out to be interesting to consider mirabolic invariants in their own right. To this end, let us now describe the algebra of observables that is invariant under the mirabolic subgroup $\mathrm{M}_N$. Such invariants can be expressed via $Q$ and $P$ as well as the following variables:
 
 \begin{definition}
-The \emph{dressed oscillators} are defined to be $A \coloneq \mathcal{T}^{-1} a, B \coloneq bU$ and $C \coloneq bUP$ while the \emph{Frobenius matrix} and the \emph{Lax matrix} are defined to be $W \coloneq \mathcal{T}^{-1} U$ and $L \coloneq \mathcal{T}^{-1} UP$, respectively. We also define $\bar A \coloneq C L^{-1}$ and $\bar C \coloneq L^{-1} A$ for later purposes. It will be convenient for us to express these generators as polynomials as follows:
+The \emph{dressed oscillators} are defined to be $A \coloneq T^{-1} a, B \coloneq bU$ and $C \coloneq bUP$ while the \emph{Frobenius matrix} and the \emph{Lax matrix} are defined to be $W \coloneq T^{-1} U$ and $L \coloneq T^{-1} UP$, respectively. We also define $\bar A \coloneq C L^{-1}$ and $\bar C \coloneq L^{-1} A$ for later purposes. It will be convenient for us to express these generators as polynomials as follows:
 \begin{align}
 A^\alpha(z) \coloneq e^t \ell(z) A^\alpha, \quad C^\alpha(z) \coloneq C^\alpha \ell^*(z) e, \quad L(z,z') \coloneq e^t \ell(z) L \ell^*(z') e.
 \end{align}
@@ -428,24 +428,24 @@ In the preceding section, we have found the subalgebra of invariants under the a
 \end{align}
 However, when we try to compute the commutation relations for these variables, we see that the components $t_i$ of $t$ commute with their inverses according to
 \begin{equation}
-[t_i^{-1},t_j] = \frac{\hbar}{q_{ij}} (1-t_j t_i^{-1}-t_i^{-1} t_j + t_i^{-1} t_j^2 t_i^{-1})
+[t_i^{-1},t_j] = \frac{\hbar}{x_{ij}} (1-t_j t_i^{-1}-t_i^{-1} t_j + t_i^{-1} t_j^2 t_i^{-1})
 \end{equation}
 and notice that this cannot be rearranged in a way that allows a reordering making $t_i$ and $t_i^{-1}$ into generators of a Poincaré--Birkhoff--Witt basis. The failure of the Poincaré--Birkhoff--Witt property is a strong indication that the variables $\mathbf{a}$ that contain $t^{-1}$ are problematic for quantization. In particular, there is no canonical ordering that makes cancelations manifest when computing commutators containing $\mathbf{a}$.
 
 We can alternatively go the route of imposing a gauge fixing constraint via the Dirac method, and there are two interesting constraints to consider. Firstly, we note that the commutation relations for $A$ may be written in component form as
 \begin{equation}
-[A_i^\alpha,A_j^\beta] = -\frac{\hbar}{q_{ij}} (A_i^\alpha-A_j^\alpha) (A_i^\beta-A_j^\beta).
+[A_i^\alpha,A_j^\beta] = -\frac{\hbar}{x_{ij}} (A_i^\alpha-A_j^\alpha) (A_i^\beta-A_j^\beta).
 \end{equation}
 From this it is clear that $\sum_{\rho=1}^\ell A_i^\rho = 1$ for $i=1,\dots,N$ is in fact a system of first-class constraints and that they give a complete gauge fixing of the torus action on $A$. However, the computations become slightly more transparent if we instead impose the gauge fixing $A_i^\ell = 1$, i.e. we impose that the $\ell$th spin components are fixed to one. Let $J$ be the right ideal generated by $A_i^\ell - 1$ for $i=1,\dots,N$. This is also a 
 system of first-class constraints, i.e. $[J,J] \subseteq J$, and importantly satisfies
 \begin{equation}
 [J,A_i^\alpha] \subseteq J, \quad [J,C_i^\alpha] \subseteq J - \hbar\delta^{\ell\alpha} ({\cdots}),
 \end{equation}
-so as long as $\alpha < \ell$ we also have $[J,C_i^\alpha] \subseteq J$. According to the Dirac method, physical observables $O$ are characterized by the condition $[J,O] \subseteq J$. It follows that $q_i,A_i^\alpha,C_i^\alpha$ for $i=1,\dots,N$ and $\alpha = 1,\dots,\ell-1$ are all physical observables under this gauge fixing, i.e. we have essentially eliminated one unphysical polarization from the spins. We can solve for the unphysical $B_i^\ell$ via the moment map equation and the mirabolic condition for $W$, which gives
+so as long as $\alpha < \ell$ we also have $[J,C_i^\alpha] \subseteq J$. According to the Dirac method, physical observables $O$ are characterized by the condition $[J,O] \subseteq J$. It follows that $x_i,A_i^\alpha,C_i^\alpha$ for $i=1,\dots,N$ and $\alpha = 1,\dots,\ell-1$ are all physical observables under this gauge fixing, i.e. we have essentially eliminated one unphysical polarization from the spins. We can solve for the unphysical $B_i^\ell$ via the moment map equation and the mirabolic condition for $W$, which gives
 \begin{equation}
-1 = \sum_j W_{ij} = A_i \sum_j \frac{1}{q_{ij}+\gamma\hbar} B_j = \sum_j \frac{1}{q_{ij}+\gamma\hbar} B_j^\ell + \sum_{\rho=1}^{\ell-1} A_i^\rho \sum_j \frac{1}{q_{ij}+\gamma\hbar} B_j^\rho.
+1 = \sum_j W_{ij} = A_i \sum_j \frac{1}{x_{ij}-\eta\hbar} B_j = \sum_j \frac{1}{x_{ij}-\eta\hbar} B_j^\ell + \sum_{\rho=1}^{\ell-1} A_i^\rho \sum_j \frac{1}{x_{ij}-\eta\hbar} B_j^\rho.
 \end{equation}
-Letting $\Gamma_{ij} = \frac{1}{q_{ij}+\gamma\hbar}$ be the Cauchy matrix, we can write
+Letting $\Gamma_{ij} = \frac{1}{x_{ij}-\eta\hbar}$ be the Cauchy matrix, we can write
 \begin{equation}
 B_i^\ell = \sum_j \Gamma_{ij}^{-1} - \sum_{\rho=1}^{\ell-1} \sum_{jk} \Gamma_{ij}^{-1} A_j^\rho \Gamma_{jk} B_k^\rho,
 \end{equation}
@@ -455,7 +455,7 @@ W_{ij} = \bar W_{ij} + W_{ij}^\text{red} - \bar W_{ij} (\bar W^{-1} W^\text{red}
 \end{equation}
 where
 \begin{equation}
-\bar W_{ij} \coloneq \frac{\prod_{a(\neq i)} (q_{aj}+\gamma\hbar)}{\prod_{a(\neq j)} q_{aj}}, \quad W_{ij}^\text{red} \coloneq \sum_{\rho=1}^{\ell-1} A_i^\rho \Gamma_{ij} B_j^\rho.
+\bar W_{ij} \coloneq \frac{\prod_{a(\neq i)} (x_{aj}-\eta\hbar)}{\prod_{a(\neq j)} x_{aj}}, \quad W_{ij}^\text{red} \coloneq \sum_{\rho=1}^{\ell-1} A_i^\rho \Gamma_{ij} B_j^\rho.
 \end{equation}
 Note that $\bar W$ coincides with the spinless case \cite{arutyunov_quantum_1996}. The commutation relations between $A$ and $B$ can then be written as
 \begin{equation}\label{eq:commutatorAB}
@@ -470,13 +470,13 @@ and a sanity check reveals that the Poisson bracket that is the classical limit 
 
 We would like to rewrite the commutation relations \eqref{eq:commutatorAB} in polynomial form, and we can see that
 \begin{equation}
-\sum_{i,j=1}^N \ell_i(z_1) \bar W_{ij} \ell_j^*(z_2+\gamma\hbar) = \delta(z_1,z_2).
+\sum_{i,j=1}^N \ell_i(z_1) \bar W_{ij} \ell_j^*(z_2-\eta\hbar) = \delta(z_1,z_2).
 \end{equation}
 However, it is unclear to us how the other terms in \eqref{eq:commutatorAB} can be simplified in polynomial form. Instead, we can consider the alternative gauge fixing that imposes $e^t \chi'(Q)^{-1} W = e^t \chi'(Q)^{-1}$. This is indeed a first-class constraint. To see this, note that $W$ satisfies the commutation relation
 \begin{equation}
 R_{12} W_1 W_2 = W_2 W_1 R_{12}
 \end{equation}
-and that $(e^t \chi'(Q)^{-1} \otimes e^t \chi'(Q)^{-1}) R_{12} = (e^t \chi'(Q)^{-1} \otimes e^t \chi'(Q)^{-1})$. The advantage of this constraint is that the moment map equation, which in terms of $W$ reads $QW-WQ+\gamma\hbar W = AB$, can be cast into a particularly nice polynomial form. Specifically, we use the identities
+and that $(e^t \chi'(Q)^{-1} \otimes e^t \chi'(Q)^{-1}) R_{12} = (e^t \chi'(Q)^{-1} \otimes e^t \chi'(Q)^{-1})$. The advantage of this constraint is that the moment map equation, which in terms of $W$ reads $QW-WQ-\eta\hbar W = AB$, can be cast into a particularly nice polynomial form. Specifically, we use the identities
 \begin{align}
 \ell(z) Q = z \ell(z) - \chi(z) \chi'(Q)^{-1}, \quad Q \ell^*(z) = z \ell^*(z) - \chi(z)
 \end{align}
@@ -484,32 +484,32 @@ to obtain
 \begin{equation}
 \begin{aligned}
 e^t \ell(z) AB \ell^*(z') e
-={}& e^t \ell(z) (QW-WQ+\gamma\hbar) \ell^*(z') e \\
-={}& (z-z'+\gamma\hbar) e^t \ell(z) W \ell^*(z') e - \chi(z) e^t \chi'(Q)^{-1} W \ell^*(z') e + \chi(z') e^t \ell(z) W e \\
-={}& (z-z'+\gamma\hbar) e^t \ell(z) W \ell^*(z') e - \chi(z) + \chi(z')
+={}& e^t \ell(z) (QW-WQ-\eta\hbar) \ell^*(z') e \\
+={}& (z-z'-\eta\hbar) e^t \ell(z) W \ell^*(z') e - \chi(z) e^t \chi'(Q)^{-1} W \ell^*(z') e + \chi(z') e^t \ell(z) W e \\
+={}& (z-z'-\eta\hbar) e^t \ell(z) W \ell^*(z') e - \chi(z) + \chi(z')
 \end{aligned}
 \end{equation}
 Introducing $B(z) \coloneq B \ell^*(z) e$ and $W(z,z') \coloneq e^t \ell(z) W \ell^*(z') e$ and noticing that $\chi(z) - \chi(z') = (z-z') \delta(z,z')$ with $\delta(z,z') \coloneq \sum_{i=1}^N \ell_i(z) \ell_i^*(z')$, we may thus write
 \begin{equation}
-A(z) B(z') = (z-z'+\gamma\hbar) W(z,z') - (z-z') \delta(z,z'),
+A(z) B(z') = (z-z'-\eta\hbar) W(z,z') - (z-z') \delta(z,z'),
 \end{equation}
 which is a particularly elegant form of the moment map equation. In particular, it implies
 \begin{equation}
-A(z) B(z+\gamma\hbar) = \gamma\hbar \delta(z,z+\gamma\hbar).
+A(z) B(z-\eta\hbar) = -\eta\hbar \delta(z,z-\eta\hbar).
 \end{equation}
 Further, noting that $A$ and $B$ commute according to $A_1^\alpha B_2^\beta + \hbar \delta^{\alpha\beta} \Delta_{12} W_2 = B_2^\beta A_1^\alpha$, we can write down their commutation relation in polynomial form:
 \begin{equation}
-A^\alpha(z_1) B^\beta(z_2) + \hbar \delta^{\alpha\beta} \sum_{\rho=1}^\ell \frac{A^\rho(z_1) B^\rho(z_2)}{z_1-z_2+\gamma\hbar} = B^\beta(z_2) A^\alpha(z_1) + \frac{z_1-z_2}{z_1-z_2+\gamma\hbar} \delta(z_1,z_2),
+A^\alpha(z_1) B^\beta(z_2) + \hbar \delta^{\alpha\beta} \sum_{\rho=1}^\ell \frac{A^\rho(z_1) B^\rho(z_2)}{z_1-z_2-\eta\hbar} = B^\beta(z_2) A^\alpha(z_1) + \frac{z_1-z_2}{z_1-z_2-\eta\hbar} \delta(z_1,z_2),
 \end{equation}
 which may be written in auxiliary space notation as a Faddeev--Zamolodchikov-type relation:
 \begin{equation}
-A^1(z_1) \hat R^{12}(z_1-z_2+\gamma\hbar) B^2(z_2) = B^2(z_2) A^1(z_1) + \frac{z_1-z_2}{z_1-z_2+\gamma\hbar} \delta(z_1,z_2),
+A^1(z_1) \hat R^{12}(z_1-z_2-\eta\hbar) B^2(z_2) = B^2(z_2) A^1(z_1) + \frac{z_1-z_2}{z_1-z_2-\eta\hbar} \delta(z_1,z_2),
 \end{equation}
 where we used $\hat R^{12}(z) = 1 + \frac{\hbar}{z} P^{12}$. However, despite these suggestive formulas, it is at this moment unclear to us how to find a good set of generators of the algebra of physical operators corresponding to this gauge fixing.
 
 \subsection{The reduced algebra} \label{subsection:reducedAlgebra}
 
-Besides the gauge fixing procedures above, we can also perform the reduction with respect to the residual torus in a fully gauge covariant way by simply building combinations that are products of strings of $L^{\pm 1}$ and $Q$ sandwiched between $C$ and $A$, e.g. $C L^{-1} Q L L A C Q A$. Such combinations are manifestly invariant under the residual torus symmetry (and by construction also under the mirabolic subgroup). Importantly, we can use the moment map equation, which may be cast as $[Q,L] = AC-\gamma\hbar L$, to bring these strings into a canonical form where $L^{\pm 1}$ always stands to the left of $Q$. A generating function for these canonical forms may be given by
+Besides the gauge fixing procedures above, we can also perform the reduction with respect to the residual torus in a fully gauge covariant way by simply building combinations that are products of strings of $L^{\pm 1}$ and $Q$ sandwiched between $C$ and $A$, e.g. $C L^{-1} Q L L A C Q A$. Such combinations are manifestly invariant under the residual torus symmetry (and by construction also under the mirabolic subgroup). Importantly, we can use the moment map equation, which may be cast as $[Q,L] = AC+\eta\hbar L$, to bring these strings into a canonical form where $L^{\pm 1}$ always stands to the left of $Q$. A generating function for these canonical forms may be given by
 \begin{align}
 S[n](z) \coloneq C L^{n-1} (z-Q)^{-1} A = \sum_{r=0}^\infty z^{-r-1} C L^{n-1} Q^r A.
 \end{align}
@@ -518,30 +518,30 @@ We can further use the moment map equation to obtain a recurrence relation expre
 \begin{prop}
 The generating functions $S[n](z)$ with $n > 1$ satisfy the recurrence relation
 \begin{align}
-S[n](z) = \oint_\mathcal{C} d\tau S[n-1](\tau) \partial_{\tau+\gamma\hbar,z} S[1](z),
+S[n](z) = \oint_\mathcal{C} d\tau S[n-1](\tau) \partial_{\tau-\eta\hbar,z} S[1](z),
 \end{align}
-where $\mathcal{C}$ is a contour encircling $q_1,\dots,q_N$ counterclockwise, but no other poles. Here we have used the notation $\partial_{w,z} f(z) \coloneq \frac{f(w)-f(z)}{w-z}$.
+where $\mathcal{C}$ is a contour encircling $x_1,\dots,x_N$ counterclockwise, but no other poles. Here we have used the notation $\partial_{w,z} f(z) \coloneq \frac{f(w)-f(z)}{w-z}$.
 \end{prop}
 
 \begin{proof}
 We first note that the moment map equation in components reads
 \begin{equation*}
-q_i L_{ij} - L_{ij} q_j + \gamma\hbar L_{ij} = A_i C_j,
+x_i L_{ij} - L_{ij} x_j - \eta\hbar L_{ij} = A_i C_j,
 \end{equation*}
-which implies $(q_{ij}+(\gamma+1)\hbar) L_{ij} = A_i C_j$, so
+which implies $(x_{ij}+(1-\eta)\hbar) L_{ij} = A_i C_j$, so
 \begin{equation*}
-L_{ij} = A_i \frac{1}{q_{ij}+(\gamma+1)\hbar} C_j.
+L_{ij} = A_i \frac{1}{x_{ij}+(1-\eta)\hbar} C_j.
 \end{equation*}
-Due to $\frac{1}{q_{ij}+(\gamma+1)\hbar} = \oint_\mathcal{C} d\tau (\tau-q_i)^{-1} (\tau-q_j+(\gamma+1)\hbar)^{-1}$, we find
+Due to $\frac{1}{x_{ij}+(1-\eta)\hbar} = \oint_\mathcal{C} d\tau (\tau-x_i)^{-1} (\tau-x_j+(1-\eta)\hbar)^{-1}$, we find
 \begin{equation*}
-L = \oint_\mathcal{C} d\tau (\tau-Q)^{-1} AC (\tau+\gamma\hbar-Q)^{-1}.
+L = \oint_\mathcal{C} d\tau (\tau-Q)^{-1} AC (\tau-\eta\hbar-Q)^{-1}.
 \end{equation*}
-Using $(\tau+\gamma\hbar-Q)^{-1} (z-Q)^{-1} = \partial_{\tau+\gamma\hbar,z} (z-Q)^{-1}$, it follows that
+Using $(\tau-\eta\hbar-Q)^{-1} (z-Q)^{-1} = \partial_{\tau-\eta\hbar,z} (z-Q)^{-1}$, it follows that
 \begin{align*}
 S[n](z)
 &= CL^{n-1} (z-Q)^{-1} A \\
-&= \oint_\mathcal{C} d\tau CL^{n-2} (\tau-Q)^{-1} AC (\tau+\gamma\hbar-Q)^{-1} (z-Q)^{-1} A \\
-&= \oint_\mathcal{C} d\tau S[n-1](\tau) \partial_{\tau+\gamma\hbar,z} S[1](z).\qedhere
+&= \oint_\mathcal{C} d\tau CL^{n-2} (\tau-Q)^{-1} AC (\tau-\eta\hbar-Q)^{-1} (z-Q)^{-1} A \\
+&= \oint_\mathcal{C} d\tau S[n-1](\tau) \partial_{\tau-\eta\hbar,z} S[1](z).\qedhere
 \end{align*}
 \end{proof}
 
@@ -556,8 +556,8 @@ We call $S(z)$ the \emph{quantum current}, stemming from the fact that the $S_i$
 \begin{prop}
 For any $\epsilon \in \C^\times$, we have
 \begin{align}\label{eq:SSrelation}
-\hat R^{21}(q_{ji}) S_i^1 \hat R^{12}(q_{ij}+\gamma\hbar) S_j^2 &= S_j^2 \hat R^{21}(q_{ji}+\gamma\hbar) S_i^1 \hat R^{12}(q_{ij}), \quad (i \neq j) \\ \label{eq:SSrelation2}
-\hat R^{21}(\epsilon) S_i^1 \hat R^{12}(\gamma\hbar) S_i^2 &= S_i^2 \hat R^{21}(\gamma\hbar) S_i^1 \hat R^{12}(\epsilon),
+\hat R^{21}(x_{ji}) S_i^1 \hat R^{12}(x_{ij}-\eta\hbar) S_j^2 &= S_j^2 \hat R^{21}(x_{ji}-\eta\hbar) S_i^1 \hat R^{12}(x_{ij}), \quad (i \neq j) \\ \label{eq:SSrelation2}
+\hat R^{21}(\epsilon) S_i^1 \hat R^{12}(-\eta\hbar) S_i^2 &= S_i^2 \hat R^{21}(-\eta\hbar) S_i^1 \hat R^{12}(\epsilon),
 \end{align}
 where $\hat R^{12}(z) = 1+\frac{\hbar}{z} P^{12}$ is Yang's rational $R$-matrix acting in spin space $\C^\ell$ and we have used auxiliary space notation.
 \end{prop}
@@ -566,15 +566,15 @@ where $\hat R^{12}(z) = 1+\frac{\hbar}{z} P^{12}$ is Yang's rational $R$-matrix 
 Looking at the coefficients individually, we derive
 \begin{align}
 [S_i^{\alpha\beta},S_j^{\mu\nu}]
-={}& \hbar \sum_{\rho=1}^\ell S_j^{\mu\rho} \frac{\delta^{\alpha\nu}}{q_{ji}+\gamma\hbar} S_i^{\rho\beta} - \hbar \sum_{\rho=1}^\ell S_i^{\alpha\rho} \frac{\delta^{\mu\beta}}{q_{ij}+\gamma\hbar} S_j^{\rho\nu} \label{eq:SS1} \\
-&+ \frac{\hbar}{q_{ij}+\epsilon\delta_{ij}} \bigg( S_i^{\mu\beta} S_j^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_i^{\mu\rho} \frac{\delta^{\alpha\beta}}{q_{ij}+\gamma\hbar} S_j^{\rho\nu} \bigg) \label{eq:SS2} \\
-&- \frac{\hbar}{q_{ji}+\epsilon\delta_{ij}} \bigg( S_j^{\mu\beta} S_i^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_j^{\mu\rho} \frac{\delta^{\alpha\beta}}{q_{ji}+\gamma\hbar} S_i^{\rho\nu} \bigg) \label{eq:SS3}
+={}& \hbar \sum_{\rho=1}^\ell S_j^{\mu\rho} \frac{\delta^{\alpha\nu}}{x_{ji}-\eta\hbar} S_i^{\rho\beta} - \hbar \sum_{\rho=1}^\ell S_i^{\alpha\rho} \frac{\delta^{\mu\beta}}{x_{ij}-\eta\hbar} S_j^{\rho\nu} \label{eq:SS1} \\
+&+ \frac{\hbar}{x_{ij}+\epsilon\delta_{ij}} \bigg( S_i^{\mu\beta} S_j^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_i^{\mu\rho} \frac{\delta^{\alpha\beta}}{x_{ij}-\eta\hbar} S_j^{\rho\nu} \bigg) \label{eq:SS2} \\
+&- \frac{\hbar}{x_{ji}+\epsilon\delta_{ij}} \bigg( S_j^{\mu\beta} S_i^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_j^{\mu\rho} \frac{\delta^{\alpha\beta}}{x_{ji}-\eta\hbar} S_i^{\rho\nu} \bigg) \label{eq:SS3}
 \end{align}
 making use of the identity
 \begin{align*}
 \bar R_{21}^{-1} R_{21} \bar R_{12} (e_{ii})_1 \bar R_{12}^{-1} (e_{jj})_2 R_{12}
-={} (e_{jj})_2 \bar R_{21}^{-1} (e_{ii})_1 &+ \frac{\hbar}{q_{ij}+\epsilon\delta_{ij}} (e_{ii})_2 \bar R_{21}^{-1} (e_{jj})_1 C_{12} R_{12} \\
-&- \frac{\hbar}{q_{ji}+\epsilon\delta_{ij}} (e_{jj})_2 \bar R_{21}^{-1} (e_{ii})_1 C_{12} R_{12},
+={} (e_{jj})_2 \bar R_{21}^{-1} (e_{ii})_1 &+ \frac{\hbar}{x_{ij}+\epsilon\delta_{ij}} (e_{ii})_2 \bar R_{21}^{-1} (e_{jj})_1 C_{12} R_{12} \\
+&- \frac{\hbar}{x_{ji}+\epsilon\delta_{ij}} (e_{jj})_2 \bar R_{21}^{-1} (e_{ii})_1 C_{12} R_{12},
 \end{align*}
 which holds for any $\epsilon \in \C^\times$. The relation can then be rewritten in $R$-matrix form as claimed.
 \end{proof}
@@ -590,19 +590,19 @@ Let us examine skew-symmetry in the formula for the commutator $[S_i^{\alpha\bet
 giving the additional relation
 \begin{equation}
 \begin{aligned}
-&S_j^{\mu\beta} S_i^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_j^{\mu\rho} \frac{\delta^{\alpha\beta}}{q_{ji}+\hbar\gamma} S_i^{\rho\nu} + S_i^{\mu\beta} S_j^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_i^{\mu\rho} \frac{\delta^{\alpha\beta}}{q_{ij}+\hbar\gamma} S_j^{\rho\nu} \\
-&= S_i^{\alpha\nu} S_j^{\mu\beta} + \hbar \sum_{\rho=1}^\ell S_i^{\alpha\rho} \frac{\delta^{\mu\nu}}{q_{ij}+\hbar\gamma} S_j^{\rho\beta} + S_j^{\alpha\nu} S_i^{\mu\beta} + \hbar \sum_{\rho=1}^\ell S_j^{\alpha\rho} \frac{\delta^{\mu\nu}}{q_{ji}+\hbar\gamma} S_i^{\rho\beta},
+&S_j^{\mu\beta} S_i^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_j^{\mu\rho} \frac{\delta^{\alpha\beta}}{x_{ji}-\hbar\eta} S_i^{\rho\nu} + S_i^{\mu\beta} S_j^{\alpha\nu} + \hbar \sum_{\rho=1}^\ell S_i^{\mu\rho} \frac{\delta^{\alpha\beta}}{x_{ij}-\hbar\eta} S_j^{\rho\nu} \\
+&= S_i^{\alpha\nu} S_j^{\mu\beta} + \hbar \sum_{\rho=1}^\ell S_i^{\alpha\rho} \frac{\delta^{\mu\nu}}{x_{ij}-\hbar\eta} S_j^{\rho\beta} + S_j^{\alpha\nu} S_i^{\mu\beta} + \hbar \sum_{\rho=1}^\ell S_j^{\alpha\rho} \frac{\delta^{\mu\nu}}{x_{ji}-\hbar\eta} S_i^{\rho\beta},
 \end{aligned}
 \end{equation}
 which is equivalent to skew-symmetry of the commutator.
 \end{remark}
 
 \begin{remark}
-We can now present the algebra of positive modes via $q_i$ and $S_i^{\alpha\beta}$ subject to the commutation relations $[q_i, S_j^{\alpha\beta}] = \hbar\delta_{ij} S_j^{\alpha\beta}$ as well as (\ref{eq:SSrelation}) and (\ref{eq:SSrelation2}). We remark that the moment map equation for the variables $\mathbf{a},\mathbf{c},\mathbf{L}$ can be written as $Q\mathbf{L}-\mathbf{L}Q+\gamma\hbar\mathbf{L} = \mathbf{a}\mathbf{c}$, which can be solved in the same way as before to express $\mathbf{L}$ in terms of $\mathbf{a}$ and $\mathbf{c}$:
+We can now present the algebra of positive modes via $x_i$ and $S_i^{\alpha\beta}$ subject to the commutation relations $[x_i, S_j^{\alpha\beta}] = \hbar\delta_{ij} S_j^{\alpha\beta}$ as well as (\ref{eq:SSrelation}) and (\ref{eq:SSrelation2}). We remark that the moment map equation for the variables $\mathbf{a},\mathbf{c},\mathbf{L}$ can be written as $Q\mathbf{L}-\mathbf{L}Q-\eta\hbar\mathbf{L} = \mathbf{a}\mathbf{c}$, which can be solved in the same way as before to express $\mathbf{L}$ in terms of $\mathbf{a}$ and $\mathbf{c}$:
 \begin{align}
-\mathbf{L} = \oint_\mathcal{C} d\tau (\tau-Q)^{-1} \mathbf{a} \mathbf{c} (\tau+\gamma\hbar-Q)^{-1},
+\mathbf{L} = \oint_\mathcal{C} d\tau (\tau-Q)^{-1} \mathbf{a} \mathbf{c} (\tau-\eta\hbar-Q)^{-1},
 \end{align}
-where again $\mathcal{C}$ is a contour encircling $q_1,\dots,q_N$ counterclockwise. It follows that the variables $\mathbf{a},\mathbf{c}$, and $\mathbf{L}$ can all be expressed in terms of $S_i^{\alpha\beta}$ after imposing the moment map equation and adjoining certain inverses to the algebra, since
+where again $\mathcal{C}$ is a contour encircling $x_1,\dots,x_N$ counterclockwise. It follows that the variables $\mathbf{a},\mathbf{c}$, and $\mathbf{L}$ can all be expressed in terms of $S_i^{\alpha\beta}$ after imposing the moment map equation and adjoining certain inverses to the algebra, since
 \begin{align}
 \mathbf{c}_i^\alpha = C_i^\alpha t_i = \sum_{\rho=1}^\ell S_i^{\alpha\rho}, \quad \mathbf{a}_i^\alpha = t_i^{-1} A_i^\alpha = (\mathbf{c}_i^\alpha)^{-1} S_i^{\alpha\alpha}.
 \end{align}
@@ -616,9 +616,9 @@ Besides the quantum current, which may be seen as the basic building block from 
 \begin{definition}
 Introduce the full invariants
 \begin{align}
-\mathbf{J}[n] &\coloneq b g^n a = C L^{n-1} A = \oint dz S[n](z), \\
-T(z) &\coloneq 1 + b (z-x)^{-1} a = 1 + \bar A (z-Q)^{-1} A, \\
-\bar{T}(z) &\coloneq 1 - b (z+\hbar-gxg^{-1})^{-1} a = 1 - C (z-Q)^{-1} \bar C.
+\mathbf{J}[n] &\coloneq c g^n a = C L^{n-1} A = \oint dz S[n](z), \\
+T(z) &\coloneq 1 + c (z-x)^{-1} a = 1 + \bar A (z-Q)^{-1} A, \\
+\bar{T}(z) &\coloneq 1 - c (z+\hbar-gxg^{-1})^{-1} a = 1 - C (z-Q)^{-1} \bar C.
 \end{align}
 \end{definition}
 
@@ -627,12 +627,12 @@ The coefficients $\mathbf{J}^{\alpha\beta}[n]$ satisfy the relations for the loo
 \end{prop}
 
 \begin{proof}
-It may be quickly checked that $\mathbf{J}^{\alpha\beta}[0] = b^\alpha a^\beta$ satisfy the commutation relations for the Lie algebra $\mathfrak{gl}_\ell$. Furthermore,
+It may be quickly checked that $\mathbf{J}^{\alpha\beta}[0] = c^\alpha a^\beta$ satisfy the commutation relations for the Lie algebra $\mathfrak{gl}_\ell$. Furthermore,
 \begin{align*}
 \mathbf{J}^{\alpha\beta}[n]& \mathbf{J}^{\mu\nu}[1] \\
-={}& b_1^\alpha (UP)_1 (\mathcal{T}^{-1}UP)_1^{n-1} \mathcal{T}_1^{-1} a_1^\beta b_2^\mu (UP)_2 \mathcal{T}_2^{-1} a_2^\nu \\
-={}& b_2^\mu b_1^\alpha (UP)_2 (UP)_1 \bar R_{21}^{-1} R_{21} \bar R_{12} (\bar R_{12}^{-1} \mathcal{T}_1^{-1} U_1 P_1 \bar R_{21}^{-1} R_{21} \bar R_{12})^{n-1} \bar R_{12}^{-1} R_{12} \mathcal{T}_2^{-1} \mathcal{T}_1^{-1} a_2^\nu a_1^\beta \\
-&+ b_1^\alpha (UP)_1 (\mathcal{T}_1^{-1} U_1 P_1)^{n-1} \mathcal{T}_1^{-1} [a_1^\beta,b_2^\mu] (UP)_2 \mathcal{T}_2^{-1} a_2^\nu \\
+={}& c_1^\alpha (UP)_1 (T^{-1}UP)_1^{n-1} T_1^{-1} a_1^\beta c_2^\mu (UP)_2 T_2^{-1} a_2^\nu \\
+={}& c_2^\mu c_1^\alpha (UP)_2 (UP)_1 \bar R_{21}^{-1} R_{21} \bar R_{12} (\bar R_{12}^{-1} T_1^{-1} U_1 P_1 \bar R_{21}^{-1} R_{21} \bar R_{12})^{n-1} \bar R_{12}^{-1} R_{12} T_2^{-1} T_1^{-1} a_2^\nu a_1^\beta \\
+&+ c_1^\alpha (UP)_1 (T_1^{-1} U_1 P_1)^{n-1} T_1^{-1} [a_1^\beta,c_2^\mu] (UP)_2 T_2^{-1} a_2^\nu \\
 ={}& \mathbf{J}^{\mu\nu}[1] \mathbf{J}^{\alpha\beta}[n] + \hbar \delta^{\alpha\nu} \mathbf{J}^{\mu\beta}[n+1] - \hbar \delta^{\mu\beta} \mathbf{J}^{\alpha\nu}[n+1]. \qedhere
 \end{align*}
 \end{proof}
@@ -643,7 +643,7 @@ satisfy the relations for the Yangian $Y(\mathfrak{gl}_\ell)$:
 \begin{align}
 T^{\alpha\beta}(z_1) T^{\mu\nu}(z_2) &= T^{\mu\nu}(z_2) T^{\alpha\beta}(z_1) + \hbar\partial_{12}T^{\mu\beta}(z_2) T^{\alpha\nu}(z_1)
 \end{align}
-Furthermore, since $\prod_{i=1}^N (z-q_i) T(z)$ is polynomial of degree $N$, we obtain an algebra homomorphism from the $N$-truncated Yangian $Y^N(\mathfrak{gl}_\ell)$ into $\mathfrak{A}_{N,\ell}$.
+Furthermore, since $\prod_{i=1}^N (z-x_i) T(z)$ is polynomial of degree $N$, we obtain an algebra homomorphism from the $N$-truncated Yangian $Y^N(\mathfrak{gl}_\ell)$ into $\mathfrak{A}_{N,\ell}$.
 \end{prop}
 
 \begin{proof}
@@ -663,35 +663,35 @@ R_{12} (z_1-Q_1)^{-1} R_{21} (z_2-Q_2)^{-1} R_{12} ={}& (z_2-Q_2)^{-1} R_{12} (z
 \end{proof}
 
 \begin{prop}
-We have $T(z)^{-1} = \bar{T}(z+\gamma\hbar)$.
+We have $T(z)^{-1} = \bar{T}(z-\eta\hbar)$.
 \end{prop}
 
 \begin{proof}
 This follows from the moment map equation
 \begin{align*}
-AC &= QL-LQ+\gamma\hbar L \quad \text{or} \quad \bar C \bar A = L^{-1}Q-QL^{-1}+\gamma\hbar L^{-1}
+AC &= QL-LQ-\eta\hbar L \quad \text{or} \quad \bar C \bar A = L^{-1}Q-QL^{-1}-\eta\hbar L^{-1}
 \end{align*}
 using $(z-Q)^{-1} Q = z (z-Q)^{-1} - 1$:
 \begin{align*}
-(z-Q)^{-1} AC (z+\gamma\hbar-Q)^{-1}
-&= (z-Q)^{-1} L - L (z+\gamma\hbar-Q)^{-1}, \\
-(z+\gamma\hbar-Q)^{-1} \bar C \bar A (z-Q)^{-1}
-&= L^{-1} (z-Q)^{-1} - (z+\gamma\hbar-Q)^{-1} L^{-1},
+(z-Q)^{-1} AC (z-\eta\hbar-Q)^{-1}
+&= (z-Q)^{-1} L - L (z-\eta\hbar-Q)^{-1}, \\
+(z-\eta\hbar-Q)^{-1} \bar C \bar A (z-Q)^{-1}
+&= L^{-1} (z-Q)^{-1} - (z-\eta\hbar-Q)^{-1} L^{-1},
 \end{align*}
 hence
 \begin{align*}
-\sum_{\rho=1}^\ell (\delta^{\mu\rho} + \bar A^\mu (z-Q)^{-1} A^\rho) (\delta^{\rho\beta} - C^\rho (z+\gamma\hbar-Q)^{-1} \bar C^\beta) - \delta^{\mu\beta}
+\sum_{\rho=1}^\ell (\delta^{\mu\rho} + \bar A^\mu (z-Q)^{-1} A^\rho) (\delta^{\rho\beta} - C^\rho (z-\eta\hbar-Q)^{-1} \bar C^\beta) - \delta^{\mu\beta}
 &= 0, \\
-\sum_{\rho=1}^\ell (\delta^{\alpha\rho} - C^\alpha (z+\gamma\hbar-Q)^{-1} \bar C^\rho) (\delta^{\rho\nu} + \bar A^\rho (z-Q)^{-1} A^\nu) - \delta^{\alpha\nu}
+\sum_{\rho=1}^\ell (\delta^{\alpha\rho} - C^\alpha (z-\eta\hbar-Q)^{-1} \bar C^\rho) (\delta^{\rho\nu} + \bar A^\rho (z-Q)^{-1} A^\nu) - \delta^{\alpha\nu}
 &= 0,
 \end{align*}
-which means $T(z)^{-1} = \bar{T}(z+\gamma\hbar)$.
+which means $T(z)^{-1} = \bar{T}(z-\eta\hbar)$.
 \end{proof}
 
 \begin{remark}
-In particular, we notice that the poles of $\bar{T}(z+\gamma\hbar)$ must be the zeros of $T(z)$ and vice versa. To compute the position of the poles, we must be careful about the ordering of the $q_i$ inside $\bar{T}(z)$, since $C$ and $\bar C$ do not commute with $q_i$. We follow the convention that the $q_i$ must be ordered to the left of $C$. In this case, the poles of $\bar{T}(z)$ arise at $z=q_i-\hbar$, where the shift by $\hbar$ comes about by reordering. It follows that
+In particular, we notice that the poles of $\bar{T}(z-\eta\hbar)$ must be the zeros of $T(z)$ and vice versa. To compute the position of the poles, we must be careful about the ordering of the $x_i$ inside $\bar{T}(z)$, since $C$ and $\bar C$ do not commute with $x_i$. We follow the convention that the $x_i$ must be ordered to the left of $C$. In this case, the poles of $\bar{T}(z)$ arise at $z=x_i-\hbar$, where the shift by $\hbar$ comes about by reordering. It follows that
 \begin{equation}
-T(q_i-(\gamma+1)\hbar) = 0.
+T(x_i-(1-\eta)\hbar) = 0.
 \end{equation}
 \end{remark}
 
@@ -700,9 +700,9 @@ The generator matrices $T(z)$ and $\bar{T}(z)$ satisfy the relations
 \begin{align}
 \hat R^{12}(z_1-z_2) T^1(z_1) T^2(z_2) &= T^2(z_2) T^1(z_1) \hat R^{12}(z_1-z_2) \\
 \bar{T}^1(z_1) \bar{T}^2(z_2) \hat R^{12}(z_1-z_2) &= \hat R^{12}(z_1-z_2) \bar{T}^2(z_2) \bar{T}^1(z_1) \\
-\bar{T}^1(z_1) \hat R^{21}(z_2-z_1+\gamma\hbar) T^2(z_2) &= T^2(z_2) \hat R^{21}(z_2-z_1+\gamma\hbar) \bar{T}^1(z_1).
+\bar{T}^1(z_1) \hat R^{21}(z_2-z_1-\eta\hbar) T^2(z_2) &= T^2(z_2) \hat R^{21}(z_2-z_1-\eta\hbar) \bar{T}^1(z_1).
 \end{align}
-with $\bar{T}(z+\gamma\hbar) = T(z)^{-1}$ and $\hat R^{12}(z) = \frac{z}{z+\hbar} + \frac{\hbar}{z+\hbar} P^{12}$.
+with $\bar{T}(z-\eta\hbar) = T(z)^{-1}$ and $\hat R^{12}(z) = \frac{z}{z+\hbar} + \frac{\hbar}{z+\hbar} P^{12}$.
 \end{theorem}
 
 Having established the loop algebra and Yangian relations, we my now determine their cross relation via the commutator between the Yangian and the quantum current:
@@ -712,8 +712,8 @@ The Yangian acts on the quantum current according to:
 \begin{equation}\label{eq:crossRel}
 \begin{aligned}
 [S^{\alpha\beta}(z_1),T^{\mu\nu}(z_2)]
-={}& \hbar T^{\mu\beta}(z_2) \partial_{12} S^{\alpha\nu}(z_1) + \hbar \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \partial_{z_2+\gamma\hbar,z_1} S^{\rho\beta}(z_1) \\
-&+ \frac{\hbar^2 \delta^{\alpha\beta}}{z_1-z_2} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \big( \partial_{z_2+\gamma\hbar,z_1} S^{\rho\nu}(z_1) - \partial_{z_2+\gamma\hbar,z_2} S^{\rho\nu}(z_2) \big).
+={}& \hbar T^{\mu\beta}(z_2) \partial_{12} S^{\alpha\nu}(z_1) + \hbar \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \partial_{z_2-\eta\hbar,z_1} S^{\rho\beta}(z_1) \\
+&+ \frac{\hbar^2 \delta^{\alpha\beta}}{z_1-z_2} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \big( \partial_{z_2-\eta\hbar,z_1} S^{\rho\nu}(z_1) - \partial_{z_2-\eta\hbar,z_2} S^{\rho\nu}(z_2) \big).
 \end{aligned}
 \end{equation}
 \end{prop}
@@ -724,8 +724,8 @@ We calculate
 S^{\alpha\beta}(z_1) T^{\mu\nu}(z_2)
 ={}& S^{\alpha\beta}(z_1) \delta^{\mu\nu} +\bar A_2^\mu C_1^\alpha \bar R_{21}^{-1} (z_1-Q_1)^{-1} R_{12} (z_2-Q_2)^{-1} R_{12} A_2^\nu A_1^\beta \\
 &- \hbar \delta^{\mu\beta} C_1^\alpha (z_1-Q_1)^{-1} \partial_{12} (z_2-Q_2)^{-1} A_2^\nu \\
-={}& T^{\mu\nu}(z_2) S^{\alpha\beta}(z_1) + \hbar T^{\mu\beta}(z_2) \partial_{12}S^{\alpha\nu}(z_1) + \hbar \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \partial_{z_2+\gamma\hbar,z_1} S^{\rho\beta}(z_1) \\
-&+ \frac{\hbar^2 \delta^{\alpha\beta}}{z_1-z_2} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \big( \partial_{z_2+\gamma\hbar,z_1} S^{\rho\nu}(z_1) - \partial_{z_2+\gamma\hbar,z_2} S^{\rho\nu}(z_2) \big),
+={}& T^{\mu\nu}(z_2) S^{\alpha\beta}(z_1) + \hbar T^{\mu\beta}(z_2) \partial_{12}S^{\alpha\nu}(z_1) + \hbar \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \partial_{z_2-\eta\hbar,z_1} S^{\rho\beta}(z_1) \\
+&+ \frac{\hbar^2 \delta^{\alpha\beta}}{z_1-z_2} \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \big( \partial_{z_2-\eta\hbar,z_1} S^{\rho\nu}(z_1) - \partial_{z_2-\eta\hbar,z_2} S^{\rho\nu}(z_2) \big),
 \end{align*}
 where we have used 
 \begin{align*}
@@ -735,13 +735,13 @@ where we have used
 \end{align*}
 and that the moment map equation implies
 \begin{equation*}
-\bar A^\mu (z_2-Q)^{-1} L (z_1-Q)^{-1} A^\beta = \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \frac{S^{\rho\beta}(z_1)-S^{\rho\beta}(z_2+\gamma\hbar)}{z_2-z_1+\gamma\hbar},
+\bar A^\mu (z_2-Q)^{-1} L (z_1-Q)^{-1} A^\beta = \sum_{\rho=1}^\ell T^{\mu\rho}(z_2) \frac{S^{\rho\beta}(z_1)-S^{\rho\beta}(z_2-\eta\hbar)}{z_2-z_1-\eta\hbar},
 \end{equation*}
 which comes from considering
 \begin{equation*}
-\bar A^\mu (z_2-Q)^{-1} AC (z_2-Q+\gamma\hbar)^{-1} (z_1-Q)^{-1} A^\beta
+\bar A^\mu (z_2-Q)^{-1} AC (z_2-Q-\eta\hbar)^{-1} (z_1-Q)^{-1} A^\beta
 \end{equation*}
-using $(z_2-Q)^{-1} Q = (z_2-Q)^{-1} z_2 - 1$ as well as the identity $(z_2-Q+\gamma\hbar)^{-1} (z_1-Q)^{-1} = (z_2-z_1+\gamma\hbar)^{-1} \left( (z_1-Q)^{-1} - (z_2-Q+\gamma\hbar)^{-1} \right)$.
+using $(z_2-Q)^{-1} Q = (z_2-Q)^{-1} z_2 - 1$ as well as the identity $(z_2-Q-\eta\hbar)^{-1} (z_1-Q)^{-1} = (z_2-z_1-\eta\hbar)^{-1} \left( (z_1-Q)^{-1} - (z_2-Q-\eta\hbar)^{-1} \right)$.
 \end{proof}
 
 \begin{remark}
@@ -751,24 +751,24 @@ This cross relation between $S(z_1)$ and $T(z_2)$ determines the cross relations
 \begin{corollary}
 It follows that $\mathbf{J}[1] = \oint dz S(z)$ commutes with $T(z)$ according to
 \begin{equation}\label{eq:currentYangianRel}
-[\mathbf{J}[1]^{\alpha\beta},T^{\mu\nu}(z)] = -\hbar T^{\mu\beta}(z) S^{\alpha\nu}(z) + \hbar \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(z) S^{\rho\beta}(z+\gamma\hbar) + \hbar^2 \delta^{\alpha\beta} \sum_{\rho=1}^\ell T^{\mu\rho}(z) \Delta S^{\rho\nu}(z),
+[\mathbf{J}[1]^{\alpha\beta},T^{\mu\nu}(z)] = -\hbar T^{\mu\beta}(z) S^{\alpha\nu}(z) + \hbar \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(z) S^{\rho\beta}(z-\eta\hbar) + \hbar^2 \delta^{\alpha\beta} \sum_{\rho=1}^\ell T^{\mu\rho}(z) \Delta S^{\rho\nu}(z),
 \end{equation}
-where we have introduced the finite difference $\Delta f(z) \coloneq \frac{f(z+\gamma\hbar)-f(z)}{\gamma\hbar}$.
+where we have introduced the finite difference $\Delta f(z) \coloneq \frac{f(z)-f(z-\eta\hbar)}{\eta\hbar}$.
 \end{corollary}
 
 \begin{remark}
-Let us examine the pole structure of \eqref{eq:currentYangianRel}, where we again have to be careful to order all the $q_i$ to the left. Indeed, we see that the right-hand side has simple poles at $q_i-(\gamma+1)\hbar$ that do not appear on the left-hand side. The vanishing of the residue yields the following additional relation:
+Let us examine the pole structure of \eqref{eq:currentYangianRel}, where we again have to be careful to order all the $x_i$ to the left. Indeed, we see that the right-hand side has simple poles at $x_i-(1-\eta)\hbar$ that do not appear on the left-hand side. The vanishing of the residue yields the following additional relation:
 \begin{equation}
-0 = \gamma\hbar^2 \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(q_i-(\gamma+1)\hbar) S_i^{\rho\beta} + \hbar^2\delta^{\alpha\beta} \sum_{\rho=1}^\ell T^{\mu\rho}(q_i-(\gamma+1)\hbar) S_i^{\rho\nu},
+0 = -\eta\hbar^2 \delta^{\alpha\nu} \sum_{\rho=1}^\ell T^{\mu\rho}(x_i-(1-\eta)\hbar) S_i^{\rho\beta} + \hbar^2\delta^{\alpha\beta} \sum_{\rho=1}^\ell T^{\mu\rho}(x_i-(1-\eta)\hbar) S_i^{\rho\nu},
 \end{equation}
-but this is trivially satisfied, since we already saw that $T(q_i-(\gamma+1)\hbar) = 0$. Besides the poles at $q_i-(\gamma+1)\hbar$, we find poles at $z=q_i$ as well as $z=q_i-\hbar$, but these are matched with poles on the left-hand side.
+but this is trivially satisfied, since we already saw that $T(x_i-(1-\eta)\hbar) = 0$. Besides the poles at $x_i-(1-\eta)\hbar$, we find poles at $z=x_i$ as well as $z=x_i-\hbar$, but these are matched with poles on the left-hand side.
 \end{remark}
 
-At this point we can use \eqref{eq:currentYangianRel} to check whether the action of $\mathfrak{A}_{1,\ell}$ coincides with the action of the loop Yangian in the simplest non-trivial representation---the vector representation $\C^\ell[q]$. Concretely, the action of the Yangian and loop algebra on $\C^\ell[q]$ are
+At this point we can use \eqref{eq:currentYangianRel} to check whether the action of $\mathfrak{A}_{1,\ell}$ coincides with the action of the loop Yangian in the simplest non-trivial representation---the vector representation $\C^\ell[x]$. Concretely, the action of the Yangian and loop algebra on $\C^\ell[x]$ are
 \begin{equation}
-    T^{\alpha\beta}(z) \mapsto \delta_{\alpha\beta} - \frac{\hbar}{z-q} e_{\alpha\beta}, \qquad \mathbf{J}[1]^{\alpha\beta} \mapsto e_{\alpha\beta} e^{-\hbar\partial}.
+    T^{\alpha\beta}(z) \mapsto \delta_{\alpha\beta} - \frac{\hbar}{z-x} e_{\alpha\beta}, \qquad \mathbf{J}[1]^{\alpha\beta} \mapsto e_{\alpha\beta} e^{-\hbar\partial}.
 \end{equation}
-Due to our specification $N=1$, we have $\mathbf{J}[1] = S_1$ and $S(z) = \frac{1}{z-q_1+\hbar} S_1$, and indeed we find that \eqref{eq:currentYangianRel} is satisfied for $\gamma = -\ell-1$. More generally, we conjecture that $\mathfrak{A}_{N,\ell}$ can be represented on the Schur--Weyl bimodule $(\C^\ell)^{\otimes N} \otimes \C[q_1,\dots,q_N]$, which also appears in the quantum spin Ruijsenaars--Schneider models of \cite{klabbers_deformed_2024}.
+Due to our specification $N=1$, we have $\mathbf{J}[1] = S_1$ and $S(z) = \frac{1}{z-x_1+\hbar} S_1$, and indeed we find that \eqref{eq:currentYangianRel} is satisfied for $\eta = \ell+1$. More generally, we conjecture that $\mathfrak{A}_{N,\ell}$ can be represented on the Schur--Weyl bimodule $(\C^\ell)^{\otimes N} \otimes \C[x_1,\dots,x_N]$, which also appears in the quantum spin Ruijsenaars--Schneider models of \cite{klabbers_deformed_2024}.
 
 \subsection{Calculation of the spectrum} \label{subsection:spectrum}
 
@@ -776,10 +776,10 @@ We now come to a proposal to calculate eigenvalues and eigenvectors of the lowes
 \begin{equation}\label{eq:HamiltonianYangianRel}
 \begin{aligned}
 [H,T(z)]
-={}& \hbar^2 (\gamma+\ell) T(z) \Delta S(z),
+={}& \hbar^2 (\ell-\eta) T(z) \Delta S(z),
 \end{aligned}
 \end{equation}
-which closely resembles the way creation operators should commute with the Hamiltonian. We remark that the Yangian becomes a symmetry of the Hamiltonian at $\gamma = -\ell$, which is the critical level in the language of \cite{reshetikhin_central_1990}. The appearance of a critical level should be compared with the Gaudin model, where the commutator between the Segal--Sugawara element and the current of the affine Kac--Moody algebra is proportional to $\kappa-\kappa_c$ (where $\kappa$ is the level and $\kappa_c$ is the critical level) \cite{frenkel_langlands_2010}. On the other hand, we conclude that in the case of non-critical level $\gamma \neq -\ell$, we can use the generators of the Yangian as creation operators to move between energy levels and build up the spectrum of the Hamiltonian.
+which closely resembles the way creation operators should commute with the Hamiltonian. We remark that the Yangian becomes a symmetry of the Hamiltonian at $\eta = \ell$, which is the critical level in the language of \cite{reshetikhin_central_1990}. The appearance of a critical level should be compared with the Gaudin model, where the commutator between the Segal--Sugawara element and the current of the affine Kac--Moody algebra is proportional to $\kappa-\kappa_c$ (where $\kappa$ is the level and $\kappa_c$ is the critical level) \cite{frenkel_langlands_2010}. On the other hand, we conclude that in the case of non-critical level $\eta \neq \ell$, we can use the generators of the Yangian as creation operators to move between energy levels and build up the spectrum of the Hamiltonian.
 
 To this end, let $\mathbf{E} \coloneq \oint dz T(z)$, which is the generator of $\mathfrak{gl}_\ell$-symmetry and commutes with $S(z)$ according to
 \begin{equation}
@@ -787,11 +787,11 @@ To this end, let $\mathbf{E} \coloneq \oint dz T(z)$, which is the generator of 
 \end{equation}
 While it is at the moment unclear to us how to formulate a highest weight condition for both the Yangian and the Hamiltonian $H$, we may consider a vacuum vector $|0\rangle$ satisfying
 \begin{equation}
-S^{\alpha\beta}(z) |0\rangle = \delta^{\alpha\beta} \sum_{i=1}^N \frac{1}{z-q_i+\hbar} \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}} |0\rangle, \quad \mathbf{E}^{\alpha\alpha} |0\rangle = \delta^{\alpha\ell} N |0\rangle, \quad \mathbf{E}^{\alpha\beta}|0\rangle = 0, \quad \alpha > \beta.
+S^{\alpha\beta}(z) |0\rangle = \delta^{\alpha\beta} \sum_{i=1}^N \frac{1}{z-x_i+\hbar} \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}} |0\rangle, \quad \mathbf{E}^{\alpha\alpha} |0\rangle = \delta^{\alpha\ell} N |0\rangle, \quad \mathbf{E}^{\alpha\beta}|0\rangle = 0, \quad \alpha > \beta.
 \end{equation}
-It is easily checked that these conditions are compatible with the commutation relations of $S(z)$ and $\mathbf{E}$ when $\gamma = 1$, so we will set $\gamma = 1$ in the following. It follows that the vacuum energy is given by
+It is easily checked that these conditions are compatible with the commutation relations of $S(z)$ and $\mathbf{E}$ when $\eta = -1$, so we will set $\eta = -1$ in the following. It follows that the vacuum energy is given by
 \begin{equation}
-H |0\rangle = \ell \sum_{i=1}^N \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}} |0\rangle = N \ell |0\rangle.
+H |0\rangle = \ell \sum_{i=1}^N \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}} |0\rangle = N \ell |0\rangle.
 \end{equation}
 We now consider the creation operator $\bar{\mathbf{A}}^\mu(w) \coloneq T^{\mu\ell}(w)$ for $\mu = 1,\dots,\ell$, which is equal to $\bar A^\mu (w-Q)^{-1} e$ under the gauge condition $A_i^\ell=1$, and build up states of the form
 \begin{equation}
@@ -808,43 +808,43 @@ where we have used auxiliary space notation in spin space. Acting with $S^{\alph
 \begin{equation}
 \begin{aligned}
 S^{\alpha\alpha}(z) & \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle \\
-={}& \frac{1}{2} \sum_{i=1}^N \frac{1}{z-q_i+\hbar} \bigg( 1 + \prod_{a=1}^k (1-2\hbar V(w_a-q_i+\hbar)) \bigg) \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}}\bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle
+={}& \frac{1}{2} \sum_{i=1}^N \frac{1}{z-x_i+\hbar} \bigg( 1 + \prod_{a=1}^k (1-2\hbar V(w_a-x_i+\hbar)) \bigg) \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}}\bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle
 \end{aligned}
 \end{equation}
 as well as
 \begin{equation}
 \begin{aligned}
 S^{\ell\ell}(z) & \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle \\
-={}& \sum_{i=1}^N \frac{1}{z-q_i+\hbar} \prod_{a=1}^k (1-2\hbar V(w_a-q_i+\hbar)) \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}} \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle,
+={}& \sum_{i=1}^N \frac{1}{z-x_i+\hbar} \prod_{a=1}^k (1-2\hbar V(w_a-x_i+\hbar)) \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}} \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle,
 \end{aligned}
 \end{equation}
 where we have introduced the potential $V(z) \coloneq \frac{1}{z}-\frac{1}{z+\hbar}$. This implies
 \begin{equation}
 \begin{aligned}
 H \bar{\mathbf{A}}^{\mu_1}&(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle \\
-={}& \bigg( \frac{N(\ell-1)}{2} + \frac{\ell+1}{2} \sum_{i=1}^N \prod_{a=1}^k (1-2\hbar V(w_a-q_i+\hbar)) \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}} \bigg) \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle.
+={}& \bigg( \frac{N(\ell-1)}{2} + \frac{\ell+1}{2} \sum_{i=1}^N \prod_{a=1}^k (1-2\hbar V(w_a-x_i+\hbar)) \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}} \bigg) \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle.
 \end{aligned}
 \end{equation}
-Importantly, this is not an eigenvalue equation since the term in front depends on $q_1,\dots,q_N$, which do not act as a scalar on the vacuum. However, we can define the rescaled and shifted Hamiltonian $\tilde H \coloneq \frac{2}{\ell+1} H - \frac{\ell-1}{\ell+1} N$ and multiply the state with an arbitrary function $\psi(q_1,\dots,q_N)$ giving
+Importantly, this is not an eigenvalue equation since the term in front depends on $x_1,\dots,x_N$, which do not act as a scalar on the vacuum. However, we can define the rescaled and shifted Hamiltonian $\tilde H \coloneq \frac{2}{\ell+1} H - \frac{\ell-1}{\ell+1} N$ and multiply the state with an arbitrary function $\psi(x_1,\dots,x_N)$ giving
 \begin{equation}
 \begin{aligned}
-\tilde H \psi&(q_1,\dots,q_N) \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle \\
-={}& \sum_{i=1}^N \psi(q_1,\dots,q_i-\hbar,\dots,q_N) \prod_{a=1}^k (1-2\hbar V(w_a-q_i+\hbar)) \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}} \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle.
+\tilde H \psi&(x_1,\dots,x_N) \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle \\
+={}& \sum_{i=1}^N \psi(x_1,\dots,x_i-\hbar,\dots,x_N) \prod_{a=1}^k (1-2\hbar V(w_a-x_i+\hbar)) \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}} \bar{\mathbf{A}}^{\mu_1}(w_1) \cdots \bar{\mathbf{A}}^{\mu_k}(w_k) |0\rangle.
 \end{aligned}
 \end{equation}
 This becomes an eigenvalue equation when $\psi$ fulfills the difference equation
 \begin{equation} \label{eq:diffeq}
-\sum_{i=1}^N \prod_{a=1}^k (1-2\hbar V(w_a-q_i+\hbar)) \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}} e^{-\hbar\partial_i} \psi = \lambda \psi.
+\sum_{i=1}^N \prod_{a=1}^k (1-2\hbar V(w_a-x_i+\hbar)) \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}} e^{-\hbar\partial_i} \psi = \lambda \psi.
 \end{equation}
 It should be remarked that the energy eigenvalues of the eigenstates determined by solutions of \eqref{eq:diffeq} do not depend on the spin configuration given by $\mu_1,\dots,\mu_k$. This is a phenomenon observed more generally in spin-type integrable many-body systems. For example, the spectrum of the rational spin Calogero model considered in \cite{bourgine_calogero_2024} does not depend on the underlying spin configurations either. Instead, the introduction of spins enters into the degeneracies of the energy spectrum and modifies the exchange statistics.
 
-We note that for $k=0$ the difference operator in \eqref{eq:diffeq} reproduces exactly the spinless quantum Ruijsenaars--Schneider Hamiltonian with shift parameter $\gamma = 1$. Its simplest entire solution is given by plane waves multiplied with an attractive and symmetric Vandermonde-type factor:
+We note that for $k=0$ the difference operator in \eqref{eq:diffeq} reproduces exactly the spinless quantum Ruijsenaars--Schneider Hamiltonian with shift parameter $\eta = -1$. Its simplest entire solution is given by plane waves multiplied with an attractive and symmetric Vandermonde-type factor:
 \begin{equation}
-\psi(q_1,\dots,q_N) \coloneq \exp \bigg( \sum_{i=1}^N \frac{p_i q_i}{\hbar} \bigg) \Delta(q_1,\dots,q_N), \quad \Delta(q_1,\dots,q_N) \coloneq \prod_{i < j} \operatorname{sinc} \bigg( 2\pi \frac{q_i-q_j}{\hbar} \bigg)
+\psi(x_1,\dots,x_N) \coloneq \exp \bigg( \sum_{i=1}^N \frac{p_i x_i}{\hbar} \bigg) \Delta(x_1,\dots,x_N), \quad \Delta(x_1,\dots,x_N) \coloneq \prod_{i < j} \operatorname{sinc} \bigg( 2\pi \frac{x_i-x_j}{\hbar} \bigg)
 \end{equation}
 The corresponding eigenvalue is $\lambda = \sum_{i=1}^N e^{-p_i}$ and its $\mathfrak{gl}_\ell$-degeneracy is $\operatorname{Sym}^N \C^\ell$ coming from the action of $\mathbf{E}$ on the vacuum. We also know that $\mathbf{J}[1]^{\alpha\alpha}$ for $\alpha = 1,\dots,\ell$ acts as a symmetry of the Hamiltonian, but we find
 \begin{equation}
-\mathbf{J}[1]^{\alpha\alpha} \psi |0\rangle = \sum_{i=1}^N \prod_{j(\neq i)} \frac{q_{ij}-\hbar}{q_{ij}} e^{-\hbar\partial_i} \psi |0\rangle = \lambda \psi |0\rangle,
+\mathbf{J}[1]^{\alpha\alpha} \psi |0\rangle = \sum_{i=1}^N \prod_{j(\neq i)} \frac{x_{ij}-\hbar}{x_{ij}} e^{-\hbar\partial_i} \psi |0\rangle = \lambda \psi |0\rangle,
 \end{equation}
 so this does not produce more states. We conclude that the $L(\mathfrak{gl}_\ell)$-degeneracy of these eigenstates is just the evaluation module $\operatorname{Sym}^N \C^\ell$. This should be compared with subsection 3.1.4 of \cite{lamers_spin-ruijsenaars_2022}, where it is found that the ground state of their model has degeneracy $\operatorname{Sym}^N \C^\ell$.
 

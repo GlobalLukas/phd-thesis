@@ -124,11 +124,11 @@ In order for the description of the light BPS monopoles to be valid perturbative
 \end{equation}
 This, in turn, defines a torus fibration $\mathfrak{M} \coloneq T^*\mathcal{B}/\Gamma \to \mathcal{B}$ over the Coulomb branch $\mathcal{B}$, which comes with the canonical holomorphic symplectic form of the cotangent bundle. \emph{The punchline is that the coordinates $u$ form a Poisson-commutative family turning the torus fibration $\mathfrak{M}$ into the phase space of an algebraic integrable system in the sense of the Liouville theorem.} Specifically, it turns out that $a^i$ and their canonical conjugates are the action and angle variables of the periodic Toda chain (in the center-of-mass frame), whose Hamiltonian may be written as
 \begin{equation}
-	u_2 = H_\text{Toda} = \frac{1}{2} \sum_{i=1}^{N} p_i^2 + \Lambda^2 \sum_{i=1}^{N} e^{q_i - q_{i+1}},
+	u_2 = H_\text{Toda} = \frac{1}{2} \sum_{i=1}^{N} p_i^2 + \Lambda^2 \sum_{i=1}^{N} e^{x_i - x_{i+1}},
 \end{equation}
-where $q_i$ are particle coordinates, $p_i$ the canonical momenta, and $i$ is taken modulo $N$. This Hamiltonian has the stationary points
+where $x_i$ are particle coordinates, $p_i$ the canonical momenta, and $i$ is taken modulo $N$. This Hamiltonian has the stationary points
 \begin{equation}
-	p_i = 0, \qquad q_i - q_{i+1} = 2\pi\I\,k/N,
+	p_i = 0, \qquad x_i - x_{i+1} = 2\pi\I\,k/N,
 \end{equation}
 at which $u_2 = \Lambda^2 e^{2\pi\I\,k/N}$. Since these points are stationary, the Liouville torus at these energy levels (the fiber sitting over a point $u$) must degenerate in the direction of the flow. The modulus $\tau$ of the torus therefore blows up in this direction, making the effective theory of the corresponding light BPS particle weakly coupled.
 
@@ -282,8 +282,8 @@ Krichever and Zabrodin showed that the spin Ruijsenaars--Schneider model is an i
 Specifically, the Lax pair of Krichever and Zabrodin is given by
 \begin{equation}
     \begin{aligned}
-		L(z) \coloneq{}& \sum_{i,j=1}^N \Phi(z,x_j-x_i+\eta) f_{ij} E_{ij}, \qquad \\
-        M(z) \coloneq{}& \sum_{i=1}^N E_1(z) f_{ii} E_{ii} + \sum_{i,j=1}^N V(x_i-x_j) f_{ij} E_{ii} + \sum_{i \neq j}^N \Phi(z,x_j-x_i) f_{ij} E_{ij}.
+		L(z) \coloneq{}& \sum_{i,j=1}^N \Phi(z,x_j-x_i+\eta) f_{ij} e_{ij}, \qquad \\
+        M(z) \coloneq{}& \sum_{i=1}^N E_1(z) f_{ii} e_{ii} + \sum_{i,j=1}^N V(x_i-x_j) f_{ij} e_{ii} + \sum_{i \neq j}^N \Phi(z,x_j-x_i) f_{ij} e_{ij}.
     \end{aligned}
 \end{equation}
 Subsequently, Krichever constructed a symplectic form for the $\mathrm{M}_\ell$-invariant variables from the spectral data of the Lax matrix \cite{krichever_elliptic_1998}. However, it was not immediately obvious how to reexpress this symplectic form in terms of the natural variables $x_i,a_i^\alpha,c_i^\alpha$, except in the spinless case $\ell=1$. In the case $N=2$, \cite{soloviev_hamiltonian_2008} wrote down a symplectic form for the variables
@@ -319,7 +319,7 @@ whose Poisson brackets are of the form
 	\{ T_1(z),T_2(w) \} &= \frac{1}{z-w} [P,T_1(z) T_2(w)], \\
 	\{ J_1[n],J_2[m] \} &= \frac{1}{2} [P,J_1[n+m]-J_2[n+m]],
 \end{align}
-where $P = \sum_{i,j=1}^N E_{ij} \otimes E_{ji}$ is the permutation operator. Now, the important insight is that these Poisson brackets are the defining Poisson brackets of the classical limit of the Yangian $Y(\mathfrak{gl}_\ell)$ and the loop algebra $L(\mathfrak{gl}_\ell)$. More precisely, $T(z)$ and $J[n]$ generate the $N$-truncated quotients thereof, which comes from the fact that $T(z)$ and $J[n]$ are defined in terms of $N \times N$ matrices. Moreover, we find that
+where $P = \sum_{i,j=1}^N e_{ij} \otimes e_{ji}$ is the permutation operator. Now, the important insight is that these Poisson brackets are the defining Poisson brackets of the classical limit of the Yangian $Y(\mathfrak{gl}_\ell)$ and the loop algebra $L(\mathfrak{gl}_\ell)$. More precisely, $T(z)$ and $J[n]$ generate the $N$-truncated quotients thereof, which comes from the fact that $T(z)$ and $J[n]$ are defined in terms of $N \times N$ matrices. Moreover, we find that
 \begin{equation}\label{eq:HamFromCurrent}
 	\Tr J[n] = \Tr c g^n a = \Tr ac g^n = \eta H[n],
 \end{equation}
@@ -333,7 +333,7 @@ The paper \cite{bullimore_coulomb_2015} offered very concrete insight into the P
 \end{equation}
 that could be written as matrix products of $L$-operators of the form
 \begin{equation}
-	L^\alpha = \sum_{i,j=1}^N \frac{u_j^{\alpha+1}}{\varphi_i^\alpha - \varphi_j^{\alpha+1}} E_{ij},
+	L^\alpha = \sum_{i,j=1}^N \frac{u_j^{\alpha+1}}{\varphi_i^\alpha - \varphi_j^{\alpha+1}} e_{ij},
 \end{equation}
 resembling the Lax matrix of the (spinless) Ruijsenaars--Schneider model. Comparing these formulas to the ideas of \cite{nakajima_cherkis_2025} made it clear that such a construction should also be possible in the case of the necklace quiver. Constructed correctly, the momentum map for the necklace quiver then takes values in the loop algebra $L(\mathfrak{gl}_\ell)$, and the trace of the first mode should give the defining Hamiltonian $H[1]$ of the rational spin Ruijsenaars--Schneider model as in equation \eqref{eq:HamFromCurrent}. From the knowledge of the Hamiltonian $H[1]$ and the identification $x_i = \varphi_i^0$, we may compute $f_{ii}$ from the equations of motion \eqref{eq:eoms}, which inspires an ansatz for the spin (co)vector variables $a_i^\alpha$ and $c_i^\alpha$. Again using the equations of motion as a check, this ansatz finally yielded the correct identification of variables between the Coulomb branch variables and the variables of the rational spin Ruijsenaars--Schneider model.
 
