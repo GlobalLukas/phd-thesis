@@ -8,20 +8,24 @@
 % List of publications 1) mine used for this dissertation, 2) all of mine or just the rest
 %
 % publications for dissertation accreditation
+% NOTE: biblio-zotero.bib has no forthesis/notforthesis keywords, so the lists
+% are selected by explicit keys. TODO: add arutyunov:2026b (arXiv:2607.28043,
+% Arutyunov--Hardi--Klabbers) to Zotero and append its key to the \nocite below.
 \begin{refsection}
-  \nocite{*}
+  \nocite{arutyunov_quantized_2026,arutyunov_spin_2026,arutyunov_elliptic_2026}
   \printbibliography[%
     heading=subbibliography,%
-    keyword={forthesis},%
     title={Dissertation Related Publications}]%
 \end{refsection}
 
 % publications not for dissertation accreditation
-\begin{refsection}
-  \nocite{*}
-  \printbibliography[%
-    heading=subbibliography,%
-    keyword={notforthesis},%
-    title=Other Publications]%
-\end{refsection}
+% TODO: the only entry of this list (Berndt et al., Robust Online Algorithms for
+% Dynamic Choosing Problems, doi:10.1007/978-3-030-80049-9_4) is not in Zotero yet.
+% Add it, then restore this block with \nocite{<its key>}.
+%\begin{refsection}
+%  \nocite{<key>}
+%  \printbibliography[%
+%    heading=subbibliography,%
+%    title=Other Publications]%
+%\end{refsection}
 

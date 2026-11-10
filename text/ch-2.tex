@@ -86,7 +86,7 @@ Quiver gauge theories generally provide a large class of tractably computable th
 
 \subsection{Poisson reduction}
 
-Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret as the phase space of a classical system, on which some symmetries act. Following \cite{semenov:1985,alekseev:1994}, the action of the symmetry may be formalized by the notion of Poisson--Lie groups:
+Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret as the phase space of a classical system, on which some symmetries act. Following \cite{semenov-tian-shansky_dressing_1985,alekseev_symplectic_1994}, the action of the symmetry may be formalized by the notion of Poisson--Lie groups:
 
 \begin{definition}
 	\begin{enumerate}[label=(\roman*)]
@@ -140,7 +140,7 @@ Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret a
 		\begin{equation}
 			L = L_+ L_-^{-1}, \qquad \operatorname{diag}(L_+) \operatorname{diag}(L_-) = 1, \qquad L_\pm \in B_\pm
 		\end{equation}
-		and the Poisson bracket defined by \eqref{eq:PBpp}--\eqref{eq:PBmonodromy} is the classical limit of the RLL presentation of the quantum group $U_\hbar(\mathfrak{gl}_N)$ \cite{FRT:90,reshetikhin:1988}.
+		and the Poisson bracket defined by \eqref{eq:PBpp}--\eqref{eq:PBmonodromy} is the classical limit of the RLL presentation of the quantum group $U_\hbar(\mathfrak{gl}_N)$ \cite{faddeev_quantization_1989,reshetikhin_quantum_1988}.
 	\end{enumerate}
 \end{example}
 
@@ -193,15 +193,15 @@ Suppose we are handed a Poisson manifold $(M,\{ -,- \}_M)$, which we interpret a
 		\hline
 		Integrable model & obtained from & reference \\
 		\hline
-		Rational CM & $T^* \mathfrak{gl}_N$ & \cite{kazhdan:1978} \\
-		Trigonometric CM & $T^* \mathfrak{gl}_N(t)$ & \cite{gorsky:1994} \\
-		Trigonometric CM & $T^* \mathrm{GL}_N$ & \cite{kazhdan:1978} \\
-		Elliptic CM & $T^* \mathfrak{gl}_N(z,\bar z)$ & \cite{gorsky:1994b} \\
-		Rational RS & $T^* \mathrm{GL}_N$ & \cite{fock:2000} \\
-		Trigonometric RS & Heisenberg double of $\mathrm{GL}_N$ & \cite{feher:2009} \\
-		Trigonometric RS & $T^* \mathrm{GL}_N(t)$ & \cite{gorsky:1995} \\
-		Elliptic RS & $T^* \mathrm{GL}_N(z,\bar z)$ & \cite{arutyunov:1997a} \\
-		Elliptic RS & Affine Heisenberg double of $\mathrm{GL}_N$ & \cite{arutyunov:1997c} \\
+		Rational CM & $T^* \mathfrak{gl}_N$ & \cite{kazhdan_hamiltonian_1978} \\
+		Trigonometric CM & $T^* \mathfrak{gl}_N(t)$ & \cite{gorsky_hamiltonian_1994} \\
+		Trigonometric CM & $T^* \mathrm{GL}_N$ & \cite{kazhdan_hamiltonian_1978} \\
+		Elliptic CM & $T^* \mathfrak{gl}_N(z,\bar z)$ & \cite{gorsky_elliptic_1994} \\
+		Rational RS & $T^* \mathrm{GL}_N$ & \cite{fock_duality_2000} \\
+		Trigonometric RS & Heisenberg double of $\mathrm{GL}_N$ & \cite{feher_poisson-lie_2009} \\
+		Trigonometric RS & $T^* \mathrm{GL}_N(t)$ & \cite{gorsky_relativistic_1995} \\
+		Elliptic RS & $T^* \mathrm{GL}_N(z,\bar z)$ & \cite{arutyunov_elliptic_1997} \\
+		Elliptic RS & Affine Heisenberg double of $\mathrm{GL}_N$ & \cite{arutyunov_elliptic_1997-1} \\
 		\hline
 \end{tabular}
 	\caption[Integrable models from Poisson reduction]{Integrable models obtained from Poisson reduction of various spaces.\label{table:intSysRed}}
@@ -271,7 +271,7 @@ The notion of a Poisson--Lie group then has to be replaced by the notion of a \e
 			S&\colon U(\mathfrak{g}_\hbar) \to U(\mathfrak{g}_\hbar), \qquad &&\xi \in \mathfrak{g} \mapsto -\xi, \\
 			\epsilon&\colon U(\mathfrak{g}_\hbar) \to \C[\hbar], \qquad &&\xi \in \mathfrak{g} \mapsto 0.
 		\end{align}
-		\item Following \cite{FRT:90,alekseev:1992}, we may present the Drinfeld--Jimbo quantum group $U_q(\mathfrak{gl}_N)$ (a Hopf algebra over $\C[q^{\pm 1}]$) by generators $l_\pm^{ij}$ for $i,j=1,\dots,N$ satisfying
+		\item Following \cite{faddeev_quantization_1989,alekseev_hidden_1992}, we may present the Drinfeld--Jimbo quantum group $U_q(\mathfrak{gl}_N)$ (a Hopf algebra over $\C[q^{\pm 1}]$) by generators $l_\pm^{ij}$ for $i,j=1,\dots,N$ satisfying
 		\begin{equation}
 			l_\pm^{ij} = 0, \qquad i \lessgtr j, \qquad l_\pm^{ii} l_\mp^{ii} = 1.
 		\end{equation}
@@ -297,7 +297,7 @@ The notion of a Poisson--Lie group then has to be replaced by the notion of a \e
 	\end{enumerate}
 \end{example}
 
-Recall from the previous section that a Hamiltonian Poisson--Lie action is characterized by its momentum map $\mathcal{M} \colon M \to G^*$, which is a map of Poisson manifolds. In algebraic geometry, this corresponds to a map between the Poisson algebras of regular functions $\mathcal{O}(G^*) \to \mathcal{O}(M)$. The analog of this map in the quantum case is a \emph{quantum momentum map}. We now proceed to define the quantum Hamiltonian reduction given a quantum momentum map. A useful review can be found in the lecture notes \cite{etingof:2009}.
+Recall from the previous section that a Hamiltonian Poisson--Lie action is characterized by its momentum map $\mathcal{M} \colon M \to G^*$, which is a map of Poisson manifolds. In algebraic geometry, this corresponds to a map between the Poisson algebras of regular functions $\mathcal{O}(G^*) \to \mathcal{O}(M)$. The analog of this map in the quantum case is a \emph{quantum momentum map}. We now proceed to define the quantum Hamiltonian reduction given a quantum momentum map. A useful review can be found in the lecture notes \cite{etingof_lectures_2009}.
 
 \begin{definition}
 	A \emph{quantum momentum map} is an algebra map $\mu \colon H_\hbar \to \mathfrak{A}_\hbar$ from a Hopf algebra $H_\hbar$ over $\C[\hbar]$ to a possibly non-commutative $\C[\hbar]$-algebra $\mathfrak{A}_\hbar$. The \emph{adjoint action} of $h \in H_\hbar$ on $f \in \mathfrak{A}_\hbar$ is defined by
@@ -317,7 +317,7 @@ Recall from the previous section that a Hamiltonian Poisson--Lie action is chara
 	\end{equation}
 \end{definition}
 
-\begin{prop}[\cite{bezrukavnikov:2003}]
+\begin{prop}[\cite{bezrukavnikov_cherednik_2021}]
 	The algebra structure of $\mathfrak{A}_\hbar$ descends to a well-defined algebra structure of $\mathfrak{A}_\hbar /\!\!/ H_\hbar$.
 \end{prop}
 
@@ -347,17 +347,17 @@ The main property that makes quantum Hamiltonian reduction useful to us is that 
 
 As discussed in section \ref{sec:motivation} of the introduction, the Coulomb branch of a 3d $\mathcal{N}=4$ gauge theory---with compact gauge group $G_c$ and matter in the hypermultiplet representation $T^* V$ for some representation $V$ of the complexification $G$ of $G_c$---is the moduli space of vacua where the scalars inside the vector multiplets acquire non-zero expectation values.
 
-Classically speaking, the Coulomb branch is described by the quotient $(\R^3 \times S^1)^{\operatorname{rk} G}/W$, parametrized by the three real scalars of the vector multiplet together with the dual photon of section \ref{sec:motivation} modulo the action of the Weyl group $W$. Quantum mechanically, this description has to be corrected, and finding the correct algebra of functions on the Coulomb branch was a long-standing open problem. A leap of progress was made when Cremonesi--Hanany--Zaffaroni found the \emph{monopole formula} \cite{cremonesi:2014}, which gives the Hilbert series of the algebra of functions on the Coulomb branch. However, the monopole formula is only a character, and says little about the Coulomb branch as a variety. Subsequently, the construction of Braverman, Finkelberg, Nakajima (BFN), and others supplied the algebra structure, recovering the monopole formula as a Hilbert series.
+Classically speaking, the Coulomb branch is described by the quotient $(\R^3 \times S^1)^{\operatorname{rk} G}/W$, parametrized by the three real scalars of the vector multiplet together with the dual photon of section \ref{sec:motivation} modulo the action of the Weyl group $W$. Quantum mechanically, this description has to be corrected, and finding the correct algebra of functions on the Coulomb branch was a long-standing open problem. A leap of progress was made when Cremonesi--Hanany--Zaffaroni found the \emph{monopole formula} \cite{cremonesi_monopole_2014}, which gives the Hilbert series of the algebra of functions on the Coulomb branch. However, the monopole formula is only a character, and says little about the Coulomb branch as a variety. Subsequently, the construction of Braverman, Finkelberg, Nakajima (BFN), and others supplied the algebra structure, recovering the monopole formula as a Hilbert series.
 
 The BFN construction employs the machinery of equivariant Borel--Moore homology of certain infinite-dimensional spaces to solve this problem. The following subsections are meant to familiarize the reader with the basics of their construction.
 
 \subsection{Equivariant Borel--Moore homology}
 
-Borel--Moore homology \cite{borel:1960} is a homology theory that extends the properties of singular homology of compact spaces to locally compact spaces. One of its defining features is that it has a cap product with singular cohomology
+Borel--Moore homology \cite{borel_homology_1960} is a homology theory that extends the properties of singular homology of compact spaces to locally compact spaces. One of its defining features is that it has a cap product with singular cohomology
 \begin{equation}
 	\cap \colon H_n^\textup{BM}(X) \otimes H^k(X) \to H_{n-k}^\textup{BM}(X),
 \end{equation}
-which induces a Poincaré duality isomorphism for (possibly non-compact!) oriented manifolds with $n = \dim_\R X$. Importantly, \emph{equivariant} Borel--Moore homology \cite{anderson:2023} defines a useful extension of equivariant cohomology for which pushforwards exist for all proper maps. This makes it possible to construct convolution products in equivariant Borel--Moore homology. A review of Borel--Moore homology, convolution products, and their uses in geometric representation theory can be found in \cite{ginzburg:1998}. For applications to Coulomb branches, we will be particularly interested in spaces related to the affine Grassmannian, which is reviewed in \cite{zhu:2016}.
+which induces a Poincaré duality isomorphism for (possibly non-compact!) oriented manifolds with $n = \dim_\R X$. Importantly, \emph{equivariant} Borel--Moore homology \cite{anderson_equivariant_2023} defines a useful extension of equivariant cohomology for which pushforwards exist for all proper maps. This makes it possible to construct convolution products in equivariant Borel--Moore homology. A review of Borel--Moore homology, convolution products, and their uses in geometric representation theory can be found in \cite{ginzburg_geometric_1998}. For applications to Coulomb branches, we will be particularly interested in spaces related to the affine Grassmannian, which is reviewed in \cite{zhu_introduction_2016}.
 
 \begin{definition}
 	Let $G$ be a complex reductive algebraic group acting on a complex variety $X$. The \emph{equivariant cohomology} and \emph{equivariant Borel--Moore homology} are defined by
@@ -371,7 +371,7 @@ which induces a Poincaré duality isomorphism for (possibly non-compact!) orient
 	Typically, $EG$ is an infinite-dimensional space that has to be approximated by finite-dimensional spaces to obtain a well-defined Borel--Moore homology. We will sweep this subtlety under the rug for the purposes of a shortened exposition.
 \end{remark}
 
-\begin{prop}[\cite{anderson:2023}]
+\begin{prop}[\cite{anderson_equivariant_2023}]
 	Let $G$ be a complex reductive algebraic group acting on a non-singular complex variety $X$.
 	\begin{enumerate}[label=(\roman*)]
 		\item The equivariant Borel--Moore homology of a point is
@@ -409,7 +409,7 @@ which induces a Poincaré duality isomorphism for (possibly non-compact!) orient
 	where $\operatorname{Frac}(H_G^\textup{BM}(\textup{pt}))$ is the fraction field of $H_G^\textup{BM}(\textup{pt}) = S(\mathfrak{g}^*)^G$.
 \end{definition}
 
-\begin{theorem}[Localization theorem {\cite{anderson:2023}}]
+\begin{theorem}[Localization theorem {\cite{anderson_equivariant_2023}}]
 	Let $T$ be a complex torus acting on a complex variety $X$. The inclusion $\iota \colon X^T \to X$ yields a pushfoward map
 	\begin{equation}
 		\iota_* \colon \bigoplus_{x \in X^T} H_T^\textup{BM}(\{ x \}) \to H_T^\textup{BM}(X)
@@ -485,7 +485,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	Let $G = \mathrm{GL}_N$. The columns of any matrix inside $G_\mathcal{K}$ define a set of $N$ elements of $\mathcal{K}^N$ which is linearly independent over $\mathcal{K}$, therefore linearly independent over $\mathcal{O}$, generating a free rank $N$ $\mathcal{O}$-submodule of $\mathcal{K}^N$. Free rank $N$ $\mathcal{O}$-submodules of $\mathcal{K}^N$ are also called \emph{lattices} in $\mathcal{K}^N$. Acting with a matrix in $G_\mathcal{O}$ on the generating set of a lattice preserves the lattice. This establishes a bijection between the $\C$-points of $\mathrm{Gr}_G$ and the set of lattices in $\mathcal{K}^N$.
 \end{example}
 
-\begin{prop}[\cite{zhu:2016}]
+\begin{prop}[\cite{zhu_introduction_2016}]
     Let $X_*^+(T)$ be the set of dominant coweights. Then $\mathrm{Gr}_G$ splits into left $G_\mathcal{O}$-orbits indexed by dominant coweights:
     \begin{equation}
 		\textup{Gr}_G = \bigsqcup_{\lambda \in X_*^+(T)} \textup{Gr}_G^\lambda, \qquad \textup{Gr}_G^\lambda \coloneq G_\mathcal{O} \cdot x^\lambda, \qquad x^\lambda \coloneq t^\lambda G_\mathcal{O},
@@ -501,12 +501,12 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
     where $\mu \leq \lambda$ denotes the dominance order on $X_*^+(T)$. In particular, for minuscule $\lambda$ (minimal elements with respect to the dominance order), we have $\overline{\textup{Gr}_G^\lambda} = \textup{Gr}_G^\lambda$.
 \end{definition}
 
-\begin{prop}[\cite{zhu:2016}]\label{prop:finDimApprox}
+\begin{prop}[\cite{zhu_introduction_2016}]\label{prop:finDimApprox}
 	The Schubert varieties $\overline{\textup{Gr}_G^\lambda}$ are projective varieties and the inductive limit $\varinjlim_\lambda \overline{\textup{Gr}_G^\lambda}$ exhibits $\textup{Gr}_G$ as an ind-projective scheme.
 \end{prop}
 
 \begin{remark}
-	Proposition \ref{prop:finDimApprox} is the basis for any finite-dimensional approximations that are needed to define the Borel--Moore homological constructions rigorously. For the purposes of this thesis, we will sweep these technicalities under the rug. The interested reader can go back to the original reference \cite{braverman:2018} for details.
+	Proposition \ref{prop:finDimApprox} is the basis for any finite-dimensional approximations that are needed to define the Borel--Moore homological constructions rigorously. For the purposes of this thesis, we will sweep these technicalities under the rug. The interested reader can go back to the original reference \cite{braverman_towards_2018} for details.
 \end{remark}
 
 \begin{definition}
@@ -517,7 +517,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	where $s \in \C_\hbar^\times$ acts on $\mathcal{O}$ by $t \mapsto st$ and $\hbar$ is the generator of $H_{\C_\hbar^\times}^\textup{BM}(\textup{pt}) = \C[\hbar]$. Then $\tilde G$ acts on $V_\mathcal{O}$ where $\C_\hbar^\times$ acts on $V$ with weight $\frac{\hbar}{2}$.
 \end{definition}
 
-\begin{definition}[\cite{braverman:2018}]
+\begin{definition}[\cite{braverman_towards_2018}]
 	Equip $T_{G,V} \coloneq G_\mathcal{K} \times^{G_\mathcal{O}} V_\mathcal{O}$ with the natural action of $\tilde G$ from the left. There are $\tilde G$-equivariant maps
 	\begin{align}
 		\rho & \colon T_{G,V} \to V_\mathcal{K}, \qquad &&[g,v] \mapsto gv, \\
@@ -537,7 +537,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	The spaces $R_{G,V}^{\leq \lambda}$ serve as approximations for the full space $R_{G,V}$ in the same way $\overline{\textup{Gr}_G^\lambda}$ serve as approximations for $\textup{Gr}_G$.
 \end{remark}
 
-\begin{prop}[\cite{braverman:2018}]
+\begin{prop}[\cite{braverman_towards_2018}]
 	The equivariant Borel--Moore homology $H_{\tilde G}^\textup{BM}(R_{G,V})$ comes equipped with a convolution product.
 \end{prop}
 
@@ -577,11 +577,11 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	The \emph{quantized Coulomb branch algebra} is $\mathfrak{A}_\hbar \coloneq H_{\tilde G}^\textup{BM}(R)$ equipped with the convolution product, which is an algebra over $\C[\hbar]$. The \emph{(classical) Coulomb branch algebra} is its specialization $\mathfrak{A} \coloneq \mathfrak{A}_\hbar/\hbar \mathfrak{A}_\hbar$.
 \end{definition}
 
-\begin{prop}[\cite{braverman:2018}]
+\begin{prop}[\cite{braverman_towards_2018}]
 	The Coulomb branch algebra $\mathfrak{A}$ is commutative and has the structure of a Poisson algebra.
 \end{prop}
 
-\begin{definition}[\cite{braverman:2018}]
+\begin{definition}[\cite{braverman_towards_2018}]
 	The \emph{Coulomb branch} is the affine complex Poisson variety
 	\begin{equation}
 		\mathfrak{M} \coloneq \operatorname{Spec} \mathfrak{A}.
@@ -619,7 +619,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	More generally, we obtain the following:
 \end{example}
 
-\begin{prop}[\cite{braverman:2018}]
+\begin{prop}[\cite{braverman_towards_2018}]
 	Suppose $G' = G = T = (\C^\times)^N$ and $V=0$. Then $\mathfrak{A}_{\hbar,\textup{loc}} \coloneq H_{\tilde G}^\textup{BM}(R)_\textup{loc}$ is generated by the fixed point fundamental classes $[x^\lambda]$ for $\lambda \in X_*(T)$ as a right module over $\operatorname{Frac}(H_{\tilde G}^\textup{BM}(\text{pt})) = \C(\hbar,a_1,\dots,a_N)$. The convolution product is given by
 	\begin{equation}
 		(f_1(a) [x^{\lambda_1}]) * (f_2(a) [x^{\lambda_2}]) = f_1(a) f_2(a+\lambda_1 \hbar) [x^{\lambda_1 + \lambda_2}].
@@ -633,7 +633,7 @@ Let $G$ be a complex reductive algebraic group (the complexified gauge group) wi
 	exhibits $\mathfrak{A}_{\hbar,\textup{loc}}$ as an algebra of difference operators on $\C(\hbar,a_1,\dots,a_N)$.
 \end{prop}
 
-\begin{prop}[\cite{braverman:2018,braverman:2018b}]
+\begin{prop}[\cite{braverman_towards_2018,braverman_coulomb_2018}]
 	Let $\mathbf{z} \colon R_{T,0} \to R_{T,V}$ be the zero section and let $\iota\colon R_{T,V} \to R_{G,V}$ be the abelianization map. Then
 	\begin{equation}
 		H_{\tilde G}^\textup{BM}(R_{G,V})_\textup{loc} \cong H_{\tilde T}^\textup{BM}(R_{G,V})_\textup{loc}^W \overset{(\iota_*)^{-1}}{\to} H_{\tilde T}^\textup{BM}(R_{T,V})_\textup{loc}^W \overset{\mathbf{z}^*}{\to} H_{\tilde T}^\textup{BM}(R_{T,0})_\textup{loc}^W \hookrightarrow H_{\tilde T}^\textup{BM}(R_{T,0})_\textup{loc}
@@ -668,7 +668,7 @@ We now restrict our attention to quiver gauge theories whose quiver is an ADE qu
 	The word \emph{zastava} means \emph{flag} in various Slavic languages, explaining the terminology.
 \end{remark}
 
-\begin{theorem}[\cite{braverman:2018b}]
+\begin{theorem}[\cite{braverman_coulomb_2018}]
 	Let $Q$ be a quiver of finite type ADE or affine type A and $N_\bullet$ a dimension vector. Then 
 	\begin{equation}
 		\mathfrak{M}_Q \cong \mathring Z_Q^\textup{rat}.
@@ -679,7 +679,7 @@ We now restrict our attention to quiver gauge theories whose quiver is an ADE qu
 	The \emph{necklace quiver} with $\ell$ nodes of rank $N$ is the quiver $Q$ of affine type $A_{\ell-1}^{(1)}$ with constant dimension vector $N_\bullet = N$, see figure \ref{fig:quiver}.
 \end{definition}
 
-\begin{prop}[\cite{finkelberg:2014,nakajima:2017}]
+\begin{prop}[\cite{finkelberg_quantization_2014,nakajima_cherkis_2025}]
 	Let $Q$ be the necklace quiver. Then $\mathring Z_Q^\textup{rat}$ has étale rational coordinates $\varphi_i^\alpha$ and $u_i^\alpha$ for $\alpha \in \Z_\ell$ and $i=1,\dots,N$ and their Poisson brackets are given by
 	\begin{align}\label{eq:etaleCoordsPB}
 		\{ \varphi_i^\alpha,\varphi_j^\beta \} &= 0, \qquad
@@ -700,16 +700,16 @@ We now restrict our attention to quiver gauge theories whose quiver is an ADE qu
 \end{prop}
 
 \begin{remark}
-	These Poisson brackets are exactly the generalization of the Poisson brackets obtained in \cite{bullimore:2015} for Coulomb branches of linear quivers using the abelianization method. We will therefore refer to the Poisson algebra of the étale rational coordinates as the \emph{abelianized Coulomb branch algebra}.
+	These Poisson brackets are exactly the generalization of the Poisson brackets obtained in \cite{bullimore_coulomb_2015} for Coulomb branches of linear quivers using the abelianization method. We will therefore refer to the Poisson algebra of the étale rational coordinates as the \emph{abelianized Coulomb branch algebra}.
 \end{remark}
 
 \subsection{$K$-theoretic and elliptic Coulomb branches}
 
-The BFN construction of Coulomb branches of 3d $\mathcal{N}=4$ gauge theories has natural trigonometric and elliptic deformations. Namely, instead of taking equivariant Borel--Moore homology of the BFN space $R_{G,V}$, we can take equivariant $K$-theory, or equivariant elliptic Borel--Moore homology. The former case is well-known, while the latter case is less explored. However, the description of Coulomb branches of quivers of (finite) type ADE in terms of the open zastava is known to generalize to the trigonometric and elliptic cases \cite{finkelberg:2018,finkelberg:2022}.
+The BFN construction of Coulomb branches of 3d $\mathcal{N}=4$ gauge theories has natural trigonometric and elliptic deformations. Namely, instead of taking equivariant Borel--Moore homology of the BFN space $R_{G,V}$, we can take equivariant $K$-theory, or equivariant elliptic Borel--Moore homology. The former case is well-known, while the latter case is less explored. However, the description of Coulomb branches of quivers of (finite) type ADE in terms of the open zastava is known to generalize to the trigonometric and elliptic cases \cite{finkelberg_towards_2018,finkelberg_elliptic_2022}.
 
 Physically speaking, the trigonometric and elliptic deformations describe the Coulomb branches of 4d $\mathcal{N}=2$ and 5d $\mathcal{N}=1$ gauge theories on the compactified spacetimes $\R^3 \times S^1$ and $\R^3 \times T^2$. The fields in the effective three-dimensional theory then consist of infinite towers of Kaluza--Klein modes (Fourier modes of the fields along $S^1$ or $T^2$) and summing over them yields periodic or doubly quasi-periodic---\emph{i.e.} trigonometric or elliptic---functions.
 
-\begin{prop}[\cite{finkelberg:2018,finkelberg:2022}]
+\begin{prop}[\cite{finkelberg_towards_2018,finkelberg_elliptic_2022}]
 	Let $Q$ be a quiver of finite type ADE with dimension vector $N_\bullet$ and $G,V$ the corresponding complexified gauge group and matter representation.
 	\begin{enumerate}[label=(\roman*)]
 	\item Then
