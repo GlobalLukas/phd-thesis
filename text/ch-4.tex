@@ -770,7 +770,7 @@ In this section, we construct generators of the abelianized quantized $K$-theore
 \begin{equation}
     Q_i^\alpha Q_j^\beta = Q_j^\beta Q_i^\alpha, \qquad P_i^\alpha Q_j^\beta = q^{\delta_{ij} \delta^{\alpha\beta}} Q_j^\beta P_i^\alpha, \qquad P_i^\alpha P_j^\beta = P_j^\beta P_i^\alpha.
 \end{equation}
-The abelianized monopole operators of minuscule coweight/magnetic charge, which together with the exponentiated vacuum expectation values $Q_i^\alpha$ generate the abelianized quantized $K$-theoretic Coulomb branch algebra, can then be expressed in terms of the $q$-difference operators as \todo{[TODO: Define the multiplicative masses $\mu^\alpha$ and the parameter $t$ (presumably $t = \prod_\alpha \mu^\alpha$ from the telescoping of $\tilde L^{\text{tot}-}$), and state their relation to the masses $m_\alpha$ of figure \ref{fig:quiver} and $m^{\alpha\to\beta}$ of chapter \ref{chap:background}.]} 
+The abelianized monopole operators of minuscule coweight/magnetic charge, which together with the exponentiated vacuum expectation values $Q_i^\alpha$ generate the abelianized quantized $K$-theoretic Coulomb branch algebra, can then be expressed in terms of the $q$-difference operators as \todo{[TODO: Define the multiplicative masses $\mu^\alpha \in \C^\times$ and set $t \coloneq \prod_{\alpha \in \Z_\ell} \mu^\alpha$ (checked in the notebook QuantizationOfTheTrigonometricRSModel.nb); state their relation to the masses $m_\alpha$ of figure \ref{fig:quiver} and $m^{\alpha\to\beta}$ of chapter \ref{chap:background}.]} 
 \begin{align}
     u_i^{\alpha+} &\coloneq \prod_{k=1}^N (Q_k^\alpha/Q_k^{\alpha+1})^{1/2} \frac{\prod_{k=1}^N (1-(\mu^\alpha)^{-1} Q_k^{\alpha+1}/Q_i^\alpha)}{\prod_{k(\neq i)} (1-Q_k^\alpha/Q_i^\alpha)} P_i^\alpha, \\
     u_i^{\alpha-} &\coloneq \prod_{k=1}^N (Q_k^\alpha/Q_k^{\alpha-1})^{1/2} \frac{\prod_{k=1}^N (1-\mu^{\alpha-1} Q_k^{\alpha-1}/Q_i^\alpha)}{\prod_{k(\neq i)} (1-Q_k^\alpha/Q_i^\alpha)} (P_i^\alpha)^{-1}.
@@ -797,7 +797,7 @@ we quantize this algebra. To every arrow $\alpha \to \alpha+1$ in the necklace q
     L_{ij}^{\alpha+} &\coloneq \frac{q^{1/2}}{1-(\mu^\alpha)^{-1} Q_i^{\alpha+1}/Q_j^\alpha} u_j^{\alpha+}, \label{eq:LpOp} \\
     L_{ij}^{\alpha-} &\coloneq \frac{q^{-1/2}}{\mu^\alpha Q_i^\alpha/Q_j^{\alpha+1}-1} u_j^{\alpha+1,-}. \label{eq:LmOp}
 \end{align}
-\todo{[TODO: Compare with the classical $L$-operators of section \ref{sec:hypEoms}: the quantum $L^{\alpha+}$ has the transposed index structure ($u_j^{\alpha+}$ with $Q_i^{\alpha+1}/Q_j^\alpha$); classical spin variables use $u^+$, quantum ones $L^-,u^-$; $\tilde L$ is $Q^{-1} L Q$ classically and $\mu Q L Q^{-1}$ here; and $H^-[1] = \Tr L^{\text{tot}-}$ vs.\ $(t-1)\Tr L$ built from $u^+$. Reconcile conventions.]} 
+\todo{[TODO: Sign of $L^{\alpha-}$: the notebook uses $L_{ij}^{\alpha-} = q^{-1/2} u_j^{\alpha+1,-}/(1-\mu^\alpha Q_i^\alpha/Q_j^{\alpha+1})$, i.e.\ an extra overall minus sign compared to \eqref{eq:LmOp}. With that sign, \eqref{eq:Ltot}, the formulas for $L^{\text{tot}-}_{ij}$, $\tilde L^{\text{tot}-}_{ij}$, $H^-[1] = \Tr L^{\text{tot}-} = q^{-1/2} S^-[1]$, the spectral curve and $F^{\alpha,\beta}$ are correct as written; with the current sign they acquire factors $(-1)^\ell$ resp.\ $(-1)^{\beta-\alpha}$. Separately: compare with the classical $L$-operators of section \ref{sec:hypEoms} (transposed index structure of $L^{\alpha+}$; classical spin variables use $u^+$, quantum ones $L^-,u^-$; $\tilde L$ is $Q^{-1} L Q$ classically and $\mu Q L Q^{-1}$ here; $H^-[1]$ vs.\ $(t-1)\Tr L$). Reconcile conventions.]} 
 In \cite{arutyunov_spin_2026} it was shown that 
 the Poisson brackets of the classical counterparts of these $L$-operators are quadratic in $L^{\alpha\pm}$ and can be written in terms of classical $r$-matrices. Assuming the operator ordering prescribed by equations \eqref{eq:LpOp} and \eqref{eq:LmOp}, we obtain the following commutation relations
 \begin{align}
@@ -979,7 +979,7 @@ which satisfy relations analogous to the relations for $U_q(\mathfrak{gl}_\ell)$
     E^\alpha E^\beta &= E^\beta E^\alpha, \qquad \alpha-\beta \neq 0,\pm1, \\[5pt]
     F^\alpha F^\beta &= F^\beta F^\alpha, \qquad \alpha-\beta \neq 0,\pm1,
 \end{align}
-where $K^\alpha \coloneq t^\alpha (t^{\alpha-1})^{-1}$, as well as the $q$-Serre relations \todo{[TODO: From $P_i^\alpha Q_j^\beta = q^{\delta_{ij}\delta^{\alpha\beta}} Q_j^\beta P_i^\alpha$ and the definition of $t^\beta$ one finds $E^\alpha t^\beta = q^{(\delta^{\alpha\beta}-\delta^{\alpha+1,\beta})/2} t^\beta E^\alpha$, the opposite exponent. Also $K^\alpha = t^\alpha (t^{\alpha-1})^{-1}$ is centred at node $\alpha-1$ and inverted relative to the classical $K^\alpha$. Possible fix: invert $t^\alpha$ and set $K^\alpha \coloneq (t^{\alpha+1})^{-1} t^\alpha$.]} 
+where $K^\alpha \coloneq t^\alpha (t^{\alpha-1})^{-1}$, as well as the $q$-Serre relations \todo{[TODO: With $t^\alpha$ as in \eqref{eq:DJgen1}, the notebook shows that these relations hold for $(t^\beta)^{-1} = T^+[0]^{\beta\beta}$ instead of $t^\beta$. Minimal fix keeping \eqref{eq:DJgen1}: $E^\alpha t^\beta = q^{(\delta^{\alpha\beta}-\delta^{\alpha+1,\beta})/2} t^\beta E^\alpha$, $F^\alpha t^\beta = q^{(-\delta^{\alpha\beta}+\delta^{\alpha+1,\beta})/2} t^\beta F^\alpha$, and $K^\alpha \coloneq t^{\alpha+1} (t^\alpha)^{-1}$ (the current $K^\alpha$ is centred at node $\alpha-1$). The notebook also verifies $E^\alpha K^\beta = q^{-\kappa^{\alpha\beta}/2} K^\beta E^\alpha$. Note that this $K^\alpha$ is inverse to the classical one up to mass factors.]} 
 \begin{align}
     (E^\alpha)^2 E^{\alpha\pm1} + E^{\alpha\pm1} (E^\alpha)^2 &= (q^{1/2}+q^{-1/2}) E^\alpha E^{\alpha\pm1} E^\alpha, \\[5pt]
     (F^\alpha)^2 F^{\alpha\pm1} + F^{\alpha\pm1} (F^\alpha)^2 &= (q^{1/2}+q^{-1/2}) F^\alpha F^{\alpha\pm1} F^\alpha,
@@ -1023,7 +1023,7 @@ satisfy the relations \eqref{eq:DJrel1}--\eqref{eq:DJrel2}. More generally, we c
 \begin{align}
     E^{\alpha,\beta} \coloneq (\mu^{\alpha-1})^{-1} u^{\beta+} L^{\beta-1,+} \cdots L^{\alpha+} e, \qquad F^{\alpha,\beta} \coloneq \mu^\beta u^{\alpha-} L^{\alpha-} \cdots L^{\beta-1,-} e,
 \end{align}
-where we use the covector $u^{\alpha\pm} \coloneq (u_1^{\alpha\pm},\dots,u_N^{\alpha\pm})$ and the vector $e = (1,\dots,1)^t$. In terms of the 4d $\mathcal{N}=2$ necklace quiver gauge theory, these may be thought of as monopole operators with fundamental charge under the gauge nodes $\alpha$ to $\beta$, see \cite[\S 6.6.1]{bullimore_coulomb_2015}. From the integrable spin chain perspective, they may be thought of as the propagation of an excitation along the spin chain from site $\alpha$ to site $\beta$. Using the isomorphism between the Drinfeld--Jimbo and the RTT presentation \cite{finkelberg_shifted_2019}, we then find the zeroth and first modes of the generator matrices $T^\pm(u)$ to be of the form
+where we use the covector $u^{\alpha\pm} \coloneq (u_1^{\alpha\pm},\dots,u_N^{\alpha\pm})$ and the vector $e = (1,\dots,1)^t$. \todo{[TODO: Prefactors: the notebook uses $\prod_{\rho=\alpha}^{\beta} (\mu^{\rho-1})^{-N/2}$ in $E^{\alpha,\beta}$ and $\prod_{\rho=\alpha}^{\beta} (\mu^\rho)^{N/2}$ in $F^{\alpha,\beta}$ instead of $(\mu^{\alpha-1})^{-1}$ and $\mu^\beta$; only then are $E^{\alpha,\alpha}$, $F^{\alpha,\alpha}$ proportional to $E^\alpha$, $F^\alpha$ and do the $T^\pm[0]$ formulas below hold.]} In terms of the 4d $\mathcal{N}=2$ necklace quiver gauge theory, these may be thought of as monopole operators with fundamental charge under the gauge nodes $\alpha$ to $\beta$, see \cite[\S 6.6.1]{bullimore_coulomb_2015}. From the integrable spin chain perspective, they may be thought of as the propagation of an excitation along the spin chain from site $\alpha$ to site $\beta$. Using the isomorphism between the Drinfeld--Jimbo and the RTT presentation \cite{finkelberg_shifted_2019}, we then find the zeroth and first modes of the generator matrices $T^\pm(u)$ to be of the form
 \begin{equation}
     T^+[0]^{\alpha\beta} =
     \begin{cases}
@@ -1042,11 +1042,11 @@ and
 \begin{align}
     T^+[1]^{\alpha\beta} &= q^{-(1-\delta^{\alpha\beta})/2} (t^\alpha)^{-1} E^{\alpha,\beta+\ell-1}, \qquad & T^-[1]^{\alpha\beta} &= q^{(1-\delta^{\alpha\beta})/2} F^{\beta,\alpha+\ell-1} t^\beta.
 \end{align}
-One may check that the RTT relations \eqref{eq:RTT} of the quantum loop algebra are indeed satisfied to first order in $u$ and $v$. Now, we can use the quantum Leibniz formula
+One may check that the RTT relations \eqref{eq:RTT} of the quantum loop algebra are indeed satisfied to first order in $u$ and $v$. \todo{[TODO: The notebook verifies the RTT relations with $T^+(u) = T^+[0] + u^{-1} \cdot (\text{the expression given here for } T^-[1])$ and $T^-(u) = T^-[0] + u \cdot (\text{the expression for } T^+[1])$, i.e.\ with $T^\pm[1]$ swapped, while its quantum determinant check uses the assignment as written here. Either swap $T^\pm[1]$ and recompute $\operatorname{qdet}^\pm[1]$, or keep them and rerun the RTT check.]} Now, we can use the quantum Leibniz formula
 \begin{equation}
     \operatorname{qdet}^\pm(u) = \sum_{n=0}^\infty \operatorname{qdet}^\pm[n] u^{\mp n} = \sum_{\sigma \in S_\ell} (-q^{1/2})^{\ell(\sigma)} T^{\sigma(1)1\pm}(u) \cdots T^{\sigma(\ell)\ell\pm}(q^{-\ell+1} u),
 \end{equation}
-with $S_\ell$ the symmetric group on $\ell$ objects, to extract the first modes of the quantum determinant and find
+with $S_\ell$ the symmetric group on $\ell$ objects, \todo{[TODO: The notebook evaluates instead $\sum_{\sigma \in S_\ell} (-q^{1/2})^{\ell(\sigma)} T^{1\sigma(1)\pm}(u) T^{2\sigma(2)\pm}(qu) \cdots T^{\ell\sigma(\ell)\pm}(q^{\ell-1} u)$ (permutation on the column index, increasing shifts); the results \eqref{eq:qdet} are for that formula.]} to extract the first modes of the quantum determinant and find
 \begin{align}\label{eq:qdet}
     \operatorname{qdet}^\pm[0] = t^{\pm N/2}, \qquad \operatorname{qdet}^\pm[1] = q^{\mp 1/2} (1-t^{\mp 1}) H^\pm[1].
 \end{align}
@@ -1064,7 +1064,7 @@ for $\alpha = 0,\dots,\ell-1$, where we use the modified $L$-operator $\tilde L^
 \begin{equation}
     q^{1/2} L^{\alpha-} - q^{-1/2} \tilde L^{\alpha-} = e u^{\alpha+1,-}.
 \end{equation}
-\todo{[TODO: With the $q$-commutation taken into account, $q^{1/2} L^{\alpha-} - q^{-1/2} \tilde L^{\alpha-} = -e u^{\alpha+1,-}$; the sign propagates into \eqref{eq:Ltot}.]} 
+\todo{[TODO: This equation is correct once the sign of $L^{\alpha-}$ in \eqref{eq:LmOp} is fixed as in the notebook (see the note there); no change needed here or in \eqref{eq:Ltot}.]} 
 The same telescopic argument as in \cite{arutyunov_spin_2026} yields a similar identity for the total $L$-operators
 \begin{equation}\label{eq:Ltot}
         \sum_{\alpha \in \Z_\ell} q^\alpha a^\alpha c^\alpha
