@@ -18,7 +18,7 @@
 
 \section{Supersymmetric gauge theory}\label{sec:susy}
 
-\subsection{Vector multiplets and hypermultiplets}
+\subsection{Vector multiplets and hypermultiplets}\label{subsection:multiplets}
 
 What was missing from the discussion of supersymmetric field theories in the introduction was a detailed description of the field content of supersymmetric field theories with eight supercharges, specifically the representation theory of the super Poincaré algebras in 3d, 4d, and 5d, which are the symmetries of the super Minkowski spacetimes $\R^{1,2|8}$, $\R^{1,3|8}$, and $\R^{1,4|8}$.
 
@@ -63,7 +63,7 @@ Quiver gauge theories in 5d $\mathcal{N}=1$, 4d $\mathcal{N}=2$, or 3d $\mathcal
 
 \begin{definition}
 	\begin{enumerate}[label=(\roman*)]
-		\item An \emph{(unframed) quiver} $Q = (Q_0,Q_1)$ is a set of nodes $Q_0$ and a set of arrows $Q_1$ together with \emph{source} and \emph{target maps} $s,t\colon Q_1 \to Q_0$. Diagrammatically, we draw nodes $\alpha \in Q_0$ as circles and arrows $a \in Q_1$ with $s(a) = \alpha$ and $t(a) = \beta$ as arrows from node $\alpha$ to node $\beta$.
+		\item An \emph{(unframed) quiver} $Q = (Q_0,Q_1)$ is a set of nodes $Q_0$ and a set of arrows $Q_1$ together with \emph{source} and \emph{target maps} $s,t\colon Q_1 \to Q_0$. Diagrammatically, we draw nodes $\alpha \in Q_0$ as circles and arrows $a \in Q_1$ with $s(a) = \alpha$ and $t(a) = \beta$ as arrows from node $\alpha$ to node $\beta$, and write $\alpha \to \beta$.
 		\item A \emph{dimension vector} for a quiver $Q$ is a tuple of positive integers $N_\bullet = (N_\alpha)_{\alpha \in Q_0}$.
 		\item The \emph{compact} and \emph{complexified gauge group} associated to a quiver $Q$ with dimension vector $N_\bullet$ are
 		\begin{equation}
@@ -690,24 +690,46 @@ We now restrict our attention to quiver gauge theories whose quiver is an ADE qu
 	\begin{equation}
 		G_\textup{rat}^{\alpha\beta}(z) = G_\textup{rat}^{\alpha \to \beta}(z) + G_\textup{rat}^{\alpha = \beta}(z) + G_\textup{rat}^{\alpha \leftarrow \beta}(z),
 	\end{equation}
-	where
+	with
 	\begin{align}
 		G_\textup{rat}^{\alpha \to \beta}(z) = \frac{1}{z-m^{\alpha\to\beta}}, \qquad
 		G_\textup{rat}^{\alpha = \beta}(z) = \frac{1}{z} \qquad
 		G_\textup{rat}^{\alpha \leftarrow \beta}(z) = \frac{1}{z+m^{\beta\to\alpha}},
 	\end{align}
-	and we define $\frac{1}{z}$ at $z=0$ by its regular part, which is zero.
+	non-zero only in the cases $\alpha \to \beta$, $\alpha = \beta$, or $\alpha \leftarrow \beta$, respectively, and we define $\frac{1}{z}$ at $z=0$ by its regular part, which is zero.
 \end{prop}
 
 \begin{remark}
-	These Poisson brackets are exactly the generalization of the Poisson brackets obtained in \cite{bullimore_coulomb_2015} for Coulomb branches of linear quivers using the abelianization method. We will therefore refer to the Poisson algebra of the étale rational coordinates as the \emph{abelianized Coulomb branch algebra}. They furthermore provide a quantization of these
+	These Poisson brackets are exactly the generalization of the Poisson brackets obtained in \cite{bullimore_coulomb_2015} for Coulomb branches of linear quivers using the abelianization method. We will therefore refer to the Poisson algebra of the étale rational coordinates as the \emph{abelianized Coulomb branch algebra}. They furthermore compute the deformation quantization of these Poisson brackets coming from the $\Omega$-background parameter $\hbar$, which is the equivariant parameter for loop rotation group $\C_\hbar^\times$ above. Their natural generalization to the necklace quiver gives the following
 \end{remark}
+
+\begin{prop}
+    The $\hbar$-deformation quantization of the Poisson algebra of the étale rational coordinates is given by
+    \begin{equation}\label{eq:QuantCBRel}
+    \begin{aligned}
+    [\varphi_i^\alpha,\varphi_j^\beta] = 0, \qquad
+    [\varphi_i^\alpha,u_j^{\beta}] = {\hbar\delta_{ij}\delta^{\alpha\beta}}u_j^{\beta}, \qquad
+    u_i^{\alpha} u_j^{\beta} = g_\textup{rat}^{\alpha\beta}(\varphi_i^\alpha-\varphi_j^\beta) u_j^{\beta} u_i^{\alpha},
+    \end{aligned}
+    \end{equation}
+    where the rational quantum structure function $g_\textup{rat}^{\alpha\beta}(z)$ decomposes according to the adjacency of the nodes $\alpha$ and $\beta$ as
+	\begin{equation}
+		g_\textup{rat}^{\alpha\beta}(z) = g_\textup{rat}^{\alpha \to \beta}(z) g_\textup{rat}^{\alpha = \beta}(z) g_\textup{rat}^{\alpha \leftarrow \beta}(z),
+	\end{equation}
+	with
+	\begin{align}
+		g_\textup{rat}^{\alpha \to \beta}(z) = \frac{z-m^{\alpha\to\beta}-\hbar}{z-m^{\alpha\to\beta}}, \qquad
+		g_\textup{rat}^{\alpha = \beta}(z) = \frac{z+\hbar}{z-\hbar} \qquad
+		g_\textup{rat}^{\alpha \leftarrow \beta}(z) = \frac{z+m^{\beta\to\alpha}}{z+m^{\beta\to\alpha}+\hbar}
+	\end{align}
+    non-unity only in the cases $\alpha \to \beta$, $\alpha = \beta$, or $\alpha \leftarrow \beta$, respectively.
+\end{prop}
 
 \subsection{$K$-theoretic and elliptic Coulomb branches}
 
 The BFN construction of Coulomb branches of 3d $\mathcal{N}=4$ gauge theories has natural trigonometric and elliptic deformations. Namely, instead of taking equivariant Borel--Moore homology of the BFN space $R_{G,V}$, we can take equivariant $K$-theory, or equivariant elliptic Borel--Moore homology. The former case is well-known, while the latter case is less explored. However, the description of Coulomb branches of quivers of (finite) type ADE in terms of the open zastava is known to generalize to the trigonometric and elliptic cases \cite{finkelberg_towards_2018,finkelberg_elliptic_2022}.
 
-Physically speaking, the trigonometric and elliptic deformations describe the Coulomb branches of 4d $\mathcal{N}=2$ and 5d $\mathcal{N}=1$ gauge theories on the compactified spacetimes $\R^3 \times S^1$ and $\R^3 \times T^2$. The fields in the effective three-dimensional theory then consist of infinite towers of Kaluza--Klein modes (Fourier modes of the fields along $S^1$ or $T^2$) and summing over them yields periodic or doubly quasi-periodic---\emph{i.e.} trigonometric or elliptic---functions.
+Physically speaking, the trigonometric and elliptic deformations describe the Coulomb branches of 4d $\mathcal{N}=2$ and 5d $\mathcal{N}=1$ gauge theories on the compactified spacetimes $\R^3 \times S^1$ and $\R^3 \times T^2$. The fields in the effective three-dimensional theory then consist of infinite towers of Kaluza--Klein modes (Fourier modes of the fields along $S^1$ or $T^2$) and summing over them yields periodic or doubly quasi-periodic---\emph{i.e.} trigonometric or elliptic---functions, which are exactly the gauge covariant combinations of the fields under the large gauge group, as discussed in subsection~\ref{subsection:multiplets}.
 
 \begin{prop}[\cite{finkelberg_towards_2018,finkelberg_elliptic_2022}]
 	Let $Q$ be a quiver of finite type ADE with dimension vector $N_\bullet$ and $G,V$ the corresponding complexified gauge group and matter representation.
@@ -725,15 +747,35 @@ Physically speaking, the trigonometric and elliptic deformations describe the Co
 	\end{align}
 	and
 	\begin{align}
-		G_\textup{ell}^{\alpha \to \beta}(z) = E_1(z-m^{\alpha\to\beta}), \quad
+		G_\textup{ell}^{\alpha \to \beta}(z) = E_1(z-m^{\alpha\to\beta}), \;
 		G_\textup{ell}^{\alpha = \beta}(z) =
-		E_1(z), \quad
+		E_1(z), \;
 		G_\textup{ell}^{\alpha \leftarrow \beta}(z) = E_1(z+m^{\beta\to\alpha}),
 	\end{align}
-	where we define $\cot(z)$ and $E_1(z)$ at $z=0$ by their regular parts, which are zero. \todo{[TODO: Unify normalizations: $\cot(z)$ here, $\tfrac12\coth(z/2)$ in chapter \ref{chap:spinRSCB}, and $E_1 \to \pi\cot(\pi z)$ in the appendix; they agree up to rescaling $z$ by $2\pi\I$, which should be stated once.]} 
+	where we define $\cot(z)$ and $E_1(z)$ at $z=0$ by their regular parts, which are zero.
 	\end{enumerate}
 \end{prop}
 
 \begin{remark}
-	Since the generators and relations of the Poisson algebras of the étale rational coordinates are local in the quiver (depending only on a single node and its adjacent nodes), the Poisson algebras for linear quivers (finite type A) are easily generalized to necklace quivers (affine type A). In this thesis, we will assume that the description of $K$-theoretic and elliptic Coulomb branches of quivers of finite type ADE in terms of the étale rational coordinates on open zastavas and their étale rational coordinates extends to quivers of affine type A as in the rational case.
+	Since the generators and relations of the Poisson algebras of the étale rational coordinates are local in the quiver (depending only on a single node and its adjacent nodes), the Poisson algebras for linear quivers (finite type A) are easily generalized to necklace quivers (affine type A). In this thesis, we will assume that the description of classical and quantized $K$-theoretic and elliptic Coulomb branches of quivers of finite type ADE in terms of the étale rational coordinates on open zastavas and their étale rational coordinates extends to quivers of affine type A as in the rational case. The deformation quantization is then given by the following
 \end{remark}
+
+\begin{definition}
+    The \emph{quantized $K$-theoretic/elliptic Coulomb branch algebras of the necklace quiver} are generated by $u_i^\alpha$ and holomorphic functions in $\varphi_i^\alpha$ for $i=1,\dots,N$ and $\alpha \in \Z_\ell$ subject to the relations \eqref{eq:QuantCBRel} except that the rational quantum structure functions $g_\textup{rat}^{\alpha \to \beta}(z)$, $g_\textup{rat}^{\alpha = \beta}(z)$, and $g_\textup{rat}^{\alpha \leftarrow \beta}(z)$ are replaced by their trigonometric/elliptic analogs
+	\begin{align}
+		g_\textup{tri}^{\alpha \to \beta}(z) = \frac{\sin(z-m^{\alpha\to\beta}-\hbar)}{\sin(z-m^{\alpha\to\beta})}, \;
+		g_\textup{tri}^{\alpha = \beta}(z) = \frac{\sin(z+\hbar)}{\sin(z-\hbar)}, \;
+		g_\textup{tri}^{\alpha \leftarrow \beta}(z) = \frac{\sin(z+m^{\beta\to\alpha})}{\sin(z+m^{\beta\to\alpha}+\hbar)},
+	\end{align}
+    and
+    \begin{align}
+		g_\textup{ell}^{\alpha \to \beta}(z) = \frac{\theta(z-m^{\alpha\to\beta}-\hbar)}{\theta(z-m^{\alpha\to\beta})}, \;
+		g_\textup{ell}^{\alpha = \beta}(z) = \frac{\theta(z+\hbar)}{\theta(z-\hbar)}, \;
+		g_\textup{ell}^{\alpha \leftarrow \beta}(z) = \frac{\theta(z+m^{\beta\to\alpha})}{\theta(z+m^{\beta\to\alpha}+\hbar)},
+	\end{align}
+    respectively. In the $K$-theoretic case, we often write $Q_i^\alpha \coloneq \exp(\varphi_i^\alpha)$.
+\end{definition}
+
+\subsection{GKLO difference operator representation}
+
+\todo{tba}
