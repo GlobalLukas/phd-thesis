@@ -692,9 +692,9 @@ We now restrict our attention to quiver gauge theories whose quiver is an ADE qu
 	\end{equation}
 	with
 	\begin{align}
-		G_\textup{rat}^{\alpha \to \beta}(z) = \frac{1}{z-m^{\alpha\to\beta}}, \qquad
-		G_\textup{rat}^{\alpha = \beta}(z) = \frac{1}{z} \qquad
-		G_\textup{rat}^{\alpha \leftarrow \beta}(z) = \frac{1}{z+m^{\beta\to\alpha}},
+		G_\textup{rat}^{\alpha \to \beta}(z) = \frac{-1}{z-m^{\alpha\to\beta}}, \qquad
+		G_\textup{rat}^{\alpha = \beta}(z) = \frac{2}{z} \qquad
+		G_\textup{rat}^{\alpha \leftarrow \beta}(z) = \frac{-1}{z+m^{\beta\to\alpha}},
 	\end{align}
 	non-zero only in the cases $\alpha \to \beta$, $\alpha = \beta$, or $\alpha \leftarrow \beta$, respectively, and we define $\frac{1}{z}$ at $z=0$ by its regular part, which is zero.
 \end{prop}
@@ -712,14 +712,14 @@ We now restrict our attention to quiver gauge theories whose quiver is an ADE qu
     u_i^{\alpha} u_j^{\beta} = g_\textup{rat}^{\alpha\beta}(\varphi_i^\alpha-\varphi_j^\beta) u_j^{\beta} u_i^{\alpha},
     \end{aligned}
     \end{equation}
-    where the rational quantum structure function $g_\textup{rat}^{\alpha\beta}(z)$ decomposes according to the adjacency of the nodes $\alpha$ and $\beta$ as
+    where in the last relation $(i,\alpha) \neq (j,\beta)$ and the rational quantum structure function $g_\textup{rat}^{\alpha\beta}(z)$ decomposes according to the adjacency of the nodes $\alpha$ and $\beta$ as
 	\begin{equation}
 		g_\textup{rat}^{\alpha\beta}(z) = g_\textup{rat}^{\alpha \to \beta}(z) g_\textup{rat}^{\alpha = \beta}(z) g_\textup{rat}^{\alpha \leftarrow \beta}(z),
 	\end{equation}
 	with
 	\begin{align}
 		g_\textup{rat}^{\alpha \to \beta}(z) = \frac{z-m^{\alpha\to\beta}-\hbar}{z-m^{\alpha\to\beta}}, \qquad
-		g_\textup{rat}^{\alpha = \beta}(z) = \frac{z+\hbar}{z-\hbar} \qquad
+		g_\textup{rat}^{\alpha = \beta}(z) = \frac{z+\hbar}{z-\hbar}, \qquad
 		g_\textup{rat}^{\alpha \leftarrow \beta}(z) = \frac{z+m^{\beta\to\alpha}}{z+m^{\beta\to\alpha}+\hbar}
 	\end{align}
     non-unity only in the cases $\alpha \to \beta$, $\alpha = \beta$, or $\alpha \leftarrow \beta$, respectively.
@@ -741,16 +741,16 @@ Physically speaking, the trigonometric and elliptic deformations describe the Co
 	where $K_{G_\mathcal{O}}(-)$ and $E_{G_\mathcal{O}}(-)$ denote equivariant $K$-theory and elliptic Borel--Moore homology, $\operatorname{\underline{Spec}}$ denotes the relative spectrum, and $\mathring Z_Q^\textup{tri}$ and $\mathring Z_Q^\textup{ell}$ are the trigonometric open zastava and the elliptic (Coulomb) open zastava.
 	\item $\mathring Z_Q^\textup{tri}$ and $\mathring Z_Q^\textup{ell}$ have étale rational coordinates $\varphi_i^\alpha,u_i^\alpha$ with $\alpha \in Q_0$ and $i=1,\dots,N_\alpha$ with Poisson brackets exactly as in equation \eqref{eq:etaleCoordsPB}, except that the rational structure functions $G_\textup{rat}^{\alpha \to \beta}(z)$, $G_\textup{rat}^{\alpha = \beta}(z)$, and $G_\textup{rat}^{\alpha \leftarrow \beta}(z)$ are replaced by their trigonometric and elliptic analogs
 	\begin{align}
-		G_\textup{tri}^{\alpha \to \beta}(z) = \cot(z-m^{\alpha\to\beta}), \;
-		G_\textup{tri}^{\alpha = \beta}(z) = \cot(z), \;
-		G_\textup{tri}^{\alpha \leftarrow \beta}(z) = \cot(z+m^{\beta\to\alpha}),
+		G_\textup{tri}^{\alpha \to \beta}(z) = -\cot(z-m^{\alpha\to\beta}), \;
+		G_\textup{tri}^{\alpha = \beta}(z) = 2\cot(z), \;
+		G_\textup{tri}^{\alpha \leftarrow \beta}(z) = -\cot(z+m^{\beta\to\alpha}),
 	\end{align}
 	and
 	\begin{align}
-		G_\textup{ell}^{\alpha \to \beta}(z) = E_1(z-m^{\alpha\to\beta}), \;
+		G_\textup{ell}^{\alpha \to \beta}(z) = -E_1(z-m^{\alpha\to\beta}), \;
 		G_\textup{ell}^{\alpha = \beta}(z) =
-		E_1(z), \;
-		G_\textup{ell}^{\alpha \leftarrow \beta}(z) = E_1(z+m^{\beta\to\alpha}),
+		2 E_1(z), \;
+		G_\textup{ell}^{\alpha \leftarrow \beta}(z) = -E_1(z+m^{\beta\to\alpha}),
 	\end{align}
 	where we define $\cot(z)$ and $E_1(z)$ at $z=0$ by their regular parts, which are zero.
 	\end{enumerate}
@@ -773,8 +773,12 @@ Physically speaking, the trigonometric and elliptic deformations describe the Co
 		g_\textup{ell}^{\alpha = \beta}(z) = \frac{\theta(z+\hbar)}{\theta(z-\hbar)}, \;
 		g_\textup{ell}^{\alpha \leftarrow \beta}(z) = \frac{\theta(z+m^{\beta\to\alpha})}{\theta(z+m^{\beta\to\alpha}+\hbar)},
 	\end{align}
-    respectively. In the $K$-theoretic case, we often write $Q_i^\alpha \coloneq \exp(\varphi_i^\alpha)$.
+    respectively.
 \end{definition}
+
+\begin{remark}
+    In the $K$-theoretic case, we write $Q_i^\alpha \coloneq \exp(2 \I \varphi_i^\alpha)$, $q \coloneq \exp(2\I \hbar)$, and $\mu^\alpha \coloneq \exp(-2\I m^\alpha)$.
+\end{remark}
 
 \subsection{GKLO difference operator representation}
 
