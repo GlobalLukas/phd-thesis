@@ -693,7 +693,7 @@ We now restrict our attention to quiver gauge theories whose quiver is an ADE qu
 	with
 	\begin{align}
 		G_\textup{rat}^{\alpha \to \beta}(z) = \frac{-1}{z-m^{\alpha\to\beta}}, \qquad
-		G_\textup{rat}^{\alpha = \beta}(z) = \frac{2}{z} \qquad
+		G_\textup{rat}^{\alpha = \beta}(z) = \frac{2}{z}, \qquad
 		G_\textup{rat}^{\alpha \leftarrow \beta}(z) = \frac{-1}{z+m^{\beta\to\alpha}},
 	\end{align}
 	non-zero only in the cases $\alpha \to \beta$, $\alpha = \beta$, or $\alpha \leftarrow \beta$, respectively, and we define $\frac{1}{z}$ at $z=0$ by its regular part, which is zero.
@@ -777,7 +777,18 @@ Physically speaking, the trigonometric and elliptic deformations describe the Co
 \end{definition}
 
 \begin{remark}
-    In the $K$-theoretic case, we write $Q_i^\alpha \coloneq \exp(2 \I \varphi_i^\alpha)$, $q \coloneq \exp(2\I \hbar)$, and $\mu^\alpha \coloneq \exp(-2\I m^\alpha)$.
+    In the $K$-theoretic case, we write $Q_i^\alpha \coloneq \exp(2 \I \varphi_i^\alpha)$, $q \coloneq \exp(2\I \hbar)$, and $\mu^{\alpha\to\beta} \coloneq \exp(-2\I m^{\alpha\to\beta})$. In this parametrization with $Q \coloneq \exp(2\I z)$, the quantum structure functions become
+    \begin{align}
+		g_\textup{tri}^{\alpha \to \beta}(z) = \frac{q^{-1/2} \mu^{\alpha\to\beta} Q-q^{1/2}}{\mu^{\alpha\to\beta} Q-1}, \;
+		g_\textup{tri}^{\alpha = \beta}(z) = \frac{q Q-1}{Q-q}, \;
+		g_\textup{tri}^{\alpha \leftarrow \beta}(z) = \frac{Q-\mu^{\beta\to\alpha}}{q^{1/2} Q-q^{-1/2} \mu^{\beta\to\alpha}},
+	\end{align}
+    and the classical structure functions become
+    \begin{align}
+		G_\textup{tri}^{\alpha \to \beta}(z) = -\I \frac{\mu^{\alpha\to\beta} Q+1}{\mu^{\alpha\to\beta} Q-1}, \;
+		G_\textup{tri}^{\alpha = \beta}(z) = 2\I \frac{Q+1}{Q-1}, \;
+		G_\textup{tri}^{\alpha \leftarrow \beta}(z) = -\I \frac{Q+\mu^{\beta\to\alpha}}{Q-\mu^{\beta\to\alpha}}.
+	\end{align}
 \end{remark}
 
 \subsection{GKLO difference operator representation}
