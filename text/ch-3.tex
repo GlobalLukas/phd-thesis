@@ -1098,14 +1098,14 @@ t_i(u) \to  t'_i(u) = (d_h^{(T)})_{ii}^{-1} t_i(u) \,.
 From this fact, we see that the L operator
 \begin{equation}
 \label{eq:full_inv_L}
-\mathbb{L}(u,z):= t^{-1}(u) L(z) t(u) \,,
+\mathbf{L}(u,z):= t^{-1}(u) L(z) t(u) \,,
 \end{equation}
 is a full invariant object, no matter the choice of $u$.
 
 Using the expression in~\eqref{eq:full_inv_L}, we obtain
 \begin{equation}
 \label{eq:D_mathcalL_parameterization2}
-\mathbb{L}(u,z+\tfrac{\tau}{2}) - \gamma Q^{-1} \mathbb{L}(u,z-\tfrac{\tau}{2}) Q =  \gamma \varkappa t^{-1}(u) T^{-1}(z) a(z) c(z) T(z) Q^{-1} L(z-\tfrac{\tau}{2}) Q t(u) \,.
+\mathbf{L}(u,z+\tfrac{\tau}{2}) - \gamma Q^{-1} \mathbf{L}(u,z-\tfrac{\tau}{2}) Q =  \gamma \varkappa t^{-1}(u) T^{-1}(z) a(z) c(z) T(z) Q^{-1} L(z-\tfrac{\tau}{2}) Q t(u) \,.
 \end{equation}
 From this constraint, we read the definitions for the invariant spin oscillators to be
 \begin{equation}
@@ -1126,7 +1126,7 @@ Moreover we are working with the gauge choice
 \end{equation}
 Plugging these expressions into~\eqref{eq:D_mathcalL_parameterization2}, we obtain
 \begin{equation}
-\mathbb{L}(u,z+\tfrac{\tau}{2}) - \gamma Q^{-1} \mathbb{L}(u, z-\tfrac{\tau}{2}) Q = \gamma \varkappa  \mathbf{a}(u,z) \mathbf{c}(u,z)
+\mathbf{L}(u,z+\tfrac{\tau}{2}) - \gamma Q^{-1} \mathbf{L}(u, z-\tfrac{\tau}{2}) Q = \gamma \varkappa  \mathbf{a}(u,z) \mathbf{c}(u,z)
 \end{equation}
 To solve this equation, we define
 \begin{equation}
@@ -1140,7 +1140,7 @@ Q_{ij} := \delta_{ij} Q_i \,, \qquad Q_i := e^{2\pi\I x_i} \,, \qquad x_{ij} := 
 Then the moment map constraint in components becomes
 \begin{equation}
 \label{eq:mom_map_constr_L_comp}
-\mathbb{L}_{ij}(u,z+\tfrac{\tau}{2}) - e^{-2\pi\I (x_{ij} - \eta)}  \mathbb{L}_{ij}(u, z-\tfrac{\tau}{2}) =  \tilde{\varkappa}  f_{ij}(u,z) \,,
+\mathbf{L}_{ij}(u,z+\tfrac{\tau}{2}) - e^{-2\pi\I (x_{ij} - \eta)}  \mathbf{L}_{ij}(u, z-\tfrac{\tau}{2}) =  \tilde{\varkappa}  f_{ij}(u,z) \,,
 \end{equation}
 where
 \begin{equation}
@@ -1165,19 +1165,19 @@ The deformation parameter $\eta$ ensures that the second argument $x_{ij}-\eta$ 
 Once such a Green's function is found, we can write a general solution to the moment map as
 \begin{equation}
 \label{eq:Loperator_general_sol}
-\mathbb{L}_{ij}(u,z) = \tilde{\varkappa} \int^{+1/2}_{-1/2} \frac{dw}{2 \pi \I } \,  \Phi(z-w-\tfrac{\tau}{2}, x_{ij}- \eta) f_{ij}(u, w) \,.
+\mathbf{L}_{ij}(u,z) = \tilde{\varkappa} \int^{+1/2}_{-1/2} \frac{dw}{2 \pi \I } \,  \Phi(z-w-\tfrac{\tau}{2}, x_{ij}- \eta) f_{ij}(u, w) \,.
 \end{equation}
 We now evaluate the first loop argument of the invariant fields at a common point $u=\Delta^0$, defining
 \begin{equation}
 \label{eq:gauge_a}
-\mathbf{a}_i^\alpha(z):= \mathbf{a}_i^\alpha(\Delta^0, z) \,, \qquad \mathbf{c}_i^\alpha(z) := \mathbf{c}_i^\alpha(\Delta^0, z) \,, \qquad \mathbb{L}_{ij}(z) := \mathbb{L}_{ij}(\Delta^0,z) \,.
+\mathbf{a}_i^\alpha(z):= \mathbf{a}_i^\alpha(\Delta^0, z) \,, \qquad \mathbf{c}_i^\alpha(z) := \mathbf{c}_i^\alpha(\Delta^0, z) \,, \qquad \mathbf{L}_{ij}(z) := \mathbf{L}_{ij}(\Delta^0,z) \,.
 \end{equation}
 The original dependence on the first argument is retained when computing the Poisson brackets, since derivatives with respect to this argument can contribute in the coincidence limit. Section \ref{sec:removing_first_loop} explains why the evaluation point must be treated as a dynamical variable and specifies its brackets with the oscillator fields.
 
 On the space~\eqref{eq:gauge_a} we have
 \begin{equation}
 \label{eq:Loperator_general_sol2}
-\mathbb{L}_{ij}(z) = \tilde{\varkappa} \int^{+1/2}_{-1/2} \frac{dw}{2 \pi \I } \,  \Phi(z-w-\tfrac{\tau}{2}, x_{ij}- \eta) f_{ij}(w) \,.
+\mathbf{L}_{ij}(z) = \tilde{\varkappa} \int^{+1/2}_{-1/2} \frac{dw}{2 \pi \I } \,  \Phi(z-w-\tfrac{\tau}{2}, x_{ij}- \eta) f_{ij}(w) \,.
 \end{equation}
 
 
@@ -1215,7 +1215,7 @@ The other brackets for the double are obtained similarly; it turns out they corr
 
 If we restrict to the zero modes of the oscillators, then equation~\eqref{eq:Loperator_general_sol2} becomes
 \begin{equation}
-\mathbb{L}_{ij}(z) = \tilde{\varkappa} \int^{+1/2}_{-1/2} \frac{dw}{2 \pi \I } \,  \Phi(z-w-\tfrac{\tau}{2}, x_{ij}- \eta) f^{(0)}_{ij}\,, \qquad f^{(0)}_{ij} = \sum_{\alpha} \mathbf{a}_i^{(0)\alpha} \mathbf{c}_j^{(0)\alpha}  \,.
+\mathbf{L}_{ij}(z) = \tilde{\varkappa} \int^{+1/2}_{-1/2} \frac{dw}{2 \pi \I } \,  \Phi(z-w-\tfrac{\tau}{2}, x_{ij}- \eta) f^{(0)}_{ij}\,, \qquad f^{(0)}_{ij} = \sum_{\alpha} \mathbf{a}_i^{(0)\alpha} \mathbf{c}_j^{(0)\alpha}  \,.
 \end{equation}
 Using the periodicity properties of $\Phi$ the integral can be performed exactly. Indeed, shifting the integration line from $(-\tfrac12, +\tfrac12)$ to $(-\tfrac12+\tfrac{\tau}{2}+ \I \varepsilon, +\tfrac12+\tfrac{\tau}{2}+ \I \varepsilon)$ (where $\varepsilon$ is a positive infinitesimal parameter) and subtracting the associated residue of the pole coming from the shift we obtain
 \begin{equation}
@@ -1245,9 +1245,9 @@ From this equation, we obtain
 \end{equation}
 We obtain
 \begin{equation}
-\mathbb{L}^{(0)}_{ij} =  \frac{\tilde{\varkappa}}{1-e^{2\pi\I (\eta-x_{ij})}} f^{(0)}_{ij} \,.
+\mathbf{L}^{(0)}_{ij} =  \frac{\tilde{\varkappa}}{1-e^{2\pi\I (\eta-x_{ij})}} f^{(0)}_{ij} \,.
 \end{equation}
-This corresponds to the Lax operator of the hyperbolic spin RS models\footnote{Strictly speaking, the Lax operator is trigonometric for real values of $x_i$ and hyperbolic for imaginary values.}. One can check by a direct computation (as done in~\cite{arutyunov_hyperbolic_2019}) that $H_k= \Tr \left( (\mathbb{L}^{(0)})^k \right)$ are in involution, and $H_1$ is the Hamiltonian of the spin hyperbolic RS models.
+This corresponds to the Lax operator of the hyperbolic spin RS models\footnote{Strictly speaking, the Lax operator is trigonometric for real values of $x_i$ and hyperbolic for imaginary values.}. One can check by a direct computation (as done in~\cite{arutyunov_hyperbolic_2019}) that $H_k= \Tr \left( (\mathbf{L}^{(0)})^k \right)$ are in involution, and $H_1$ is the Hamiltonian of the spin hyperbolic RS models.
 
 
 \paragraph{Elliptic spin RS models with inhomogeneities.}
@@ -1261,7 +1261,7 @@ where $\mathbf{c}_j^\alpha$ is independent of the loop coordinate.
 In the expressions above, the parameters $\{\Delta^\alpha \}_{\alpha \in \Z_\ell}$ correspond to inhomogeneities. These inhomogeneities are real numbers, distinct modulo $1$. By replacing the representation~\eqref{eq:repres_a_b} in~\eqref{eq:Loperator_general_sol2}, we obtain
 \begin{equation}
 \label{eq:Loperator_specific_sol}
-\mathbb{L}_{ij}(z)=\tilde{\varkappa}\sum_\alpha \frac{1}{2 \pi \I } \,  \Phi(z-\Delta^\alpha-\tfrac{\tau}{2}, x_{ij}- \eta) \mathbf{a}_i^\alpha\mathbf{c}_j^\alpha \,, 
+\mathbf{L}_{ij}(z)=\tilde{\varkappa}\sum_\alpha \frac{1}{2 \pi \I } \,  \Phi(z-\Delta^\alpha-\tfrac{\tau}{2}, x_{ij}- \eta) \mathbf{a}_i^\alpha\mathbf{c}_j^\alpha \,, 
 \end{equation}
 where
 \begin{equation}
@@ -1280,7 +1280,7 @@ In the following sections and associated appendices, we will perform the explici
 \subsection{Poisson brackets of invariant objects}
 \label{sec:Poisson_inv}
 
-In this section, we derive the Poisson brackets of the quantities invariant under the group actions, namely the $\mathbb{L}$ operator defined in~\eqref{eq:full_inv_L} and the invariant spin oscillators~\eqref{eq:a_inv_spin} and~\eqref{eq:b_inv_spin}. We compute these brackets by expressing the invariant quantities in terms of the elements $A(u)$ and $B(u)$ of the original affine Heisenberg double and the oscillator variables on the symplectic manifold introduced in section~\ref{sec:affine_osc_manifold}. The derivation does not require imposing the moment map constraint.
+In this section, we derive the Poisson brackets of the quantities invariant under the group actions, namely the $\mathbf{L}$ operator defined in~\eqref{eq:full_inv_L} and the invariant spin oscillators~\eqref{eq:a_inv_spin} and~\eqref{eq:b_inv_spin}. We compute these brackets by expressing the invariant quantities in terms of the elements $A(u)$ and $B(u)$ of the original affine Heisenberg double and the oscillator variables on the symplectic manifold introduced in section~\ref{sec:affine_osc_manifold}. The derivation does not require imposing the moment map constraint.
 
 
 %%%%%%%%%%%%%%%%%
@@ -1357,36 +1357,36 @@ As far as we know, this is a new Poisson bracket. Evaluating the unreduced brack
 \subsubsection{LL bracket}
 
 Once the TT and TB brackets are known, the derivation of the remaining brackets is a matter of an algebraic computation.
-Performing a long but straightforward computation, we find the following bracket between invariant $\mathbb{L}$ operators:
+Performing a long but straightforward computation, we find the following bracket between invariant $\mathbf{L}$ operators:
 \begin{equation}
 \label{eq:LL_bracket_with_index_arbitraryxz}
 \begin{split}
-&\frac{2\pi}{\varkappa} \{ \mathbb{L}_{ij}(u,z), \mathbb{L}_{kl}(v,w) \} =\\
-&\scriptstyle{+\mathbb{L}_{ij}(u,z) \mathbb{L}_{kl}(v,w) \left(\I t^{-1}_j(u) t^{-1}_l(v) \Phi(v-u, x_{lj}) t_l(u) t_j(v) + \I t^{-1}_i(u) t^{-1}_k(v) \Phi(v-u, x_{ki}) t_k(u) t_i(v) \right)} \\
-&\scriptstyle{+\mathbb{L}_{ij}(u,z) \mathbb{L}_{kl}(v,w) \left(-\I t^{-1}_j(u) t^{-1}_k(v) \Phi(v-u, x_{kj}) t_k(u) t_j(v) + \I t^{-1}_i(u) t^{-1}_l(v) \Phi(u-v, x_{il}) t_l(u) t_i(v) \right)}\\
-&\scriptstyle{+ \I \mathbb{L}_{il}(u,z)\mathbb{L}_{kj}(v,w)  t^{-1}_{l}(u) t^{-1}_j(v)  \ \Phi(z-w, x_{lj}) t_{j}(u) t_{l}(v)+\I \mathbb{L}_{kj}(u,z)\mathbb{L}_{il}(v,w)
+&\frac{2\pi}{\varkappa} \{ \mathbf{L}_{ij}(u,z), \mathbf{L}_{kl}(v,w) \} =\\
+&\scriptstyle{+\mathbf{L}_{ij}(u,z) \mathbf{L}_{kl}(v,w) \left(\I t^{-1}_j(u) t^{-1}_l(v) \Phi(v-u, x_{lj}) t_l(u) t_j(v) + \I t^{-1}_i(u) t^{-1}_k(v) \Phi(v-u, x_{ki}) t_k(u) t_i(v) \right)} \\
+&\scriptstyle{+\mathbf{L}_{ij}(u,z) \mathbf{L}_{kl}(v,w) \left(-\I t^{-1}_j(u) t^{-1}_k(v) \Phi(v-u, x_{kj}) t_k(u) t_j(v) + \I t^{-1}_i(u) t^{-1}_l(v) \Phi(u-v, x_{il}) t_l(u) t_i(v) \right)}\\
+&\scriptstyle{+ \I \mathbf{L}_{il}(u,z)\mathbf{L}_{kj}(v,w)  t^{-1}_{l}(u) t^{-1}_j(v)  \ \Phi(z-w, x_{lj}) t_{j}(u) t_{l}(v)+\I \mathbf{L}_{kj}(u,z)\mathbf{L}_{il}(v,w)
          t^{-1}_{i}(u) t^{-1}_k(v) \Phi(w-z, x_{ki}) t_{k}(u) t_{i}(v)} \\
-&\scriptstyle{+\mathbb{L}_{ij}(u,z) \mathbb{L}_{jl}(v,w) t_j^{-1}(u) t^{-1}_k(v) \I \Phi(w-u-\tfrac{\tau}{2}, x_{kj})  t_k(u) t_j(v) -\mathbb{L}_{ij}(u,z) \mathbb{L}_{il}(v,w)   t_i^{-1}(u) t^{-1}_k(v)  \I \Phi(w-u-\tfrac{\tau}{2}, x_{ki})  t_k(u) t_i(v)   } \\
-&\scriptstyle{+ \mathbb{L}_{kj}(u,z) \mathbb{L}_{kl}(v,w)  t_i^{-1}(u) t_k^{-1}(v) \I \Phi(z-v-\tfrac{\tau}{2}, x_{ik}) t_i(v) t_k(u)   -\mathbb{L}_{lj}(u,z) \mathbb{L}_{kl}(v,w) t_i^{-1}(u) t_l^{-1}(v) \I \Phi(z-v-\tfrac{\tau}{2}, x_{il}) t_i(v) t_l(u)  }\,.
+&\scriptstyle{+\mathbf{L}_{ij}(u,z) \mathbf{L}_{jl}(v,w) t_j^{-1}(u) t^{-1}_k(v) \I \Phi(w-u-\tfrac{\tau}{2}, x_{kj})  t_k(u) t_j(v) -\mathbf{L}_{ij}(u,z) \mathbf{L}_{il}(v,w)   t_i^{-1}(u) t^{-1}_k(v)  \I \Phi(w-u-\tfrac{\tau}{2}, x_{ki})  t_k(u) t_i(v)   } \\
+&\scriptstyle{+ \mathbf{L}_{kj}(u,z) \mathbf{L}_{kl}(v,w)  t_i^{-1}(u) t_k^{-1}(v) \I \Phi(z-v-\tfrac{\tau}{2}, x_{ik}) t_i(v) t_k(u)   -\mathbf{L}_{lj}(u,z) \mathbf{L}_{kl}(v,w) t_i^{-1}(u) t_l^{-1}(v) \I \Phi(z-v-\tfrac{\tau}{2}, x_{il}) t_i(v) t_l(u)  }\,.
   \end{split}
 \end{equation}
-We notice that for arbitrary values of the loop parameters $u$, $z$, $v$ and $w$, the bracket above does not close on the $\mathbb{L}$ operators alone. Instead, on the RHS also appear the elements $t_i$ defined in~\eqref{eq:ti_x}. To remove these elements, we need to take the limit in which $u$ and $v$ are evaluated at coincident points $u=v=\Delta^0$.
-Even if multiple terms on the RHS of the expression above are singular for $u=v$, it turns out that all singularities cancel each other and the final expression is finite. Remarkably, also derivative terms arising from taking the limit $u \to \Delta^0$ and $v \to \Delta^0$ cancel each other, leading to the following formula written entirely in terms of $\mathbb{L}$ operators
+We notice that for arbitrary values of the loop parameters $u$, $z$, $v$ and $w$, the bracket above does not close on the $\mathbf{L}$ operators alone. Instead, on the RHS also appear the elements $t_i$ defined in~\eqref{eq:ti_x}. To remove these elements, we need to take the limit in which $u$ and $v$ are evaluated at coincident points $u=v=\Delta^0$.
+Even if multiple terms on the RHS of the expression above are singular for $u=v$, it turns out that all singularities cancel each other and the final expression is finite. Remarkably, also derivative terms arising from taking the limit $u \to \Delta^0$ and $v \to \Delta^0$ cancel each other, leading to the following formula written entirely in terms of $\mathbf{L}$ operators
 \begin{equation}
 \label{eq:LL_bracket_main}
 \begin{split}
-\frac{2\pi}{\varkappa} \{ \mathbb{L}_{ij}(z), \mathbb{L}_{kl}(w) \} &=\mathbb{L}_{ij}(z) \mathbb{L}_{kl}(w) \left(\I  E_1(x_{lj})  + \I  E_1(x_{ki}) -\I  E_1(x_{kj})  + \I  E_1(x_{il})  \right) \\
-&+ \I \mathbb{L}_{il}(z)\mathbb{L}_{kj}(w)   \ \Phi(z-w, x_{lj}) +\I \mathbb{L}_{kj}(z)\mathbb{L}_{il}(w) \Phi(w-z, x_{ki})  \\
-&+\mathbb{L}_{ij}(z) \mathbb{L}_{jl}(w) \I \Phi(w-\Delta^0-\tfrac{\tau}{2}, x_{kj})   -\mathbb{L}_{ij}(z) \mathbb{L}_{il}(w)     \I \Phi(w-\Delta^0-\tfrac{\tau}{2}, x_{ki})    \\
-&+ \mathbb{L}_{kj}(z) \mathbb{L}_{kl}(w)   \I \Phi(z-\Delta^0-\tfrac{\tau}{2}, x_{ik})    -\mathbb{L}_{lj}(z) \mathbb{L}_{kl}(w)  \I \Phi(z-\Delta^0-\tfrac{\tau}{2}, x_{il})   \,.
+\frac{2\pi}{\varkappa} \{ \mathbf{L}_{ij}(z), \mathbf{L}_{kl}(w) \} &=\mathbf{L}_{ij}(z) \mathbf{L}_{kl}(w) \left(\I  E_1(x_{lj})  + \I  E_1(x_{ki}) -\I  E_1(x_{kj})  + \I  E_1(x_{il})  \right) \\
+&+ \I \mathbf{L}_{il}(z)\mathbf{L}_{kj}(w)   \ \Phi(z-w, x_{lj}) +\I \mathbf{L}_{kj}(z)\mathbf{L}_{il}(w) \Phi(w-z, x_{ki})  \\
+&+\mathbf{L}_{ij}(z) \mathbf{L}_{jl}(w) \I \Phi(w-\Delta^0-\tfrac{\tau}{2}, x_{kj})   -\mathbf{L}_{ij}(z) \mathbf{L}_{il}(w)     \I \Phi(w-\Delta^0-\tfrac{\tau}{2}, x_{ki})    \\
+&+ \mathbf{L}_{kj}(z) \mathbf{L}_{kl}(w)   \I \Phi(z-\Delta^0-\tfrac{\tau}{2}, x_{ik})    -\mathbf{L}_{lj}(z) \mathbf{L}_{kl}(w)  \I \Phi(z-\Delta^0-\tfrac{\tau}{2}, x_{il})   \,.
   \end{split}
 \end{equation}
 The bracket above can also be written using the matrix notation
 \begin{equation}
 \label{eq:Poiss_bracket_inv_L_magic_limit}
 \begin{split}
-\frac{2\pi}{\varkappa} \{ \mathbb{L}_{1}(z), \mathbb{L}_{2}(w) \}&= r_{12}(z;w)  \mathbb{L}_{1}(z)\mathbb{L}_{2}(w)-\mathbb{L}_{1}(z) \mathbb{L}_{2}(w) \underline{r}_{12}(z;w) \\
-&+\mathbb{L}_1(z) \overline{r}_{21}(w;z)  \mathbb{L}_2(w)-\mathbb{L}_2(w) \overline{r}_{12}(z;w) \mathbb{L}_1(z) \,,
+\frac{2\pi}{\varkappa} \{ \mathbf{L}_{1}(z), \mathbf{L}_{2}(w) \}&= r_{12}(z;w)  \mathbf{L}_{1}(z)\mathbf{L}_{2}(w)-\mathbf{L}_{1}(z) \mathbf{L}_{2}(w) \underline{r}_{12}(z;w) \\
+&+\mathbf{L}_1(z) \overline{r}_{21}(w;z)  \mathbf{L}_2(w)-\mathbf{L}_2(w) \overline{r}_{12}(z;w) \mathbf{L}_1(z) \,,
   \end{split}
 \end{equation}
 with the different $r$ matrices written in Appendix~\todo{[TODO: missing appendix \texttt{app:list\_of\_r\_mat} of the paper; r-matrices must be rewritten with periods 1, $\tau$ and $\Phi$, $E_1$]}.
@@ -1399,7 +1399,7 @@ r_{12}(z;w)-\underline{r}_{12}(z;w)
 \end{equation}
 Defining
 \begin{equation}
-I_m(z):=\Tr\bigl(\mathbb{L}(z)^m\bigr),
+I_m(z):=\Tr\bigl(\mathbf{L}(z)^m\bigr),
 \qquad m\geq1,
 \end{equation}
 and applying the Leibniz rule and cyclic property of the trace, we obtain
@@ -1408,7 +1408,7 @@ and applying the Leibniz rule and cyclic property of the trace, we obtain
 &\frac{2\pi}{\varkappa} \{I_m(z),I_n(w) \}
 =\frac{2\pi mn}{\varkappa}\Tr_{12}
 \left[
-\mathbb{L}_1(z)^{m-1}\mathbb{L}_2(w)^{n-1}
+\mathbf{L}_1(z)^{m-1}\mathbf{L}_2(w)^{n-1}
 \{ \mathbb L_1(z),\mathbb L_2(w) \}
 \right] \\
 &=mn \, \Tr_{12}
@@ -1445,7 +1445,7 @@ and commutes with the spectral invariants. These invariants thus provide conserv
 \subsubsection{Brackets of invariant oscillators}
 \label{sec:Brackets_inv_osc}
 
-As for the $\mathbb{L}$ operators, the brackets of the invariant oscillators also do not close on the invariant objects $\mathbb{L}(u,z)$, $\mathbf{a}(u,z)$ and $\mathbf{c}(u,z)$. The different brackets for the double-loop invariant spin oscillators are listed in~\todo{[TODO: missing equation \texttt{eq:aa\_inv\_br\_doubleloop} from the paper's appendices]}, \todo{[TODO: missing equation \texttt{eq:ab\_inv\_br\_doubleloop} from the paper's appendices]} and~\todo{[TODO: missing equation \texttt{eq:bb\_inv\_br\_doubleloop} from the paper's appendices]}, respectively. To allow these brackets to close on the invariant $\mathbb{L}$ and spin operators, we take the limit $u=v=\Delta^0$, exactly as we did for the $\mathbb{L}$ operators. Namely, we take the limit
+As for the $\mathbf{L}$ operators, the brackets of the invariant oscillators also do not close on the invariant objects $\mathbf{L}(u,z)$, $\mathbf{a}(u,z)$ and $\mathbf{c}(u,z)$. The different brackets for the double-loop invariant spin oscillators are listed in~\todo{[TODO: missing equation \texttt{eq:aa\_inv\_br\_doubleloop} from the paper's appendices]}, \todo{[TODO: missing equation \texttt{eq:ab\_inv\_br\_doubleloop} from the paper's appendices]} and~\todo{[TODO: missing equation \texttt{eq:bb\_inv\_br\_doubleloop} from the paper's appendices]}, respectively. To allow these brackets to close on the invariant $\mathbf{L}$ and spin operators, we take the limit $u=v=\Delta^0$, exactly as we did for the $\mathbf{L}$ operators. Namely, we take the limit
 \begin{equation}
 \lim_{u \to \Delta^0} \lim_{v \to \Delta^0} \, \frac{1}{\varkappa} \, \{ \mathbf{a}_i^\alpha(u,z), \mathbf{a}_j^\beta(v,w) \}
 \end{equation}
@@ -1489,7 +1489,7 @@ Similarly, we obtain the following Poisson brackets for the other oscillators at
 &\frac{1}{\varkappa} \, \{\mathbf{a}_i^\alpha(u,z), \mathbf{c}_j^\beta(v,w)\}\bigl|_{u=v=\Delta^0}=\\
 &+\tfrac{\I}{2\pi} \Phi(\Delta^0-z, x_{ji})   \mathbf{a}_j^\alpha(z) \mathbf{c}_j^\beta(w) -\tfrac{\I}{2\pi} E_1(x_{ji}) \mathbf{a}_i^\alpha(z) \mathbf{c}_j^\beta(w)\\
 &+\mathbf{a}_i^\mu(z) \rho_-^{\mu \alpha, \beta \mu}(z-w) \mathbf{c}_j^\mu(w)-  \mathbf{a}_i^0 (z)\mathbf{a}_j^\alpha(\Delta^0,\Delta^0) \rho^{0 \alpha, \alpha 0}(z-\Delta^0) \mathbf{c}_j^\beta(w)\\
-&-\frac{1}{\varkappa} \delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbb{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\frac{1}{\varkappa} \delta^{0\beta} Q_j Q^{-1}_i  \mathbb{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
+&-\frac{1}{\varkappa} \delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\frac{1}{\varkappa} \delta^{0\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
 &-\mathbf{a}_i^\mu(\Delta^0,\Delta^0) \rho_-^{\mu 0, \beta \nu}(\Delta^0-w) \mathbf{c}_j^\nu(w) \mathbf{a}_i^\alpha(z)\\
 &+\tfrac{\I}{2\pi} \mathbf{a}_i^\alpha(z) \frac{d}{du} \mathbf{c}_j^\beta(u,w)\Bigl|_{u=\Delta^0} +\tfrac{\I}{2\pi} \mathbf{c}_j^\beta(w) \frac{d}{du} \mathbf{a}_i^\alpha(u,z)\Bigl|_{u=\Delta^0}  \, ,
 \end{split}
@@ -1501,12 +1501,12 @@ Similarly, we obtain the following Poisson brackets for the other oscillators at
 &-\rho^{\alpha \mu, \beta \nu}(z-w)
 \mathbf{c}_i^\mu(z) \mathbf{c}_j^\nu(w)+\mathbf{c}_j^\beta(w)  \mathbf{a}_j^\mu(\Delta^0,\Delta^0) \rho_+^{\alpha \mu, \mu 0}(z-\Delta^0) \mathbf{c}_i^\mu(z)  \\
 &+\mathbf{c}_i^\alpha(z)  \mathbf{a}_i^\mu(\Delta^0,\Delta^0)  \rho_-^{\mu 0, \beta \mu}(\Delta^0-w) \mathbf{c}_j^\mu(w)\\
-&+\frac{1}{\varkappa} \delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbb{L}_{ji}(\Delta^0, z-\tfrac{\tau}{2}) Q_i\\
-&-\frac{1}{\varkappa} \delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbb{L}_{ij}(\Delta^0,w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
+&+\frac{1}{\varkappa} \delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbf{L}_{ji}(\Delta^0, z-\tfrac{\tau}{2}) Q_i\\
+&-\frac{1}{\varkappa} \delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbf{L}_{ij}(\Delta^0,w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
 &+\tfrac{\I}{2\pi} \frac{d}{dv}\mathbf{c}_i^\alpha(v,z) \Bigl|_{v=\Delta^0} \mathbf{c}_j^\beta(w)-\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha(\Delta^0,z) \frac{d}{dv}\mathbf{c}_j^\beta(v,w) \Bigl|_{v=\Delta^0}\,.
 \end{split}
 \end{equation}
-After taking the collinear limit $u=v=\Delta^0$, all the brackets close on the invariants $\mathbb{L}$, $\mathbf{a}$ and $\mathbf{c}$. The price to pay is that derivative terms arise in the limit.
+After taking the collinear limit $u=v=\Delta^0$, all the brackets close on the invariants $\mathbf{L}$, $\mathbf{a}$ and $\mathbf{c}$. The price to pay is that derivative terms arise in the limit.
 
 \paragraph{The importance of being dynamical.}
 
@@ -1567,7 +1567,7 @@ This condition constrains the bracket at the evaluation point; its extension to 
 \end{equation}
 This choice respects the normalization and leaves each product
 $\mathbf{a}_i^\alpha(z)\mathbf{c}_j^\alpha(z)$ invariant under the action of $\Delta^0$. 
-Due to this fact, the $\mathbb{L}$-$\mathbb{L}$ bracket, which is already closed on the $\mathbb{L}$ operators alone (see eq.~\eqref{eq:LL_bracket_main}), remains unchanged and additional unwanted derivatives are not produced in that bracket.
+Due to this fact, the $\mathbf{L}$-$\mathbf{L}$ bracket, which is already closed on the $\mathbf{L}$ operators alone (see eq.~\eqref{eq:LL_bracket_main}), remains unchanged and additional unwanted derivatives are not produced in that bracket.
 
 The choice~\eqref{eq:D1_ab_comm_main} supplies the chain-rule contributions needed to cancel the derivative terms when both spin indices differ from $0$. In particular, we obtain
 \begin{equation}
@@ -1586,7 +1586,7 @@ The choice~\eqref{eq:D1_ab_comm_main} supplies the chain-rule contributions need
 &\frac{1}{\varkappa} \, \{\mathbf{a}_i^\alpha(z), \mathbf{c}_j^\beta(w)\}=+\mathbf{a}_i^\mu(z) \rho_-^{\mu \alpha, \beta \mu}(z-w) \mathbf{c}_j^\mu(w)\\
 &+\tfrac{\I}{2\pi} \Phi(\Delta^0-z, x_{ji})   \mathbf{a}_j^\alpha(z) \mathbf{c}_j^\beta(w) -\tfrac{\I}{2\pi} E_1(x_{ji}) \mathbf{a}_i^\alpha(z) \mathbf{c}_j^\beta(w)\\
 &-  \mathbf{a}_i^0 (z)\mathbf{a}_j^\alpha(\Delta^0) \rho^{0 \alpha, \alpha 0}(z-\Delta^0) \mathbf{c}_j^\beta(w) -\mathbf{a}_i^\mu(\Delta^0) \rho_-^{\mu 0, \beta \nu}(\Delta^0-w) \mathbf{c}_j^\nu(w) \mathbf{a}_i^\alpha(z)\\
-&-\frac{1}{\varkappa} \delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbb{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\frac{1}{\varkappa} \delta^{0\beta} Q_j Q^{-1}_i  \mathbb{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
+&-\frac{1}{\varkappa} \delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\frac{1}{\varkappa} \delta^{0\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
 &+\tfrac{\I}{2\pi} \delta^{\beta0}  \frac{d}{du} \mathbf{a}_i^\alpha(u,z)\Bigl|_{u=\Delta^0} \mathbf{c}_j^\beta(\Delta^0 ,w) +\tfrac{\I}{2\pi} \delta^{\alpha0} \mathbf{a}_i^\alpha(\Delta^0 ,z) \frac{d}{du} \mathbf{c}_j^\beta(u,w)\Bigl|_{u=\Delta^0}  \,,
 \end{split}
 \end{equation}
@@ -1597,7 +1597,7 @@ The choice~\eqref{eq:D1_ab_comm_main} supplies the chain-rule contributions need
 \mathbf{c}_i^\beta(z) \mathbf{c}_j^\alpha(w) \\
 &+\tfrac{\I}{2\pi} \mathbf{c}_j^\alpha(z) \mathbf{c}_i^\beta(w)   \Phi(z-w, x_{ji})   +\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha(z) E_1(x_{ji})    \mathbf{c}_j^\beta(w) \\
 &+\mathbf{c}_j^\beta(w)  \mathbf{a}_j^\mu(\Delta^0) \rho_+^{\alpha \mu, \mu 0}(z-\Delta^0) \mathbf{c}_i^\mu(z)  -\mathbf{c}_i^\alpha(z)  \mathbf{a}_i^\mu(\Delta^0)  \rho_+^{\beta \mu, \mu 0}(w-\Delta^0) \mathbf{c}_j^\mu(w)\\
-&+\frac{1}{\varkappa} \delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbb{L}_{ji}(z-\tfrac{\tau}{2}) Q_i -\frac{1}{\varkappa} \delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbb{L}_{ij}(w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
+&+\frac{1}{\varkappa} \delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbf{L}_{ji}(z-\tfrac{\tau}{2}) Q_i -\frac{1}{\varkappa} \delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
 &+\tfrac{\I}{2\pi} \delta^{\beta0}\frac{d}{du}\mathbf{c}_i^\alpha(u,z) \Bigl|_{u=\Delta^0} \mathbf{c}_j^\beta(\Delta^0,w)-\tfrac{\I}{2\pi} \delta^{\alpha0} \mathbf{c}_i^\alpha(\Delta^0,z) \frac{d}{du}\mathbf{c}_j^\beta(u,w) \Bigl|_{u=\Delta^0} \,.
 \end{split}
 \end{equation}
@@ -1742,24 +1742,24 @@ the localized brackets for the invariant oscillators turn out to be
 &- \I \Phi(\Delta^{\beta0}, x_{ji})\mathbf{a}_i^\alpha \mathbf{a}_i^\beta- \I \Phi(\Delta^{0\alpha}, x_{ji})\mathbf{a}_j^\alpha \mathbf{a}_j^\beta \,,\\
 \frac{2\pi}{\varkappa} \{\mathbf{c}_i^\alpha,\mathbf{c}_j^\beta\}  =&+\I (1+\delta^{\alpha\beta})  
   E_1(x_{ji})   \mathbf{c}_i^\alpha \mathbf{c}_j^\beta  +(1-\delta^{\alpha\beta}) \I \mathbf{c}_j^\alpha \mathbf{c}_i^\beta   \Phi(\Delta^{\alpha \beta}, x_{ji})\\
-&+\delta^{\alpha0} \mathbb{L}^{\text{reg},\alpha}_{ji} \mathbf{c}_j^\beta -\delta^{\beta0} \mathbb{L}^{\text{reg},\beta}_{ij} \mathbf{c}_i^\alpha   \,,\\
+&+\delta^{\alpha0} \mathbf{L}^{\text{reg},\alpha}_{ji} \mathbf{c}_j^\beta -\delta^{\beta0} \mathbf{L}^{\text{reg},\beta}_{ij} \mathbf{c}_i^\alpha   \,,\\
 \frac{2\pi}{\varkappa} \, \{\mathbf{a}_i^\alpha, \mathbf{c}_j^\beta\}=&+\I \Phi(\Delta^{0\alpha}, x_{ji})   \mathbf{a}_j^\alpha \mathbf{c}_j^\beta  -\I E_1(x_{ji}) \mathbf{a}_i^\alpha \mathbf{c}_j^\beta \\
-&-\delta^{\alpha\beta} \mathbb{L}^{\text{reg},\alpha}_{ij} +\delta^{\beta0} \mathbb{L}^{\text{reg},0}_{ij} \mathbf{a}_i^\alpha \,,
+&-\delta^{\alpha\beta} \mathbf{L}^{\text{reg},\alpha}_{ij} +\delta^{\beta0} \mathbf{L}^{\text{reg},0}_{ij} \mathbf{a}_i^\alpha \,,
 \end{split}
 \end{equation}
 where we defined
 \begin{equation}
 \label{eq:Lreg_ba_alpha}
-\mathbb{L}^{\text{reg},\alpha}_{ji} =\frac{1}{\I }  \sum_{\mu \ne \alpha}  \Phi(\Delta^{\alpha\mu}, x_{ji} - \eta) \mathbf{a}_j^\mu \mathbf{c}_i^\mu+\frac{1}{\I }  E_1(x_{ji} - \eta) \mathbf{a}_j^\alpha \mathbf{c}_i^\alpha \,.
+\mathbf{L}^{\text{reg},\alpha}_{ji} =\frac{1}{\I }  \sum_{\mu \ne \alpha}  \Phi(\Delta^{\alpha\mu}, x_{ji} - \eta) \mathbf{a}_j^\mu \mathbf{c}_i^\mu+\frac{1}{\I }  E_1(x_{ji} - \eta) \mathbf{a}_j^\alpha \mathbf{c}_i^\alpha \,.
 \end{equation}
 The normalization in~\eqref{eq:Lreg_ba_alpha} absorbs the common factor
-$\tilde{\varkappa}/2\pi$ appearing in the regular part of $\mathbb{L}_{ji}(z)$ when expanding $z = \tfrac{\tau}{2}+\Delta^\alpha+s$ around $\tfrac{\tau}{2}+\Delta^\alpha$: 
+$\tilde{\varkappa}/2\pi$ appearing in the regular part of $\mathbf{L}_{ji}(z)$ when expanding $z = \tfrac{\tau}{2}+\Delta^\alpha+s$ around $\tfrac{\tau}{2}+\Delta^\alpha$: 
 \begin{equation}
-\mathbb{L}_{ji}(\tfrac{\tau}{2}+\Delta^\alpha+s)=\frac{\tilde{\varkappa}}{2\pi \I }
+\mathbf{L}_{ji}(\tfrac{\tau}{2}+\Delta^\alpha+s)=\frac{\tilde{\varkappa}}{2\pi \I }
 \frac{\mathbf{a}_j^\alpha\mathbf{c}_i^\alpha}{s}
 +
 \frac{\tilde{\varkappa}}{2\pi}
-\mathbb{L}^{\mathrm{reg},\alpha}_{ji}+O(s).
+\mathbf{L}^{\mathrm{reg},\alpha}_{ji}+O(s).
 \end{equation}
 As already remarked, the spin indices $\alpha, \beta$ are assumed to be different from zero in the $\mathbf{a}$ oscillators, since $\mathbf{a}_i^0=1$. The brackets above are then always well defined.
 
@@ -1769,7 +1769,7 @@ and solve
 \label{eq:Delta_a_b_br}
    \frac{2\pi}{\varkappa} \, \{ \Delta^\alpha, \mathbf{a}_i^\beta \} = -\I (\delta^{\alpha\beta}-\delta^{\alpha0}) \mathbf{a}_i^\beta, \qquad \frac{2\pi}{\varkappa} \, \{ \Delta^\alpha, \mathbf{c}_i^\beta \} = \I (\delta^{\alpha\beta}-\delta^{\alpha0}) \mathbf{c}_i^\beta \,, \qquad \frac{2\pi}{\varkappa} \, \{ \Delta^\alpha, \Delta^\beta \}=0 \,.
 \end{equation}
-It is possible to check that replacing the localized oscillators into the $\mathbb{L}$ operator~\eqref{eq:Loperator_specific_sol}, and using the relations~\eqref{eq:oscillator_final_inhom}, we obtain the Poisson bracket~\eqref{eq:LL_bracket_main}. This is a self-consistent check of the correctness of our derivation.
+It is possible to check that replacing the localized oscillators into the $\mathbf{L}$ operator~\eqref{eq:Loperator_specific_sol}, and using the relations~\eqref{eq:oscillator_final_inhom}, we obtain the Poisson bracket~\eqref{eq:LL_bracket_main}. This is a self-consistent check of the correctness of our derivation.
 Finally, following a standard route, we also obtain
 \begin{equation}
 \label{eq:bq_br}
@@ -1788,7 +1788,7 @@ H=
 \frac{2\pi \I }{\tilde{\varkappa}}
 \sum_{\alpha \in \Z_\ell}
 \operatorname{Res}_{z=\Delta^\alpha+\tfrac{\tau}{2}}
-\Tr\mathbb L(z).
+\Tr\mathbf{L}(z).
 \end{equation}
 With the convention 
 \begin{equation}
