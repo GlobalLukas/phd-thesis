@@ -880,30 +880,30 @@ Its Poisson structure is specified on the generators by the following brackets
 \begin{equation}
 \label{eq:affineHD}
 \begin{aligned}
-\frac{1}{2\pi\I}\{ A_1(z), A_2(w) \}
+\{ A_1(z), A_2(w) \}
 = &-\, r_{\mp}(z-w)\,A_1(z)A_2(w)
 - A_1(z)A_2(w)\, r_{\pm}(z-w)\\
 &+ A_1(z)r_-(z-w+\tau)A_2(w)
 + A_2(w)r_+(z-w-\tau)A_1(z)\, ,  \\
-\frac{1}{2\pi\I}\{ B_1(z), B_2(w) \}
+\{ B_1(z), B_2(w) \}
 =& -\, r_{\mp}(z-w)\,B_1(z)B_2(w)
 - B_1(z)B_2(w)\, r_{\pm}(z-w) \\
 &+ B_1(z)r_-(z-w)B_2(w)
 + B_2(w)r_+(z-w)B_1(z)\, ,  \\
-\frac{1}{2\pi\I}\{ A_1(z), B_2(w) \}
+\{ A_1(z), B_2(w) \}
 =& -\, r_-(z-w)\,A_1(z)B_2(w)
 - A_1(z)B_2(w)r_-(z-w+\tau) \\
 &+ A_1(z)r_-(z-w+\tau)B_2(w)
 + B_2(w)\,r_+(z-w)A_1(z)\, ,   \\
-\frac{1}{2\pi\I}\{ B_1(z), A_2(w) \}
+\{ B_1(z), A_2(w) \}
 = &-\, r_+(z-w)\,B_1(z)A_2(w)
 -B_1(z)A_2(w)r_+(z-w-\tau) \\
 &+ B_1(z)r_-(z-w)A_2(w)+ A_2(w)r_+(z-w-\tau)B_1(z)
  \, .
 \end{aligned}
 \end{equation}
-In general, the brackets~\eqref{eq:affineHD} contain a deformation parameter $\varkappa$ in place of $2\pi\I$, which connects $\widehat{D}$ to the cotangent bundle of the central extension of the loop group $LG\!: S^{1}\to G$, where 
-$G=\mathrm{GL}_N$. Throughout this section we fix $\varkappa = 2\pi\I$: with this normalization the Poisson brackets of the reduced phase space derived below, \eqref{eq:oscillator_final_inhom}, \eqref{eq:Delta_a_b_br} and~\eqref{eq:bq_br}, coincide with those of the Coulomb branch in~\cite{arutyunov_elliptic_2026}. The classical $r$-matrices $r(z)$ and $r_{\pm}(z)$ are  defined in Appendix~\todo{[TODO: missing appendix \texttt{app:matrix\_bblocks} of the paper]}.  Their construction involves either a Cauchy principal value prescription or regularization parameter $\varepsilon$ 
+In general, the right-hand sides of the brackets~\eqref{eq:affineHD} carry an overall factor $\varkappa$, a deformation parameter which connects $\widehat{D}$ to the cotangent bundle of the central extension of the loop group $LG\!: S^{1}\to G$, where 
+$G=\mathrm{GL}_N$. Throughout this section we fix $\varkappa = 2\pi\I$ and absorb this factor into the definitions of the $r$-matrices $r$, $r_\pm$ and of the matrices $\rho$, $\rho_\pm$ introduced below. With this normalization the Poisson brackets of the reduced phase space derived below, \eqref{eq:oscillator_final_inhom}, \eqref{eq:Delta_a_b_br} and~\eqref{eq:bq_br}, coincide with those of the Coulomb branch in~\cite{arutyunov_elliptic_2026}. The classical $r$-matrices $r(z)$ and $r_{\pm}(z)$ are  defined in Appendix~\todo{[TODO: missing appendix \texttt{app:matrix\_bblocks} of the paper; include the overall factor $\varkappa=2\pi\I$]}.  Their construction involves either a Cauchy principal value prescription or regularization parameter $\varepsilon$ 
 ensuring that the Poisson brackets are well-defined as distributions on the full interval $z, w \in [-\tfrac12, +\tfrac12]$. 
 The loop variables have period $1$, and the modular parameter $\tau$ of appendix~\ref{app:ellipticFuncs}, with $\Im \tau>0$, plays the role of the central charge: the fields are shifted by the half-periods $\pm\tfrac{\tau}{2}$.  Setting the left-hand side of \eqref{eq:affineHD} to zero Fourier modes 
 and setting to zero all non-zero Fourier modes on the right-hand side yields the Poisson structure of the finite-dimensional Heisenberg double. From a physical point of view,
@@ -912,7 +912,7 @@ and are analytic in the strip $|\Im z|< \tfrac{1}{2}\Im \tau$.
 For non-real arguments, the kernels $r_\pm(z)$ appearing in these
 brackets are understood as the meromorphic continuation
 \begin{equation}
-\widetilde r(z)=r-\frac{\I }{2}C_{12}\cot(\pi z),
+\widetilde r(z)=r+\pi C_{12}\cot(\pi z),
 \end{equation}
 rather than as their Fourier series evaluated outside their domains
 of convergence. The subscripts $\pm$ specify the boundary values on
@@ -930,7 +930,7 @@ The Poisson manifold \eqref{eq:affineHD} is endowed with the action of the Poiss
 is given by the Sklyanin bracket
 \begin{equation}
 \label{eq:SklyaninLG}
-\{h_1(z),h_2(w)\}= - 2\pi\I [r_{\pm}(z-w),h_1(z)h_2(w)]\, , ~~~h(z)\in LG\, .
+\{h_1(z),h_2(w)\}= - [r_{\pm}(z-w),h_1(z)h_2(w)]\, , ~~~h(z)\in LG\, .
 \end{equation}
 The occurrence  of $r_{\pm}(z-w)$ in \eqref{eq:affineHD} and \eqref{eq:SklyaninLG} means that any consistent choice of upper or lower signs is possible and defines the same Poisson structures.
 On the generators of the double, the action of $LG$ is given by 
@@ -950,16 +950,16 @@ Using the Poisson brackets~\eqref{eq:affineHD}, one finds that
 \begin{equation}
 \label{eq:Pois_Mx_My_to_be_checked}
 \begin{split}
-\frac{1}{2\pi\I} \{ M_1(z), A_2(w)\} &= - r_+(z-w+ \tfrac{\tau}{2}) M_1(z) A_2(w) + A_2(w)  r_+(z-w-\tfrac{\tau}{2}) M_1(z) \\
+\{ M_1(z), A_2(w)\} &= - r_+(z-w+ \tfrac{\tau}{2}) M_1(z) A_2(w) + A_2(w)  r_+(z-w-\tfrac{\tau}{2}) M_1(z) \\
 &+M_1(z) r_-(z-w +\tfrac{\tau}{2})  A_2(w) - M_1(z) A_2(w)r_-(z-w -\tfrac{\tau}{2}) \,,\\
-\frac{1}{2\pi\I} \{ M_1(z), B_2(w)\} &= -[ r_+(z-w+ \tfrac{\tau}{2})M_1(z), B_2(w) ] + [ M_1(z) r_-(z-w +\tfrac{\tau}{2}) , B_2(w) ]\,.
+\{ M_1(z), B_2(w)\} &= -[ r_+(z-w+ \tfrac{\tau}{2})M_1(z), B_2(w) ] + [ M_1(z) r_-(z-w +\tfrac{\tau}{2}) , B_2(w) ]\,.
 \end{split}
 \end{equation}
 It follows from these relations that the moment map satisfies the Poisson relations of the Semenov-Tian-Shansky bracket 
 \begin{equation}
 \label{eq:STSbracket}
 \begin{aligned}
-\frac{1}{2\pi\I}\{ M_1(z), M_2(w) \}=&- r_+(z-w) M_1(z) M_2 (w)  - M_1(z)  M_2 (w) r_-(z-w) \\
+\{ M_1(z), M_2(w) \}=&- r_+(z-w) M_1(z) M_2 (w)  - M_1(z)  M_2 (w) r_-(z-w) \\
 &+ M_1(z) r_-(z-w) M_2 (w)+ M_2 (w) r_+(z-w) M_1(z)  
 \end{aligned}
 \end{equation}
@@ -975,26 +975,26 @@ We endow $\widehat{\Sigma}$ with the structure of the Poisson manifold by defini
 \begin{equation}
 \label{eq:starting_osc_br}
 \begin{aligned}
-\frac{1}{2\pi\I}\{a_1(z),a_2(w)\}&=+r(z-w)a_1(z)a_2(w)-a_1(z)a_2(w)\rho(z-w)\, \\
-\frac{1}{2\pi\I}\{c_1(z),c_2(w)\}&=+c_1(z)c_2(w)r(z-w)-\rho(z-w)c_1(z)c_2(w)\, \\
-\frac{1}{2\pi\I}\{a_1(z),c_2(w)\}&=-c_2(w)r_+(z-w)a_1(z)+a_1(z)\rho_-(z-w)c_2(w)-\frac{1}{2\pi\I} C_{12}^{\textup{rec}}\delta(z-w)\, ,\\
-\frac{1}{2\pi\I}\{c_1(z),a_2(w)\}&=-c_1(z)r_-(z-w)a_2(w)+a_2(w)\rho_+(z-w)c_1(z)+\frac{1}{2\pi\I} C_{12}^{\textup{rec}}\delta(z-w)\, .
+\{a_1(z),a_2(w)\}&=+r(z-w)a_1(z)a_2(w)-a_1(z)a_2(w)\rho(z-w)\, \\
+\{c_1(z),c_2(w)\}&=+c_1(z)c_2(w)r(z-w)-\rho(z-w)c_1(z)c_2(w)\, \\
+\{a_1(z),c_2(w)\}&=-c_2(w)r_+(z-w)a_1(z)+a_1(z)\rho_-(z-w)c_2(w)-C_{12}^{\textup{rec}}\delta(z-w)\, ,\\
+\{c_1(z),a_2(w)\}&=-c_1(z)r_-(z-w)a_2(w)+a_2(w)\rho_+(z-w)c_1(z)+C_{12}^{\textup{rec}}\delta(z-w)\, .
 \end{aligned}
 \end{equation}
 Here the matrix $\rho(z)$ acts on $\C^\ell \otimes \C^\ell$.
 We consider two admissible choices for $\rho(z)$: $\hat{\rho}(z)$ and $\check{\rho}(z)$, given respectively by
 \begin{equation}
 \begin{split}
-\hat{\rho}(z) &= \frac{1}{2} \sum_{\alpha, \beta \in \Z_\ell} \operatorname{sgn}_{\beta \alpha} e_{\alpha \beta} \otimes e_{\beta \alpha}  -\frac{\I }{2} \, \operatorname{p.v.} \, \cot(\pi z) \sum_{\alpha, \beta \in \Z_\ell} e_{\alpha \beta} \otimes e_{\beta \alpha}   \,,\\
-\check{\rho}(z)&=  \tfrac{1}{2} \delta(z) \sum_{\alpha, \beta \in \Z_\ell} \operatorname{sgn}_{\beta \alpha} e_{\alpha \beta} \otimes e_{\beta \alpha} - \frac{\I }{2} \, \operatorname{p.v.} \, \cot(\pi z) \sum_{\alpha \in \Z_\ell} e_{\alpha \alpha} \otimes e_{\alpha \alpha}  \,.
+\hat{\rho}(z) &= \pi\I \sum_{\alpha, \beta \in \Z_\ell} \operatorname{sgn}_{\beta \alpha} e_{\alpha \beta} \otimes e_{\beta \alpha}  +\pi \, \operatorname{p.v.} \, \cot(\pi z) \sum_{\alpha, \beta \in \Z_\ell} e_{\alpha \beta} \otimes e_{\beta \alpha}   \,,\\
+\check{\rho}(z)&=  \pi\I\, \delta(z) \sum_{\alpha, \beta \in \Z_\ell} \operatorname{sgn}_{\beta \alpha} e_{\alpha \beta} \otimes e_{\beta \alpha} + \pi \, \operatorname{p.v.} \, \cot(\pi z) \sum_{\alpha \in \Z_\ell} e_{\alpha \alpha} \otimes e_{\alpha \alpha}  \,.
 \end{split}
 \end{equation}
 Similar definitions apply to $\rho_{\pm}(z)$, which can be both $\hat{\rho}_{\pm}(z)$ or $\check{\rho}_{\pm}(z)$.
-These matrices, together with $r(z)$ and $r_\pm(z)$, are defined in appendix~\todo{[TODO: missing appendix \texttt{app:definitions} of the paper]}.
+These matrices, together with $r(z)$ and $r_\pm(z)$, are defined in appendix~\todo{[TODO: missing appendix \texttt{app:definitions} of the paper; include the overall factor $\varkappa=2\pi\I$]}.
 
 For both choices of $\hat{\rho}$ and $\check{\rho}$, the brackets above form a Poisson algebra. We provide a detailed check of the Jacobi identity of these brackets in appendix~\todo{[TODO: missing appendix \texttt{app:Jacobi\_oscillators} of the paper]}.
 We also introduce the constant matrix $C_{12}^{\textup{rec}}$, which we refer to as the rectangular split Casimir, analogous to the split Casimir $C_{12}$;
-see Appendix~\todo{[TODO: missing appendix \texttt{app:matrix\_bblocks} of the paper]}. 
+see Appendix~\todo{[TODO: missing appendix \texttt{app:matrix\_bblocks} of the paper; include the overall factor $\varkappa=2\pi\I$]}. 
 
 The Poisson Lie group $LG$ acts on $\widehat{\Sigma}$,  as 
 \begin{equation}
@@ -1009,15 +1009,15 @@ This action $LG\times \widehat{\Sigma}\to \widehat{\Sigma}$ is a mapping of Pois
 In particular, the Poisson relations of $\omega(z)$ with affine oscillators are 
 \begin{equation}
 \begin{aligned}
-\frac{1}{2\pi\I}\{\omega_1(z),a_2(w)\}&=+\big(r_+(z-w)\omega_1(z)-\omega_1(z)r_-(z-w)\big)a_2(w)\, ,\\
-\frac{1}{2\pi\I}\{\omega_1(z),c_2(w)\}&=- c_2(w)\big(r_+(z-w)\omega_1(z)-\omega_1(z)r_-(z-w)\big)\, .
+\{\omega_1(z),a_2(w)\}&=+\big(r_+(z-w)\omega_1(z)-\omega_1(z)r_-(z-w)\big)a_2(w)\, ,\\
+\{\omega_1(z),c_2(w)\}&=- c_2(w)\big(r_+(z-w)\omega_1(z)-\omega_1(z)r_-(z-w)\big)\, .
 \end{aligned}
 \end{equation}
 From here we find the Poisson relations among the entries of $\omega$
 \begin{equation}
 \label{eq:Pois_br_mom_map}
 \begin{aligned}
-\frac{1}{2\pi\I}\{\omega_1(z),\omega_2(w)\}=&+r_+(z-w)\omega_1(z)\omega_2(w)+\omega_1(z)\omega_2(w)r_-(z-w)\\
+\{\omega_1(z),\omega_2(w)\}=&+r_+(z-w)\omega_1(z)\omega_2(w)+\omega_1(z)\omega_2(w)r_-(z-w)\\
 &-\omega_1(z)r_-(z-w)\omega_2(w)-\omega_2(w)r_+(z-w)\omega_1(z)\, .
 \end{aligned}
 \end{equation}
@@ -1200,15 +1200,15 @@ We recall that all functions are periodic on this interval.
 Performing such an expansion on the first line in~\eqref{eq:affineHD}, we get
 \begin{equation}
     \begin{split}
-\frac{1}{2\pi\I} \{A^{(0)}_1, A^{(0)}_2 \} = &- r_{\mp} A^{(0)}_1 A^{(0)}_2 - A^{(0)}_1 A^{(0)}_2 r_\pm + A^{(0)}_2 r_{+} A^{(0)}_1 + A^{(0)}_1 r_-  A^{(0)}_2\\
+\{A^{(0)}_1, A^{(0)}_2 \} = &- r_{\mp} A^{(0)}_1 A^{(0)}_2 - A^{(0)}_1 A^{(0)}_2 r_\pm + A^{(0)}_2 r_{+} A^{(0)}_1 + A^{(0)}_1 r_-  A^{(0)}_2\\
 &+ \sum^{+\infty}_{n=1} e^{\pi\I n \tau} \left( A^{(-n)}_2 C_{12} A^{(+n)}_1  + A^{(-n)}_1  C_{12} A^{(+n)}_2 \right) 
     \end{split}
 \end{equation}
-coupling infinitely many modes. The definitions for the different finite-dimensional $r$-matrices $r$ and $r_\pm$ are provided in Appendix~\todo{[TODO: missing appendix \texttt{app:matrix\_bblocks} of the paper]}.
+coupling infinitely many modes. The definitions for the different finite-dimensional $r$-matrices $r$ and $r_\pm$ are provided in Appendix~\todo{[TODO: missing appendix \texttt{app:matrix\_bblocks} of the paper; include the overall factor $\varkappa=2\pi\I$]}.
 By setting all nonzero modes $A^{(n\ne 0)}=0$, we obtain the Poisson algebra of a finite dimensional double
 \begin{equation}
     \begin{split}
-\frac{1}{2\pi\I} \{A^{(0)}_1, A^{(0)}_2 \} = &- r_{\mp} A^{(0)}_1 A^{(0)}_2 - A^{(0)}_1 A^{(0)}_2 r_\pm + A^{(0)}_2 r_{+} A^{(0)}_1 + A^{(0)}_1 r_-  A^{(0)}_2 \,.
+\{A^{(0)}_1, A^{(0)}_2 \} = &- r_{\mp} A^{(0)}_1 A^{(0)}_2 - A^{(0)}_1 A^{(0)}_2 r_\pm + A^{(0)}_2 r_{+} A^{(0)}_1 + A^{(0)}_1 r_-  A^{(0)}_2 \,.
     \end{split}
 \end{equation}
 The other brackets for the double are obtained similarly; it turns out they correspond to replacing $r_\pm(z) \to r_\pm$ in~\eqref{eq:affineHD}. A similar truncation on the oscillator manifold leads to the oscillator brackets proposed in~\cite{arutyunov_hyperbolic_2019}.
@@ -1331,8 +1331,8 @@ We can now plug this variation in~\eqref{eq:TT_br_expr1} and compute the integra
 \begin{equation}
 \label{eq:brackets_TT_final}
     \begin{split}
-     \frac{1}{2\pi\I} \{T_1(z), T_2(w) \}&= T_1(z) T_2(w) r_{x}(z,w) - T_1(z) T_2(w) \mathfrak{r}_{\pi}(z,w)\\
-     &+\frac{\I}{2\pi} T_1(z) T_2(w) \sum_{ijk} \left(\mathsf{X}_{jk}-\mathsf{X}_{ik} \right) e_{ii} \otimes e_{jj} \,.
+     \{T_1(z), T_2(w) \}&= T_1(z) T_2(w) r_{x}(z,w) - T_1(z) T_2(w) \mathfrak{r}_{\pi}(z,w)\\
+     &- T_1(z) T_2(w) \sum_{ijk} \left(\mathsf{X}_{jk}-\mathsf{X}_{ik} \right) e_{ii} \otimes e_{jj} \,.
     \end{split}
 \end{equation}
 In the expression above, we defined
@@ -1341,10 +1341,10 @@ In the expression above, we defined
 \mathsf{X}= T^{-1}(0) \partial T(0) \,.
 \end{equation}
 These derivative terms arise from double poles contained in the contour adopted to perform the integration with Cauchy theorem.
-The different $r$-matrices are listed in Appendix~\todo{[TODO: missing appendix \texttt{app:list\_of\_r\_mat} of the paper; r-matrices must be rewritten with periods 1, $\tau$ and $\Phi$, $E_1$]}.
+The different $r$-matrices are listed in Appendix~\todo{[TODO: missing appendix \texttt{app:list\_of\_r\_mat} of the paper; r-matrices must be rewritten with periods 1, $\tau$ and $\Phi$, $E_1$; include the overall factor $\varkappa=2\pi\I$]}.
 We checked that this bracket is both skew-symmetric and satisfies the Jacobi identity, providing in this way a consistent Poisson structure. The verification of the Jacobi identity relies on the shifted classical Yang--Baxter equation satisfied by $r_{x}(z,w)$. Namely, if we define
 \begin{equation}
-\mathcal{R}_{ab}^x=r_{x}(z_a,z_b)_{ab} + \frac{\I}{2\pi} \frac{\partial}{\partial z_a}-\frac{\I}{2\pi} \frac{\partial}{\partial z_b}
+\mathcal{R}_{ab}^x=r_{x}(z_a,z_b)_{ab} -  \frac{\partial}{\partial z_a}+ \frac{\partial}{\partial z_b}
 \end{equation}
 then we obtain
 \begin{equation}
@@ -1389,10 +1389,10 @@ The bracket above can also be written using the matrix notation
 &+\mathbf{L}_1(z) \overline{r}_{21}(w;z)  \mathbf{L}_2(w)-\mathbf{L}_2(w) \overline{r}_{12}(z;w) \mathbf{L}_1(z)\bigr) \,,
   \end{split}
 \end{equation}
-with the different $r$ matrices written in Appendix~\todo{[TODO: missing appendix \texttt{app:list\_of\_r\_mat} of the paper; r-matrices must be rewritten with periods 1, $\tau$ and $\Phi$, $E_1$]}.
+with the different $r$ matrices written in Appendix~\todo{[TODO: missing appendix \texttt{app:list\_of\_r\_mat} of the paper; r-matrices must be rewritten with periods 1, $\tau$ and $\Phi$, $E_1$; include the overall factor $\varkappa=2\pi\I$]}.
 
 The quadratic Poisson algebra~\eqref{eq:Poiss_bracket_inv_L_magic_limit} implies that the spectral invariants of the Lax operator are in involution. 
-Indeed the explicit expressions in Appendix~\todo{[TODO: missing appendix \texttt{app:list\_of\_r\_mat} of the paper; r-matrices must be rewritten with periods 1, $\tau$ and $\Phi$, $E_1$]} satisfy
+Indeed the explicit expressions in Appendix~\todo{[TODO: missing appendix \texttt{app:list\_of\_r\_mat} of the paper; r-matrices must be rewritten with periods 1, $\tau$ and $\Phi$, $E_1$; include the overall factor $\varkappa=2\pi\I$]} satisfy
 \begin{equation}
 r_{12}(z;w)-\underline{r}_{12}(z;w)
 +\bar{r}_{21}(w;z)-\bar{r}_{12}(z;w)=0.
@@ -1447,7 +1447,7 @@ and commutes with the spectral invariants. These invariants thus provide conserv
 
 As for the $\mathbf{L}$ operators, the brackets of the invariant oscillators also do not close on the invariant objects $\mathbf{L}(u,z)$, $\mathbf{a}(u,z)$ and $\mathbf{c}(u,z)$. The different brackets for the double-loop invariant spin oscillators are listed in~\todo{[TODO: missing equation \texttt{eq:aa\_inv\_br\_doubleloop} from the paper's appendices]}, \todo{[TODO: missing equation \texttt{eq:ab\_inv\_br\_doubleloop} from the paper's appendices]} and~\todo{[TODO: missing equation \texttt{eq:bb\_inv\_br\_doubleloop} from the paper's appendices]}, respectively. To allow these brackets to close on the invariant $\mathbf{L}$ and spin operators, we take the limit $u=v=\Delta^0$, exactly as we did for the $\mathbf{L}$ operators. Namely, we take the limit
 \begin{equation}
-\lim_{u \to \Delta^0} \lim_{v \to \Delta^0} \, \frac{1}{2\pi\I} \, \{ \mathbf{a}_i^\alpha(u,z), \mathbf{a}_j^\beta(v,w) \}
+\lim_{u \to \Delta^0} \lim_{v \to \Delta^0} \, \{ \mathbf{a}_i^\alpha(u,z), \mathbf{a}_j^\beta(v,w) \}
 \end{equation}
 It is possible to show that all the double-loop oscillator brackets are finite in this limit, even though terms considered separately might be singular. Let us show in some more detail how the limit is computed. We explain here the logic adopted in performing the limit, while we refer the reader to Appendices~\todo{[TODO: missing appendix \texttt{app:aa\_collin\_lim} of the paper]}, \todo{[TODO: missing appendix \texttt{app:ab\_collin\_lim} of the paper]} and~\todo{[TODO: missing appendix \texttt{app:bb\_collin\_lim} of the paper]} for the full derivation. 
 
@@ -1463,8 +1463,8 @@ Let us consider the $\mathbf{a}$-$\mathbf{a}$ bracket~\todo{[TODO: missing equat
 \begin{equation}
 \label{eq:aa_inv_br_doubleloopsing}
 \begin{split}
-\frac{1}{2\pi\I} \, \{\mathbf{a}_i^\alpha(u,z) \,,\mathbf{a}_j^\beta(v,w) \}&=  t^{-1}_i(u) t^{-1}_j(v)    t_j(u) t_i(v)    
-  \tfrac{\I}{2\pi} \Phi(v-u, x_{ji})\mathbf{a}_i^\alpha(u,z) \mathbf{a}_j^\beta(v,w)  \\
+\{\mathbf{a}_i^\alpha(u,z) \,,\mathbf{a}_j^\beta(v,w) \}&= -t^{-1}_i(u) t^{-1}_j(v)    t_j(u) t_i(v)    
+  \Phi(v-u, x_{ji})\mathbf{a}_i^\alpha(u,z) \mathbf{a}_j^\beta(v,w)  \\
 &-   \mathbf{a}_i^\mu (u,u)\mathbf{a}_j^\nu(v,v) \rho^{\mu 0, \nu 0}(u-v) \mathbf{a}_i^\alpha(u,z) \mathbf{a}_j^\beta(v,w)+\dots\,.
 \end{split}
 \end{equation}
@@ -1474,36 +1474,36 @@ Even if the result is finite, expanding the RHS of~\eqref{eq:aa_inv_br_doubleloo
 \begin{equation}
 \label{eq:aa_bracket_final_components_main}
 \begin{split}
-&\frac{1}{2\pi\I} \, \{\mathbf{a}_i^\alpha(u,z) \,,\mathbf{a}_j^\beta(v,w) \}\bigl|_{u=v=\Delta^0}=\\
-&  + \tfrac{\I}{2\pi} \Phi(w-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_i^\beta(w) - \tfrac{\I}{2\pi} \Phi(w-\Delta^0, x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_i^\beta(w)\\
-&- \tfrac{\I}{2\pi} \Phi(\Delta^0-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_j^\beta(w)+\tfrac{\I}{2\pi} E_1(x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_j^\beta(w)\\
+&\{\mathbf{a}_i^\alpha(u,z) \,,\mathbf{a}_j^\beta(v,w) \}\bigl|_{u=v=\Delta^0}=\\
+&  -  \Phi(w-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_i^\beta(w) +  \Phi(w-\Delta^0, x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_i^\beta(w)\\
+&+  \Phi(\Delta^0-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_j^\beta(w)- E_1(x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_j^\beta(w)\\
 &- \mathbf{a}_i^\mu(z)\mathbf{a}_j^\nu(w) \rho^{\mu \alpha, \nu \beta}(z-w) +\mathbf{a}_i^\beta (\Delta^0,\Delta^0)\mathbf{a}_j^0(w)   \rho^{\beta 0, 0 \beta}(\Delta^0-w) \mathbf{a}_i^\alpha( z)\\
 &+ \mathbf{a}_i^0 (z)\mathbf{a}_j^\alpha(\Delta^0,\Delta^0)   \rho^{0 \alpha, \alpha 0}(z-\Delta^0) \mathbf{a}_j^\beta(w)\\
-&-\tfrac{\I}{2\pi} \frac{d}{du} ((\mathbf{a}_i^\alpha(u,z) )\Bigr|_{u=\Delta^0}   \mathbf{a}_j^\beta(w)+\tfrac{\I}{2\pi} \frac{d}{du} (\mathbf{a}_j^\beta(u,w) )\Bigr|_{u=\Delta^0}  \mathbf{a}_i^\alpha(z)\,.
+&+ \frac{d}{du} ((\mathbf{a}_i^\alpha(u,z) )\Bigr|_{u=\Delta^0}   \mathbf{a}_j^\beta(w)- \frac{d}{du} (\mathbf{a}_j^\beta(u,w) )\Bigr|_{u=\Delta^0}  \mathbf{a}_i^\alpha(z)\,.
 \end{split}
 \end{equation}
 In the expression above, we are using the previously introduced definition $\mathbf{a}_i^\alpha(z) \coloneq \mathbf{a}_i^\alpha(\Delta^0, z)$.
 Similarly, we obtain the following Poisson brackets for the other oscillators at coincident points:
 \begin{equation}
 \begin{split}
-&\frac{1}{2\pi\I} \, \{\mathbf{a}_i^\alpha(u,z), \mathbf{c}_j^\beta(v,w)\}\bigl|_{u=v=\Delta^0}=\\
-&+\tfrac{\I}{2\pi} \Phi(\Delta^0-z, x_{ji})   \mathbf{a}_j^\alpha(z) \mathbf{c}_j^\beta(w) -\tfrac{\I}{2\pi} E_1(x_{ji}) \mathbf{a}_i^\alpha(z) \mathbf{c}_j^\beta(w)\\
+&\{\mathbf{a}_i^\alpha(u,z), \mathbf{c}_j^\beta(v,w)\}\bigl|_{u=v=\Delta^0}=\\
+&- \Phi(\Delta^0-z, x_{ji})   \mathbf{a}_j^\alpha(z) \mathbf{c}_j^\beta(w) + E_1(x_{ji}) \mathbf{a}_i^\alpha(z) \mathbf{c}_j^\beta(w)\\
 &+\mathbf{a}_i^\mu(z) \rho_-^{\mu \alpha, \beta \mu}(z-w) \mathbf{c}_j^\mu(w)-  \mathbf{a}_i^0 (z)\mathbf{a}_j^\alpha(\Delta^0,\Delta^0) \rho^{0 \alpha, \alpha 0}(z-\Delta^0) \mathbf{c}_j^\beta(w)\\
-&-\frac{1}{2\pi\I} \delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\frac{1}{2\pi\I} \delta^{0\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
+&-\delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\delta^{0\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
 &-\mathbf{a}_i^\mu(\Delta^0,\Delta^0) \rho_-^{\mu 0, \beta \nu}(\Delta^0-w) \mathbf{c}_j^\nu(w) \mathbf{a}_i^\alpha(z)\\
-&+\tfrac{\I}{2\pi} \mathbf{a}_i^\alpha(z) \frac{d}{du} \mathbf{c}_j^\beta(u,w)\Bigl|_{u=\Delta^0} +\tfrac{\I}{2\pi} \mathbf{c}_j^\beta(w) \frac{d}{du} \mathbf{a}_i^\alpha(u,z)\Bigl|_{u=\Delta^0}  \, ,
+&- \mathbf{a}_i^\alpha(z) \frac{d}{du} \mathbf{c}_j^\beta(u,w)\Bigl|_{u=\Delta^0} - \mathbf{c}_j^\beta(w) \frac{d}{du} \mathbf{a}_i^\alpha(u,z)\Bigl|_{u=\Delta^0}  \, ,
 \end{split}
 \end{equation}
 \begin{equation}
 \begin{split}
-&\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha(u,z),\mathbf{c}_j^\beta(v,w)\}\bigl|_{u=v=\Delta^0} =\\
-&+\tfrac{\I}{2\pi} \mathbf{c}_j^\alpha(z) \mathbf{c}_i^\beta(w)   \Phi(z-w, x_{ji}) +\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha(z) E_1(x_{ji})    \mathbf{c}_j^\beta(w) \\
+&\{\mathbf{c}_i^\alpha(u,z),\mathbf{c}_j^\beta(v,w)\}\bigl|_{u=v=\Delta^0} =\\
+&- \mathbf{c}_j^\alpha(z) \mathbf{c}_i^\beta(w)   \Phi(z-w, x_{ji}) - \mathbf{c}_i^\alpha(z) E_1(x_{ji})    \mathbf{c}_j^\beta(w) \\
 &-\rho^{\alpha \mu, \beta \nu}(z-w)
 \mathbf{c}_i^\mu(z) \mathbf{c}_j^\nu(w)+\mathbf{c}_j^\beta(w)  \mathbf{a}_j^\mu(\Delta^0,\Delta^0) \rho_+^{\alpha \mu, \mu 0}(z-\Delta^0) \mathbf{c}_i^\mu(z)  \\
 &+\mathbf{c}_i^\alpha(z)  \mathbf{a}_i^\mu(\Delta^0,\Delta^0)  \rho_-^{\mu 0, \beta \mu}(\Delta^0-w) \mathbf{c}_j^\mu(w)\\
-&+\frac{1}{2\pi\I} \delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbf{L}_{ji}(\Delta^0, z-\tfrac{\tau}{2}) Q_i\\
-&-\frac{1}{2\pi\I} \delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbf{L}_{ij}(\Delta^0,w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
-&+\tfrac{\I}{2\pi} \frac{d}{dv}\mathbf{c}_i^\alpha(v,z) \Bigl|_{v=\Delta^0} \mathbf{c}_j^\beta(w)-\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha(\Delta^0,z) \frac{d}{dv}\mathbf{c}_j^\beta(v,w) \Bigl|_{v=\Delta^0}\,.
+&+\delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbf{L}_{ji}(\Delta^0, z-\tfrac{\tau}{2}) Q_i\\
+&-\delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbf{L}_{ij}(\Delta^0,w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
+&- \frac{d}{dv}\mathbf{c}_i^\alpha(v,z) \Bigl|_{v=\Delta^0} \mathbf{c}_j^\beta(w)+ \mathbf{c}_i^\alpha(\Delta^0,z) \frac{d}{dv}\mathbf{c}_j^\beta(v,w) \Bigl|_{v=\Delta^0}\,.
 \end{split}
 \end{equation}
 After taking the collinear limit $u=v=\Delta^0$, all the brackets close on the invariants $\mathbf{L}$, $\mathbf{a}$ and $\mathbf{c}$. The price to pay is that derivative terms arise in the limit.
@@ -1541,9 +1541,9 @@ then we obtain (for $\alpha, \beta \ne 0$)
 \begin{equation}
 \label{eq:aa_bracket_final_components_main_dyn}
 \begin{split}
-&\frac{1}{2\pi\I} \, \{\mathbf{a}_i^\alpha(\Delta^0,z) \,,\mathbf{a}_j^\beta(\Delta^0,w) \}=\\
-&  + \tfrac{\I}{2\pi} \Phi(w-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_i^\beta(w) - \tfrac{\I}{2\pi} \Phi(w-\Delta^0, x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_i^\beta(w)\\
-&- \tfrac{\I}{2\pi} \Phi(\Delta^0-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_j^\beta(w)+\tfrac{\I}{2\pi} E_1(x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_j^\beta(w)\\
+&\{\mathbf{a}_i^\alpha(\Delta^0,z) \,,\mathbf{a}_j^\beta(\Delta^0,w) \}=\\
+&  -  \Phi(w-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_i^\beta(w) +  \Phi(w-\Delta^0, x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_i^\beta(w)\\
+&+  \Phi(\Delta^0-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_j^\beta(w)- E_1(x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_j^\beta(w)\\
 &- \mathbf{a}_i^\mu(z)\mathbf{a}_j^\nu(w) \rho^{\mu \alpha, \nu \beta}(z-w) +\mathbf{a}_i^\beta (\Delta^0,\Delta^0)\mathbf{a}_j^0(w)   \rho^{\beta 0, 0 \beta}(\Delta^0-w) \mathbf{a}_i^\alpha( z)\\
 &+ \mathbf{a}_i^0 (z)\mathbf{a}_j^\alpha(\Delta^0,\Delta^0)   \rho^{0 \alpha, \alpha 0}(z-\Delta^0) \mathbf{a}_j^\beta(w)\,.
 \end{split}
@@ -1573,32 +1573,32 @@ The choice~\eqref{eq:D1_ab_comm_main} supplies the chain-rule contributions need
 \begin{equation}
 \label{eq:aa_main_xD1_dyn}
 \begin{split}
-&\frac{1}{2\pi\I} \, \{\mathbf{a}_i^\alpha(z) \,,\mathbf{a}_j^\beta(w) \}=- \mathbf{a}_i^\beta(z)\mathbf{a}_j^\alpha(w) \rho^{\beta \alpha, \alpha \beta}(z-w)\\
-&  + \tfrac{\I}{2\pi} \Phi(w-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_i^\beta(w) - \tfrac{\I}{2\pi} \Phi(w-\Delta^0, x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_i^\beta(w)\\
-&- \tfrac{\I}{2\pi} \Phi(\Delta^0-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_j^\beta(w)+\tfrac{\I}{2\pi} E_1(x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_j^\beta(w)\\
+&\{\mathbf{a}_i^\alpha(z) \,,\mathbf{a}_j^\beta(w) \}=- \mathbf{a}_i^\beta(z)\mathbf{a}_j^\alpha(w) \rho^{\beta \alpha, \alpha \beta}(z-w)\\
+&  -  \Phi(w-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_i^\beta(w) +  \Phi(w-\Delta^0, x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_i^\beta(w)\\
+&+  \Phi(\Delta^0-z, x_{ji})\mathbf{a}_j^\alpha(z) \mathbf{a}_j^\beta(w)- E_1(x_{ji})\mathbf{a}_i^\alpha(z) \mathbf{a}_j^\beta(w)\\
 &+\mathbf{a}_i^\beta (\Delta^0)\mathbf{a}_j^0(w)   \rho^{\beta 0, 0 \beta}(\Delta^0-w) \mathbf{a}_i^\alpha(z)- \mathbf{a}_i^0 (z)\mathbf{a}_j^\alpha(\Delta^0)   \rho^{\alpha 0,0 \alpha}(\Delta^0-z) \mathbf{a}_j^\beta(w)\\
-&-\tfrac{\I}{2\pi} \delta^{\beta0} \frac{d}{du} ((\mathbf{a}_i^\alpha(u,z) )\Bigr|_{u=\Delta^0}   \mathbf{a}_j^\beta(\Delta^0,w)+\tfrac{\I}{2\pi} \delta^{\alpha0} \mathbf{a}_i^\alpha(\Delta^0,z) \frac{d}{du} (\mathbf{a}_j^\beta(u,w) )\Bigr|_{u=\Delta^0}  \,,
+&+ \delta^{\beta0} \frac{d}{du} ((\mathbf{a}_i^\alpha(u,z) )\Bigr|_{u=\Delta^0}   \mathbf{a}_j^\beta(\Delta^0,w)- \delta^{\alpha0} \mathbf{a}_i^\alpha(\Delta^0,z) \frac{d}{du} (\mathbf{a}_j^\beta(u,w) )\Bigr|_{u=\Delta^0}  \,,
 \end{split}
 \end{equation}
 \begin{equation}
 \label{eq:ab_main_xD1_dyn}
 \begin{split}
-&\frac{1}{2\pi\I} \, \{\mathbf{a}_i^\alpha(z), \mathbf{c}_j^\beta(w)\}=+\mathbf{a}_i^\mu(z) \rho_-^{\mu \alpha, \beta \mu}(z-w) \mathbf{c}_j^\mu(w)\\
-&+\tfrac{\I}{2\pi} \Phi(\Delta^0-z, x_{ji})   \mathbf{a}_j^\alpha(z) \mathbf{c}_j^\beta(w) -\tfrac{\I}{2\pi} E_1(x_{ji}) \mathbf{a}_i^\alpha(z) \mathbf{c}_j^\beta(w)\\
+&\{\mathbf{a}_i^\alpha(z), \mathbf{c}_j^\beta(w)\}=+\mathbf{a}_i^\mu(z) \rho_-^{\mu \alpha, \beta \mu}(z-w) \mathbf{c}_j^\mu(w)\\
+&- \Phi(\Delta^0-z, x_{ji})   \mathbf{a}_j^\alpha(z) \mathbf{c}_j^\beta(w) + E_1(x_{ji}) \mathbf{a}_i^\alpha(z) \mathbf{c}_j^\beta(w)\\
 &-  \mathbf{a}_i^0 (z)\mathbf{a}_j^\alpha(\Delta^0) \rho^{0 \alpha, \alpha 0}(z-\Delta^0) \mathbf{c}_j^\beta(w) -\mathbf{a}_i^\mu(\Delta^0) \rho_-^{\mu 0, \beta \nu}(\Delta^0-w) \mathbf{c}_j^\nu(w) \mathbf{a}_i^\alpha(z)\\
-&-\frac{1}{2\pi\I} \delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\frac{1}{2\pi\I} \delta^{0\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
-&+\tfrac{\I}{2\pi} \delta^{\beta0}  \frac{d}{du} \mathbf{a}_i^\alpha(u,z)\Bigl|_{u=\Delta^0} \mathbf{c}_j^\beta(\Delta^0 ,w) +\tfrac{\I}{2\pi} \delta^{\alpha0} \mathbf{a}_i^\alpha(\Delta^0 ,z) \frac{d}{du} \mathbf{c}_j^\beta(u,w)\Bigl|_{u=\Delta^0}  \,,
+&-\delta^{\alpha\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(z-w)+\delta^{0\beta} Q_j Q^{-1}_i  \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) \delta(\Delta^0-w)\mathbf{a}_i^\alpha(z)\\
+&- \delta^{\beta0}  \frac{d}{du} \mathbf{a}_i^\alpha(u,z)\Bigl|_{u=\Delta^0} \mathbf{c}_j^\beta(\Delta^0 ,w) - \delta^{\alpha0} \mathbf{a}_i^\alpha(\Delta^0 ,z) \frac{d}{du} \mathbf{c}_j^\beta(u,w)\Bigl|_{u=\Delta^0}  \,,
 \end{split}
 \end{equation}
 \begin{equation}
 \label{eq:bb_main_xD1_dyn}
 \begin{split}
-&\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha(z),\mathbf{c}_j^\beta(w)\} =-\rho^{\alpha \beta, \beta \alpha}(z-w)
+&\{\mathbf{c}_i^\alpha(z),\mathbf{c}_j^\beta(w)\} =-\rho^{\alpha \beta, \beta \alpha}(z-w)
 \mathbf{c}_i^\beta(z) \mathbf{c}_j^\alpha(w) \\
-&+\tfrac{\I}{2\pi} \mathbf{c}_j^\alpha(z) \mathbf{c}_i^\beta(w)   \Phi(z-w, x_{ji})   +\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha(z) E_1(x_{ji})    \mathbf{c}_j^\beta(w) \\
+&- \mathbf{c}_j^\alpha(z) \mathbf{c}_i^\beta(w)   \Phi(z-w, x_{ji})   - \mathbf{c}_i^\alpha(z) E_1(x_{ji})    \mathbf{c}_j^\beta(w) \\
 &+\mathbf{c}_j^\beta(w)  \mathbf{a}_j^\mu(\Delta^0) \rho_+^{\alpha \mu, \mu 0}(z-\Delta^0) \mathbf{c}_i^\mu(z)  -\mathbf{c}_i^\alpha(z)  \mathbf{a}_i^\mu(\Delta^0)  \rho_+^{\beta \mu, \mu 0}(w-\Delta^0) \mathbf{c}_j^\mu(w)\\
-&+\frac{1}{2\pi\I} \delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbf{L}_{ji}(z-\tfrac{\tau}{2}) Q_i -\frac{1}{2\pi\I} \delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
-&+\tfrac{\I}{2\pi} \delta^{\beta0}\frac{d}{du}\mathbf{c}_i^\alpha(u,z) \Bigl|_{u=\Delta^0} \mathbf{c}_j^\beta(\Delta^0,w)-\tfrac{\I}{2\pi} \delta^{\alpha0} \mathbf{c}_i^\alpha(\Delta^0,z) \frac{d}{du}\mathbf{c}_j^\beta(u,w) \Bigl|_{u=\Delta^0} \,.
+&+\delta^{\alpha0}  \delta(z-\Delta^0)  \, \mathbf{c}_j^\beta(w) Q^{-1}_j    \mathbf{L}_{ji}(z-\tfrac{\tau}{2}) Q_i -\delta^{0\beta} \mathbf{c}_i^\alpha(z) Q^{-1}_i \mathbf{L}_{ij}(w-\tfrac{\tau}{2}) Q_j \delta(\Delta^0-w)\\
+&- \delta^{\beta0}\frac{d}{du}\mathbf{c}_i^\alpha(u,z) \Bigl|_{u=\Delta^0} \mathbf{c}_j^\beta(\Delta^0,w)+ \delta^{\alpha0} \mathbf{c}_i^\alpha(\Delta^0,z) \frac{d}{du}\mathbf{c}_j^\beta(u,w) \Bigl|_{u=\Delta^0} \,.
 \end{split}
 \end{equation}
 One might be concerned that for $\alpha$ or $\beta$ equal to $0$ the derivatives are still there. However, it turns out that these residual derivatives play an important role in the localization of the second loop variable. We will come back to this point in the next section.
@@ -1635,7 +1635,7 @@ The parameters $\{\Delta^\alpha\}_{\alpha \in \Z_\ell}$ are the inhomogeneities 
 and in the limit $\epsilon \to 0$ becomes a Dirac delta function of period $1$. The importance of keeping the regulator $\epsilon$ in~\eqref{eq:reg_Dirac_Delta_main} comes from the fact that certain terms on the RHS of~\eqref{eq:ab_main_xD1_dyn} and~\eqref{eq:bb_main_xD1_dyn} are singular in the limit $\epsilon \to 0$. 
 We should then expand the bracket in an $\epsilon$ expansion, show that at the order $1/\epsilon$ all terms that are separately singular sum to zero, and only at the end send $\epsilon \to 0$. A detailed computation of this mechanism is explained in Appendix~\todo{[TODO: missing appendix \texttt{app:fin\_dim\_with\_imp} of the paper]}. 
 Here, we only provide the main steps of the derivation. In particular, we will show that such a localization procedure is possible only if we assume that $\rho(z)= \check{\rho}(z)$, while it fails for $\rho(z)= \hat{\rho}(z)$.
-The explicit expressions for these matrices are provided in Appendix~\todo{[TODO: missing appendix \texttt{app:rho\_matrices} of the paper; rewrite with period 1]}.
+The explicit expressions for these matrices are provided in Appendix~\todo{[TODO: missing appendix \texttt{app:rho\_matrices} of the paper; rewrite with period 1; include the overall factor $\varkappa=2\pi\I$]}.
 
 
 \subsubsection{Complete removal of the loop parameters}
@@ -1646,29 +1646,29 @@ Moreover, both $\hat{\rho}_+^{\alpha \mu, \mu 0}(z-\Delta^0)$ and $\check{\rho}_
 \begin{equation}
 \label{eq:beforeexpansion_bb_Diraceps}
 \begin{split}
-&\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha(z),\mathbf{c}_j^\beta(w)\} =-\rho^{\alpha \beta, \beta \alpha}(z-w)
+&\{\mathbf{c}_i^\alpha(z),\mathbf{c}_j^\beta(w)\} =-\rho^{\alpha \beta, \beta \alpha}(z-w)
 \mathbf{c}_i^\beta(z) \mathbf{c}_j^\alpha(w) \\
-&+\tfrac{\I}{2\pi} \mathbf{c}_j^\alpha(z) \mathbf{c}_i^\beta(w)   \Phi(z-w, x_{ji})   +\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha(z) E_1(x_{ji})    \mathbf{c}_j^\beta(w) \,.
+&- \mathbf{c}_j^\alpha(z) \mathbf{c}_i^\beta(w)   \Phi(z-w, x_{ji})   - \mathbf{c}_i^\alpha(z) E_1(x_{ji})    \mathbf{c}_j^\beta(w) \,.
 \end{split}
 \end{equation}
 Since we assume $\Delta^\alpha$ and $\Delta^\beta$ to be dynamical, when we replace the representation~\eqref{eq:b_representation} into the bracket above, we need to take into account that
 \begin{equation}
 \label{eq:expansion_bb_Diraceps}
 \begin{split}
-&\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha(z),\mathbf{c}_j^\beta(w)\}=\\
-&+\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha,\mathbf{c}_j^\beta\} \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)+\frac{1}{2\pi\I} \{\Delta^\alpha,\Delta^\beta\} \mathbf{c}_i^\alpha \mathbf{c}_j^\beta \delta'_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)\\
-&-\frac{1}{2\pi\I} \{\Delta^\alpha ,\mathbf{c}_j^\beta\} \mathbf{c}_i^\alpha \delta'_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)+\frac{1}{2\pi\I} \{\Delta^\beta ,\mathbf{c}_i^\alpha\} \mathbf{c}_j^\beta \delta_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)
+&\{\mathbf{c}_i^\alpha(z),\mathbf{c}_j^\beta(w)\}=\\
+&+\{\mathbf{c}_i^\alpha,\mathbf{c}_j^\beta\} \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)+\{\Delta^\alpha,\Delta^\beta\} \mathbf{c}_i^\alpha \mathbf{c}_j^\beta \delta'_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)\\
+&-\{\Delta^\alpha ,\mathbf{c}_j^\beta\} \mathbf{c}_i^\alpha \delta'_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)+\{\Delta^\beta ,\mathbf{c}_i^\alpha\} \mathbf{c}_j^\beta \delta_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)
 \end{split}
 \end{equation}
 Combining~\eqref{eq:beforeexpansion_bb_Diraceps} and~\eqref{eq:expansion_bb_Diraceps} we see that
 \begin{equation}
 \label{eq:afterexpansion_bb_Diracepsn}
 \begin{split}
-&\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha,\mathbf{c}_j^\beta\} \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)=-\rho^{\alpha \beta, \beta \alpha}(z-w)
+&\{\mathbf{c}_i^\alpha,\mathbf{c}_j^\beta\} \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)=-\rho^{\alpha \beta, \beta \alpha}(z-w)
 \mathbf{c}_i^\beta \mathbf{c}_j^\alpha\delta_\epsilon(z-\Delta^\beta) \delta_\epsilon(w-\Delta^\alpha) \\
-&+\Bigl(\tfrac{\I}{2\pi} \mathbf{c}_j^\alpha \mathbf{c}_i^\beta   \Phi(z-w, x_{ji})    +\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha E_1(x_{ji})    \mathbf{c}_j^\beta \Bigr) \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta) \\
-&-\frac{1}{2\pi\I} \{\Delta^\alpha,\Delta^\beta\} \mathbf{c}_i^\alpha \mathbf{c}_j^\beta \delta'_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)\\
-&+\frac{1}{2\pi\I} \{\Delta^\alpha ,\mathbf{c}_j^\beta\} \mathbf{c}_i^\alpha \delta'_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)-\frac{1}{2\pi\I} \{\Delta^\beta ,\mathbf{c}_i^\alpha\} \mathbf{c}_j^\beta \delta_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)
+&+\Bigl(- \mathbf{c}_j^\alpha \mathbf{c}_i^\beta   \Phi(z-w, x_{ji})    - \mathbf{c}_i^\alpha E_1(x_{ji})    \mathbf{c}_j^\beta \Bigr) \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta) \\
+&-\{\Delta^\alpha,\Delta^\beta\} \mathbf{c}_i^\alpha \mathbf{c}_j^\beta \delta'_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)\\
+&+\{\Delta^\alpha ,\mathbf{c}_j^\beta\} \mathbf{c}_i^\alpha \delta'_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\beta)-\{\Delta^\beta ,\mathbf{c}_i^\alpha\} \mathbf{c}_j^\beta \delta_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\beta)
 \end{split}
 \end{equation}
 The Derivative of the regularized Dirac delta function might look suspicious, and it might seem tempting to assume $\Delta^\alpha$ and $\Delta^\beta$ commute trivially with the oscillators.
@@ -1679,11 +1679,11 @@ In this case, all functions on the RHS of~\eqref{eq:afterexpansion_bb_Diracepsn}
 \begin{equation}
 \label{eq:afterexpansion_bb_Diraceps}
 \begin{split}
-&\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha,\mathbf{c}_j^\beta\}_{\alpha \ne \beta} \delta(z-\Delta^\alpha) \delta(w-\Delta^\beta)=-\rho^{\alpha \beta, \beta \alpha}(\Delta^{\beta \alpha})
+&\{\mathbf{c}_i^\alpha,\mathbf{c}_j^\beta\}_{\alpha \ne \beta} \delta(z-\Delta^\alpha) \delta(w-\Delta^\beta)=-\rho^{\alpha \beta, \beta \alpha}(\Delta^{\beta \alpha})
 \mathbf{c}_i^\beta \mathbf{c}_j^\alpha\delta(z-\Delta^\beta) \delta(w-\Delta^\alpha) \\
-&+\Bigl(\tfrac{\I}{2\pi} \mathbf{c}_j^\alpha \mathbf{c}_i^\beta   \Phi(\Delta^{\alpha \beta}, x_{ji})    +\tfrac{\I}{2\pi} \mathbf{c}_i^\alpha E_1(x_{ji})    \mathbf{c}_j^\beta \Bigr) \delta(z-\Delta^\alpha) \delta(w-\Delta^\beta) \\
-&-\frac{1}{2\pi\I} \{\Delta^\alpha,\Delta^\beta\}_{\alpha \ne \beta} \mathbf{c}_i^\alpha \mathbf{c}_j^\beta \delta'(z-\Delta^\alpha) \delta'(w-\Delta^\beta)\\
-&+\frac{1}{2\pi\I} \{\Delta^\alpha ,\mathbf{c}_j^\beta\}_{\alpha \ne \beta} \mathbf{c}_i^\alpha \delta'(z-\Delta^\alpha) \delta(w-\Delta^\beta)-\frac{1}{2\pi\I} \{\Delta^\beta ,\mathbf{c}_i^\alpha\}_{\alpha \ne \beta} \mathbf{c}_j^\beta \delta(z-\Delta^\alpha) \delta'(w-\Delta^\beta) \,,
+&+\Bigl(- \mathbf{c}_j^\alpha \mathbf{c}_i^\beta   \Phi(\Delta^{\alpha \beta}, x_{ji})    - \mathbf{c}_i^\alpha E_1(x_{ji})    \mathbf{c}_j^\beta \Bigr) \delta(z-\Delta^\alpha) \delta(w-\Delta^\beta) \\
+&-\{\Delta^\alpha,\Delta^\beta\}_{\alpha \ne \beta} \mathbf{c}_i^\alpha \mathbf{c}_j^\beta \delta'(z-\Delta^\alpha) \delta'(w-\Delta^\beta)\\
+&+\{\Delta^\alpha ,\mathbf{c}_j^\beta\}_{\alpha \ne \beta} \mathbf{c}_i^\alpha \delta'(z-\Delta^\alpha) \delta(w-\Delta^\beta)-\{\Delta^\beta ,\mathbf{c}_i^\alpha\}_{\alpha \ne \beta} \mathbf{c}_j^\beta \delta(z-\Delta^\alpha) \delta'(w-\Delta^\beta) \,,
 \end{split}
 \end{equation}
 where we use the definition $\Delta^{\alpha \beta} \coloneq \Delta^\alpha-\Delta^\beta$.
@@ -1701,18 +1701,18 @@ Now we consider the case $\alpha=\beta$, for which the bracket~\eqref{eq:afterex
 \begin{equation}
 \label{eq:bb_with_Dir_alphaeqbeta}
 \begin{split}
-&\frac{1}{2\pi\I} \{\mathbf{c}_i^\alpha,\mathbf{c}_j^\alpha\} \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha)= \\
-&+\mathbf{c}_i^\alpha \mathbf{c}_j^\alpha\Bigl(-\check{\rho}^{\alpha \alpha, \alpha \alpha}(z-w)+\tfrac{\I}{2\pi}    \Phi(z-w, x_{ji})    +\tfrac{\I}{2\pi}  E_1(x_{ji})     \Bigr) \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha) \\
-&+\frac{1}{2\pi\I} \{\Delta^\alpha ,\mathbf{c}_j^\alpha\} \mathbf{c}_i^\alpha \delta'_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha)-\frac{1}{2\pi\I} \{\Delta^\alpha ,\mathbf{c}_i^\alpha\} \mathbf{c}_j^\alpha \delta_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\alpha)
+&\{\mathbf{c}_i^\alpha,\mathbf{c}_j^\alpha\} \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha)= \\
+&+\mathbf{c}_i^\alpha \mathbf{c}_j^\alpha\Bigl(-\check{\rho}^{\alpha \alpha, \alpha \alpha}(z-w)-    \Phi(z-w, x_{ji})    -  E_1(x_{ji})     \Bigr) \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha) \\
+&+\{\Delta^\alpha ,\mathbf{c}_j^\alpha\} \mathbf{c}_i^\alpha \delta'_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha)-\{\Delta^\alpha ,\mathbf{c}_i^\alpha\} \mathbf{c}_j^\alpha \delta_\epsilon(z-\Delta^\alpha) \delta'_\epsilon(w-\Delta^\alpha)
 \end{split}
 \end{equation}
 In such a situation, the matrix $\check{\rho}$ plays the important role of generating derivatives of Dirac delta functions
 in the bracket. Taking both $\Phi(z-w, x_{ji})$ and  $\check{\rho}$ in the principal value prescription, we obtain the following result in the $\epsilon \to 0$ limit:
 \begin{equation}
 \begin{split}
-&\lim_{\epsilon \to 0^+} \, \Bigl(-\check{\rho}^{\alpha \alpha, \alpha \alpha}(z-w)+\tfrac{\I}{2\pi}    \Phi(z-w, x_{ji})     \Bigr) \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha) = \\
-&+\tfrac{\I}{2\pi}  
-  E_1(x_{ji})    \delta(z-\Delta^\alpha)\delta(w-\Delta^\alpha)-\tfrac{\I}{2\pi} \left(\delta'(z-\Delta^\alpha) \delta(w-\Delta^\alpha) - \delta(z-\Delta^\alpha) \delta'(w-\Delta^\alpha) \right) \,.
+&\lim_{\epsilon \to 0^+} \, \Bigl(-\check{\rho}^{\alpha \alpha, \alpha \alpha}(z-w)-    \Phi(z-w, x_{ji})     \Bigr) \delta_\epsilon(z-\Delta^\alpha) \delta_\epsilon(w-\Delta^\alpha) = \\
+&-  
+  E_1(x_{ji})    \delta(z-\Delta^\alpha)\delta(w-\Delta^\alpha)+ \left(\delta'(z-\Delta^\alpha) \delta(w-\Delta^\alpha) - \delta(z-\Delta^\alpha) \delta'(w-\Delta^\alpha) \right) \,.
 \end{split}
 \end{equation}
 Without the $\rho$ matrix, the second term on the RHS of the expression above would have had a $1/2$ coefficient.
