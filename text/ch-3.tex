@@ -1156,7 +1156,11 @@ Using the quasi-periodicity $\Phi(z+\tau,u)=e^{-2\pi\I u}\Phi(z,u)$ and the simp
 \begin{equation}
 \mathbb{G}_{ij}(z) = \frac{1}{2 \pi \I } \, \Phi(z-\tfrac{\tau}{2}, x_{ij}- \eta) \,,
 \end{equation}
-with $\Phi$ the Kronecker elliptic function~\eqref{eq:kronecker}. In terms of the function $\varphi(x,s) = \frac{\sigma(s+x-\Delta)}{\sigma(x-\Delta)\sigma(s)}e^{-\frac{\zeta(\pi)}{\pi}(x-\Delta)s}$ built from Weierstrass functions with periods $2\pi$ and $2\Delta$ that is used in the original paper\todo{[TODO: cite the paper]}, we have $\varphi(2\pi x, 2\pi s) = \frac{1}{2\pi}\Phi(x-\tfrac{\tau}{2}, s)$ with $\Delta = \pi\tau$; all formulas below are written with periods $1$ and $\tau$.
+with $\Phi$ the Kronecker elliptic function~\eqref{eq:kronecker}. The original paper\todo{[TODO: cite the paper]} uses periods $2\pi$ and $2\pi\tau$ and the function $\varphi(x,s) = \frac{\sigma(s+x-\pi\tau)}{\sigma(x-\pi\tau)\sigma(s)}e^{-\frac{\zeta(\pi)}{\pi}(x-\pi\tau)s}$, where $\sigma$ and $\zeta$ are the Weierstrass sigma and zeta functions for these periods. In terms of the functions of appendix~\ref{app:ellipticFuncs} they read
+\begin{equation}
+\sigma(x) = 2\pi\,\theta\bigl(\tfrac{x}{2\pi}\bigr)\, e^{-\frac{\theta'''(0)}{24\pi^2}x^2}\,, \qquad \zeta(x) = \frac{\sigma'(x)}{\sigma(x)} = \frac{1}{2\pi}\Bigl(E_1\bigl(\tfrac{x}{2\pi}\bigr) - \frac{\theta'''(0)}{6\pi}\,x\Bigr)\,,
+\end{equation}
+so that $\zeta(\pi) = -\frac{\theta'''(0)}{12\pi}$, since $E_1(\tfrac12)=0$. The Gaussian factors then cancel against the exponential in $\varphi$, and we find $\varphi(2\pi x, 2\pi s) = \frac{1}{2\pi}\Phi(x-\tfrac{\tau}{2}, s)$. All formulas below are written with periods $1$ and $\tau$.
 The deformation parameter $\eta$ ensures that the second argument $x_{ij}-\eta$ of $\Phi$ never vanishes, also for $i=j$.
 Once such a Green's function is found, we can write a general solution to the moment map as
 \begin{equation}
